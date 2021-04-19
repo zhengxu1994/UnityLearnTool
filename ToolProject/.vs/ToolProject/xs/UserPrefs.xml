@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{867945B8-755C-27AE-7CE2-68A275B91FB5}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NewTool2021/Movement/Move/MoveUnit.cs">
+    <Files>
+      <File FileName="Assets/NewTool2021/Movement/Move/MoveUnit.cs" Line="268" Column="56" />
+      <File FileName="Assets/NewTool2021/Movement/Move/MapMgr.cs" />
+      <File FileName="Assets/NewTool2021/Movement/Move/MoveMgr.cs" Line="64" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ToolProject" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="NewTool2021" expanded="True">
+                <Node name="Movement" expanded="True">
+                  <Node name="Move" expanded="True">
+                    <Node name="MoveUnit.cs" selected="True" />
+                  </Node>
+                  <Node name="PathFinding" expanded="True" />
+                </Node>
+                <Node name="Render" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="57bac2ae-c452-498f-8ac4-9a1913aa5fd5" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

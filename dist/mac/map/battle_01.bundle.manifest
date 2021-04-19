@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 1241910132
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dd0662d356cafc57b38537ec159ea30c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 305add591739a89fa1ffa9c1fd022e27
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 104
+  Script: {instanceID: 0}
+- Class: 157
+  Script: {instanceID: 0}
+- Class: 196
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Map/battle_01.unity
+Dependencies:
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/texture/map_battle_01_r0_c1.bundle
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/texture/map_battle_01_r0_c0.bundle

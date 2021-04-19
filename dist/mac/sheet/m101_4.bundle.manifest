@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 326557243
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4ea503e6e6f2b3bf5beaba04faf252d5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/SpriteSheet/m101_4.png
+Dependencies: []

@@ -1,0 +1,31 @@
+ManifestFileVersion: 0
+CRC: 1008092981
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a6facdac8d1e1c7168b1d13beb2e8487
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 08e5839e4db477429ed20d28d657089e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Effect/Prefab/90013.prefab
+Dependencies:
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/material/90013_huo_001.bundle
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/material/90013_hit_004.bundle
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/material/90013_yan_001.bundle
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/material/90013_glow_002.bundle
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/material/90013_hit_002.bundle
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/material/90013_hit_003.bundle
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/material/10052_par_002.bundle

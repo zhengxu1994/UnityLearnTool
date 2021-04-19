@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3144224278
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6c1514044108b1cb768abd98b8510e78
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 21c99c86a43ad817b2cb7f65458ae090
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Effect/Material/90013-hit-003.mat
+Dependencies:
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/texture/eff_90013_hit_003.bundle
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/shader/yl_alpha_blend.bundle

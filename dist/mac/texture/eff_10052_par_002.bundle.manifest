@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 2746854201
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fe7ab836771ce88c4d59fed0e8bed1d4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Effect/Texture/10052_par_002.png
+Dependencies: []

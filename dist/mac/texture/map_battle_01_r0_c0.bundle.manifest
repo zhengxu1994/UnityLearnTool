@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 600655692
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cefdd5813b1b65b5402eac8c54e8730c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/MapRes/battle_01/battle_01_r0_c0.png
+Dependencies: []

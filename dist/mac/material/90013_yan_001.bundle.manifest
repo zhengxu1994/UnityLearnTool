@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 1287230710
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a27b18da1dc280bd9bb9ee4bdfede294
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 21c99c86a43ad817b2cb7f65458ae090
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Effect/Material/90013_yan_001.mat
+Dependencies:
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/ToolProject/Assets/../../dist/mac/shader/yl_alpha_blend.bundle

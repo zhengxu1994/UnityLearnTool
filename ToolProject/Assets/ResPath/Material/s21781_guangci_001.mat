@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: s21781_guangci_001
+  m_Shader: {fileID: 4800000, guid: 5b630355b5d76854892b5ebf87e0ccad, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 2800000, guid: 45b5a1a2ec6eab44f990d1f241807af7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlphaTex2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlphaTex3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlphaTex4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlphaTex5:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GradientTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SoftDissolveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: 61adcecc709d1394987585084ba85e41, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VertexOffsetTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _mask1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex4coord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _text:
+        m_Texture: {fileID: 2800000, guid: c4e6b2ccffd97df4e83a7733fa2a2e9d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha2U: 0
+    - _Alpha2V: 0
+    - _Alpha3U: 0
+    - _Alpha3V: 0
+    - _Alpha4U: 0
+    - _Alpha4V: 0
+    - _Alpha5U: 0
+    - _Alpha5V: 0
+    - _AlphaTexUV2: 0
+    - _AlphaU: 0
+    - _AlphaV: 0
+    - _CustomDataUV2XInfluenceSoftDissolve: 0
+    - _CustomDataUV2X_Indensity: 1
+    - _DepthFade: 0
+    - _DepthFadeIndensity: 1
+    - _DissolveTexPlusValue: 0
+    - _Distortion2UV: 0
+    - _DistortionIndensity: 0
+    - _DistortionInfluenceGradient: 0
+    - _DistortionInfluenceOffset: 0
+    - _DistortionInfluenceSoft: 0
+    - _DistortionU: 0
+    - _DistortionV: 0
+    - _GradientTexU: 0
+    - _GradientTexV: 0
+    - _Indensity: 2
+    - _LineIndensity: 1
+    - _LineRange: 0.5
+    - _LineWidth: 0.1
+    - _MainPower: 1
+    - _MainU: 0
+    - _MainV: 0
+    - _Opacity: 1
+    - _OpacityPower: 1
+    - _SoftDissolveIndensity: 0
+    - _SoftDissolveSoft: 0
+    - _SoftDissolveSwitch: 0
+    - _SoftDissolveTexU: 0
+    - _SoftDissolveTexV: 0
+    - _VertexColorInfluenceSoftDissolve: 0
+    - _VertexOffsetIndensity: 0
+    - _VertexOffsetTexU: 0
+    - _VertexOffsetTexV: 0
+    - __dirty: 0
+    - _u_move: 0
+    - _v_move: 0
+    m_Colors:
+    - _Color: {r: 1.319508, g: 1.319508, b: 1.319508, a: 1}
+    - _LineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _node_5315: {r: 1.1353015, g: 0.7251664, b: 0.23181549, a: 1}

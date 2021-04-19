@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2949568560
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e107dec6ca6bf855fd1bdfccf5e2387e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 55d48f4ad9c3b13330b9eb5ee5686477
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Effect/Shader/yl-Particle Add.shader
+Dependencies: []

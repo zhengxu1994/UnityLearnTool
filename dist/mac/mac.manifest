@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1390773209
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: map/battle_01.bundle
+      Dependencies:
+        Dependency_0: texture/map_battle_01_r0_c1.bundle
+        Dependency_1: texture/map_battle_01_r0_c0.bundle
+    Info_1:
+      Name: texture/map_battle_01_r0_c1.bundle
+      Dependencies: {}
+    Info_2:
+      Name: texture/map_battle_01_r0_c0.bundle
+      Dependencies: {}
+    Info_3:
+      Name: config/dependency.bundle
+      Dependencies: {}
