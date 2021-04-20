@@ -59,6 +59,19 @@ namespace TrueSync {
 
 #region Properties
 
+        public FP this[int idx]
+        {
+            get {
+                if (idx == 0) return x;
+                else return y;
+            }
+            set
+            {
+                if (idx == 0) x = value;
+                else y = value;
+            }
+        }
+
         public static TSVector2 zero
         {
             get { return zeroVector; }

@@ -29,6 +29,35 @@ namespace Movement
             return false;
         }
 
+        public bool IsBlockPixel(TSVector2 pixel,bool allowEdge = false)
+        {
+            int x = pixel.x.AsInt();
+            int y = pixel.y.AsInt();
+            return IsBlockPixel(x, y, allowEdge);
+        }
+
+        public bool IsBlockPixel(int x,int y,bool allowEdge =false)
+        {
+            if(allowEdge)
+            {
+                if (x % tileSize == 0)
+                    x = Math.Max(0, x - 1);
+                if (y % tileSize == 0)
+                    y = Math.Max(0, y - 1);
+            }
+            x = (int)Math.Floor(x * multTileSize);
+            y = (int)Math.Floor(y * multTileSize);
+            return IsBlockTile(x, y);
+        }
+
+
+        public bool IsBlockTile(int x,int y)
+        {
+            if (x < 0 || y < 0 || x >= tileWidth || y >= tileHight)
+                return true;
+            return blockData[x, y] == TYPE_BLOCK;
+        }
+
         public JPoint PosToCell(TSVector2 pos)
         {
             return new JPoint((int)(pos.x * multTileSize), (int)(pos.y * multTileSize));

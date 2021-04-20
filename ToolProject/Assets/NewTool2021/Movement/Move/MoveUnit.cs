@@ -265,16 +265,189 @@ namespace Movement
         {
             if (targetPrey != null && targetPrey.uid == uid)
                 return;
-            //var unit = MoveMgr.Inst.GetMoveUnit(uid);
-            //if(unit != null)
-            //{
-            //    targetPrey = null;
-            //    direction = Calculater.GetDirByPos(position, targetPrey.position);
-            //    moveState = MoveState.CloseToTarget;
-            //    CheckMoveToNext();
-            //}
+            var unit = MoveMgr.Inst.GetMoveUnit(uid);
+            if (unit != null)
+            {
+                targetPrey = null;
+                direction = Calculater.GetDirByPos(position, targetPrey.position);
+                moveState = MoveState.CloseToTarget;
+                CheckMoveToNext();
+            }
         }
 
+        bool CheckStandSpace()
+        {
+            var uids = MoveMgr.Inst.GetUnitsInCell(position, -1, uid);
+            if (uids.Count > 0)
+            {
+                var emptyPos = MoveMgr.Inst.GetStandPosAround(position, position);
+                if(emptyPos != position)
+                {
+                    for (int i = 0; i < uids.Count; i++)
+                    {
+                        var unit = MoveMgr.Inst.GetMoveUnit(uids[i]);
+                        if(unit != null && !unit.isMoving)
+                        {
+                            moveParty.target = emptyPos;
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        void CheckMoveToNext()
+        {
+            if(targetPrey == null)
+            {
+                if(moveGoal.Equals(position) || moveGoal == MoveMgr.InvalidPos)
+                {
+                    StopMove(StopCause.ReachedGoal, MoveState.Stand);
+                    return;
+                }
+            }
+            var colRet = HasCollision(out var other, out var disSQ, position, true);
+            bool canContinueMove = false;
+            if (other == null)
+                canContinueMove = true;
+            else
+            {
+                if ((!IsGetInTheWay(other) || colRet != CollisionUnit.HardCollision) && other.camp == camp)
+                    canContinueMove = true;
+            }
+
+            if (!canContinueMove)
+            {
+                if ((colRet == CollisionUnit.HardCollision || colRet == CollisionUnit.NearByCollision) && other.camp != camp)
+                {
+                    StopMoveCallBack(StopCause.EnemySpotted, MoveState.Stand, other);
+                    return;
+                }
+
+                other = MoveMgr.Inst.GetCollisionMoveUnit(position, uid, atkRange, camp);
+                if(other != null)
+                {
+                    StopMoveCallBack(StopCause.EnemySpotted, MoveState.Stand, other);
+                    return;
+                }
+
+                var center = MoveMgr.Inst.PosToCenter(position);
+                if(center != position)
+                {
+                    moveParty.target = center;
+                    return;
+                }
+            }
+            else
+            {
+                if(targetPrey != null && TSVector2.DistanceSquared(position,targetPrey.position) < atkRangeSQ)
+                {
+                    StopMoveCallBack(StopCause.EnemySpotted, MoveState.Stand, targetPrey);
+                    return;
+                }
+                var tpos = targetPrey == null ? moveGoal : targetPrey.position;
+                nextDir = Calculater.GetDirByPos(position, tpos);
+                var nextCenter = MoveMgr.Inst.NextCenter(position, nextDir);
+                MoveUnit nextUnit = null;
+                var nunit = MoveMgr.Inst.GetUnitInCell(nextCenter);
+                if (nunit != null && nunit.camp == camp)
+                {
+                    if (formationIdx > 0)
+                    {
+                        var offdir = formationIdx % 2 == 0 ? -1 : 1;
+                        nextCenter = MoveMgr.Inst.NextCenter(position, (nextDir + 8 + offdir) % 8);
+                        nunit = MoveMgr.Inst.GetUnitInCell(nextCenter);
+                        if (nunit != null && nunit.camp == camp) { }
+                        else
+                            nextUnit = nunit;
+                    }
+                }
+                else
+                    nextUnit = nunit;
+
+                if(nextUnit != nunit)
+                {
+                    if(TSVector2.DistanceSquared(position,nextUnit.position) < atkRangeSQ)
+                    {
+                        StopMoveCallBack(StopCause.EnemySpotted, MoveState.Stand, nextUnit);
+                        return;
+                    }
+                    else
+                    {
+                        StopMoveCallBack(StopCause.HasNearlyEnemy, MoveState.CloseToTarget, nextUnit);
+                        var nearPos = nextUnit.position + TSVector2.ClampMagnitude(position - nextUnit.position, radius * 2);
+                        moveParty.target = nearPos;
+                        moveParty.reached = false;
+                        return;
+                    }
+                }
+                else
+                {
+                    nextPoint = nextCenter;
+                    if (!MoveMgr.Inst.IsBlockPixel(nextPoint))
+                    {
+                        moveParty.target = nextPoint;
+                        moveParty.reached = false;
+                        return;
+                    }
+                    else
+                    {
+                        //我正在往目标方向走，但是我的八方向前进格是阻挡格 ，此时是否寻路
+                    }
+                }
+            }
+        }
+
+
+        public void StopMoveCallBack(StopCause cause,MoveState endState = MoveState.Stand,MoveUnit relate =null)
+        {
+            StopMove(cause, endState);
+            moveStopCB?.Invoke(cause, relate);
+        }
+
+        bool IsGetInTheWay(MoveUnit other)
+        {
+            if (other == null) return false;
+            var dirForMe = Calculater.GetDirByPos(position, other.position);
+            return Calculater.GetDirOffset(direction, dirForMe) < 2;
+        }
+
+        private CollisionUnit HasCollision(out MoveUnit other,out FP distance,TSVector2 pos,bool checkAtk)
+        {
+            other = null;
+            distance = 0;
+            if (MapMgr.Inst.IsBlockPixel(pos) || MapMgr.Inst.IsCollisionBlock(pos))
+                return CollisionUnit.BlockCollision;
+            other = MoveMgr.Inst.GetCollisionMoveUnit(pos, uid, checkAtk ? atkRange : radius);
+            if(other != null)
+            {
+                var dis = TSVector2.DistanceSquared(pos, other.position);
+                distance = dis.AsInt();
+                if (dis <= collisionSQ)
+                    return CollisionUnit.HardCollision;
+                else if (dis <= atkRangeSQ)
+                    return CollisionUnit.NearByCollision;
+            }
+            return CollisionUnit.NotCollision;
+        }
+
+        private CollisionUnit HasCollision(out MoveUnit other,out FP distance)
+        {
+            return HasCollision(out other, out distance, position, false);
+        }
+
+        public void StopMove(StopCause cause,MoveState endState = MoveState.Stand)
+        {
+            targetPrey = null;
+            moveToGoalBySelf = false;
+            waypoints = null;
+            moveGoal = MoveMgr.InvalidPos;
+
+            if (endState != MoveState.MoveToLineUp && cause != StopCause.ChangeTarget)
+                moveParty.reached = true;
+            moveState = endState;
+        }
         //bool CheckStandSpace()
         //{
         //    var uids = MoveMgr.Inst.GetUnitsInCell(position, -1, uid);

@@ -70,6 +70,19 @@
     <Compile Include="Assets\NewTool2021\DataStructure\DictBox.cs" />
     <Compile Include="Assets\NewTool2021\DataStructure\HashBox.cs" />
     <Compile Include="Assets\NewTool2021\DataStructure\ListBox.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\HyperRect.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\IKdTree.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\IPriorityQueue.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\KdTree.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\KdTreeNode.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\Math\DoubleMath.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\Math\FloatMath.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\Math\GeoMath.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\Math\GeoUtils.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\Math\ITypeMath.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\Math\TypeMath.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\NearestNeighbourList.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\KdTreeLib\PriorityQueue.cs" />
     <Compile Include="Assets\NewTool2021\Movement\Move\Calculater.cs" />
     <Compile Include="Assets\NewTool2021\Movement\Move\Formation.cs" />
     <Compile Include="Assets\NewTool2021\Movement\Move\MapMgr.cs" />
@@ -78,6 +91,7 @@
     <Compile Include="Assets\NewTool2021\Movement\Move\MoveParty.cs" />
     <Compile Include="Assets\NewTool2021\Movement\Move\MoveUniform.cs" />
     <Compile Include="Assets\NewTool2021\Movement\Move\MoveUnit.cs" />
+    <Compile Include="Assets\NewTool2021\Movement\Move\TSVector2KdTree.cs" />
     <Compile Include="Assets\NewTool2021\Movement\PathFinding\AStarFinding.cs" />
     <Compile Include="Assets\NewTool2021\Movement\PathFinding\JPSFinding.cs" />
     <Compile Include="Assets\NewTool2021\Movement\PathFinding\Pathmodifier.cs" />
@@ -90,6 +104,8 @@
     <Compile Include="Assets\NewTool2021\Movement\RVO2\src\Simulator.cs" />
     <Compile Include="Assets\NewTool2021\Movement\RVO2\src\Vector2.cs" />
     <Compile Include="Assets\NewTool2021\ParabolaPath.cs" />
+    <Compile Include="Assets\NewTool2021\Pool\TObjectPool.cs" />
+    <Compile Include="Assets\NewTool2021\Pool\UtilTool.cs" />
     <Compile Include="Assets\NewTool2021\RedDot\RedDotConst.cs" />
     <Compile Include="Assets\NewTool2021\RedDot\RedDotMgr.cs" />
     <Compile Include="Assets\NewTool2021\RedDot\RedDotNode.cs" />

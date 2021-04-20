@@ -34,5 +34,11 @@ namespace Movement
         {
             return (1 - t) * (1 - t) * start + 2 * t * (1 - t) * control + t * t * end;
         }
+
+        public static int GetDirOffset(int dir1,int dir2)
+        {
+            int offset = dir1 > dir2 ? dir1 - dir2 : dir2 - dir1;
+            return offset % 8;
+        }
     }
 }
