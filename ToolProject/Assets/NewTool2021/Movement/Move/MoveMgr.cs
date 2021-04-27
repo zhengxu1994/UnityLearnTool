@@ -224,5 +224,12 @@ namespace Movement
                 return moveBlock[x, y] == 1;
             return true;
         }
+
+        public TSVector2 NextPos(TSVector2 pos,int dir)
+        {
+            var x = (int)(pos.x * multSize) + diro[dir, 0];
+            var y = (int)(pos.y * multSize) + diro[dir, 1];
+            return new TSVector2(x * logicSize + pos.x % logicSize, y * logicSize + pos.y % logicSize);
+        }
     }
 }

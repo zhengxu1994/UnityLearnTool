@@ -151,6 +151,16 @@ namespace Movement
 
         public override int direction { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public override bool isMoving => throw new NotImplementedException();
+        public  bool isMoving { get; protected set; }
+
+        public override void TargetDispose(bool targetDead)
+        {
+
+        }
+
+        public void StopMove(StopCause cause,GroupState endState = GroupState.FreeStand)
+        {
+
+        }
     }
 }

@@ -50,7 +50,7 @@ namespace Movement
 
         public abstract int direction { get; set; }
 
-        public abstract bool isMoving { get; }
+        public bool isMoving { get; protected set; } = false;
 
         public abstract TSVector2 position { get; set; }
 
@@ -59,6 +59,8 @@ namespace Movement
         public abstract void LogicUpdate();
 
         public abstract void UpdateStep();
+
+        public abstract void TargetDispose(bool targetDead);
 
         public TSVector2 CrossesPoint(TSVector2 a ,TSVector2 b,TSVector2 p)
         {
