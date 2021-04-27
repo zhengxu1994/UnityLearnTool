@@ -103,6 +103,10 @@ namespace RVO
 
         internal IList<Obstacle> obstacles_;
 
+        internal IDictionary<int, int> index2agentNoDict_;
+
+        internal IDictionary<int, int> agentNo2indexDict_;
+
         internal KdTree kdTree_;
 
         internal FP timeStep_;
@@ -127,6 +131,52 @@ namespace RVO
             }
         }
 
+        public void delAgent(int agentNo)
+        {
+            agents_[agentNo2indexDict_[agentNo]].needDelete_ = true;
+        }
+
+        void updateDeleteAgent()
+        {
+            bool isDelete = false;
+            for (int i = agents_.Count - 1; i >= 0; i--)
+            {
+                if (agents_[i].needDelete_)
+                {
+                    agents_.RemoveAt(i);
+                    isDelete = true;
+                }
+            }
+            if (isDelete)
+                onDelAgent();
+        }
+        int s_totalID;
+
+        void onDelAgent()
+        {
+            agentNo2indexDict_.Clear();
+            index2agentNoDict_.Clear();
+            for (int i = 0; i < agents_.Count; i++)
+            {
+                int agentNo = agents_[i].id_;
+                agentNo2indexDict_.Add(agentNo, i);
+                index2agentNoDict_.Add(i, agentNo);
+            }
+        }
+
+        void onAddAgent()
+        {
+            if (agents_.Count == 0) return;
+            int index = agents_.Count - 1;
+            int agentNo = agents_[index].id_;
+            agentNo2indexDict_.Add(agentNo, index);
+            index2agentNoDict_.Add(index, agentNo);
+        }
+
+        public void setAgentRelationGroup(int agentNo,int relation)
+        {
+            agents_[agentNo2indexDict_[agentNo]].reletionGroup_ = relation;
+        }
         /**
          * <summary>Adds a new agent with default properties to the simulation.
          * </summary>
@@ -139,6 +189,11 @@ namespace RVO
          */
         public int addAgent(TSVector2 position)
         {
+            return addAgent(position, defaultAgent_.radius_, defaultAgent_.maxSpeed_);
+        }
+
+        public int addAgent(TSVector2 position,FP radius,FP maxSpped)
+        {
             if (defaultAgent_ == null)
             {
                 return -1;
@@ -146,6 +201,7 @@ namespace RVO
 
             Agent agent = new Agent();
             agent.id_ = agents_.Count;
+            s_totalID++;
             agent.maxNeighbors_ = defaultAgent_.maxNeighbors_;
             agent.maxSpeed_ = defaultAgent_.maxSpeed_;
             agent.neighborDist_ = defaultAgent_.neighborDist_;
@@ -154,11 +210,10 @@ namespace RVO
             agent.timeHorizon_ = defaultAgent_.timeHorizon_;
             agent.timeHorizonObst_ = defaultAgent_.timeHorizonObst_;
             agent.velocity_ = defaultAgent_.velocity_;
-            agents_.Add (agent);
-
+            agents_.Add(agent);
+            onAddAgent();
             return agent.id_;
         }
-
         /**
          * <summary>Adds a new agent to the simulation.</summary>
          *
@@ -365,7 +420,7 @@ namespace RVO
          */
         public int getAgentAgentNeighbor(int agentNo, int neighborNo)
         {
-            return agents_[agentNo].agentNeighbors_[neighborNo].Value.id_;
+            return agents_[agentNo2indexDict_[agentNo]].agentNeighbors_[neighborNo].Value.id_;
         }
 
         /**
@@ -379,7 +434,7 @@ namespace RVO
          */
         public int getAgentMaxNeighbors(int agentNo)
         {
-            return agents_[agentNo].maxNeighbors_;
+            return agents_[agentNo2indexDict_[agentNo]].maxNeighbors_;
         }
 
         /**
@@ -392,7 +447,7 @@ namespace RVO
          */
         public FP getAgentMaxSpeed(int agentNo)
         {
-            return agents_[agentNo].maxSpeed_;
+            return agents_[agentNo2indexDict_[agentNo]].maxSpeed_;
         }
 
         /**
@@ -407,7 +462,7 @@ namespace RVO
          */
         public FP getAgentNeighborDist(int agentNo)
         {
-            return agents_[agentNo].neighborDist_;
+            return agents_[agentNo2indexDict_[agentNo]].neighborDist_;
         }
 
         /**
@@ -422,7 +477,7 @@ namespace RVO
          */
         public int getAgentNumAgentNeighbors(int agentNo)
         {
-            return agents_[agentNo].agentNeighbors_.Count;
+            return agents_[agentNo2indexDict_[agentNo]].agentNeighbors_.Count;
         }
 
         /**
@@ -437,7 +492,7 @@ namespace RVO
          */
         public int getAgentNumObstacleNeighbors(int agentNo)
         {
-            return agents_[agentNo].obstacleNeighbors_.Count;
+            return agents_[agentNo2indexDict_[agentNo]].obstacleNeighbors_.Count;
         }
 
         /**
@@ -454,7 +509,7 @@ namespace RVO
          */
         public int getAgentObstacleNeighbor(int agentNo, int neighborNo)
         {
-            return agents_[agentNo].obstacleNeighbors_[neighborNo].Value.id_;
+            return agents_[agentNo2indexDict_[agentNo]].obstacleNeighbors_[neighborNo].Value.id_;
         }
 
         /**
@@ -472,7 +527,7 @@ namespace RVO
          */
         public IList<Line> getAgentOrcaLines(int agentNo)
         {
-            return agents_[agentNo].orcaLines_;
+            return agents_[agentNo2indexDict_[agentNo]].orcaLines_;
         }
 
         /**
@@ -487,7 +542,7 @@ namespace RVO
          */
         public TSVector2 getAgentPosition(int agentNo)
         {
-            return agents_[agentNo].position_;
+            return agents_[agentNo2indexDict_[agentNo]].position_;
         }
 
         /**
@@ -502,7 +557,7 @@ namespace RVO
          */
         public TSVector2 getAgentPrefVelocity(int agentNo)
         {
-            return agents_[agentNo].prefVelocity_;
+            return agents_[agentNo2indexDict_[agentNo]].prefVelocity_;
         }
 
         /**
@@ -515,7 +570,7 @@ namespace RVO
          */
         public FP getAgentRadius(int agentNo)
         {
-            return agents_[agentNo].radius_;
+            return agents_[agentNo2indexDict_[agentNo]].radius_;
         }
 
         /**
@@ -528,7 +583,7 @@ namespace RVO
          */
         public FP getAgentTimeHorizon(int agentNo)
         {
-            return agents_[agentNo].timeHorizon_;
+            return agents_[agentNo2indexDict_[agentNo]].timeHorizon_;
         }
 
         /**
@@ -543,7 +598,7 @@ namespace RVO
          */
         public FP getAgentTimeHorizonObst(int agentNo)
         {
-            return agents_[agentNo].timeHorizonObst_;
+            return agents_[agentNo2indexDict_[agentNo]].timeHorizonObst_;
         }
 
         /**
@@ -558,7 +613,7 @@ namespace RVO
          */
         public TSVector2 getAgentVelocity(int agentNo)
         {
-            return agents_[agentNo].velocity_;
+            return agents_[agentNo2indexDict_[agentNo]].velocity_;
         }
 
         /**
@@ -757,7 +812,7 @@ namespace RVO
          */
         public void setAgentMaxNeighbors(int agentNo, int maxNeighbors)
         {
-            agents_[agentNo].maxNeighbors_ = maxNeighbors;
+            agents_[agentNo2indexDict_[agentNo]].maxNeighbors_ = maxNeighbors;
         }
 
         /**
@@ -770,7 +825,7 @@ namespace RVO
          */
         public void setAgentMaxSpeed(int agentNo, FP maxSpeed)
         {
-            agents_[agentNo].maxSpeed_ = maxSpeed;
+            agents_[agentNo2indexDict_[agentNo]].maxSpeed_ = maxSpeed;
         }
 
         /**
@@ -784,7 +839,7 @@ namespace RVO
          */
         public void setAgentNeighborDist(int agentNo, FP neighborDist)
         {
-            agents_[agentNo].neighborDist_ = neighborDist;
+            agents_[agentNo2indexDict_[agentNo]].neighborDist_ = neighborDist;
         }
 
         /**
@@ -798,7 +853,7 @@ namespace RVO
          */
         public void setAgentPosition(int agentNo, TSVector2 position)
         {
-            agents_[agentNo].position_ = position;
+            agents_[agentNo2indexDict_[agentNo]].position_ = position;
         }
 
         /**
@@ -812,7 +867,7 @@ namespace RVO
          */
         public void setAgentPrefVelocity(int agentNo, TSVector2 prefVelocity)
         {
-            agents_[agentNo].prefVelocity_ = prefVelocity;
+            agents_[agentNo2indexDict_[agentNo]].prefVelocity_ = prefVelocity;
         }
 
         /**
@@ -825,7 +880,7 @@ namespace RVO
          */
         public void setAgentRadius(int agentNo, FP radius)
         {
-            agents_[agentNo].radius_ = radius;
+            agents_[agentNo2indexDict_[agentNo]].radius_ = radius;
         }
 
         /**
@@ -839,7 +894,7 @@ namespace RVO
          */
         public void setAgentTimeHorizon(int agentNo, FP timeHorizon)
         {
-            agents_[agentNo].timeHorizon_ = timeHorizon;
+            agents_[agentNo2indexDict_[agentNo]].timeHorizon_ = timeHorizon;
         }
 
         /**
@@ -853,7 +908,7 @@ namespace RVO
          */
         public void setAgentTimeHorizonObst(int agentNo, FP timeHorizonObst)
         {
-            agents_[agentNo].timeHorizonObst_ = timeHorizonObst;
+            agents_[agentNo2indexDict_[agentNo]].timeHorizonObst_ = timeHorizonObst;
         }
 
         /**
@@ -867,7 +922,7 @@ namespace RVO
          */
         public void setAgentVelocity(int agentNo, TSVector2 velocity)
         {
-            agents_[agentNo].velocity_ = velocity;
+            agents_[agentNo2indexDict_[agentNo]].velocity_ = velocity;
         }
 
         /**

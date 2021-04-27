@@ -95,13 +95,16 @@ namespace Movement
 
         public override int direction { get => moveParty.dir; set => moveParty.dir = value; }
 
-        public override bool isMoving
+        public bool isMoving
         {
             get
             {
                 if (!moveParty.reached)
                     return true;
                 return false;
+            }
+            protected set {
+                moveParty.reached = value;
             }
         }
 
@@ -399,11 +402,46 @@ namespace Movement
             }
         }
 
+        public void JoinGroup(MoveGroup group)
+        {
+            camp = group.camp;
+            moveGroup = group;
+        }
+
+        public override void TargetDispose(bool targetDead)
+        {
+            targetPrey = null;
+            if (isMoving)
+                StopMove(StopCause.EnemyDispose, MoveState.Stand);
+        }
+        
+        public void StopMove(StopCause cause, MoveState endState = MoveState.Stand)
+        {
+            targetPrey = null;
+            moveToGoalBySelf = false;
+            waypoints = null;
+            moveGoal = MoveMgr.InvalidPos;
+
+            if (endState != MoveState.MoveToLineUp && cause != StopCause.ChangeTarget)
+                moveParty.reached = true;
+            moveState = endState;
+        }
+
 
         public void StopMoveCallBack(StopCause cause,MoveState endState = MoveState.Stand,MoveUnit relate =null)
         {
             StopMove(cause, endState);
             moveStopCB?.Invoke(cause, relate);
+        }
+
+        int JudgeMovePriority()
+        {
+            var baseIdx = 50 - formationIdx;
+            if (moveState == MoveState.IncrementWayPoint)
+                return baseIdx;
+            if (IsOnFormation() || moveState == MoveState.Stand) return 0;
+            if (moveState == MoveState.MoveToLineUp) return 100;
+            return baseIdx;
         }
 
         bool IsGetInTheWay(MoveUnit other)
@@ -437,39 +475,278 @@ namespace Movement
             return HasCollision(out other, out distance, position, false);
         }
 
-        public void StopMove(StopCause cause,MoveState endState = MoveState.Stand)
+        public void ScatterFromGoal()
         {
-            targetPrey = null;
-            moveToGoalBySelf = false;
-            waypoints = null;
-            moveGoal = MoveMgr.InvalidPos;
-
-            if (endState != MoveState.MoveToLineUp && cause != StopCause.ChangeTarget)
-                moveParty.reached = true;
-            moveState = endState;
+            if(!scatterFromGoal)
+            {
+                scatterFromGoal = true;
+                if (HasCollision(out var other,out var disSQ) != CollisionUnit.NotCollision)
+                {
+                    if (other!= null)
+                    {
+                        if (formationIdx > other.formationIdx)
+                        {
+                            var pos = MoveMgr.Inst.GetStandPosAround(position, position);
+                            if (!pos.Equals(position))
+                            {
+                                scatterFromGoal = true;
+                                moveParty.target = pos;
+                            }
+                        }
+                    }
+                }
+            }
         }
-        //bool CheckStandSpace()
-        //{
-        //    var uids = MoveMgr.Inst.GetUnitsInCell(position, -1, uid);
-        //    if(uids.Count > 0)
-        //    {
 
-        //    }
-        //}
+        public bool MoveToLineUp()
+        {
+            if (moveState == MoveState.ReachGoal || moveState == MoveState.IncrementWayPoint ||
+                moveState == MoveState.KeepOffFailed) return false;
+            if (IsOnFormation()) return false;
+            moveState = MoveState.MoveToLineUp;
+            return true;
+        }
 
+        static readonly int[,] diro = { { 0, -1 }, { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, 1 }, { 1, 1 }, { 1, 0 }, { 1, -1 } };
         public override void Dispose()
         {
             throw new NotImplementedException();
         }
 
+        int checkTick = 0;
+
         public override void LogicUpdate()
         {
-            throw new NotImplementedException();
+            if (!moveEnable) return;
+            switch (moveState)
+            {
+                case MoveState.Stand:
+                    CheckStandSpace();
+                    break;
+                case MoveState.IncrementWayPoint:
+                    if (waypoints != null)
+                    {
+                        if (moveParty.reached)
+                        {
+                            moveParty.speed = moveSpeed;
+                            if (waypointIdx < waypoints.Count - 1)
+                            {
+                                waypointIdx++;
+                                nextPoint = waypoints[waypointIdx];
+                                if (MapMgr.Inst.IsCollisionBlock(nextPoint))
+                                    nextPoint = MapMgr.Inst.PosToCenter(nextPoint);
+                                MoveToNextPoint();
+                            }
+                            else
+                            {
+                                if (!moveToGoalBySelf)
+                                    StopMove(StopCause.ReachedGoal);
+                                else
+                                    StopMove(StopCause.ReachedGoal, MoveState.MoveToLineUp);
+                            }
+                        }
+                        if (!moveParty.reached)
+                        {
+                            if (moveToGoalBySelf)
+                            {
+                                var t = moveGroup.formationRadius;
+                                if (TSVector2.DistanceSquared(position, moveGroup.position) > t * t)
+                                    moveParty.speed = moveSpeed * 1.5;
+                            }
+                            HasCollision(out MoveUnit other, out FP disSQ);
+                            if (other != null)
+                            {
+                                if (IsGetInTheWay(other))
+                                {
+                                    if (other.gid == gid && JudgeMovePriority() < other.JudgeMovePriority())
+                                    {
+                                        if (disSQ < slowDownSQ)
+                                            moveParty.speed = moveSpeed * 0.5f;
+                                        else if (disSQ < nearbySQ)
+                                            moveParty.speed = 0;
+                                    }
+                                    break;
+                                }
+                            }
+                            moveParty.speed = moveSpeed;
+                        }
+                    }
+                    break;
+                case MoveState.CloseToTarget:
+                    if (moveParty.reached)
+                    {
+                        if (checkTick > 0)
+                            checkTick--;
+                        else
+                        {
+                            CheckMoveToNext();
+                            checkTick = 30;
+                        }
+                    }
+                    break;
+                case MoveState.KeepOffFailed:
+                case MoveState.ReachGoal:
+                    if (scatterFromGoal && moveParty.reached)
+                    {
+                        scatterFromGoal = false;
+                        SetReached(true);
+                        direction = formationOffset.dir;
+                        moveStopCB?.Invoke(StopCause.FormationReach, null);
+                    }
+                    break;
+                case MoveState.MoveToLineUp:
+                    var nextPos = MoveMgr.Inst.NextPos(position, direction);
+                    bool nextBlock = MapMgr.Inst.IsCollisionBlock(nextPos);
+                    if (moveGroup.keepFormation && nextBlock && direction == moveGroup.direction)
+                    {
+                        moveGroup.StopMove(StopCause.FormationObstruct, GroupState.FormationStand);
+                        break;
+                    }
+
+                    if (nextBlock)
+                    {
+                        var goal = moveGroup.curTargetPos + formationOffset.pos;
+                        int dis = TSVector2.Distance(position, goal).AsInt();
+                        int step = 0;
+                        bool allBlock = true;
+                        while (step < dis)
+                        {
+                            step += moveGroup.formationRadius * 2;
+                            var next = goal;
+                            if (step < dis)
+                                next = position + TSVector2.ClampMagnitude(goal - position, step);
+                            if (!MapMgr.Inst.IsCollisionBlock(next))
+                            {
+                                goal = next;
+                                allBlock = false;
+                                break;
+                            }
+                        }
+                        if (allBlock)
+                        {
+                            if (moveGroup.moveGoal == MoveMgr.InvalidPos)
+                            {
+                                StopMove(StopCause.CannotReach, MoveState.KeepOffFailed);
+                                break;
+                            }
+                            goal = moveGroup.moveGoal;
+                            goal.x -= diro[moveGroup.goalDir, 0] * moveGroup.formationRadius;
+                            goal.y -= diro[moveGroup.goalDir, 1] * moveGroup.formationRadius;
+                            goal = MapMgr.Inst.PosToCenter(goal);
+                        }
+                        var center = MapMgr.Inst.PosToCenter(moveGroup.moveGoal);
+                        if (MapMgr.Inst.IsBlockPixel(goal) || TSVector2.DistanceSquared(position, center)
+                            < TSVector2.DistanceSquared(position, goal))
+                            goal = center;
+                        if (position == goal)
+                        {
+                            StopMove(StopCause.CannotReach, MoveState.KeepOffFailed);
+                            break;
+                        }
+                        if (MapMgr.Inst.IsSameCell(position, goal))
+                            waypoints = new List<TSVector2>() { goal };
+                        else
+                            waypoints = MapMgr.Inst.FindCellPath(position, goal);
+                        if (waypoints != null)
+                        {
+                            MoveByPath(waypoints);
+                            moveToGoalBySelf = true;
+                        }
+                        else
+                        {
+                            StopMove(StopCause.CannotReach, MoveState.KeepOffFailed);
+                            ScatterFromGoal();
+                        }
+                    }
+                    else
+                    {
+                        var mypos = moveGroup.position + formationOffset.pos;
+                        moveParty.target = mypos;
+                        if (moveParty.reached && !moveGroup.isMoving)
+                        {
+                            StopMove(StopCause.ReachedGoal, MoveState.LineUpEnd);
+                            ScatterFromGoal();
+                            break;
+                        }
+                        if (TSVector2.DistanceSquared(position, mypos) > radiusSQ)
+                            moveParty.speed = moveSpeed * 1.5f;
+                        else
+                            moveParty.speed = moveSpeed;
+                    }
+                    break;
+            }
+        }
+
+
+        private void SetReached(bool reached)
+        {
+            moveParty.reached = reached;
+            isMoving = !reached;
         }
 
         public override void UpdateStep()
         {
-            throw new NotImplementedException();
+            if(moveState == MoveState.Displacement)
+            {
+                var lastPos = displacementPos - position;
+                var nextPOs = position + TSVector2.ClampMagnitude(lastPos, displaceSpeed * moveParty.speed);
+                if (TSVector2.Dot(lastPos, displacementPos - nextPOs) <= 0)
+                {
+                    position = displacementPos;
+                    StopMove(StopCause.Displacement);
+                }
+                else
+                    position = nextPOs;
+            }
+            else if (moveState == MoveState.DisplacementByTime)
+            {
+                if(hasDisplaceTime >= startTime)
+                {
+                    if(hasBezier)
+                    {
+                        if(deleyCB != null)
+                        {
+                            deleyCB.Invoke();
+                            deleyCB = null;
+                        }
+                        int displacePathCount = hasDisplaceTime - startTime;
+                        if (displacePathCount < displacePath.Length)
+                        {
+                            var nextPos = displacePath[displacePathCount];
+                            position = nextPos;
+                        }
+                        else
+                        {
+                            if (hasDisplaceTime >= displaceTime)
+                            {
+                                position = displacementPos;
+                                StopMove(StopCause.Displacement);
+                                return;
+                            }
+                            else
+                                position += dropVector;
+                        }
+                    }
+                    else
+                    {
+                        position += displaceVector;
+                        if (hasDisplaceTime >= displaceTime)
+                        {
+                            position = displacementPos;
+                            deleyCB?.Invoke();
+                            deleyCB = null;
+                            StopMove(StopCause.Displacement);
+                            return;
+                        }
+                    }
+                }
+                hasDisplaceTime++;
+            }
+            else if (moveEnable)
+            {
+                if (!moveEnable) return;
+                moveParty.UpdateStep();
+            }
         }
     }
 }
