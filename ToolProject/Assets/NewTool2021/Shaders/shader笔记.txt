@@ -15,3 +15,9 @@ vs:ViewSpace 观察空间
 cs:HomogenousClipSpace 其次裁剪空间
 ts:TangentSpace 切线空间
 txs :TextureSpace 纹理空间
+
+
+镜面反射
+Phong(r dot v)
+ rDir = Reflect(-lDir,nDir)
+BlinnPhong(h dot n)

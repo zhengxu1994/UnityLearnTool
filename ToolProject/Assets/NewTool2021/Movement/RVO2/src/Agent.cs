@@ -53,6 +53,8 @@ namespace RVO
         internal FP radius_ = 0.0f;
         internal FP timeHorizon_ = 0.0f;
         internal FP timeHorizonObst_ = 0.0f;
+        internal bool needDelete_ = false;
+        internal int reletionGroup_ = -1;
 
         private TSVector2 newVelocity_;
 

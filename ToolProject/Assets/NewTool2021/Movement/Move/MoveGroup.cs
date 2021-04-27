@@ -60,6 +60,13 @@ namespace Movement
 
         public Formation formation { get; private set; } = null;
 
+        public int radius { get; private set; } = 0;
+        private int groupRadius = 0;
+
+        public static float atkDisRate { get; set; } = 1.2f;
+
+        
+
         public void ChangeFormation(Formation newFormation)
         {
             if(formation != newFormation)
@@ -149,9 +156,33 @@ namespace Movement
             }
         }
 
-        public override int direction { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public override int direction { get => groupPivot.dir; set =>groupPivot.dir = value % 8; }
 
         public  bool isMoving { get; protected set; }
+
+        private void SetGroupState(GroupState state)
+        {
+            groupState = state;
+            isMoving = groupState == GroupState.FormationMove;
+        }
+
+        TSVector2 enemyCenter;
+        bool manualMove = false;
+
+        bool isChargeAttack = false;
+        int agentSid = -1;
+        public void AttackTarget(MoveGroup enemy,bool chargeAttack)
+        {
+            isChargeAttack = chargeAttack;
+            if (isChargeAttack)
+            {
+                enemyCenter = enemy.position;
+                if (agentSid >= 0)
+                {
+                    RVO.Simulator.Instance.setAgentRelationGroup(agentSid, 0);
+                }
+            }
+        }
 
         public override void TargetDispose(bool targetDead)
         {
