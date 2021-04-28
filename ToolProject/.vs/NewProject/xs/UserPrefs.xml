@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{E9C14AE5-1D01-3179-C1CD-FA0858BD35C2}|">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Assets/NewTool2021/Render/DrawMesh.cs" Line="3" Column="38" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NewProject" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="NewTool2021" expanded="True">
+                <Node name="DataStructure" expanded="True" />
+                <Node name="Render" expanded="True">
+                  <Node name="DrawMesh.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fa680576-48e2-4326-96c3-743e51c3e67a" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
