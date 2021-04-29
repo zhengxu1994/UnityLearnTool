@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TrueSync;
 namespace Movement
 {
@@ -39,6 +40,36 @@ namespace Movement
         {
             int offset = dir1 > dir2 ? dir1 - dir2 : dir2 - dir1;
             return offset % 8;
+        }
+
+        private static readonly double eps = 1e-6;
+        public static void GetCircle(List<TSVector2> p ,out TSVector2 center,out FP radius)
+        {
+            center = p[0];
+            radius = 0;
+            int i, j, k;
+            for (i = 0; i < p.Count; i++)
+            {
+                if(Distance(center,p[i])<radius +eps)
+                {
+                    continue;
+                }
+                center = p[i];
+                radius = 0;
+                for (j = 0; j < i; j++)
+                {
+                    if (Distance(center, p[j]) < radius + eps)
+                    {
+                        continue;
+                    }
+
+                }
+            }
+        }
+
+        private static FP Distance(TSVector2 p1,TSVector2 p2)
+        {
+            return TSVector2.Distance(p1, p2);
         }
     }
 }

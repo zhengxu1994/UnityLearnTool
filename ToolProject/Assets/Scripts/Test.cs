@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
+    public Sprite res;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +37,12 @@ public class Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            var obj = new GameObject();
+            var render = obj.AddComponent<SpriteRenderer>();
+            render.sprite = res;
+        }
     }
 }
 

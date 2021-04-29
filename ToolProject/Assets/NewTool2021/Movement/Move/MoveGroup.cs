@@ -89,11 +89,6 @@ namespace Movement
             throw new NotImplementedException();
         }
 
-        public override void DisplacementTo(TSVector2 target, FP speed)
-        {
-            throw new NotImplementedException();
-        }
-
         public override void LogicUpdate()
         {
             throw new NotImplementedException();
@@ -184,11 +179,90 @@ namespace Movement
             }
         }
 
+        int checkPeryYawTick = 0;
+        int manualTargetGid = MoveMgr.InvalidUid;
         public override void TargetDispose(bool targetDead)
         {
+            targetPrey = null;
+            checkPeryYawTick = 0;
 
+            if (isChargeAttack && agentSid >= 0 && targetDead)
+            {
+                RVO.Simulator.Instance.setAgentRelationGroup(agentSid, camp + 10);
+                var normalVec = (enemyCenter - position).normalized;
+                var fightCenter = position + normalVec * radius;
+                groupPivot.target = fightCenter;
+                var speed = TSVector2.Distance(fightCenter, position) * 30;
+                RVO.Simulator.Instance.setAgentMaxSpeed(agentSid, speed);
+                RVO.Simulator.Instance.setAgentPrefVelocity(agentSid, normalVec * speed);
+            }
+
+            isChargeAttack = false;
+            manualTargetGid = MoveMgr.InvalidUid;
+
+            if (isMoving)
+                StopMove(StopCause.EnemyDispose, GroupState.FreeStand);
         }
 
+        public void ApproachTarget(int gid,bool isManual = false)
+        {
+            targetPrey = MoveMgr.Inst.GetMoveGroup(gid);
+            if (isManual)
+                manualTargetGid = gid;
+        }
+
+        TSVector2 displacementPos;
+        FP displaceSpeed;
+        TSVector2 displaceVector;
+        int displaceTime = 0;
+        int hasDisplaceTime = 0;
+        bool waitingManualMove = false;
+        int waitingTick = 0;
+        int checkPathYawTick = 0;
+        int stopUpTick = 0;
+
+        public override void DisplacementTo(TSVector2 target, FP speed)
+        {
+            displacementPos = target;
+            displaceSpeed = speed;
+            if (!OnFromtaion())
+            {
+                SetGroupState(GroupState.DisplaceWait);
+                foreach (var unit in moveUnits.Values)
+                {
+                    var lineUpPos = unit.formationOffset.pos + displacementPos;
+                    unit.DisplacementTo(lineUpPos,speed);
+                }
+            }
+            else
+            {
+                direction = Calculater.GetDirByPos(position, displacementPos);
+                SetGroupState(GroupState.Displacement);
+                foreach (var unit in moveUnits.Values)
+                    unit.DisplacementTo(target, speed);
+            }
+        }
+
+        private List<TSVector2> _points = new List<TSVector2>();
+
+        public void ReCalculateRadius()
+        {
+            _points.Clear();
+            foreach (var unit in moveUnits.Values)
+            {
+                _points.Add(unit.position);
+            }
+        }
+
+        bool OnFromtaion()
+        {
+            foreach (var unit in moveUnits.Values)
+            {
+                if (!unit.IsOnFormation())
+                    return false;
+            }
+            return true;
+        }
         public void StopMove(StopCause cause,GroupState endState = GroupState.FreeStand)
         {
 

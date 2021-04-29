@@ -231,5 +231,12 @@ namespace Movement
             var y = (int)(pos.y * multSize) + diro[dir, 1];
             return new TSVector2(x * logicSize + pos.x % logicSize, y * logicSize + pos.y % logicSize);
         }
+
+        public MoveGroup GetMoveGroup(int gid)
+        {
+            if (moveGroups.TryGetValue(gid, out var group))
+                return group;
+            return null;
+        }
     }
 }

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E9C14AE5-1D01-3179-C1CD-FA0858BD35C2}</ProjectGuid>
+    <ProjectGuid>{867945B8-755C-27AE-7CE2-68A275B91FB5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -442,6 +442,7 @@
     <None Include="Assets\ResPath\Shader\yl Alpha Blend.shader" />
     <None Include="Assets\ResPath\Shader\yl_Dissolution_blend.shader" />
     <None Include="Assets\NewTool2021\Shaders\shader笔记.txt" />
+    <None Include="Assets\NewTool2021\Shaders\LambortAndPhong\LambortAndPhong.shader" />
     <None Include="Assets\ResPath\Shader\UV_Move_Add.shader" />
     <None Include="Assets\NewTool2021\Shaders\ShaderForge\Learn1\Lambot\Lambot.shader" />
     <None Include="Assets\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
@@ -465,37 +466,37 @@
     <None Include="Assets\NewTool2021\Shaders\Diffuse\DiffuseVertex.shader" />
     <None Include="Assets\ResPath\Shader\WarningArrow.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/NewProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/NewProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/NewProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/NewProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/NewProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/NewProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/NewProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/NewProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/NewProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/NewProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/NewProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -1031,7 +1032,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{AB10F42A-142C-90B3-1AA5-F99EAFFD87CA}</Project>
+      <Project>{9D195AE0-F9D5-9796-2FA8-B771476AD697}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
