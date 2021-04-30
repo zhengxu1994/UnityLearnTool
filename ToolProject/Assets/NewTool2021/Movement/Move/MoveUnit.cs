@@ -95,19 +95,6 @@ namespace Movement
 
         public override int direction { get => moveParty.dir; set => moveParty.dir = value; }
 
-        public bool isMoving
-        {
-            get
-            {
-                if (!moveParty.reached)
-                    return true;
-                return false;
-            }
-            protected set {
-                moveParty.reached = value;
-            }
-        }
-
         public FP moveDelta { get; set; } = 1f / 30f;
         public FP moveStep;
 
@@ -169,6 +156,7 @@ namespace Movement
             this.camp = camp;
             this.moveParty = moveParty;
             this.moveGroup = moveGroup;
+            moveParty.onSetReached = () => { isMoving = !moveParty.reached; };
 #if UNITY_EDITOR
             this.moveParty.id = uid;
 
@@ -201,7 +189,7 @@ namespace Movement
                 position = endPoint;
         }
 
-        public void DisplacementTo(int time,TSVector2 endPoint,Action cb)
+        public void DisplacementTo(int time,TSVector2 endPoint,Action cb = null)
         {
             var dirVector = endPoint - position;
             displaceVector = dirVector / time;

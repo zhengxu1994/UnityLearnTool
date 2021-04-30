@@ -238,5 +238,13 @@ namespace Movement
                 return group;
             return null;
         }
+
+        public MoveUnit GetNearestMoveUnit(TSVector2 pos,Func<MoveUnit,bool> fliter = null)
+        {
+            var units = unitKdTree.GetNearestNeighbours(pos, 1, fliter);
+            if (units.Length > 0)
+                return units[0].Value;
+            return null;
+        }
     }
 }

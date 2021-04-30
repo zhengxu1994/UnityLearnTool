@@ -40,6 +40,7 @@ namespace RVO
      */
     internal class Agent
     {
+        internal HashSet<int> ignoreAgents_ = new HashSet<int>();
         internal IList<KeyValuePair<FP, Agent>> agentNeighbors_ = new List<KeyValuePair<FP, Agent>>();
         internal IList<KeyValuePair<FP, Obstacle>> obstacleNeighbors_ = new List<KeyValuePair<FP, Obstacle>>();
         internal IList<Line> orcaLines_ = new List<Line>();
@@ -431,7 +432,7 @@ namespace RVO
          */
         internal void insertAgentNeighbor(Agent agent, ref FP rangeSq)
         {
-            if (this != agent)
+            if (this != agent && !ignoreAgents_.Contains(agent.id_))
             {
                 FP distSq = RVOMath.absSq(position_ - agent.position_);
 

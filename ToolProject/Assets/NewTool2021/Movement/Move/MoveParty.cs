@@ -6,7 +6,7 @@ namespace Movement
     public class MoveParty
     {
         public GameObject gameObject { get; set; }
-
+        public Action onSetReached;
         TSVector2 _position;
 
         public TSVector2 position
@@ -36,6 +36,7 @@ namespace Movement
                 {
                     _target = value;
                     reached = false;
+                    onSetReached?.Invoke();
                     var newDir = Calculater.GetDirByVector(_target - position);
                     if (newDir != dir || dir == -1)
                     {

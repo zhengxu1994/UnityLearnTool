@@ -177,6 +177,16 @@ namespace RVO
         {
             agents_[agentNo2indexDict_[agentNo]].reletionGroup_ = relation;
         }
+
+        public void addIgnoreAgent(int agentNo,int ignoreNo)
+        {
+            agents_[agentNo2indexDict_[agentNo]].ignoreAgents_.Add(ignoreNo);
+        }
+
+        public void removeIgnoreAgent(int agentNo,int ignoreNo)
+        {
+            agents_[agentNo2indexDict_[agentNo]].ignoreAgents_.Remove(ignoreNo);
+        }
         /**
          * <summary>Adds a new agent with default properties to the simulation.
          * </summary>
