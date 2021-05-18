@@ -187,3 +187,6 @@ ToolProject/Temp/UnityTempFile-ff4237bc777d94c7094992d13693c58d
 /ToolProject/Assembly-CSharp-Editor.csproj
 /ToolProject/Assembly-CSharp-Editor-firstpass.csproj
 /ToolProject/Assembly-CSharp-firstpass.csproj
+obj
+Packages
+Temp
