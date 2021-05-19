@@ -1,20 +1,10 @@
-﻿<Properties StartupConfiguration="{E9C14AE5-1D01-3179-C1CD-FA0858BD35C2}|">
+﻿<Properties StartupConfiguration="{867945B8-755C-27AE-7CE2-68A275B91FB5}|">
   <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="Assets/NewTool2021/Render/DrawMesh.cs" Line="3" Column="38" />
-    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="NewProject" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="NewTool2021" expanded="True">
-                <Node name="DataStructure" expanded="True" />
-                <Node name="Render" expanded="True">
-                  <Node name="DrawMesh.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
+            <Node name="Assets" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>
@@ -22,7 +12,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fa680576-48e2-4326-96c3-743e51c3e67a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a0eb0b97-a88c-4aef-990c-7d55a521cac7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
