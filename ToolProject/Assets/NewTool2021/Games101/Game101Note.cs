@@ -117,6 +117,44 @@ p = (p·u)u + (p·v)v +(p·w)w
  *                (-sino  coso) 
  * 
  * 
+ * 三维矩阵
  * 
- * 
+ * Rx = (1, 0 ,   0 , 0)
+ *      (0,coso,-sino 0)
+ *      (0,sino,coso, 0)
+ *      (0, 0,   0,   1) 
+ *      
+ * Ry = (coso,   0,  sino , 0)
+ *      (0,      1,    0  , 0)
+ *      (-sino,  0,  coso , 0)
+ *      (0,      0,   0   , 1) 
+ *      
+ *      
+ * Rz = (coso,   -sino , 0  , 0)
+ *      (sino,   coso  , 0  , 0)
+ *      (0,        0,    1  , 0)
+ *      (0,        0,    0  , 1) 
+ *      
+ *      
+ *R(n,a) =                      T         (0  , -nz , ny)
+ *        cos(a)I + (1-cos(a))nn + sin(a) (nz ,  0  ,-nx)
+ *                                        (-ny,  nx , 0 )
+ *                                        
+ *                                        
+ *Mview = Rview Tview 
+ *   Tview = [1 0 0 -xe]
+ *           [0 1 0 -ye]
+ *           [0 0 1 -ze]  平移矩阵
+ *           [0 0 0   1]
+ *     -1 
+ *   Rview = [Xg x t  Xt  X - g  0]
+ *           [Yg x t  Yt  Y - g  0]
+ *           [Zg x t  Zt  Z - g  0]
+ *           [0       0     0    1]
+ *           
+ *      逆矩阵 就是把行的值放到对应的列上
+ *   Rview = [Xg x t  Yg x t  Zg x t  0]
+ *           [Xt       Yt      Zt     0]
+ *           [X - g   Y-g    Z - g    0]
+ *           [0       0     0         1]
  */
