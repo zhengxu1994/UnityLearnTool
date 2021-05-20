@@ -147,5 +147,60 @@ namespace Movement
             FP b = p2.y + p1.y;
             C = (A * a + B * b) / 2;
         }
+
+        public static bool IsPointInSector(TSVector2 ownerPos,TSVector2 targetPos,TSVector2 forward,FP angle,FP dis)
+        {
+            if (TSVector2.Distance(ownerPos, targetPos) > dis) return false;
+            return IsPointInSectorAngle(ownerPos, targetPos, forward, angle, dis);
+        }
+
+        public static bool IsPointInSectorAngle(TSVector2 ownerPos,TSVector2 targetPos,TSVector2 forward,FP angle,FP dis)
+        {
+            FP dot = TSVector2.Dot(forward.normalized, (targetPos - ownerPos).normalized);
+            dot = TSMath.Clamp(dot, -1, 1);
+            return TSMath.Acos(dot) * TSMath.Rad2Deg < angle * 0.5f;
+        }
+
+        public static bool IsPointInMatrix(TSVector2 p1,TSVector2 p2,TSVector2 p3,TSVector2 p4,TSVector2 p)
+        {
+            return TSVector2.Dot(p - p1, p4 - p1) >= 0 && TSVector2.Dot(p - p1, p2 - p1) >= 0 &&
+                TSVector2.Dot(p - p3, p4 - p3) >= 0 && TSVector2.Dot(p - p3, p2 - p3) >= 0;
+        }
+
+        public static bool IsPointInRectangle(int rectWidth,int skillRange,TSVector2 toNormalized,TSVector2 ownerPixel,TSVector2 targetPixel)
+        {
+            RotateRect(rectWidth, skillRange, toNormalized, out TSVector2 a, out TSVector2 b, out TSVector2 c, out TSVector2 d);
+            a += ownerPixel;
+            b += ownerPixel;
+            c += ownerPixel;
+            d += ownerPixel;
+
+            if (!Calculater.IsPointInMatrix(a, b, c, d, targetPixel))
+                return true;
+            return false;
+        }
+
+        public static void RotateRect(int width,int length,TSVector2 to,out TSVector2 a,out TSVector2 b,out TSVector2 c,out TSVector2 d)
+        {
+            RotateRect(width, length, TSVector2.down, to, out a, out b, out c, out d);
+        }
+
+        public static void RotateRect(int width,int length,TSVector2 from,TSVector2 to, out TSVector2 a, out TSVector2 b, out TSVector2 c, out TSVector2 d)
+        {
+            var aa = new TSVector(-width / 2, 0, 0);
+            var bb = new TSVector(width / 2, 0, 0);
+            var cc = new TSVector(width / 2, -length, 0);
+            var dd = new TSVector(-width / 2, -length, 0);
+            TSQuaternion angle = TSQuaternion.FromToRotation(from.ToTSVector(), to.ToTSVector());
+            aa = angle * aa;
+            bb = angle * bb;
+            cc = angle * cc;
+            dd = angle * dd;
+
+            a = aa.ToTSVector2();
+            b = bb.ToTSVector2();
+            c = cc.ToTSVector2();
+            d = dd.ToTSVector2();
+        }
     }
 }

@@ -14,7 +14,8 @@ public class EntityAttr
     public int maxHp;
     public int atk;
     public int speed;
-    public int sex; // 0 男 1女 
+    public int sex; // 0 男 1女
+    public int skillRange;
 
     public static EntityAttr operator+(EntityAttr a,EntityAttr b)
     {

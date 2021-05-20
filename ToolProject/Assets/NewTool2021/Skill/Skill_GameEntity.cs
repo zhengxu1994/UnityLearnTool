@@ -7,4 +7,6 @@ public class Skill_GameEntity
     public TSVector2 pixel;
 
     public int id;
+
+    public Skill_GameEntityData data;
 }

@@ -116,8 +116,13 @@
     <Compile Include="Assets\NewTool2021\RenderQueue\RenderQueueTest.cs" />
     <Compile Include="Assets\NewTool2021\Skill\Choose\SkillChooseController.cs" />
     <Compile Include="Assets\NewTool2021\Skill\Choose\SkillChooseInterface.cs" />
+    <Compile Include="Assets\NewTool2021\Skill\SkillManager.cs" />
     <Compile Include="Assets\NewTool2021\Skill\Skill_GameEntity.cs" />
     <Compile Include="Assets\NewTool2021\Skill\Skill_GameEntityData.cs" />
+    <Compile Include="Assets\NewTool2021\Tool\LogTool.cs" />
+    <Compile Include="Assets\NewTool2021\Tool\MonSingleton.cs" />
+    <Compile Include="Assets\NewTool2021\Tool\Singleton.cs" />
+    <Compile Include="Assets\NewTool2021\Tool\ZConsole.cs" />
     <Compile Include="Assets\NewTool2021\TrueSync\Plugins\TrueSyncDll\Drawing.cs" />
     <Compile Include="Assets\NewTool2021\TrueSync\Plugins\TrueSyncDll\ICommunicator.cs" />
     <Compile Include="Assets\NewTool2021\TrueSync\Plugins\TrueSyncDll\IPhysicsManagerBase.cs" />
