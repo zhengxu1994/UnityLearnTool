@@ -135,6 +135,7 @@ namespace FairyGUI
         EventListener _onGearStop;
         EventListener _onFocusIn;
         EventListener _onFocusOut;
+        EventListener _onDispose;
 
         internal protected bool underConstruct;
         internal float _width;
@@ -1652,7 +1653,12 @@ namespace FairyGUI
         {
             get { return _disposed; }
         }
-
+        public EventListener onDispose
+        {
+            get {
+                return _onDispose??(_onDispose = new EventListener(this, "onDispose"));
+            }
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -1661,8 +1667,9 @@ namespace FairyGUI
             if (_disposed)
                 return;
 
-            _disposed = true;
+            DispatchEvent("onDispose", null);
 
+            _disposed = true;
             RemoveFromParent();
             RemoveEventListeners();
             relations.Dispose();
