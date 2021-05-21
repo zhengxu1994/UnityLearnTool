@@ -6,27 +6,30 @@ namespace ZFramework
     {
         protected static T instance = null;
 
-        public static T Inst()
+        public static T Inst
         {
-            if(instance == null)
+            get
             {
-                instance = FindObjectOfType<T>();
-                if(FindObjectsOfType<T>().Length > 1)
+                if (instance == null)
                 {
-                    Debug.LogError("More than 1");
-                    return instance;
+                    instance = FindObjectOfType<T>();
+                    if (FindObjectsOfType<T>().Length > 1)
+                    {
+                        Debug.LogError("More than 1");
+                        return instance;
+                    }
+                    if (instance == null)
+                    {
+                        string instanceName = typeof(T).Name;
+                        GameObject instanceGo = GameObject.Find(instanceName);
+                        if (instanceGo == null)
+                            instanceGo = new GameObject(instanceName);
+                        instance = instanceGo.AddComponent<T>();
+                        DontDestroyOnLoad(instanceGo);
+                    }
                 }
-                if(instance == null)
-                {
-                    string instanceName = typeof(T).Name;
-                    GameObject instanceGo =  GameObject.Find(instanceName);
-                    if (instanceGo == null)
-                        instanceGo = new GameObject(instanceName);
-                    instance = instanceGo.AddComponent<T>();
-                    DontDestroyOnLoad(instanceGo);
-                }
+                return instance;
             }
-            return instance;
         }
 
         protected virtual void OnDestroy()

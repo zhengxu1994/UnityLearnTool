@@ -116,9 +116,12 @@
     <Compile Include="Assets\NewTool2021\RenderQueue\RenderQueueTest.cs" />
     <Compile Include="Assets\NewTool2021\Skill\Choose\SkillChooseController.cs" />
     <Compile Include="Assets\NewTool2021\Skill\Choose\SkillChooseInterface.cs" />
+    <Compile Include="Assets\NewTool2021\Skill\EventTrigger.cs" />
     <Compile Include="Assets\NewTool2021\Skill\SkillManager.cs" />
     <Compile Include="Assets\NewTool2021\Skill\Skill_GameEntity.cs" />
     <Compile Include="Assets\NewTool2021\Skill\Skill_GameEntityData.cs" />
+    <Compile Include="Assets\NewTool2021\Skill\Trigger\Trigger.cs" />
+    <Compile Include="Assets\NewTool2021\Skill\Trigger\TriggerManager.cs" />
     <Compile Include="Assets\NewTool2021\Tool\LogTool.cs" />
     <Compile Include="Assets\NewTool2021\Tool\MonSingleton.cs" />
     <Compile Include="Assets\NewTool2021\Tool\Singleton.cs" />

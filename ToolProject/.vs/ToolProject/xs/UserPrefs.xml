@@ -1,17 +1,11 @@
 ﻿<Properties StartupConfiguration="{867945B8-755C-27AE-7CE2-68A275B91FB5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NewTool2021/TrueSync/TrueSync/Engine/Math/TSQuaternion.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NewTool2021/Tool/MonSingleton.cs">
     <Files>
-      <File FileName="Assets/NewTool2021/RenderQueue/RenderQueueTest.cs" Line="29" Column="46" />
-      <File FileName="Assets/NewTool2021/Skill/Skill_GameEntity.cs" Line="3" Column="14" />
-      <File FileName="Assets/NewTool2021/Skill/Skill_GameEntityData.cs" Line="3" Column="14" />
-      <File FileName="Assets/NewTool2021/Skill/Choose/SkillChooseInterface.cs" Line="154" Column="47" />
-      <File FileName="Assets/NewTool2021/Skill/Choose/SkillChooseController.cs" Line="17" Column="13" />
-      <File FileName="Assets/NewTool2021/Skill/SkillManager.cs" Line="16" Column="1" />
-      <File FileName="Assets/NewTool2021/Tool/Singleton.cs" Line="7" Column="27" />
-      <File FileName="Assets/NewTool2021/Tool/MonSingleton.cs" Line="1" Column="1" />
-      <File FileName="Assets/NewTool2021/Movement/Move/Calculater.cs" Line="186" Column="40" />
-      <File FileName="Assets/NewTool2021/TrueSync/TrueSync/Engine/Math/TSVector2.cs" Line="247" Column="43" />
-      <File FileName="Assets/NewTool2021/TrueSync/TrueSync/Engine/Math/TSQuaternion.cs" Line="29" Column="19" />
+      <File FileName="Assets/NewTool2021/Skill/Trigger/Trigger.cs" Line="62" Column="30" />
+      <File FileName="Assets/NewTool2021/Skill/EventTrigger.cs" Line="6" Column="30" />
+      <File FileName="Assets/NewTool2021/Skill/Trigger/TriggerManager.cs" Line="26" Column="34" />
+      <File FileName="Assets/NewTool2021/Tool/Singleton.cs" Line="23" Column="33" />
+      <File FileName="Assets/NewTool2021/Tool/MonSingleton.cs" Line="31" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,14 +19,15 @@
                 <Node name="RenderQueue" expanded="True" />
                 <Node name="Skill" expanded="True">
                   <Node name="Choose" expanded="True" />
+                  <Node name="Trigger" expanded="True" />
                 </Node>
-                <Node name="Tool" expanded="True" />
+                <Node name="Tool" expanded="True">
+                  <Node name="MonSingleton.cs" selected="True" />
+                </Node>
                 <Node name="TrueSync" expanded="True">
                   <Node name="TrueSync" expanded="True">
                     <Node name="Engine" expanded="True">
-                      <Node name="Math" expanded="True">
-                        <Node name="TSQuaternion.cs" selected="True" />
-                      </Node>
+                      <Node name="Math" expanded="True" />
                     </Node>
                   </Node>
                 </Node>

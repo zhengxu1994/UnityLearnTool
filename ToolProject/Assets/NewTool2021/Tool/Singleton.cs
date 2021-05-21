@@ -12,13 +12,16 @@ namespace ZFramework
 
         }
 
-        public static T Inst()
+        public static T Inst
         {
-            if(instance == null)
+            get
             {
-                instance = Activator.CreateInstance(typeof(T)) as T;
+                if (instance == null)
+                {
+                    instance = Activator.CreateInstance(typeof(T)) as T;
+                }
+                return instance;
             }
-            return instance;
         }
     }
 }
