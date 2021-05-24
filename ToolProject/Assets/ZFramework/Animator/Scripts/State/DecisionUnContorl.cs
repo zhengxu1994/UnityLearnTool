@@ -45,6 +45,7 @@ namespace ZFramework.FSM
             entity.canAttack = false;
             entity.attacking = false;
             entity.chanting = false;
+            entity.canChanting = false;
         }
     }
 }

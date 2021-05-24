@@ -12,6 +12,7 @@ namespace ZFramework.FSM
         public bool isMoving;
         public bool isControl;
         public bool chanting;
+        public bool canChanting;
         public bool canAttack;
         public bool attacking;
         public Dictionary<AbnormalState, List<int>> abnormalStates = new Dictionary<AbnormalState, List<int>>();
@@ -29,6 +30,11 @@ namespace ZFramework.FSM
         public TrueSync.FP atkDis;
 
         public bool dieImmediately = false;
+
+        public void RandomMove()
+        {
+            
+        }
     }
 
     public enum AbnormalState

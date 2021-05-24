@@ -44,6 +44,7 @@ namespace ZFramework.FSM
             entity.isMoving = false;
             entity.canMove = false;
             entity.chanting = false;
+            entity.canChanting = false;
             entity.atkTarget = null;
         }
     }

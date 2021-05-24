@@ -1,11 +1,12 @@
 ﻿using System;
-using UnityEngine;
-
 namespace ZFramework.FSM
 {
-    public class DecisionAttack : DecisionFSMState
+    /// <summary>
+    /// 嘲讽
+    /// </summary>
+    public class DecisionBeSneered : DecisionFSMState
     {
-        public DecisionAttack(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
+        public DecisionBeSneered(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
         {
 
         }
@@ -13,6 +14,11 @@ namespace ZFramework.FSM
         public override bool Reason()
         {
             if (!base.Reason()) return false;
+            if (!entity.alive || !entity.abnormalStates.ContainsKey(AbnormalState.BeSneered))
+            {
+                fsm.PerformTransId(TransId.DecisionUnControl);
+                return false;
+            }
             return true;
         }
 
