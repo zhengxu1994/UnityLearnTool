@@ -105,6 +105,9 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="ILRuntime">
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/ILRuntime.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
@@ -296,6 +299,15 @@
     </Reference>
     <Reference Include="TexturePackerImporter">
       <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Assets/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
+    </Reference>
+    <Reference Include="ILRuntime.Mono.Cecil">
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="ILRuntime.Mono.Cecil.Pdb">
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="ILRuntime.Mono.Cecil.Mdb">
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

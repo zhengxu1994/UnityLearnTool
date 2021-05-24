@@ -1,5 +1,7 @@
 fileFormatVersion: 2
-guid: ea8a1a6962677e54e89e8039b0c7cfa0
+guid: 81e672ecd28fa472cb41b0ba3ea4d3bb
+timeCreated: 1539658189
+licenseType: Free
 IHVImageFormatImporter:
   externalObjects: {}
   textureSettings:
@@ -7,13 +9,11 @@ IHVImageFormatImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   isReadable: 0
   sRGBTexture: 1
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

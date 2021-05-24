@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 56076892dcd4b4bdaa78c5c3f39a4dce
+guid: 27dd1920080cb46ffafe705234e48d87
 ShaderImporter:
   externalObjects: {}
   defaultTextures: []
   nonModifiableTextures: []
   userData: 
-  assetBundleName: shader/yl_alpha_blend.bundle
+  assetBundleName: effect/shader.bundle
   assetBundleVariant: 

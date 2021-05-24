@@ -75,13 +75,6 @@
     <Compile Include="Assets\Editor\ExportResourceOld\ExportResourceSprite.cs" />
     <Compile Include="Assets\Editor\ExportResourceOld\ExportResourceSpriteSheet.cs" />
     <Compile Include="Assets\Editor\ExportResourceOld\TexturePackerImporter.cs" />
-    <Compile Include="Assets\NewTool2021\Editor\ResourcesChecker.cs" />
-    <Compile Include="Assets\NewTool2021\TrueSync\TrueSync\Unity\Editor\MenuContext.cs" />
-    <Compile Include="Assets\NewTool2021\TrueSync\TrueSync\Unity\Editor\TSFPDrawer.cs" />
-    <Compile Include="Assets\NewTool2021\TrueSync\TrueSync\Unity\Editor\TSRigidBodyEditor.cs" />
-    <Compile Include="Assets\NewTool2021\TrueSync\TrueSync\Unity\Editor\TSVector2Drawer.cs" />
-    <Compile Include="Assets\NewTool2021\TrueSync\TrueSync\Unity\Editor\TSVectorDrawer.cs" />
-    <Compile Include="Assets\NewTool2021\TrueSync\TrueSync\Unity\Editor\TrueSyncConfigEditor.cs" />
     <Compile Include="Assets\PluginTools\ShaderForge\Editor\Code\SFPSC_Blending.cs" />
     <Compile Include="Assets\PluginTools\ShaderForge\Editor\Code\SFPSC_Console.cs" />
     <Compile Include="Assets\PluginTools\ShaderForge\Editor\Code\SFPSC_Experimental.cs" />
@@ -278,8 +271,15 @@
     <Compile Include="Assets\PluginTools\ShaderForge\Editor\Code\_Utility\SerializableDictionary.cs" />
     <Compile Include="Assets\PluginTools\ShaderForge\Editor\InternalResources\Inspectors\ShaderForgeInspector.cs" />
     <Compile Include="Assets\PluginTools\ShaderForge\Editor\InternalResources\Inspectors\ShaderForgeMaterialInspector.cs" />
-    <Compile Include="Assets\ShaderlabVSCode\Editor\ShaderlabVSCodeEditor.cs" />
-    <Compile Include="Assets\ShaderlabVSCode\Editor\VSCodeBridge.cs" />
+    <Compile Include="Assets\PluginTools\ShaderlabVSCode\Editor\ShaderlabVSCodeEditor.cs" />
+    <Compile Include="Assets\PluginTools\ShaderlabVSCode\Editor\VSCodeBridge.cs" />
+    <Compile Include="Assets\ZFramework\Editor\ResourcesChecker.cs" />
+    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\Editor\MenuContext.cs" />
+    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\Editor\TSFPDrawer.cs" />
+    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\Editor\TSRigidBodyEditor.cs" />
+    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\Editor\TSVector2Drawer.cs" />
+    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\Editor\TSVectorDrawer.cs" />
+    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\Editor\TrueSyncConfigEditor.cs" />
     <Compile Include="Assets\codeandweb.com\Editor\UIImageSetSizeAndPivot.cs" />
     <None Include="Assets\PluginTools\ShaderForge\Editor\InternalResources\GPU Rendering\SFN_ArcTan2\SFN_ArcTan2_NPTP.shader" />
     <None Include="Assets\PluginTools\ShaderForge\Editor\InternalResources\GPU Rendering\SFN_Dot\SFN_Dot_ABS.shader" />
@@ -502,6 +502,9 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="ILRuntime">
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/ILRuntime.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
@@ -693,6 +696,15 @@
     </Reference>
     <Reference Include="TexturePackerImporter">
       <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Assets/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
+    </Reference>
+    <Reference Include="ILRuntime.Mono.Cecil">
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="ILRuntime.Mono.Cecil.Pdb">
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="ILRuntime.Mono.Cecil.Mdb">
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

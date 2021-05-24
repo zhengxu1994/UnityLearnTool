@@ -1,40 +1,19 @@
 ﻿<Properties StartupConfiguration="{867945B8-755C-27AE-7CE2-68A275B91FB5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/FGUI/Scripts/UI/GObject.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ZFramework/Animator/Scripts/State/DecisionIdle.cs">
     <Files>
-      <File FileName="Assets/NewTool2021/Skill/Trigger/Trigger.cs" Line="10" Column="15" />
-      <File FileName="Assets/NewTool2021/Skill/EventTrigger.cs" />
-      <File FileName="Assets/NewTool2021/Skill/Trigger/TriggerManager.cs" />
-      <File FileName="Assets/NewTool2021/Tool/Singleton.cs" />
-      <File FileName="Assets/NewTool2021/Tool/MonSingleton.cs" />
-      <File FileName="Assets/NewTool2021/Tool/Timer.cs" Line="6" Column="8" />
-      <File FileName="Assets/NewTool2021/Tool/GameMain.cs" Line="42" Column="18" />
-      <File FileName="Assets/NewTool2021/Tool/UITimer.cs" Line="49" Column="41" />
-      <File FileName="Assets/Plugins/FGUI/Scripts/UI/GObject.cs" Line="7" Column="18" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionMove.cs" Line="1" Column="1" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionIdle.cs" Line="10" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ToolProject" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="NewTool2021" expanded="True">
-                <Node name="RenderQueue" expanded="True" />
-                <Node name="Skill" expanded="True">
-                  <Node name="Trigger" expanded="True" />
-                </Node>
-                <Node name="Tool" expanded="True" />
-                <Node name="TrueSync" expanded="True">
-                  <Node name="TrueSync" expanded="True">
-                    <Node name="Engine" expanded="True">
-                      <Node name="Math" expanded="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="Plugins" expanded="True">
-                <Node name="FGUI" expanded="True">
+              <Node name="ZFramework" expanded="True">
+                <Node name="Animator" expanded="True">
                   <Node name="Scripts" expanded="True">
-                    <Node name="UI" expanded="True">
-                      <Node name="GObject.cs" selected="True" />
+                    <Node name="State" expanded="True">
+                      <Node name="DecisionIdle.cs" selected="True" />
                     </Node>
                   </Node>
                 </Node>
@@ -47,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a0eb0b97-a88c-4aef-990c-7d55a521cac7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c7e533fc-59a4-4e06-bf38-90dd3a6e94b1" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
