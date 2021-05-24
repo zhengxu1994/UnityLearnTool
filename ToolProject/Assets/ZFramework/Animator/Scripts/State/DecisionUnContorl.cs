@@ -11,7 +11,18 @@ namespace ZFramework.FSM
 
         public override bool Reason()
         {
-            return base.Reason();
+            if (!base.Reason()) return false;
+            if(!entity.alive)
+            {
+                fsm.PerformTransId(TransId.DecisionDie);
+                return false;
+            }
+            if(!entity.isControl)
+            {
+                fsm.PerformTransId(TransId.DecisionIdle);
+                return false;
+            }
+            return true;
         }
 
         public override void Action()
@@ -21,12 +32,19 @@ namespace ZFramework.FSM
 
         public override void DoBeforeLeaving()
         {
-            base.DoBeforeLeaving();
+            LogTool.LogError("又可以动了");
+            entity.canMove = true;
+            entity.canAttack = true;
         }
 
         public override void DoBeforeEntering()
         {
-            base.DoBeforeEntering();
+            LogTool.LogError("受到了控制，动不了了");
+            entity.canMove = false;
+            entity.isMoving = false;
+            entity.canAttack = false;
+            entity.attacking = false;
+            entity.chanting = false;
         }
     }
 }

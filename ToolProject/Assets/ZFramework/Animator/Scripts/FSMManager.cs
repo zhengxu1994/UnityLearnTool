@@ -9,11 +9,26 @@ namespace ZFramework.FSM
         public int id;
         public bool alive;
         public bool canMove;
-
         public bool isMoving;
-        public List<AbnormalState> abnormalStates =new List<AbnormalState>();
+        public bool isControl;
+        public bool chanting;
+        public bool canAttack;
+        public bool attacking;
+        public Dictionary<AbnormalState, List<int>> abnormalStates = new Dictionary<AbnormalState, List<int>>();
+
+        public int hp;
 
         public GameObject obj;
+
+        public bool hasChantSkill;
+
+        public FSMEntity atkTarget;
+
+        public TrueSync.TSVector2 pos;
+
+        public TrueSync.FP atkDis;
+
+        public bool dieImmediately = false;
     }
 
     public enum AbnormalState
@@ -46,6 +61,32 @@ namespace ZFramework.FSM
 
     public class FSMManager : Singleton<FSMManager>
     {
+        /// <summary>
+        /// 移动状态下 影响内部逻辑处理的特殊状态
+        /// </summary>
+        public List<AbnormalState> effectMoveAbState = new List<AbnormalState>() {
+            AbnormalState.RejectMove,
+            AbnormalState.Chaos,
+        };
+        /// <summary>
+        /// 影响控制的特殊状态
+        /// </summary>
+        public List<AbnormalState> effectControlState = new List<AbnormalState>() {
+            AbnormalState.Dizzy,
+        };
+        /// <summary>
+        /// 在攻击状态下影响内部逻辑处理的状态
+        /// </summary>
+        public List<AbnormalState> effectAttackState = new List<AbnormalState>() {
+            AbnormalState.BeSneered,
+        };
+        /// <summary>
+        /// 影响施法的特殊状态
+        /// </summary>
+        public List<AbnormalState> effectChantState = new List<AbnormalState>() {
+            AbnormalState.Silent
+        };
+
         public Dictionary<int,DecisionFSM> fsms = new Dictionary<int,DecisionFSM>();
 
         public bool pause = false;

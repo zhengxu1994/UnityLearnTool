@@ -14,22 +14,53 @@ namespace ZFramework.FSM
         {
             if (!base.Reason()) return false;
             //死亡优先级最高
+            if(!entity.alive)
+            {
+                fsm.PerformTransId(TransId.DecisionDie);
+                return false;
+            }
+            //受控制次优先级
+            if(entity.isControl)
+            {
+                //什么事情都不能做
+                fsm.PerformTransId(TransId.DecisionUnControl);
+                return false;
+            }
+            if(entity.chanting)
+            {
+                fsm.PerformTransId(TransId.DecisionChant);
+                return false;
+            }
+            if (entity.isMoving && entity.canMove)
+            {
+                fsm.PerformTransId(TransId.DecisionMove);
+                return true;
+            }
+            if(entity.attacking)
+            {
+                fsm.PerformTransId(TransId.DecisionAttack);
+                return false;
+            }
             return true;
         }
 
         public override void Action()
         {
-            base.Action();
+            //搜索目标
+            if (entity.atkTarget == null)
+                DecisionTool.Inst.SearchAtkTarget(entity);
         }
 
         public override void DoBeforeEntering()
         {
             //切换到待机动画
+            LogTool.Log("切换待机状态");
         }
 
         public override void DoBeforeLeaving()
         {
             //
+            LogTool.Log("离开待机状态");
         }
     }
 }

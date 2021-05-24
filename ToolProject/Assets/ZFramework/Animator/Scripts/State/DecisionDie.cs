@@ -11,22 +11,40 @@ namespace ZFramework.FSM
 
         public override bool Reason()
         {
-            return base.Reason();
+            if (!base.Reason()) return false; ;
+            if(entity.alive)
+            {
+                fsm.PerformTransId(TransId.DecisionIdle);
+                return false;
+            }
+            if(entity.dieImmediately == false)
+            {
+                fsm.PerformTransId(TransId.DecisionNearDie);
+                return false;
+            }
+            return true;
         }
 
         public override void Action()
         {
-            base.Action();
+            //处理死亡逻辑
+            //播放死亡动画
+            LogTool.LogError("这把真的挂了");
         }
 
         public override void DoBeforeLeaving()
         {
-            base.DoBeforeLeaving();
+            entity.canMove = entity.canAttack = true;
         }
 
         public override void DoBeforeEntering()
         {
-            base.DoBeforeEntering();
+            entity.canAttack = false;
+            entity.attacking = false;
+            entity.isMoving = false;
+            entity.canMove = false;
+            entity.chanting = false;
+            entity.atkTarget = null;
         }
     }
 }

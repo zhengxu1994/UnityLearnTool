@@ -34,8 +34,12 @@ namespace ZFramework.FSM
             unControlState.AddTransId(TransId.DecisionDie, StateID.DecisionDie);
             unControlState.AddTransId(TransId.DecisionIdle, StateID.DecisionIdle);
 
+            DecisionNearDie nearDieState = new DecisionNearDie(fsm, entity);
+            nearDieState.AddTransId(TransId.DecisionDie, StateID.DecisionDie);
+
             DecisionDie dieState = new DecisionDie(fsm, entity);
             dieState.AddTransId(TransId.DecisionDie, StateID.DecisionDie);
+            dieState.AddTransId(TransId.DecisionNearDie, StateID.DecisionNearDie);
             return fsm;
         }
     }
@@ -50,6 +54,7 @@ namespace ZFramework.FSM
         DecisionForceAttack,
         DecisionUnControl,
         DecisionChant,
+        DecisionNearDie,
         DecisionDie
     }
 
@@ -62,6 +67,7 @@ namespace ZFramework.FSM
         DecisionForceAttack,
         DecisionUnControl,
         DecisionChant,
+        DecisionNearDie,
         DecisionDie
     }
 }

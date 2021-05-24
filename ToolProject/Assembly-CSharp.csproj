@@ -69,6 +69,7 @@
     <Compile Include="Assets\PluginTools\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\DecisionFSM.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\DecisionFSMState.cs" />
+    <Compile Include="Assets\ZFramework\Animator\Scripts\DecisionTool.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\FSMManager.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\FSMState.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\FSMSystem.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionIdle.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionMove.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionUnContorl.cs" />
+    <Compile Include="Assets\ZFramework\Animator\Scripts\State\SecondState\DecisionNearDie.cs" />
     <Compile Include="Assets\ZFramework\CatCooking\Base\Jobs\Jobs.cs" />
     <Compile Include="Assets\ZFramework\CatCooking\Base\Organic-Variety\OrganicVariety.cs" />
     <Compile Include="Assets\ZFramework\Data\LocalStore.cs" />
