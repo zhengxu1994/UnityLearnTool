@@ -30,7 +30,7 @@ namespace ZFramework.FSM
             chantState.AddTransId(TransId.DecisionDie, StateID.DecisionDie);
             chantState.AddTransId(TransId.DecisionIdle, StateID.DecisionIdle);
 
-            DecisionUnControl unControlState = new DecisionUnControl(fsm, entity);
+            DecisionAbnormalState unControlState = new DecisionAbnormalState(fsm, entity);
             unControlState.AddTransId(TransId.DecisionDie, StateID.DecisionDie);
             unControlState.AddTransId(TransId.DecisionIdle, StateID.DecisionIdle);
 

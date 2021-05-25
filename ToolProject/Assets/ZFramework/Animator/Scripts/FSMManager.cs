@@ -8,13 +8,17 @@ namespace ZFramework.FSM
     {
         public int id;
         public bool alive;
-        public bool canMove;
-        public bool isMoving;
-        public bool isControl;
-        public bool chanting;
-        public bool canChanting;
-        public bool canAttack;
-        public bool attacking;
+        public bool canMove;//可以移动
+        public bool canChanting;//可以释放
+        public bool canAttack;//可以攻击
+
+        public bool isControl;//受到控制
+
+        public bool isMoving;//正在移动中
+        public bool chanting;//正在施法中
+        public bool attacking;//正在攻击中
+
+        public int camp = -1;
         public Dictionary<AbnormalState, List<int>> abnormalStates = new Dictionary<AbnormalState, List<int>>();
 
         public int hp;
@@ -31,10 +35,19 @@ namespace ZFramework.FSM
 
         public bool dieImmediately = false;
 
+        public MoveOperation moveOperation;
+
         public void RandomMove()
         {
             
         }
+    }
+
+    public class MoveOperation
+    {
+        public TrueSync.TSVector2 targetPos;
+
+        public bool force = false;
     }
 
     public enum AbnormalState
@@ -94,7 +107,9 @@ namespace ZFramework.FSM
         };
 
         public Dictionary<int,DecisionFSM> fsms = new Dictionary<int,DecisionFSM>();
-
+        public Dictionary<int, FSMEntity> entities = new Dictionary<int, FSMEntity>();
+        public HashSet<int> players = new HashSet<int>();
+        public HashSet<int> enemies = new HashSet<int>();
         public bool pause = false;
 
         public void AddFSM(int id,DecisionFSM fsm)
@@ -103,7 +118,31 @@ namespace ZFramework.FSM
             fsms.Add(id, fsm);  
         }
 
-        public void RemoveFSM(int id, DecisionFSM  fsm)
+        public void AddEntity(FSMEntity entity)
+        {
+            if (!entities.ContainsKey(entity.id))
+            {
+                entities.Add(entity.id, entity);
+                if (entity.camp == 1)
+                    players.Add(entity.id);
+                else
+                    enemies.Add(entity.id);
+            }
+        }
+
+        public void RemoveEntity(FSMEntity entity)
+        {
+            if (entities.ContainsKey(entity.id))
+            {
+                entities.Remove(entity.id);
+                if (entity.camp == 1)
+                    players.Remove(entity.id);
+                else
+                    enemies.Remove(entity.id);
+            }
+        }
+
+        public void RemoveFSM(int id, DecisionFSM fsm)
         {
             if(fsms.ContainsKey(id))
                 fsms.Remove(id);
@@ -116,6 +155,7 @@ namespace ZFramework.FSM
             {
                 fsm.Value.Run();
             }
+            DecisionTool.Inst.CheckUpdate(entities);
         }
     }
 }

@@ -5,14 +5,14 @@ namespace ZFramework.FSM
 {
     public class DecisionTool : Singleton<DecisionTool>
     {
-        public void CheckUpdate(List<FSMEntity> entities)
+        public void CheckUpdate(Dictionary<int,FSMEntity> entities)
         {
             if (entities == null || entities.Count <= 0) return;
             FSMEntity tempEntity = null;
             //Check State Condition
-            for (int i = 0; i < entities.Count; i++)
+            foreach (var temp in entities)
             {
-                tempEntity = entities[i];
+                tempEntity = temp.Value;
                 //首先检测死亡
                 if (CheckDeath(tempEntity)) continue;
                 //检测控制
@@ -55,7 +55,7 @@ namespace ZFramework.FSM
         {
             if (entity.abnormalStates.ContainsKey(AbnormalState.Dizzy) ||
                 entity.abnormalStates.ContainsKey(AbnormalState.RejectMove) ||
-                entity.abnormalStates.ContainsKey(AbnormalState.Chaos)||
+                entity.abnormalStates.ContainsKey(AbnormalState.Chaos) ||
                 entity.abnormalStates.ContainsKey(AbnormalState.BeSneered))
                 entity.isControl = true;
             else
@@ -66,25 +66,45 @@ namespace ZFramework.FSM
         public void CheckChant(FSMEntity entity)
         {
             entity.chanting =  entity.hasChantSkill;
+            if(entity.chanting)
+            {
+                entity.attacking = false;
+                entity.isMoving = false;
+            }
         }
 
         public void CheckMove(FSMEntity entity)
         {
             if (entity.abnormalStates.ContainsKey(AbnormalState.RejectMove))
             {
-                entity.isMoving = false;
                 entity.canMove = false;
+                entity.isMoving = false;
+            }
+            else if (entity.moveOperation != null)
+            {
+                entity.canMove = true;
+                entity.isMoving = true;
+            }
+            else if(entity.moveOperation == null)
+            {
+                entity.isMoving = false;
             }
         }
 
         public void CheckAttack(FSMEntity entity)
         {
-            if (entity.atkTarget != null && TSVector2.DistanceSquared(entity.pos, entity.atkTarget.pos) <= entity.atkDis)
+            if (entity.atkTarget != null && TSVector2.DistanceSquared(entity.pos, entity.atkTarget.pos) <= entity.atkDis * entity.atkDis
+                && (entity.moveOperation == null || !entity.moveOperation.force))
             {
+                //在攻击范围内 并且 没有强制移动的指令
+                entity.canAttack = true;
                 entity.attacking = true;
+                entity.isMoving = false;
             }
             else
+            {
                 entity.attacking = false;
+            }
         }
 
 

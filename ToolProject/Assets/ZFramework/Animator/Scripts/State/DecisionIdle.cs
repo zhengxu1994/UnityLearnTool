@@ -34,9 +34,9 @@ namespace ZFramework.FSM
             if (entity.isMoving && entity.canMove)
             {
                 fsm.PerformTransId(TransId.DecisionMove);
-                return true;
+                return false;
             }
-            if(entity.attacking)
+            if(entity.canAttack && entity.attacking)
             {
                 fsm.PerformTransId(TransId.DecisionAttack);
                 return false;

@@ -73,15 +73,13 @@
     <Compile Include="Assets\ZFramework\Animator\Scripts\FSMManager.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\FSMState.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\FSMSystem.cs" />
+    <Compile Include="Assets\ZFramework\Animator\Scripts\FSMTest.cs" />
+    <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionAbnormalState.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionAttack.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionChant.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionDie.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionIdle.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionMove.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionUnContorl.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\State\SecondState\DecisionBeSneered.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\State\SecondState\DecisionChaos.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\State\SecondState\DecisionDizzy.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\State\SecondState\DecisionNearDie.cs" />
     <Compile Include="Assets\ZFramework\CatCooking\Base\Jobs\Jobs.cs" />
     <Compile Include="Assets\ZFramework\CatCooking\Base\Organic-Variety\OrganicVariety.cs" />

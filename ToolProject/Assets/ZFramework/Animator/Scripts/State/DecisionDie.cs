@@ -34,17 +34,17 @@ namespace ZFramework.FSM
 
         public override void DoBeforeLeaving()
         {
-            entity.canMove = entity.canAttack = true;
+            entity.canMove = entity.canAttack = entity.canChanting = true;
         }
 
         public override void DoBeforeEntering()
         {
             entity.canAttack = false;
+            entity.canMove = false;
+            entity.canChanting = false;
             entity.attacking = false;
             entity.isMoving = false;
-            entity.canMove = false;
             entity.chanting = false;
-            entity.canChanting = false;
             entity.atkTarget = null;
         }
     }

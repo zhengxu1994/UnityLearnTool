@@ -2,9 +2,9 @@
 using UnityEngine;
 namespace ZFramework.FSM
 {
-    public class DecisionUnControl : DecisionFSMState
+    public class DecisionAbnormalState : DecisionFSMState
     {
-        public DecisionUnControl(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
+        public DecisionAbnormalState(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
         {
 
         }
@@ -27,25 +27,17 @@ namespace ZFramework.FSM
 
         public override void Action()
         {
-            base.Action();
+            //各种异常状态处理，存在优先级和混合
         }
 
         public override void DoBeforeLeaving()
         {
-            LogTool.LogError("又可以动了");
-            entity.canMove = true;
-            entity.canAttack = true;
+            LogTool.LogError("异常解除");
         }
 
         public override void DoBeforeEntering()
         {
-            LogTool.LogError("受到了控制，动不了了");
-            entity.canMove = false;
-            entity.isMoving = false;
-            entity.canAttack = false;
-            entity.attacking = false;
-            entity.chanting = false;
-            entity.canChanting = false;
+            LogTool.LogError("受到了异常状态");
         }
     }
 }

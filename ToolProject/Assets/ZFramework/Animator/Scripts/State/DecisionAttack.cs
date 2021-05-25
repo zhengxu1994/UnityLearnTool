@@ -13,22 +13,27 @@ namespace ZFramework.FSM
         public override bool Reason()
         {
             if (!base.Reason()) return false;
+            if(!entity.alive ||entity.isControl || entity.isMoving)
+            {
+                fsm.PerformTransId(TransId.DecisionIdle);
+                return false;
+            }
             return true;
         }
 
         public override void Action()
         {
-            base.Action();
+           
         }
 
         public override void DoBeforeLeaving()
         {
-            base.DoBeforeLeaving();
+
         }
 
         public override void DoBeforeEntering()
         {
-            base.DoBeforeEntering();
+
         }
     }
 }
