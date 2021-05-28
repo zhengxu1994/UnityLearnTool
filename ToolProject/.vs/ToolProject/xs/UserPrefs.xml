@@ -1,16 +1,13 @@
 ﻿<Properties StartupConfiguration="{867945B8-755C-27AE-7CE2-68A275B91FB5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ZFramework/Animator/Scripts/FSMTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ZFramework/Animator/Scripts/State/DecisionIdle.cs">
     <Files>
-      <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionAttack.cs" Line="18" Column="58" />
-      <File FileName="Assets/ZFramework/Animator/Scripts/FSMManager.cs" Line="79" Column="28" />
-      <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionIdle.cs" Line="51" Column="59" />
-      <File FileName="Assets/ZFramework/Animator/Scripts/DecisionTool.cs" Line="8" Column="32" />
-      <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionUnContorl.cs" Line="30" Column="32" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionIdle.cs" Line="37" Column="1" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/FSMSystem.cs" Line="58" Column="1" />
       <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionMove.cs" Line="35" Column="46" />
-      <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionDie.cs" Line="44" Column="40" />
-      <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionChant.cs" Line="40" Column="1" />
-      <File FileName="Assets/ZFramework/Animator/Scripts/DecisionFSM.cs" Line="6" Column="25" />
-      <File FileName="Assets/ZFramework/Animator/Scripts/FSMTest.cs" Line="10" Column="18" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/DecisionTool.cs" Line="112" Column="21" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/DecisionFSM.cs" Line="1" Column="1" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/DecisionFSMState.cs" Line="1" Column="1" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/FSMManager.cs" Line="171" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,9 +17,14 @@
               <Node name="ZFramework" expanded="True">
                 <Node name="Animator" expanded="True">
                   <Node name="Scripts" expanded="True">
-                    <Node name="FSMTest.cs" selected="True" />
+                    <Node name="State" expanded="True">
+                      <Node name="SecondState" expanded="True" />
+                      <Node name="DecisionIdle.cs" selected="True" />
+                    </Node>
                   </Node>
                 </Node>
+                <Node name="Pool" expanded="True" />
+                <Node name="Tool" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -32,9 +34,11 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="229282b7-a243-48eb-b479-a2cbafa3c832" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0cf6ea84-2bbd-4b3f-8d7a-11c4119cc05a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Assets/ZFramework/Animator/Scripts/FSMSystem.cs" relfile="Assets/ZFramework/Animator/Scripts/FSMSystem.cs" line="43" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

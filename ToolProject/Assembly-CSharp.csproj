@@ -67,6 +67,7 @@
     <Compile Include="Assets\PluginTools\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\PluginTools\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\PluginTools\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
+    <Compile Include="Assets\TestCls.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\DecisionFSM.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\DecisionFSMState.cs" />
     <Compile Include="Assets\ZFramework\Animator\Scripts\DecisionTool.cs" />

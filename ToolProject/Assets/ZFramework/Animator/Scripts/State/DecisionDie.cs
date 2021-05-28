@@ -6,7 +6,7 @@ namespace ZFramework.FSM
     {
         public DecisionDie(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
         {
-
+            stateID = StateID.DecisionDie;
         }
 
         public override bool Reason()

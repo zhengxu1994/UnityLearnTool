@@ -53,10 +53,10 @@ namespace ZFramework.FSM
         /// <returns></returns>
         public bool CheckUnControl(FSMEntity entity)
         {
-            if (entity.abnormalStates.ContainsKey(AbnormalState.Dizzy) ||
-                entity.abnormalStates.ContainsKey(AbnormalState.RejectMove) ||
-                entity.abnormalStates.ContainsKey(AbnormalState.Chaos) ||
-                entity.abnormalStates.ContainsKey(AbnormalState.BeSneered))
+            if (entity.abnormalStates.Contains(AbnormalState.Dizzy) ||
+                entity.abnormalStates.Contains(AbnormalState.RejectMove) ||
+                entity.abnormalStates.Contains(AbnormalState.Chaos) ||
+                entity.abnormalStates.Contains(AbnormalState.BeSneered))
                 entity.isControl = true;
             else
                 entity.isControl = false;
@@ -75,14 +75,13 @@ namespace ZFramework.FSM
 
         public void CheckMove(FSMEntity entity)
         {
-            if (entity.abnormalStates.ContainsKey(AbnormalState.RejectMove))
+            if (entity.abnormalStates.Contains(AbnormalState.RejectMove))
             {
                 entity.canMove = false;
                 entity.isMoving = false;
             }
-            else if (entity.moveOperation != null)
+            else if (entity.moveOperation != null || entity.atkTarget != null) 
             {
-                entity.canMove = true;
                 entity.isMoving = true;
             }
             else if(entity.moveOperation == null)
@@ -93,8 +92,10 @@ namespace ZFramework.FSM
 
         public void CheckAttack(FSMEntity entity)
         {
-            if (entity.atkTarget != null && TSVector2.DistanceSquared(entity.pos, entity.atkTarget.pos) <= entity.atkDis * entity.atkDis
-                && (entity.moveOperation == null || !entity.moveOperation.force))
+            if (entity.atkTarget != null &&
+                TSVector2.DistanceSquared(entity.pos, entity.atkTarget.pos) <= entity.atkDis * entity.atkDis
+                && (entity.moveOperation == null
+                ||!entity.moveOperation.force))
             {
                 //在攻击范围内 并且 没有强制移动的指令
                 entity.canAttack = true;
@@ -110,17 +111,45 @@ namespace ZFramework.FSM
 
         public void SearchAtkTarget(FSMEntity entity)
         {
-
+            //强制移动就不需要搜索目标了
+            if (entity.moveOperation != null && entity.moveOperation.force) return;
+            //搜索攻击目标
+            int camp = entity.camp;
+            var targets = camp == 1 ? FSMManager.Inst.enemies : FSMManager.Inst.players;
+            if (targets.Count <= 0) return;
+            //搜索最近的目标
+            FSMEntity targetEntity = null;
+            FP minDis = FP.MaxValue;
+            foreach (var id in targets)
+            {
+                var tempEntity = FSMManager.Inst.entities[id];
+                FP dis = TSVector2.DistanceSquared(tempEntity.pos, entity.pos);
+                if (dis <= entity.searchDis * entity.searchDis && dis< minDis)
+                {
+                    targetEntity = tempEntity;
+                }
+            }
+            if(entity.atkTarget == null || entity.atkTarget != targetEntity)
+            {
+                entity.atkTarget = targetEntity;
+            }
         }
 
         public void AttackTarget(FSMEntity entity)
         {
-
+            
         }
 
         public void MoveToTarget(FSMEntity entity)
         {
-
+            //移动到目标处
+            if (entity.atkTarget == null) return;
+            var dir = (entity.atkTarget.pos - entity.pos).normalized;
+            var nextPos = entity.pos + dir * entity.moveSpeed * 0.01;
+            if (TrueSync.TSVector2.Dot(entity.atkTarget.pos - entity.pos, entity.atkTarget.pos - nextPos) > 0)
+                entity.pos = entity.atkTarget.pos;
+            else
+                entity.pos = nextPos;
         }
     }
 }

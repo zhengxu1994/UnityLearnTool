@@ -7,7 +7,7 @@ namespace ZFramework.FSM
     {
         public DecisionMove(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
         {
-
+            stateID = StateID.DecisionMove;
         }
 
         public override bool Reason()
@@ -19,7 +19,7 @@ namespace ZFramework.FSM
                 return false;
             }
             //受到控制 ，不能移动 ， 结束移动
-            if (!entity.isControl || !entity.canMove || !entity.isMoving)
+            if (entity.isControl || !entity.canMove || !entity.isMoving)
             {
                 fsm.PerformTransId(TransId.DecisionIdle);
                 return false;
@@ -37,12 +37,12 @@ namespace ZFramework.FSM
 
         public override void DoBeforeLeaving()
         {
-
+            LogTool.Log("离开移动状态");
         }
 
         public override void DoBeforeEntering()
         {
-
+            LogTool.Log("进入移动状态");
         }
     }
 }

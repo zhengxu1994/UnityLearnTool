@@ -6,7 +6,7 @@ namespace ZFramework.FSM
     {
         public DecisionChant(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
         {
-
+            stateID = StateID.DecisionChant;
         }
 
         public override bool Reason()

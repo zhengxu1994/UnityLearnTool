@@ -7,7 +7,7 @@ namespace ZFramework.FSM
     {
         public DecisionAttack(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
         {
-
+            stateID = StateID.DecisionAttack;
         }
 
         public override bool Reason()

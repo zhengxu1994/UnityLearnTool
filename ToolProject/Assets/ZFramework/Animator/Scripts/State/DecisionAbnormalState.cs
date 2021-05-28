@@ -6,7 +6,7 @@ namespace ZFramework.FSM
     {
         public DecisionAbnormalState(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
         {
-
+            stateID = StateID.DecisionUnControl;
         }
 
         public override bool Reason()

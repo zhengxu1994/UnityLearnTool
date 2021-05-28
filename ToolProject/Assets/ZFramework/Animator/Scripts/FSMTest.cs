@@ -11,6 +11,8 @@ namespace ZFramework.FSM
         public InputField skillTargerId;
         public InputField abnormalInput;
         public InputField campId;
+        public GameObject playerPrefab;
+        public GameObject enemyPrefab;
         private void Start()
         {
             fsmManager = FSMManager.Inst;
@@ -29,11 +31,12 @@ namespace ZFramework.FSM
             entity.atkDis = 5;
             entity.alive = true;
             entity.id = ++id;
-            entity.obj = new GameObject("Entity" + entity.id);
+            entity.camp = int.Parse(campId.text);
+            entity.obj = Instantiate(entity.camp == 1 ? playerPrefab : enemyPrefab);
+            entity.obj.name = "Entity" + id.ToString();
             entity.pos = new TrueSync.TSVector2(UnityEngine.Random.Range(-100, 100),
                 UnityEngine.Random.Range(-100, 100));
             entity.obj.transform.position = entity.pos.ToVector();
-            entity.camp = int.Parse(campId.text);
             DecisionFSM fsm = DecisionFSM.CreateDecisionFSM(entity);
             fsmManager.AddEntity(entity);
             fsmManager.AddFSM(entity.id,fsm);
@@ -45,6 +48,10 @@ namespace ZFramework.FSM
             int uerId = int.Parse(skillUserId.text);
             int targetId = int.Parse(skillTargerId.text);
             int abnormal = int.Parse(abnormalInput.text);
+            var userEntity = fsmManager.entities[uerId];
+            var targetEntity = fsmManager.entities[targetId];
+            if (userEntity.camp == targetEntity.camp) return;
+            targetEntity.AddAbnormalState((AbnormalState)abnormal);
         }
         //救人
         public void SaveEntity()

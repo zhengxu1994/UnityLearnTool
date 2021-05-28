@@ -19,9 +19,12 @@ namespace ZFramework.FSM
         public bool attacking;//正在攻击中
 
         public int camp = -1;
-        public Dictionary<AbnormalState, List<int>> abnormalStates = new Dictionary<AbnormalState, List<int>>();
+
+        public TrueSync.FP searchDis = 150;
+        public List<AbnormalState> abnormalStates = new List<AbnormalState>();
 
         public int hp;
+        public int moveSpeed = 5;
 
         public GameObject obj;
 
@@ -36,6 +39,14 @@ namespace ZFramework.FSM
         public bool dieImmediately = false;
 
         public MoveOperation moveOperation;
+
+        public void AddAbnormalState(AbnormalState state)
+        {
+            if (!abnormalStates.Contains(state))
+            {
+                abnormalStates.Add(state);
+            }
+        }
 
         public void RandomMove()
         {
@@ -114,7 +125,7 @@ namespace ZFramework.FSM
 
         public void AddFSM(int id,DecisionFSM fsm)
         {
-            if (!fsms.ContainsKey(id)) return;
+            if (fsms.ContainsKey(id)) return;
             fsms.Add(id, fsm);  
         }
 
@@ -154,6 +165,11 @@ namespace ZFramework.FSM
             foreach (var fsm in fsms)
             {
                 fsm.Value.Run();
+            }
+            foreach (var entityObj in entities)
+            {
+                entityObj.Value.obj.transform.position
+                     = entityObj.Value.pos.ToVector();
             }
             DecisionTool.Inst.CheckUpdate(entities);
         }

@@ -46,6 +46,7 @@ namespace ZFramework.FSM
 
         public override void Action()
         {
+            LogTool.Log("Idle======");
             //搜索目标
             if (entity.atkTarget == null)
                 DecisionTool.Inst.SearchAtkTarget(entity);

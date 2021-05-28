@@ -40,6 +40,14 @@ namespace ZFramework.FSM
             DecisionDie dieState = new DecisionDie(fsm, entity);
             dieState.AddTransId(TransId.DecisionDie, StateID.DecisionDie);
             dieState.AddTransId(TransId.DecisionNearDie, StateID.DecisionNearDie);
+
+            fsm.AddState(idleState);
+            fsm.AddState(moveState);
+            fsm.AddState(attackState);
+            fsm.AddState(chantState);
+            fsm.AddState(unControlState);
+            fsm.AddState(nearDieState);
+            fsm.AddState(dieState);
             return fsm;
         }
     }

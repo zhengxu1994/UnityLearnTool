@@ -10,7 +10,7 @@ namespace ZFramework.FSM
         private int Num = 100;
         public DecisionNearDie(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
         {
-
+            stateID = StateID.DecisionNearDie;
         }
 
         public override bool Reason()
