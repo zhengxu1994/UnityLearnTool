@@ -45,6 +45,8 @@ namespace ZFramework.FSM
 
         public MoveOperation moveOperation;
 
+        public TextMesh hpTxt;
+
         public void AddAbnormalState(AbnormalState state)
         {
             if (!abnormalStates.Contains(state))
@@ -75,6 +77,12 @@ namespace ZFramework.FSM
                 }
                 atkerList.Clear();
             }
+        }
+
+        public void HpChange(int damage)
+        {
+            this.hp -= damage;
+            this.hpTxt.text = hp.ToString();
         }
     }
 

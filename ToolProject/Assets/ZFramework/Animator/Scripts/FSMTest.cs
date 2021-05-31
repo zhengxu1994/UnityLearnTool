@@ -47,6 +47,7 @@ namespace ZFramework.FSM
             entity.id = ++id;
             entity.camp = int.Parse(campId.text);
             entity.obj = Instantiate(entity.camp == 1 ? playerPrefab : enemyPrefab);
+            entity.hpTxt = entity.obj.GetComponentInChildren<TextMesh>();
             entity.obj.name = "Entity" + id.ToString();
             entity.pos = new TrueSync.TSVector2(UnityEngine.Random.Range(-100, 100),
                 UnityEngine.Random.Range(-100, 100));
@@ -73,7 +74,11 @@ namespace ZFramework.FSM
         public void SaveEntity()
         {
             int targetId = int.Parse(skillTargerId.text);
-            
+            if (FSMManager.Inst.entities.ContainsKey(targetId))
+            {
+                FSMEntity entity = FSMManager.Inst.entities[targetId];
+                entity.HpChange(-100);
+            }
         }
 
     }

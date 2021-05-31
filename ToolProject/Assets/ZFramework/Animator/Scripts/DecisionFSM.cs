@@ -40,6 +40,7 @@ namespace ZFramework.FSM
             DecisionDie dieState = new DecisionDie(fsm, entity);
             dieState.AddTransId(TransId.DecisionDie, StateID.DecisionDie);
             dieState.AddTransId(TransId.DecisionNearDie, StateID.DecisionNearDie);
+            dieState.AddTransId(TransId.DecisionIdle, StateID.DecisionIdle);
 
             fsm.AddState(idleState);
             fsm.AddState(moveState);

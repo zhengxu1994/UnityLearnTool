@@ -161,7 +161,7 @@ namespace ZFramework.FSM
                 LogTool.LogError("攻击目标为空/必须活着");
                 return;
             }
-            entity.atkTarget.hp -= entity.damage;
+            entity.atkTarget.HpChange(entity.damage);
             LogTool.LogWarning("AttackerID:{0}", entity.id);
         }
 
