@@ -82,6 +82,7 @@ namespace ZFramework.FSM
 
         public virtual bool Reason()
         {
+            DecisionTool.Inst.Check(entity);
             return true;
         }
 

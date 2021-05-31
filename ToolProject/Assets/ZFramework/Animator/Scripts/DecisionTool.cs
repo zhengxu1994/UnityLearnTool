@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using TrueSync;
+using UnityEngine;
 namespace ZFramework.FSM
 {
     public class DecisionTool : Singleton<DecisionTool>
@@ -13,17 +14,21 @@ namespace ZFramework.FSM
             foreach (var temp in entities)
             {
                 tempEntity = temp.Value;
-                //首先检测死亡
-                if (CheckDeath(tempEntity)) continue;
-                //检测控制
-                if (CheckUnControl(tempEntity)) continue;
-                //检测是否释放技能
-                CheckChant(tempEntity);
-                //判断是否可以移动
-                CheckMove(tempEntity);
-                //判断是否可以攻击
-                CheckAttack(tempEntity);
+                Check(tempEntity);
             }
+        }
+
+        public void Check(FSMEntity entity)
+        {
+            if (CheckDeath(entity)) return;
+            //检测控制
+            if (CheckUnControl(entity)) return;
+            //检测是否释放技能
+            CheckChant(entity);
+            //判断是否可以移动
+            CheckMove(entity);
+            //判断是否可以攻击
+            CheckAttack(entity);
         }
 
         /// <summary>
@@ -36,6 +41,15 @@ namespace ZFramework.FSM
             if (entity.hp <= 0 && entity.alive)
             {
                 entity.alive = false;
+                if(entity.atkerList.Count > 0)
+                {
+                    foreach (var atker in entity.atkerList)
+                    {
+                        if (atker.atkTarget == entity)
+                            atker.atkTarget = null;
+                    }
+                    entity.atkerList.Clear();
+                }
                 return true;
             }
             else if (entity.hp > 0 && entity.alive == false)
@@ -97,7 +111,7 @@ namespace ZFramework.FSM
                 && (entity.moveOperation == null
                 ||!entity.moveOperation.force))
             {
-                //在攻击范围内 并且 没有强制移动的指令
+                //在攻击范围内 并且 没有强制移动的指令 
                 entity.canAttack = true;
                 entity.attacking = true;
                 entity.isMoving = false;
@@ -124,29 +138,40 @@ namespace ZFramework.FSM
             {
                 var tempEntity = FSMManager.Inst.entities[id];
                 FP dis = TSVector2.DistanceSquared(tempEntity.pos, entity.pos);
-                if (dis <= entity.searchDis * entity.searchDis && dis< minDis)
+                //视野内 活着的
+                if (dis <= entity.searchDis * entity.searchDis && dis< minDis && tempEntity.alive)
                 {
                     targetEntity = tempEntity;
                 }
             }
+            if (targetEntity == null) return;
             if(entity.atkTarget == null || entity.atkTarget != targetEntity)
             {
+                if (entity.atkTarget != null)
+                    entity.atkTarget.atkerList.Remove(entity);
                 entity.atkTarget = targetEntity;
+                entity.atkTarget.atkerList.Add(entity);
             }
         }
 
-        public void AttackTarget(FSMEntity entity)
+        public void  AttackTarget(FSMEntity entity)
         {
-            
+            if(entity.atkTarget == null || !entity.atkTarget.alive)
+            {
+                LogTool.LogError("攻击目标为空/必须活着");
+                return;
+            }
+            entity.atkTarget.hp -= entity.damage;
+            LogTool.LogWarning("AttackerID:{0}", entity.id);
         }
 
         public void MoveToTarget(FSMEntity entity)
         {
             //移动到目标处
-            if (entity.atkTarget == null) return;
+            if (entity.atkTarget == null || !entity.atkTarget.alive) return;
             var dir = (entity.atkTarget.pos - entity.pos).normalized;
             var nextPos = entity.pos + dir * entity.moveSpeed * 0.01;
-            if (TrueSync.TSVector2.Dot(entity.atkTarget.pos - entity.pos, entity.atkTarget.pos - nextPos) > 0)
+            if (TrueSync.TSVector2.Dot(entity.atkTarget.pos - entity.pos, entity.atkTarget.pos - nextPos) <= 0)
                 entity.pos = entity.atkTarget.pos;
             else
                 entity.pos = nextPos;

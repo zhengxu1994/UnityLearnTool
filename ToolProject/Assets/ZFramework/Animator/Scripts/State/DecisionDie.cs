@@ -30,6 +30,10 @@ namespace ZFramework.FSM
             //处理死亡逻辑
             //播放死亡动画
             LogTool.LogError("这把真的挂了");
+            //从列表中移除
+            FSMManager.Inst.RemoveEntity(entity);
+            FSMManager.Inst.RemoveFSM(entity.id,(DecisionFSM)this.fsm);
+            entity.Dispose();
         }
 
         public override void DoBeforeLeaving()

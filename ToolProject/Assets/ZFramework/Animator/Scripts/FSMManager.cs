@@ -8,6 +8,7 @@ namespace ZFramework.FSM
     {
         public int id;
         public bool alive;
+        public bool nearDeath;
         public bool canMove;//可以移动
         public bool canChanting;//可以释放
         public bool canAttack;//可以攻击
@@ -18,19 +19,23 @@ namespace ZFramework.FSM
         public bool chanting;//正在施法中
         public bool attacking;//正在攻击中
 
+        public int damage = 10;
+
         public int camp = -1;
 
         public TrueSync.FP searchDis = 150;
         public List<AbnormalState> abnormalStates = new List<AbnormalState>();
 
-        public int hp;
-        public int moveSpeed = 5;
+        public int hp = 100;
+        public int moveSpeed = 10;
 
         public GameObject obj;
 
         public bool hasChantSkill;
 
         public FSMEntity atkTarget;
+
+        public HashSet<FSMEntity> atkerList = new HashSet<FSMEntity>();
 
         public TrueSync.TSVector2 pos;
 
@@ -51,6 +56,25 @@ namespace ZFramework.FSM
         public void RandomMove()
         {
             
+        }
+
+        public void Dispose()
+        {
+            LogTool.LogWarning("entity 死亡，id :{0}", id);
+            GameObject.Destroy(obj);
+            if (atkTarget != null)
+            {
+                if (atkTarget.atkerList.Contains(this))
+                    atkTarget.atkerList.Remove(this);
+            }
+            if (atkerList.Count > 0)
+            {
+                foreach (var atker in atkerList)
+                {
+                    atker.atkTarget = null;
+                }
+                atkerList.Clear();
+            }
         }
     }
 
@@ -153,10 +177,12 @@ namespace ZFramework.FSM
             }
         }
 
+        private HashSet<int> removeFSMHash = new HashSet<int>();
+
         public void RemoveFSM(int id, DecisionFSM fsm)
         {
-            if(fsms.ContainsKey(id))
-                fsms.Remove(id);
+            if (fsms.ContainsKey(id))
+                removeFSMHash.Add(id);
         }
 
         public void Update()
@@ -166,12 +192,19 @@ namespace ZFramework.FSM
             {
                 fsm.Value.Run();
             }
+            if(removeFSMHash.Count > 0)
+            {
+                foreach (var removeId in removeFSMHash)
+                {
+                    if (fsms.ContainsKey(removeId))
+                        fsms.Remove(removeId);
+                }
+            }
             foreach (var entityObj in entities)
             {
                 entityObj.Value.obj.transform.position
                      = entityObj.Value.pos.ToVector();
-            }
-            DecisionTool.Inst.CheckUpdate(entities);
+            } 
         }
     }
 }
