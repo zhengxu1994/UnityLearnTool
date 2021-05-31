@@ -168,11 +168,32 @@ namespace ZFramework.FSM
         public void MoveToTarget(FSMEntity entity)
         {
             //移动到目标处
-            if (entity.atkTarget == null || !entity.atkTarget.alive) return;
-            var dir = (entity.atkTarget.pos - entity.pos).normalized;
-            var nextPos = entity.pos + dir * entity.moveSpeed * 0.01;
-            if (TrueSync.TSVector2.Dot(entity.atkTarget.pos - entity.pos, entity.atkTarget.pos - nextPos) <= 0)
-                entity.pos = entity.atkTarget.pos;
+            TSVector2 nextPos;
+            TSVector2 dir;
+            TSVector2 endPos;
+            //强制移动
+            if (entity.moveOperation != null && entity.moveOperation.force)
+            {
+                dir = (entity.moveOperation.targetPos - entity.pos).normalized;
+                endPos = entity.moveOperation.targetPos;
+            }
+            else if ((entity.atkTarget != null && entity.atkTarget.alive))
+            {
+                dir = (entity.atkTarget.pos - entity.pos).normalized;
+                endPos = entity.atkTarget.pos;
+            }
+            else
+            {
+                return;
+            }
+
+            nextPos = entity.pos + dir * entity.moveSpeed * 0.01;
+            if (TrueSync.TSVector2.Dot(endPos - entity.pos, endPos - nextPos) <= 0)
+            {
+                entity.pos = endPos;
+                if (entity.moveOperation != null)
+                    entity.moveOperation = null;
+            }
             else
                 entity.pos = nextPos;
         }

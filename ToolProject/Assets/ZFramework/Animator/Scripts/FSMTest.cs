@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 namespace ZFramework.FSM
 {
@@ -13,6 +14,8 @@ namespace ZFramework.FSM
         public InputField campId;
         public GameObject playerPrefab;
         public GameObject enemyPrefab;
+
+        public FSMEntity playerEntity = null;
         private void Start()
         {
             fsmManager = FSMManager.Inst;
@@ -21,6 +24,17 @@ namespace ZFramework.FSM
         private void Update()
         {
             fsmManager.Update();
+            if(Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+            {
+                if (playerEntity == null) return;
+                var inputPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                inputPos.z = 0;
+                playerEntity.moveOperation = new MoveOperation() {
+                    force = true,
+                    targetPos = inputPos.ToTSVector2()
+                };
+                LogTool.Log("Pos:{0}", inputPos);
+            }
         }
         //创建一个Entity
         public void CreateEntity()
@@ -40,6 +54,8 @@ namespace ZFramework.FSM
             DecisionFSM fsm = DecisionFSM.CreateDecisionFSM(entity);
             fsmManager.AddEntity(entity);
             fsmManager.AddFSM(entity.id,fsm);
+            if (playerEntity == null)
+                playerEntity = entity;
         }
         
         //选择Entity释放技能模拟 添加buff

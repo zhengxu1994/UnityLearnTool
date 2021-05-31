@@ -1,9 +1,14 @@
 ﻿<Properties StartupConfiguration="{867945B8-755C-27AE-7CE2-68A275B91FB5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ZFramework/Animator/Scripts/State/DecisionAttack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ZFramework/Animator/Scripts/DecisionTool.cs">
     <Files>
-      <File FileName="Assets/ZFramework/Animator/Scripts/DecisionTool.cs" Line="157" Column="34" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/DecisionTool.cs" Line="189" Column="1" />
       <File FileName="Assets/ZFramework/Tool/LogTool.cs" Line="43" Column="1" />
-      <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionAttack.cs" Line="18" Column="81" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionAttack.cs" Line="37" Column="10" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/FSMTest.cs" Line="36" Column="48" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/FSMManager.cs" Line="194" Column="1" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/State/DecisionMove.cs" Line="36" Column="1" />
+      <File FileName="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/TSVector2.cs" Line="38" Column="19" />
+      <File FileName="Assets/ZFramework/Animator/Scripts/FSMSystem.cs" Line="66" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,15 +20,27 @@
                   <Node name="Scripts" expanded="True">
                     <Node name="State" expanded="True">
                       <Node name="SecondState" expanded="True" />
-                      <Node name="DecisionAttack.cs" selected="True" />
                     </Node>
+                    <Node name="DecisionTool.cs" selected="True" />
                   </Node>
                 </Node>
                 <Node name="Pool" expanded="True" />
                 <Node name="Tool" expanded="True" />
+                <Node name="TrueSync" expanded="True">
+                  <Node name="TrueSync" expanded="True">
+                    <Node name="Engine" expanded="True">
+                      <Node name="Math" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
               </Node>
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>entity.id</Value>
         </State>
       </Pad>
     </Pads>
@@ -32,7 +49,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0cf6ea84-2bbd-4b3f-8d7a-11c4119cc05a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Assets/ZFramework/Animator/Scripts/DecisionTool.cs" relfile="Assets/ZFramework/Animator/Scripts/DecisionTool.cs" line="174" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
