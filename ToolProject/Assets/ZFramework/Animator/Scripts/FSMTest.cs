@@ -16,7 +16,7 @@ namespace ZFramework.FSM
         public GameObject playerPrefab;
         public GameObject enemyPrefab;
 
-        public FSMEntity playerEntity = null;
+        public GameEntity playerEntity = null;
         private void Start()
         {
             fsmManager = FSMManager.Inst;
@@ -40,7 +40,7 @@ namespace ZFramework.FSM
         //创建一个Entity
         public void CreateEntity()
         {
-            FSMEntity entity = new FSMEntity();
+            GameEntity entity = new GameEntity();
             entity.canAttack = entity.canMove = entity.canChanting = true;
             entity.hp = 100;
             entity.atkDis = 5;
@@ -78,7 +78,7 @@ namespace ZFramework.FSM
             int targetId = int.Parse(skillTargerId.text);
             if (FSMManager.Inst.entities.ContainsKey(targetId))
             {
-                FSMEntity entity = FSMManager.Inst.entities[targetId];
+                GameEntity entity = FSMManager.Inst.entities[targetId];
                 entity.HpChange(-100);
             }
         }

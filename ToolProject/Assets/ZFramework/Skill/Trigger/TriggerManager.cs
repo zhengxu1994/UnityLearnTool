@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 namespace ZFramework.Skill.Trigger
 {
-    public delegate void TriggerSkillTrigger(NotifyParam evt,Skill_GameEntity target);
-    public delegate void CancelSkillTrigger(NotifyParam evt, Skill_GameEntity target);
+    public delegate void TriggerSkillTrigger(NotifyParam evt,GameEntity target);
+    public delegate void CancelSkillTrigger(NotifyParam evt, GameEntity target);
     /// <summary>
     /// Trigger管理
     /// </summary>
@@ -19,7 +17,7 @@ namespace ZFramework.Skill.Trigger
             //Test
         }
 
-        public Trigger CreateTrigger(Skill_GameEntity creater, Skill_GameEntity owner, BattleEvent eventType, TriggerType triggerType,
+        public Trigger CreateTrigger(GameEntity creater, GameEntity owner, BattleEvent eventType, TriggerType triggerType,
              TriggerSkillTrigger skillTrigger, CancelSkillTrigger cancelTrigger)
         {
             triggerId++;
@@ -34,41 +32,6 @@ namespace ZFramework.Skill.Trigger
                 triggers[triggerId].Dispose();
                 triggers.Remove(triggerId);
             }
-        }
-    }
-
-    public class NotifyParam
-    {
-        public Dictionary<string, int> intDatas = new Dictionary<string, int>();
-
-        public Dictionary<string, string> strDatas = new Dictionary<string, string>();
-
-        public void Int(string key,int value)
-        {
-            if (!intDatas.ContainsKey(key))
-                intDatas.Add(key, value);
-            intDatas[key] = value;
-        }
-
-        public int Int(string key)
-        {
-            if (intDatas.ContainsKey(key))
-                return intDatas[key];
-            return -1;
-        }
-
-        public void Str(string key, string value)
-        {
-            if (!strDatas.ContainsKey(key))
-                strDatas.Add(key, value);
-            strDatas[key] = value;
-        }
-
-        public string Str(string key)
-        {
-            if (strDatas.ContainsKey(key))
-                return strDatas[key];
-            return "";
         }
     }
 }

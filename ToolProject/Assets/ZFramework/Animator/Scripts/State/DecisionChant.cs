@@ -4,7 +4,7 @@ namespace ZFramework.FSM
 {
     public class DecisionChant : DecisionFSMState
     {
-        public DecisionChant(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
+        public DecisionChant(FSMSystem fsm, GameEntity entity) : base(fsm, entity)
         {
             stateID = StateID.DecisionChant;
         }
@@ -32,12 +32,12 @@ namespace ZFramework.FSM
 
         public override void DoBeforeLeaving()
         {
-
+            LogTool.Log("离开吟唱");
         }
 
         public override void DoBeforeEntering()
         {
-
+            LogTool.Log("进入吟唱");
         }
     }
 }

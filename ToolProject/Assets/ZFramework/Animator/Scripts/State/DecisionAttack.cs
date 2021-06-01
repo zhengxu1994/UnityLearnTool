@@ -7,7 +7,7 @@ namespace ZFramework.FSM
     {
         public FP atkInterval = 1f;
         private FP count = 0;
-        public DecisionAttack(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
+        public DecisionAttack(FSMSystem fsm, GameEntity entity) : base(fsm, entity)
         {
             stateID = StateID.DecisionAttack;
         }

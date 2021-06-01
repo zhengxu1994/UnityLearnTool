@@ -6,7 +6,7 @@ namespace ZFramework.FSM
     public abstract class FSMState
     {
         protected FSMSystem fsm = null;
-        protected FSMEntity entity = null;
+        protected GameEntity entity = null;
         protected StateID minStateId, maxStateId;
         protected TransId minTrans, maxTrans;
         protected Dictionary<TransId, StateID> stateMap = new Dictionary<TransId, StateID>();
@@ -53,7 +53,7 @@ namespace ZFramework.FSM
             }    
         }
 
-        public FSMState(FSMSystem fsm, FSMEntity entity)
+        public FSMState(FSMSystem fsm, GameEntity entity)
         {
             this.fsm = fsm;
             this.entity = entity;

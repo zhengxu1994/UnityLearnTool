@@ -5,7 +5,7 @@ namespace ZFramework.FSM
 {
     public class DecisionMove : DecisionFSMState
     {
-        public DecisionMove(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
+        public DecisionMove(FSMSystem fsm, GameEntity entity) : base(fsm, entity)
         {
             stateID = StateID.DecisionMove;
         }

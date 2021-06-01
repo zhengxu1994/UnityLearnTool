@@ -11,7 +11,7 @@ namespace ZFramework.FSM
         //Test
         private int Num = 10;
         private FP tempTime = 0;
-        public DecisionNearDie(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
+        public DecisionNearDie(FSMSystem fsm, GameEntity entity) : base(fsm, entity)
         {
             stateID = StateID.DecisionNearDie;
         }

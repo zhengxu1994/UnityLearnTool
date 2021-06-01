@@ -4,7 +4,7 @@ namespace ZFramework.FSM
 {
     public class DecisionAbnormalState : DecisionFSMState
     {
-        public DecisionAbnormalState(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
+        public DecisionAbnormalState(FSMSystem fsm, GameEntity entity) : base(fsm, entity)
         {
             stateID = StateID.DecisionUnControl;
         }

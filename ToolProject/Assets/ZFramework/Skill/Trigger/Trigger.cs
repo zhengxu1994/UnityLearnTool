@@ -1,7 +1,4 @@
-﻿using UnityEditor;
-using UnityEngine;
-
-namespace ZFramework.Skill.Trigger
+﻿namespace ZFramework.Skill.Trigger
 {
     public enum BattleEvent
     {
@@ -42,14 +39,14 @@ namespace ZFramework.Skill.Trigger
     {
         protected TriggerSkillTrigger skillTrigger;
         protected CancelSkillTrigger cancelTrigger;
-        protected Skill_GameEntity creater;
-        protected Skill_GameEntity owner;
+        protected GameEntity creater;
+        protected GameEntity owner;
         protected TriggerType triggerType;
         protected BattleEvent eventType;
         protected int triggerId;
 
 
-        public Trigger(Skill_GameEntity creater, Skill_GameEntity owner, BattleEvent eventType, TriggerType triggerType,
+        public Trigger(GameEntity creater, GameEntity owner, BattleEvent eventType, TriggerType triggerType,
             int triggerId, TriggerSkillTrigger skillTrigger, CancelSkillTrigger cancelTrigger)
         {
             this.creater = creater;
@@ -69,7 +66,7 @@ namespace ZFramework.Skill.Trigger
             EventTrigger.Inst.RemoveAll(this);
         }
 
-        public static Trigger Create(Skill_GameEntity creater, Skill_GameEntity owner, BattleEvent eventType, TriggerType triggerType, 
+        public static Trigger Create(GameEntity creater, GameEntity owner, BattleEvent eventType, TriggerType triggerType, 
             int triggerId, TriggerSkillTrigger skillTrigger, CancelSkillTrigger cancelTrigger)
         {
             Trigger trigger = null;
@@ -98,7 +95,7 @@ namespace ZFramework.Skill.Trigger
 
     public class Trigger_BeforeAttack : Trigger
     {
-        public Trigger_BeforeAttack(Skill_GameEntity creater, Skill_GameEntity owner, BattleEvent eventType, TriggerType triggerType, int triggerId, TriggerSkillTrigger skillTrigger, CancelSkillTrigger cancelTrigger) :
+        public Trigger_BeforeAttack(GameEntity creater, GameEntity owner, BattleEvent eventType, TriggerType triggerType, int triggerId, TriggerSkillTrigger skillTrigger, CancelSkillTrigger cancelTrigger) :
             base(creater, owner, eventType, triggerType, triggerId, skillTrigger, cancelTrigger)
         {
 

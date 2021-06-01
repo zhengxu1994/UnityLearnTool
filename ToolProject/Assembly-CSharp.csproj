@@ -123,6 +123,8 @@
     <Compile Include="Assets\ZFramework\Movement\RVO2\src\RVOMath.cs" />
     <Compile Include="Assets\ZFramework\Movement\RVO2\src\Simulator.cs" />
     <Compile Include="Assets\ZFramework\Movement\RVO2\src\Vector2.cs" />
+    <Compile Include="Assets\ZFramework\Pool\GameEntity.cs" />
+    <Compile Include="Assets\ZFramework\Pool\NotifyParam.cs" />
     <Compile Include="Assets\ZFramework\Pool\TObjectPool.cs" />
     <Compile Include="Assets\ZFramework\Pool\UtilTool.cs" />
     <Compile Include="Assets\ZFramework\RedDot\RedDotConst.cs" />
@@ -136,8 +138,6 @@
     <Compile Include="Assets\ZFramework\Skill\Choose\SkillChooseInterface.cs" />
     <Compile Include="Assets\ZFramework\Skill\EventTrigger.cs" />
     <Compile Include="Assets\ZFramework\Skill\SkillManager.cs" />
-    <Compile Include="Assets\ZFramework\Skill\Skill_GameEntity.cs" />
-    <Compile Include="Assets\ZFramework\Skill\Skill_GameEntityData.cs" />
     <Compile Include="Assets\ZFramework\Skill\Trigger\Trigger.cs" />
     <Compile Include="Assets\ZFramework\Skill\Trigger\TriggerManager.cs" />
     <Compile Include="Assets\ZFramework\Tool\GameMain.cs" />

@@ -6,7 +6,7 @@ namespace ZFramework.FSM
     public sealed class DecisionFSM : FSMSystem
     {
 
-        public static DecisionFSM CreateDecisionFSM(FSMEntity entity)
+        public static DecisionFSM CreateDecisionFSM(GameEntity entity)
         {
             var fsm = new DecisionFSM();
 

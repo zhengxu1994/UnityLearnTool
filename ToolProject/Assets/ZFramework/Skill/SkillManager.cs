@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace ZFramework
+namespace ZFramework.Skill
 {
     /// <summary>
     /// 技能的管理

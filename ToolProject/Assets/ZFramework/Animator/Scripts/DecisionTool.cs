@@ -6,10 +6,10 @@ namespace ZFramework.FSM
 {
     public class DecisionTool : Singleton<DecisionTool>
     {
-        public void CheckUpdate(Dictionary<int, FSMEntity> entities)
+        public void CheckUpdate(Dictionary<int, GameEntity> entities)
         {
             if (entities == null || entities.Count <= 0) return;
-            FSMEntity tempEntity = null;
+            GameEntity tempEntity = null;
             //Check State Condition
             foreach (var temp in entities)
             {
@@ -18,7 +18,7 @@ namespace ZFramework.FSM
             }
         }
 
-        public void Check(FSMEntity entity)
+        public void Check(GameEntity entity)
         {
             if (CheckDeath(entity)) return;
             //检测控制
@@ -36,7 +36,7 @@ namespace ZFramework.FSM
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public bool CheckDeath(FSMEntity entity)
+        public bool CheckDeath(GameEntity entity)
         {
             if (entity.hp <= 0 && entity.alive)
             {
@@ -65,7 +65,7 @@ namespace ZFramework.FSM
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public bool CheckUnControl(FSMEntity entity)
+        public bool CheckUnControl(GameEntity entity)
         {
             if (entity.IsDizzy ||
                 entity.IsRejectMove ||
@@ -78,7 +78,7 @@ namespace ZFramework.FSM
             return entity.isControl;
         }
 
-        public void CheckChant(FSMEntity entity)
+        public void CheckChant(GameEntity entity)
         {
             entity.chanting = entity.hasChantSkill;
             if (entity.chanting)
@@ -88,7 +88,7 @@ namespace ZFramework.FSM
             }
         }
 
-        public void CheckMove(FSMEntity entity)
+        public void CheckMove(GameEntity entity)
         {
             if (entity.abnormalBuffs.ContainsKey(AbnormalState.RejectMove))
             {
@@ -105,7 +105,7 @@ namespace ZFramework.FSM
             }
         }
 
-        public void CheckAttack(FSMEntity entity)
+        public void CheckAttack(GameEntity entity)
         {
             if (entity.atkTarget != null &&
                 TSVector2.DistanceSquared(entity.pos, entity.atkTarget.pos) <= entity.atkDis * entity.atkDis
@@ -124,7 +124,7 @@ namespace ZFramework.FSM
         }
 
 
-        public void SearchAtkTarget(FSMEntity entity)
+        public void SearchAtkTarget(GameEntity entity)
         {
             //强制移动就不需要搜索目标了
             if (entity.moveOperation != null && entity.moveOperation.force) return;
@@ -133,7 +133,7 @@ namespace ZFramework.FSM
             var targets = camp == 1 ? FSMManager.Inst.enemies : FSMManager.Inst.players;
             if (targets.Count <= 0) return;
             //搜索最近的目标
-            FSMEntity targetEntity = null;
+            GameEntity targetEntity = null;
             FP minDis = FP.MaxValue;
             foreach (var id in targets)
             {
@@ -155,7 +155,7 @@ namespace ZFramework.FSM
             }
         }
 
-        public void AttackTarget(FSMEntity entity)
+        public void AttackTarget(GameEntity entity)
         {
             if (entity.atkTarget == null || !entity.atkTarget.alive)
             {
@@ -166,7 +166,7 @@ namespace ZFramework.FSM
             LogTool.LogWarning("AttackerID:{0}", entity.id);
         }
 
-        public void MoveToTarget(FSMEntity entity)
+        public void MoveToTarget(GameEntity entity)
         {
             //移动到目标处
             TSVector2 nextPos;
@@ -203,7 +203,7 @@ namespace ZFramework.FSM
         //最优先 眩晕类（什么事情都不能做，无法移动，无法攻击，无法释放技能） dizzy
         //下一级 混乱类（部分功能无法作用，且无法控制）
 
-        public void InAbnormalStating(FSMEntity entity)
+        public void InAbnormalStating(GameEntity entity)
         {
             entity.canMove = entity.canAttack = entity.canMove = true;
             //处理一些只响应功能，但没有具体逻辑的状态
@@ -224,13 +224,13 @@ namespace ZFramework.FSM
         }
 
 
-        private void CheckSimpleAbnormalState(FSMEntity entity)
+        private void CheckSimpleAbnormalState(GameEntity entity)
         {
             CheckSilent(entity);
             CheckRejectMove(entity);
         }
 
-        private bool CheckDizzy(FSMEntity entity)
+        private bool CheckDizzy(GameEntity entity)
         {
             if (entity.IsDizzy)
             {
@@ -246,7 +246,7 @@ namespace ZFramework.FSM
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        private bool CheckFear(FSMEntity entity)
+        private bool CheckFear(GameEntity entity)
         {
             if (entity.IsFear)
             {
@@ -262,7 +262,7 @@ namespace ZFramework.FSM
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        private bool CheckChaos(FSMEntity entity)
+        private bool CheckChaos(GameEntity entity)
         {
             if (entity.IsChaos)
             {
@@ -275,7 +275,7 @@ namespace ZFramework.FSM
             return false;
         }
 
-        private bool CheckSilent(FSMEntity entity)
+        private bool CheckSilent(GameEntity entity)
         {
             if (entity.IsSilent)
             {
@@ -285,7 +285,7 @@ namespace ZFramework.FSM
             return false;
         }
 
-        private bool CheckRejectMove(FSMEntity entity)
+        private bool CheckRejectMove(GameEntity entity)
         {
             if (entity.IsRejectMove)
             {
@@ -295,7 +295,7 @@ namespace ZFramework.FSM
             return false;
         }
 
-        private bool CheckBeSneered(FSMEntity entity)
+        private bool CheckBeSneered(GameEntity entity)
         {
             if (entity.IsBeSneered)
             {

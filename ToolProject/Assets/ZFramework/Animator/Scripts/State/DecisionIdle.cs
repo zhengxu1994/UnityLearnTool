@@ -5,7 +5,7 @@ namespace ZFramework.FSM
 {
     public class DecisionIdle : DecisionFSMState
     {
-        public DecisionIdle(FSMSystem fsm, FSMEntity entity) : base(fsm, entity)
+        public DecisionIdle(FSMSystem fsm, GameEntity entity) : base(fsm, entity)
         {
             stateID = StateID.DecisionIdle;
         }
