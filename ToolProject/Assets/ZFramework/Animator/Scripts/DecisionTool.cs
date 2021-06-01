@@ -6,7 +6,7 @@ namespace ZFramework.FSM
 {
     public class DecisionTool : Singleton<DecisionTool>
     {
-        public void CheckUpdate(Dictionary<int,FSMEntity> entities)
+        public void CheckUpdate(Dictionary<int, FSMEntity> entities)
         {
             if (entities == null || entities.Count <= 0) return;
             FSMEntity tempEntity = null;
@@ -41,7 +41,7 @@ namespace ZFramework.FSM
             if (entity.hp <= 0 && entity.alive)
             {
                 entity.alive = false;
-                if(entity.atkerList.Count > 0)
+                if (entity.atkerList.Count > 0)
                 {
                     foreach (var atker in entity.atkerList)
                     {
@@ -67,10 +67,11 @@ namespace ZFramework.FSM
         /// <returns></returns>
         public bool CheckUnControl(FSMEntity entity)
         {
-            if (entity.abnormalStates.Contains(AbnormalState.Dizzy) ||
-                entity.abnormalStates.Contains(AbnormalState.RejectMove) ||
-                entity.abnormalStates.Contains(AbnormalState.Chaos) ||
-                entity.abnormalStates.Contains(AbnormalState.BeSneered))
+            if (entity.IsDizzy ||
+                entity.IsRejectMove ||
+                entity.IsChaos ||
+                entity.IsBeSneered||
+                entity.IsFear)
                 entity.isControl = true;
             else
                 entity.isControl = false;
@@ -79,8 +80,8 @@ namespace ZFramework.FSM
 
         public void CheckChant(FSMEntity entity)
         {
-            entity.chanting =  entity.hasChantSkill;
-            if(entity.chanting)
+            entity.chanting = entity.hasChantSkill;
+            if (entity.chanting)
             {
                 entity.attacking = false;
                 entity.isMoving = false;
@@ -89,16 +90,16 @@ namespace ZFramework.FSM
 
         public void CheckMove(FSMEntity entity)
         {
-            if (entity.abnormalStates.Contains(AbnormalState.RejectMove))
+            if (entity.abnormalBuffs.ContainsKey(AbnormalState.RejectMove))
             {
                 entity.canMove = false;
                 entity.isMoving = false;
             }
-            else if (entity.moveOperation != null || entity.atkTarget != null) 
+            else if (entity.moveOperation != null || entity.atkTarget != null)
             {
                 entity.isMoving = true;
             }
-            else if(entity.moveOperation == null)
+            else if (entity.moveOperation == null)
             {
                 entity.isMoving = false;
             }
@@ -109,7 +110,7 @@ namespace ZFramework.FSM
             if (entity.atkTarget != null &&
                 TSVector2.DistanceSquared(entity.pos, entity.atkTarget.pos) <= entity.atkDis * entity.atkDis
                 && (entity.moveOperation == null
-                ||!entity.moveOperation.force))
+                || !entity.moveOperation.force))
             {
                 //在攻击范围内 并且 没有强制移动的指令 
                 entity.canAttack = true;
@@ -139,13 +140,13 @@ namespace ZFramework.FSM
                 var tempEntity = FSMManager.Inst.entities[id];
                 FP dis = TSVector2.DistanceSquared(tempEntity.pos, entity.pos);
                 //视野内 活着的
-                if (dis <= entity.searchDis * entity.searchDis && dis< minDis && tempEntity.alive)
+                if (dis <= entity.searchDis * entity.searchDis && dis < minDis && tempEntity.alive)
                 {
                     targetEntity = tempEntity;
                 }
             }
             if (targetEntity == null) return;
-            if(entity.atkTarget == null || entity.atkTarget != targetEntity)
+            if (entity.atkTarget == null || entity.atkTarget != targetEntity)
             {
                 if (entity.atkTarget != null)
                     entity.atkTarget.atkerList.Remove(entity);
@@ -154,9 +155,9 @@ namespace ZFramework.FSM
             }
         }
 
-        public void  AttackTarget(FSMEntity entity)
+        public void AttackTarget(FSMEntity entity)
         {
-            if(entity.atkTarget == null || !entity.atkTarget.alive)
+            if (entity.atkTarget == null || !entity.atkTarget.alive)
             {
                 LogTool.LogError("攻击目标为空/必须活着");
                 return;
@@ -196,6 +197,115 @@ namespace ZFramework.FSM
             }
             else
                 entity.pos = nextPos;
+        }
+
+        //优先级
+        //最优先 眩晕类（什么事情都不能做，无法移动，无法攻击，无法释放技能） dizzy
+        //下一级 混乱类（部分功能无法作用，且无法控制）
+
+        public void InAbnormalStating(FSMEntity entity)
+        {
+            entity.canMove = entity.canAttack = entity.canMove = true;
+            //处理一些只响应功能，但没有具体逻辑的状态
+            CheckSimpleAbnormalState(entity);
+            if (!CheckDizzy(entity))
+            {
+                if (!CheckFear(entity))
+                {
+                    if (!CheckBeSneered(entity))
+                    {
+                        if (!CheckChaos(entity))
+                        {
+                            //更下一级状态
+                        }
+                    }
+                }
+            }
+        }
+
+
+        private void CheckSimpleAbnormalState(FSMEntity entity)
+        {
+            CheckSilent(entity);
+            CheckRejectMove(entity);
+        }
+
+        private bool CheckDizzy(FSMEntity entity)
+        {
+            if (entity.IsDizzy)
+            {
+                entity.canMove = entity.canAttack = entity.canChanting = false;
+                Debug.Log("无法动弹~");
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// 恐惧
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        private bool CheckFear(FSMEntity entity)
+        {
+            if (entity.IsFear)
+            {
+                entity.canAttack = entity.canChanting = false;
+                //往自身朝向反方向跑
+                LogTool.Log("恐惧中～～～");
+                return true;
+            }
+            return false;
+        }
+        /// <summary>
+        /// 混乱 
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        private bool CheckChaos(FSMEntity entity)
+        {
+            if (entity.IsChaos)
+            {
+                entity.canAttack = entity.canChanting = false;
+                //到处跑
+                LogTool.Log("混乱中～");
+                entity.RandomMove();
+                return true;
+            }
+            return false;
+        }
+
+        private bool CheckSilent(FSMEntity entity)
+        {
+            if (entity.IsSilent)
+            {
+                entity.canChanting = false;
+                return true;
+            }
+            return false;
+        }
+
+        private bool CheckRejectMove(FSMEntity entity)
+        {
+            if (entity.IsRejectMove)
+            {
+                entity.canMove = false;
+                return true;
+            }
+            return false;
+        }
+
+        private bool CheckBeSneered(FSMEntity entity)
+        {
+            if (entity.IsBeSneered)
+            {
+                entity.canChanting = false;
+                //被嘲讽
+                LogTool.Log("被嘲讽中～");
+                entity.BeSneered();
+                return true;
+            }
+            return false;
         }
     }
 }

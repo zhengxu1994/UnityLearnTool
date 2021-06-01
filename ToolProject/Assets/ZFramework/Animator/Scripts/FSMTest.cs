@@ -7,6 +7,7 @@ namespace ZFramework.FSM
     public class FSMTest : MonoBehaviour
     {
         private static int id = 0;
+        private static int buffId = 0;
         private FSMManager fsmManager;
         public InputField skillUserId;
         public InputField skillTargerId;
@@ -68,7 +69,8 @@ namespace ZFramework.FSM
             var userEntity = fsmManager.entities[uerId];
             var targetEntity = fsmManager.entities[targetId];
             if (userEntity.camp == targetEntity.camp) return;
-            targetEntity.AddAbnormalState((AbnormalState)abnormal);
+            buffId++;
+            targetEntity.AddAbnormalState(new SimpleAbnormalBuff(buffId,5,(AbnormalState)abnormal));
         }
         //救人
         public void SaveEntity()

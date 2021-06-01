@@ -28,11 +28,13 @@ namespace ZFramework.FSM
         public override void Action()
         {
             //各种异常状态处理，存在优先级和混合
+            DecisionTool.Inst.InAbnormalStating(entity);
         }
 
         public override void DoBeforeLeaving()
         {
             LogTool.LogError("异常解除");
+            entity.canMove = entity.canChanting = entity.canAttack = true;
         }
 
         public override void DoBeforeEntering()

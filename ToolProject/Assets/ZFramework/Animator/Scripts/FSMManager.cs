@@ -3,6 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace ZFramework.FSM
 {
+    public class SimpleAbnormalBuff
+    {
+        public int id;
+
+        int time = 0;
+
+        public AbnormalState state;
+
+        public SimpleAbnormalBuff(int id, int time ,AbnormalState state)
+        {
+            this.id = id;
+            this.time = time;
+            this.state = state;
+        }
+
+        float tempTime = 0;
+        public void Update(float deltaTime)
+        {
+            tempTime += deltaTime;
+        }
+
+        public bool IsOver
+        {
+            get { return tempTime >= time; }
+        }
+    }
+
+
     //Test
     public class FSMEntity
     {
@@ -23,9 +51,8 @@ namespace ZFramework.FSM
 
         public int camp = -1;
 
-        public TrueSync.FP searchDis = 150;
-        public List<AbnormalState> abnormalStates = new List<AbnormalState>();
-
+            public TrueSync.FP searchDis = 150;
+        public Dictionary<AbnormalState, List<SimpleAbnormalBuff>> abnormalBuffs = new Dictionary<AbnormalState, List<SimpleAbnormalBuff>>();
         public int hp = 100;
         public int moveSpeed = 10;
 
@@ -47,17 +74,107 @@ namespace ZFramework.FSM
 
         public TextMesh hpTxt;
 
-        public void AddAbnormalState(AbnormalState state)
-        {
-            if (!abnormalStates.Contains(state))
-            {
-                abnormalStates.Add(state);
+        public bool IsDizzy {
+            get {
+                if (abnormalBuffs.ContainsKey(AbnormalState.Dizzy)
+                    && abnormalBuffs[AbnormalState.Dizzy].Count > 0)
+                    return true;
+                return false;
             }
+        }
+
+        public bool IsChaos
+        {
+            get
+            {
+                if (abnormalBuffs.ContainsKey(AbnormalState.Chaos)
+                    && abnormalBuffs[AbnormalState.Chaos].Count > 0)
+                    return true;
+                return false;
+            }
+        }
+
+        public bool IsBeSneered
+        {
+            get
+            {
+                if (abnormalBuffs.ContainsKey(AbnormalState.BeSneered)
+                    && abnormalBuffs[AbnormalState.BeSneered].Count > 0)
+                    return true;
+                return false;
+            }
+        }
+
+        public bool IsFear
+        {
+            get
+            {
+                if (abnormalBuffs.ContainsKey(AbnormalState.Fear)
+                    && abnormalBuffs[AbnormalState.Fear].Count > 0)
+                    return true;
+                return false;
+            }
+        }
+
+        public bool IsSilent
+        {
+            get
+            {
+                if (abnormalBuffs.ContainsKey(AbnormalState.Silent)
+                    && abnormalBuffs[AbnormalState.Silent].Count > 0)
+                    return true;
+                return false;
+            }
+        }
+
+
+        public void AddAbnormalState(SimpleAbnormalBuff buff)
+        {
+            if (!abnormalBuffs.ContainsKey(buff.state))
+            {
+                abnormalBuffs.Add(buff.state,new List<SimpleAbnormalBuff>());
+            }
+
+            abnormalBuffs[buff.state].Add(buff);
+        }
+
+        public bool IsRejectMove
+        {
+            get
+            {
+                if (abnormalBuffs.ContainsKey(AbnormalState.RejectMove)
+                    && abnormalBuffs[AbnormalState.RejectMove].Count > 0)
+                    return true;
+                return false;
+            }
+        }
+
+        public bool IsBlood
+        {
+            get
+            {
+                if (abnormalBuffs.ContainsKey(AbnormalState.Blood)
+                    && abnormalBuffs[AbnormalState.Blood].Count > 0)
+                    return true;
+                return false;
+            }
+        }
+
+        public void RemoveAbnormalState(SimpleAbnormalBuff buff)
+        {
+            if (!abnormalBuffs.ContainsKey(buff.state)) return;
+            if (abnormalBuffs[buff.state].Contains(buff))
+                abnormalBuffs[buff.state].Remove(buff);
         }
 
         public void RandomMove()
         {
             
+        }
+
+        public void BeSneered()
+        {
+            DecisionTool.Inst.AttackTarget(atkTarget);
         }
 
         public void Dispose()
@@ -118,37 +235,15 @@ namespace ZFramework.FSM
         /// <summary>
         /// 混乱
         /// </summary>
-        Chaos
+        Chaos,
+        /// <summary>
+        /// 恐惧
+        /// </summary>
+        Fear,
     }
 
     public class FSMManager : Singleton<FSMManager>
     {
-        /// <summary>
-        /// 移动状态下 影响内部逻辑处理的特殊状态
-        /// </summary>
-        public List<AbnormalState> effectMoveAbState = new List<AbnormalState>() {
-            AbnormalState.RejectMove,
-            AbnormalState.Chaos,
-        };
-        /// <summary>
-        /// 影响控制的特殊状态
-        /// </summary>
-        public List<AbnormalState> effectControlState = new List<AbnormalState>() {
-            AbnormalState.Dizzy,
-        };
-        /// <summary>
-        /// 在攻击状态下影响内部逻辑处理的状态
-        /// </summary>
-        public List<AbnormalState> effectAttackState = new List<AbnormalState>() {
-            AbnormalState.BeSneered,
-        };
-        /// <summary>
-        /// 影响施法的特殊状态
-        /// </summary>
-        public List<AbnormalState> effectChantState = new List<AbnormalState>() {
-            AbnormalState.Silent
-        };
-
         public Dictionary<int,DecisionFSM> fsms = new Dictionary<int,DecisionFSM>();
         public Dictionary<int, FSMEntity> entities = new Dictionary<int, FSMEntity>();
         public HashSet<int> players = new HashSet<int>();
@@ -212,6 +307,20 @@ namespace ZFramework.FSM
             {
                 entityObj.Value.obj.transform.position
                      = entityObj.Value.pos.ToVector();
+                var buffs = entityObj.Value.abnormalBuffs;
+                foreach (var buffDic in buffs)
+                {
+                    var bufflist = buffDic.Value;
+                    for (int i = 0; i < bufflist.Count; i++)
+                    {
+                        bufflist[i].Update(Time.deltaTime);
+                        if(bufflist[i].IsOver)
+                        {
+                            bufflist.RemoveAt(i);
+                            i--;
+                        }
+                    }
+                }
             } 
         }
     }
