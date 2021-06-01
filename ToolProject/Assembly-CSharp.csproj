@@ -137,6 +137,8 @@
     <Compile Include="Assets\ZFramework\Skill\Choose\SkillChooseController.cs" />
     <Compile Include="Assets\ZFramework\Skill\Choose\SkillChooseInterface.cs" />
     <Compile Include="Assets\ZFramework\Skill\EventTrigger.cs" />
+    <Compile Include="Assets\ZFramework\Skill\Skill.cs" />
+    <Compile Include="Assets\ZFramework\Skill\SkillEditor.cs" />
     <Compile Include="Assets\ZFramework\Skill\SkillManager.cs" />
     <Compile Include="Assets\ZFramework\Skill\Trigger\Trigger.cs" />
     <Compile Include="Assets\ZFramework\Skill\Trigger\TriggerManager.cs" />
