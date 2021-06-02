@@ -18,9 +18,10 @@ namespace ZFramework.Skill
     {
         public SkillChooseController chooseCtr;
 
-        public EffectNode(SkillChooseController chooseCtr)
+        public EffectNode(EffectData effectData)
         {
-            this.chooseCtr = chooseCtr;
+            chooseCtr = new SkillChooseController(effectData.chooseData);
+            
         }
 
         public abstract void DoEffect(GameEntity owner,GameEntity creater);
@@ -31,8 +32,20 @@ namespace ZFramework.Skill
         }
     }
 
+    public class DamageEffect : EffectNode
+    {
+        public DamageEffect(EffectData effectData) : base(effectData)
+        {
 
-    public class buff : LiveUpdate ,IDisposable
+        }
+
+        public override void DoEffect(GameEntity owner, GameEntity creater)
+        {
+
+        }
+    }
+
+    public class Buff : LiveUpdate ,IDisposable
     {
         //配置数据
         private GameEntity owner;
@@ -47,7 +60,7 @@ namespace ZFramework.Skill
         //effect list
         public List<EffectNode> effectNodes = new List<EffectNode>();
 
-        public buff(GameEntity owner,GameEntity creater,int id,int buffId)
+        public Buff(GameEntity owner,GameEntity creater,int id,int buffId)
         {
             this.owner = owner;
             this.creater = creater;
@@ -98,7 +111,7 @@ namespace ZFramework.Skill
 
         public virtual void Raise()
         {
-
+                
         }
 
         public virtual void Chant()

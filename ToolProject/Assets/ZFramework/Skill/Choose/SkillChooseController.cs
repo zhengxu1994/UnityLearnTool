@@ -7,9 +7,9 @@
     {
         //选择顺序 UnitTeam --> UnitRace
         //ChooseArea --> UnitAttr 
-        public SkillChooseController()
+        public SkillChooseController(ChooseData chooseData)
         {
-
+         
         }
     }
 
@@ -20,7 +20,7 @@
     {
         All,
         Enemy,
-        Friend,
+        Player,
         Neutrality
     }
     /// <summary>
@@ -40,6 +40,7 @@
     /// </summary>
     public enum UnitAttr
     {
+        None,
         Man,
         WoMan,
         Nearest,
@@ -56,6 +57,7 @@
     /// </summary>
     public enum ChooseArea
     {
+        None,
         CircleArea,
         SectorArea,
         RectangleArea

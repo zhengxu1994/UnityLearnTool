@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{867945B8-755C-27AE-7CE2-68A275B91FB5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ZFramework/Skill/SkillEditor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ZFramework/Skill/Choose/SkillChooseInterface.cs">
     <Files>
       <File FileName="Assets/ZFramework/Skill/EventTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets/ZFramework/Skill/NewClass.cs" Line="115" Column="1" />
-      <File FileName="Assets/ZFramework/Skill/Choose/SkillChooseController.cs" Line="6" Column="39" />
-      <File FileName="Assets/ZFramework/Skill/Choose/SkillChooseInterface.cs" Line="1" Column="1" />
-      <File FileName="Assets/ZFramework/Skill/SkillEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets/ZFramework/Skill/NewClass.cs" Line="23" Column="50" />
+      <File FileName="Assets/ZFramework/Skill/Choose/SkillChooseController.cs" Line="23" Column="15" />
+      <File FileName="Assets/ZFramework/Skill/Choose/SkillChooseInterface.cs" Line="35" Column="46" />
+      <File FileName="Assets/ZFramework/Skill/SkillEditor.cs" Line="19" Column="6" />
+      <File FileName="Assets/ZFramework/Skill/SkillData.cs" Line="108" Column="19" />
+      <File FileName="Assets/ZFramework/Pool/GameEntity.cs" Line="56" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,17 +22,12 @@
                 </Node>
                 <Node name="Pool" expanded="True" />
                 <Node name="Skill" expanded="True">
-                  <Node name="Choose" expanded="True" />
-                  <Node name="Skill.cs" selected="True" />
-                </Node>
-                <Node name="Tool" expanded="True" />
-                <Node name="TrueSync" expanded="True">
-                  <Node name="TrueSync" expanded="True">
-                    <Node name="Engine" expanded="True">
-                      <Node name="Math" expanded="True" />
-                    </Node>
+                  <Node name="Choose" expanded="True">
+                    <Node name="SkillChooseInterface.cs" selected="True" />
                   </Node>
                 </Node>
+                <Node name="Tool" expanded="True" />
+                <Node name="TrueSync" expanded="True" />
               </Node>
             </Node>
           </Node>
