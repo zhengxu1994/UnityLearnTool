@@ -20,7 +20,7 @@
     {
         All,
         Enemy,
-        Player,
+        Friend,
         Neutrality
     }
     /// <summary>

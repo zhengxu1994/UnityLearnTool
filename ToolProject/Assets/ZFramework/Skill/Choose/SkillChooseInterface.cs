@@ -19,7 +19,7 @@ namespace ZFramework.Skill.Choose
         public int width;
     }
 
-    public class SkillChooss {
+    public class SkillChoose {
 
         private static HashSet<UnitTeam> teams = new HashSet<UnitTeam>();
         private static HashSet<UnitRace> races = new HashSet<UnitRace>();
@@ -28,16 +28,32 @@ namespace ZFramework.Skill.Choose
             //team 多选
             HashSet<GameEntity> targets = new HashSet<GameEntity>();
             targets.UnionWith(entities);
-            if(data.team.Length != 1 && data.team[0] == (int)UnitTeam.All)
+            if (data.team.Length == 1 && data.team[0] == (int)UnitTeam.All) { }
+            else
             {
                 teams.Clear();
                 for (int i = 0; i < data.team.Length; i++)
                 {
-                    teams.Add((UnitTeam)data.team[i]);
+                    var team = (UnitTeam)data.team[i];
+                    if (info.owner.data.team == UnitTeam.Friend || info.owner.data.team == UnitTeam.Neutrality)
+                    {
+                        teams.Add(team);
+                    }
+                    else if (info.owner.data.team == UnitTeam.Enemy)
+                    {
+                        if (team == UnitTeam.Friend)
+                            teams.Add(UnitTeam.Enemy);
+                        else if (team == UnitTeam.Enemy)
+                            teams.Add(UnitTeam.Friend);
+                        else if (team == UnitTeam.Neutrality)
+                            teams.Add(UnitTeam.Neutrality);
+                    }
                 }
                 ChooseByTeam(info, targets, teams);
             }
-            if (data.race.Length != 1 && data.race[0] == (int)UnitRace.All)
+
+            if (data.race.Length == 1 && data.race[0] == (int)UnitRace.All) { }
+            else
             {
                 races.Clear();
                 for (int i = 0; i < data.race.Length; i++)
@@ -46,6 +62,7 @@ namespace ZFramework.Skill.Choose
                 }
                 ChooseByRace(info, targets, races);
             }
+
             ChooseArea chooseArea = (ChooseArea)data.area;
             switch (chooseArea)
             {
@@ -82,7 +99,7 @@ namespace ZFramework.Skill.Choose
             return targets;
         }
 
-        public static HashSet<GameEntity> ChooseByTeam(SkillChooseInfo info, HashSet<GameEntity> old,HashSet<UnitTeam> teams)
+        private static HashSet<GameEntity> ChooseByTeam(SkillChooseInfo info, HashSet<GameEntity> old,HashSet<UnitTeam> teams)
         {
             old.RemoveWhere((entity) =>
             {
@@ -93,7 +110,7 @@ namespace ZFramework.Skill.Choose
             return old;
         }
 
-        public static HashSet<GameEntity> ChooseByRace(SkillChooseInfo info, HashSet<GameEntity> old,HashSet<UnitRace> races)
+        private static HashSet<GameEntity> ChooseByRace(SkillChooseInfo info, HashSet<GameEntity> old,HashSet<UnitRace> races)
         {
             old.RemoveWhere((entity) =>
             {
@@ -105,7 +122,7 @@ namespace ZFramework.Skill.Choose
         }
 
 
-        public static HashSet<GameEntity> ChooseAreaCircle(SkillChooseInfo info, HashSet<GameEntity> old)
+        private static HashSet<GameEntity> ChooseAreaCircle(SkillChooseInfo info, HashSet<GameEntity> old)
         {
             old.RemoveWhere((entity) =>
             {
@@ -116,7 +133,7 @@ namespace ZFramework.Skill.Choose
             return old;
         }
 
-        public static HashSet<GameEntity> ChooseInSector(SkillChooseInfo info, HashSet<GameEntity> old)
+        private static HashSet<GameEntity> ChooseInSector(SkillChooseInfo info, HashSet<GameEntity> old)
         {
             old.RemoveWhere((entity) =>
             {
@@ -125,7 +142,7 @@ namespace ZFramework.Skill.Choose
             return old;
         }
 
-        public static HashSet<GameEntity> ChooseInRectangle(SkillChooseInfo info, HashSet<GameEntity> old)
+        private static HashSet<GameEntity> ChooseInRectangle(SkillChooseInfo info, HashSet<GameEntity> old)
         {
             old.RemoveWhere((entity) =>
             {
@@ -134,7 +151,7 @@ namespace ZFramework.Skill.Choose
             return old;
         }
 
-        public static HashSet<GameEntity> ChooseMaxHp(SkillChooseInfo info, HashSet<GameEntity> old)
+        private static HashSet<GameEntity> ChooseMaxHp(SkillChooseInfo info, HashSet<GameEntity> old)
         {
             var pair = old.GetEnumerator();
             int maxHp = -1;
@@ -152,7 +169,7 @@ namespace ZFramework.Skill.Choose
             return old;
         }
 
-        public static HashSet<GameEntity> ChooseMinHp(SkillChooseInfo info, HashSet<GameEntity> old)
+        private static HashSet<GameEntity> ChooseMinHp(SkillChooseInfo info, HashSet<GameEntity> old)
         {
             var pair = old.GetEnumerator();
             int minHp = int.MaxValue;
@@ -170,7 +187,7 @@ namespace ZFramework.Skill.Choose
             return old;
         }
 
-        public static HashSet<GameEntity> ChooseMan(SkillChooseInfo info, HashSet<GameEntity> old)
+        private static HashSet<GameEntity> ChooseMan(SkillChooseInfo info, HashSet<GameEntity> old)
         {
             old.RemoveWhere((entity) =>
             {
@@ -179,7 +196,7 @@ namespace ZFramework.Skill.Choose
             return old;
         }
 
-        public static HashSet<GameEntity> ChooseWoman(SkillChooseInfo info, HashSet<GameEntity> old)
+        private static HashSet<GameEntity> ChooseWoman(SkillChooseInfo info, HashSet<GameEntity> old)
         {
             old.RemoveWhere((entity) =>
             {

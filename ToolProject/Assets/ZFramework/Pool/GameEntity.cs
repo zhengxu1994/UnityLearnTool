@@ -78,7 +78,7 @@ namespace ZFramework
 
         public TextMesh hpTxt;
 
-        public EntityData data;
+        public EntityData data = new EntityData();
 
         public bool IsDizzy
         {
@@ -255,7 +255,7 @@ namespace ZFramework
     {
         public UnitTeam team;
         public UnitRace race;
-        public EntityAttr attr;
+        public EntityAttr attr = new EntityAttr();
     }
 
 
