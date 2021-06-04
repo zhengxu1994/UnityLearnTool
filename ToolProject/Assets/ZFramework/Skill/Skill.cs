@@ -118,14 +118,17 @@ namespace ZFramework.Skill
 
         private BuffData buffData;
 
-        private float tempTime = 0;
+        private float tempLive = 0;
 
         private float liveTime = 0;
 
+        private float triggerInterval = 1f;//触发间隔
+
+        private float tempTriggerTime = 1f;
         public bool IsOver
         {
             get {
-                return tempTime >= liveTime;
+                return tempLive >= liveTime;
             }
         }
 
@@ -138,6 +141,7 @@ namespace ZFramework.Skill
             stack = 1;
             this.maxStack = data.stack;
             this.buffData = data;
+            this.liveTime = data.time;
             for (int i = 0; i < buffData.effects.Count; i++)
             {
                 var effectData = buffData.effects[i];
@@ -162,12 +166,19 @@ namespace ZFramework.Skill
 
         public void Update(float deltaTime)
         {
-            tempTime += deltaTime;
-            if (effectNodes.Count <= 0) return;
-            for (int i = 0; i < effectNodes.Count; i++)
+            if (tempTriggerTime >= triggerInterval)
             {
-                effectNodes[i].DoEffect(owner,creater);
+                if (effectNodes.Count > 0)
+                {
+                    for (int i = 0; i < effectNodes.Count; i++)
+                    {
+                        effectNodes[i].DoEffect(owner, creater);
+                    }
+                }
+                tempTriggerTime = 0;
             }
+            tempLive += deltaTime;
+            tempTriggerTime += deltaTime;
         }
 
         public void Dispose()

@@ -9,6 +9,7 @@ namespace ZFramework
         public Dictionary<string, string> strDatas = new Dictionary<string, string>();
 
         public Dictionary<string, bool> boolDatas = new Dictionary<string, bool>();
+
         public void Int(string key, int value)
         {
             if (!intDatas.ContainsKey(key))

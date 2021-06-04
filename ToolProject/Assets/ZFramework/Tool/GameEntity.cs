@@ -38,11 +38,11 @@ namespace ZFramework
     public class GameEntity
     {
         public int id;
-        public bool alive;
+        public bool alive = true;
         public bool nearDeath;
-        public bool canMove;//可以移动
-        public bool canChanting;//可以释放
-        public bool canAttack;//可以攻击
+        public bool canMove = true;//可以移动
+        public bool canChanting = true;//可以释放
+        public bool canAttack = true;//可以攻击
 
         public bool isControl;//受到控制
 

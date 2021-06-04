@@ -12,6 +12,8 @@ namespace ZFramework
             //是否闪避
             GameEntity attacker = GameController.Inst.GetEntityWithId(param.attackUid);
             GameEntity definer = GameController.Inst.GetEntityWithId(param.defUid);
+            if (!attacker.alive || !definer.alive) return;
+            evt = new NotifyParam();
             evt.Int(UnStr.attackId, attacker.id);
             evt.Int(UnStr.definerId, definer.id);
             evt.Int(UnStr.formulaPercent, param.formulaPercent);
