@@ -31,7 +31,8 @@ namespace ZFramework.Skill
         // Update is called once per frame
         void Update()
         {
-            ChooseTest();
+            //ChooseTest();
+            SkillTest();
             SkillManager.Inst.Update(Time.deltaTime);
         }
         private GameEntity owner = null;
@@ -40,6 +41,40 @@ namespace ZFramework.Skill
         {
             GameController.Inst.InitEntities();
             owner = GameController.Inst.GetEntityWithId(0);
+        }
+
+        private void SkillTest()
+        {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+               
+                SkillData skillData = new SkillData();
+                ChooseData chooseData = new ChooseData()
+                {
+                    team = new int[] { 1, 3 }
+                 ,
+                    race = new int[] { 2 },
+                    area = 1,
+                    attr = new int[] { 7 }
+                };
+
+                var skillChooseInfo = new SkillChooseInfo()
+                {
+                    owner = this.owner,
+                    center = this.owner.pos,
+                    skillRange = 400,
+                };
+                skillData.chooseData = chooseData;
+                skillData.needTarget = true;
+                skillData.needMagic = 0;
+                skillData.raiseData = new RaiseData();
+                skillData.raiseData.buffs.Add(buffDatas[1]);
+                skillData.raiseData.effects.Add(effectDatas[1]);
+                skillData.raiseData.raiseTime = 5;
+                skillData.raiseData.raiseTick = 3;
+                var skill = new Skill(owner, skillData);
+                skill.Use(skillChooseInfo);
+            }
         }
 
         private void ChooseTest()

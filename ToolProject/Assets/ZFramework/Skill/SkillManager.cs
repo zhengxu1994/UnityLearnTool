@@ -11,6 +11,8 @@ namespace ZFramework.Skill
         private HashSet<GameEntity> entities;
         private HashSet<Skill> skills = new HashSet<Skill>();
         private HashSet<Skill> removeList = new HashSet<Skill>();
+        private Dictionary<int, SummonObject> summons = new Dictionary<int, SummonObject>();
+        private HashSet<int> removeSummons = new HashSet<int>();
         public void Init()
         {
             entities = GameController.Inst.entities;
@@ -45,6 +47,25 @@ namespace ZFramework.Skill
             }
         }
 
+        public void UpdateSummon(float deltaTime)
+        {
+            if (summons.Count <= 0) return;
+            foreach (var summon in summons)
+            {
+                summon.Value.Update(deltaTime);
+                if (summon.Value.isOver)
+                    removeSummons.Add(summon.Key);
+            }
+            if(removeSummons.Count > 0)
+            {
+                foreach (var removeId in removeSummons)
+                {
+                    summons.Remove(removeId);
+                }
+                removeSummons.Clear();
+            }
+        }
+
         public void Remove(Skill skill)
         {
             if (!skills.Contains(skill)) return;
@@ -55,6 +76,18 @@ namespace ZFramework.Skill
         {
             if (skills.Contains(skill)) return;
             skills.Add(skill);
+        }
+
+        public void AddSummon(SummonObject summon)
+        {
+            if (summons.ContainsKey(summon.SummonId)) return;
+            summons.Add(summon.SummonId, summon);
+        }
+
+        public void RemoveSummon(int summonId)
+        {
+            if (!summons.ContainsKey(summonId)) return;
+            summons.Remove(summonId);
         }
     }
 }

@@ -6,6 +6,7 @@ namespace ZFramework.Skill
 {
     public class SummonObject : LiveUpdate
     {
+        public static int SummonObjectId = 0;
         private GameEntity owner;
 
         private GameEntity creater;
@@ -22,12 +23,20 @@ namespace ZFramework.Skill
 
         private GameObject obj;
 
+        public bool disposeBySkill { get; private set; }
+
         public bool isOver
         {
             get
             {
                 return tempLive >= liveTime;
             }
+        }
+
+        public int SummonId
+        {
+            get;
+            private set;
         }
         public SummonObject(GameEntity owner,GameEntity creater,SummonData data,SkillChooseInfo chooseInfo)
         {
@@ -36,9 +45,11 @@ namespace ZFramework.Skill
             this.summonData = data;
             pos = chooseInfo.center;
             forward = chooseInfo.forward;
+            this.disposeBySkill = data.disposeBySkill;
             obj = new GameObject("SummonObj");
             obj.transform.position = pos.ToVector();
             obj.transform.rotation = Quaternion.FromToRotation(Vector3.right, forward.ToVector());
+            SummonId = ++SummonObjectId;
         }
 
         public void Update(float deltaTime)
@@ -48,7 +59,10 @@ namespace ZFramework.Skill
 
         public void Dispose()
         {
+            if(!disposeBySkill)
+            {
 
+            }
         }
     }
 }

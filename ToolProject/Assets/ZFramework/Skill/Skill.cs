@@ -48,7 +48,11 @@ namespace ZFramework.Skill
 
         protected HashSet<EffectNode> effects = new HashSet<EffectNode>();
 
+        protected HashSet<SummonObject> summons = new HashSet<SummonObject>();
+
         protected bool raiseOver, chantOver, endOver;
+
+        private SkillChooseInfo chooseInfo;
         public bool IsOver
         {
             get {
@@ -61,9 +65,9 @@ namespace ZFramework.Skill
             this.owner = user;
             this.skillData = skillData;
             //是否有抬手 抬手关键帧 抬手是否创建buff或者effect 抬手过程中是否可以被打断
-            hasRaise = skillData.raiseData == null;
-            hasChant = skillData.chantData == null;
-            hasEnd = skillData.endData == null;
+            hasRaise = skillData.raiseData != null;
+            hasChant = skillData.chantData != null;
+            hasEnd = skillData.endData != null;
 
             if(hasRaise)
             {
@@ -100,6 +104,7 @@ namespace ZFramework.Skill
                 LogTool.Log("技能需要目标，释放失败");
                 return;
             }
+            this.chooseInfo = info;
             //成功搜到目标  则将skill 的update加入到SkillManager的update中
             SkillManager.Inst.Add(this);
             Refresh();
@@ -108,11 +113,11 @@ namespace ZFramework.Skill
         public void Refresh()
         {
             tempTime = 0;
-            raiseOver = hasRaise;
+            raiseOver = !hasRaise;
             triggerRaiseTick = false;
             triggerEndTick = false;
-            chantOver = hasChant;
-            endOver = hasEnd;
+            chantOver = !hasChant;
+            endOver = !hasEnd;
         }
 
         public void Update(float deltaTime)
@@ -132,20 +137,23 @@ namespace ZFramework.Skill
                 {
                     //raise 结束
                     raiseOver = true;
+                    LogTool.Log("技能抬手结束");
+                    return;
                     //结束抬手特效等
                 }
                 if(tempTime  >= raiseTick && !triggerRaiseTick)
                 {
                     //触发抬手tick
                     //Buff
-                    if(skillData.raiseData.buffs.Count > 0)
+                    LogTool.Log("技能抬手Tick");
+                    if (skillData.raiseData.buffs.Count > 0)
                     {
                         foreach (var entity in targets)
                         {
                             foreach (var buffData in skillData.raiseData.buffs)
                             {
-                                var buff = Buff.Create(entity, owner, buffData);
-                                buffs.Add(buff.buffId,buff);
+                                var buff = entity.AddBuff(owner, buffData);
+                                buffs.Add(buff.buffId, buff);
                             }
                         }
                     }
@@ -163,7 +171,18 @@ namespace ZFramework.Skill
                         }
                     }
                     //Summon
-
+                    if(skillData.raiseData.summons.Count > 0)
+                    {
+                        foreach (var entity in targets)
+                        {
+                            foreach (var summonData in skillData.raiseData.summons)
+                            {
+                                var summon = new SummonObject(entity, owner, summonData, chooseInfo);
+                                summons.Add(summon);
+                            }
+                        }
+                    }
+                    triggerRaiseTick = true;
                 }
             }
         }
@@ -197,7 +216,8 @@ namespace ZFramework.Skill
             {
                 foreach (var buff in buffs)
                 {
-                    buff.Value.Dispose();
+                    if (buff.Value.disposeBySkill)
+                        buff.Value.Dispose();
                 }
                 buffs.Clear();
             }
@@ -209,6 +229,16 @@ namespace ZFramework.Skill
                     effect.Dispose();
                 }
                 effects.Clear();
+            }
+
+            if (summons.Count > 0)
+            {
+                foreach (var summon in summons)
+                {
+                    if (summon.disposeBySkill)
+                        summon.Dispose();
+                }
+                summons.Clear();
             }
         }
     }

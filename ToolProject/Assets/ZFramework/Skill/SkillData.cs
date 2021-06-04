@@ -31,12 +31,11 @@ namespace ZFramework.Skill
         public string raiseAction;
         public int raiseTime;
         public int raiseTick;
-        public bool hasBuff;
-        public bool hasEffect;
         public bool canBreak;
 
         public List<EffectData> effects = new List<EffectData>();
         public List<BuffData> buffs = new List<BuffData>();
+        public List<SummonData> summons = new List<SummonData>();
     }
 
     [Serializable]
@@ -54,6 +53,7 @@ namespace ZFramework.Skill
 
         public List<EffectData> effects = new List<EffectData>();
         public List<BuffData> buffs = new List<BuffData>();
+        public List<SummonData> summons = new List<SummonData>();
     }
 
     [Serializable]
@@ -69,7 +69,7 @@ namespace ZFramework.Skill
 
         public List<EffectData> effects = new List<EffectData>();
         public List<BuffData> buffs = new List<BuffData>();
-
+        public List<SummonData> summons = new List<SummonData>();
     }
 
     [Serializable]
@@ -100,6 +100,7 @@ namespace ZFramework.Skill
         public TriggerData triggerData;
         public ChooseData chooseData;
         public int liveTime;
+        public bool disposeBySkill;
         public List<EffectData> effects = new List<EffectData>();
         public List<BuffData> buffs = new List<BuffData>();
     }

@@ -31,6 +31,8 @@ namespace ZFramework.Skill
         private float triggerInterval = 1f;//触发间隔
 
         private float tempTriggerTime = 1f;
+
+        public bool disposeBySkill { get; private set; }
         public bool IsOver
         {
             get {
@@ -48,6 +50,7 @@ namespace ZFramework.Skill
             this.maxStack = data.stack;
             this.buffData = data;
             this.liveTime = data.time;
+            this.disposeBySkill = data.disposeBySkill;
             for (int i = 0; i < buffData.effects.Count; i++)
             {
                 var effectData = buffData.effects[i];

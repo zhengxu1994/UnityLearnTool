@@ -224,7 +224,7 @@ namespace ZFramework
                 this.hpTxt.text = hp.ToString();
         }
 
-        public void AddBuff(GameEntity creater,BuffData buffData)
+        public Buff AddBuff(GameEntity creater,BuffData buffData)
         {
             if(buffs.ContainsKey(buffData.id))
             {
@@ -246,6 +246,7 @@ namespace ZFramework
                     buffs.Add(buffData.id, buff);
                 }
             }
+            return buffs[buffData.id];
         }
     }
 
