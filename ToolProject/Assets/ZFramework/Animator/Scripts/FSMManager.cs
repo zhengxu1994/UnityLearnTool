@@ -68,20 +68,6 @@ namespace ZFramework.FSM
             {
                 entityObj.Value.obj.transform.position
                      = entityObj.Value.pos.ToVector();
-                var buffs = entityObj.Value.abnormalBuffs;
-                foreach (var buffDic in buffs)
-                {
-                    var bufflist = buffDic.Value;
-                    for (int i = 0; i < bufflist.Count; i++)
-                    {
-                        bufflist[i].Update(Time.deltaTime);
-                        if(bufflist[i].IsOver)
-                        {
-                            bufflist.RemoveAt(i);
-                            i--;
-                        }
-                    }
-                }
             } 
         }
     }

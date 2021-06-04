@@ -2,64 +2,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ZFramework.Skill.Choose;
-
+using ZFramework.Skill.Trigger;
 namespace ZFramework.Skill
 {
     public class SkillEditor : MonoBehaviour
     {
 
         public Transform[] ts;
-        
+        private Dictionary<int, BuffData> buffDatas = new Dictionary<int, BuffData>();
+        //test
+        public static Dictionary<int, EffectData> effectDatas = new Dictionary<int, EffectData>();
         // Start is called before the first frame update
         void Start()
         {
             ChooseInitTest();
+            BuffData buffData = new BuffData();
+            buffData.id = 1;
+            buffData.time = 10;
+            buffData.effects.Add(1);
+            buffData.stack = 1;
+            buffDatas.Add(buffData.id, buffData);
+            EffectData effectData = new EffectData();
+            effectData.id = 1;
+            effectData.fixValue = 5;
+            effectDatas.Add(1, effectData);
         }
 
         // Update is called once per frame
         void Update()
         {
             ChooseTest();
+            SkillManager.Inst.Update(Time.deltaTime);
         }
         private GameEntity owner = null;
 
-        HashSet<GameEntity> entities = new HashSet<GameEntity>();
         private void ChooseInitTest()
         {
-            GameEntity entity1 = new GameEntity();
-            owner = entity1;
-            GameEntity entity2 = new GameEntity();
-            GameEntity entity3 = new GameEntity();
-            GameEntity entity4 = new GameEntity();
-            entity1.id = 0;
-            entity2.id = 1;
-            entity3.id = 2;
-            entity4.id = 3;
-
-            entity1.data.team = UnitTeam.Friend;
-            entity2.data.team = UnitTeam.Enemy;
-            entity3.data.team = UnitTeam.Enemy;
-            entity4.data.team = UnitTeam.Neutrality;
-
-            entity1.data.race = UnitRace.Captain;
-            entity2.data.race = UnitRace.Captain;
-            entity3.data.race = UnitRace.Solider;
-            entity4.data.race = UnitRace.Building;
-
-            entity1.data.attr.maxHp = 100;
-            entity2.data.attr.maxHp = 100;
-            entity3.data.attr.maxHp = 200;
-            entity4.data.attr.maxHp = 80;
-
-            entities.Add(entity1);
-            entities.Add(entity2);
-            entities.Add(entity3);
-            entities.Add(entity4);
+            GameController.Inst.InitEntities();
+            owner = GameController.Inst.GetEntityWithId(0);
         }
 
         private void ChooseTest()
         {
-            foreach (var entity in entities)
+            foreach (var entity in GameController.Inst.entities)
             {
                 entity.pos = ts[entity.id].position.ToTSVector2();
             }
@@ -79,16 +64,29 @@ namespace ZFramework.Skill
                          center = this.owner.pos,
                          skillRange = 400,
                      },
-                     entities);
+                     GameController.Inst.entities);
 
                 if (targets != null && targets.Count > 0)
                 {
                     foreach (var t in targets)
                     {
                         Debug.Log(t.id);
+                        //添加一个buff
+                        t.AddBuff(owner, buffDatas[1]);
                     }
                 }
             }
         }
+
+        private void TriggerInitTest()
+        {
+            var trigger = Trigger.Trigger.Create(owner,owner,BattleEvent.BeforeAttack,TriggerType.BeforeAttack,1,
+                (e,t) => {
+                    Debug.Log("BeforeAttack");
+                }, (e,t) => {
+                    Debug.Log("BeforeAttack Cancel");
+                });
+        }
+    
     }
 }

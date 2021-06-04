@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using ZFramework.Skill;
+
 namespace ZFramework.FSM
 {
     public class FSMTest : MonoBehaviour
@@ -70,7 +72,9 @@ namespace ZFramework.FSM
             var targetEntity = fsmManager.entities[targetId];
             if (userEntity.camp == targetEntity.camp) return;
             buffId++;
-            targetEntity.AddAbnormalState(new SimpleAbnormalBuff(buffId,5,(AbnormalState)abnormal));
+            //Buff buff =Buff.Create(fsmManager.entities[targetId], fsmManager.entities[uerId],buffId);
+
+            //targetEntity.AddAbnormalState((AbnormalState)abnormal, buff);
         }
         //救人
         public void SaveEntity()

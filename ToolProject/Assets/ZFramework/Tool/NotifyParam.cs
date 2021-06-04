@@ -8,6 +8,7 @@ namespace ZFramework
 
         public Dictionary<string, string> strDatas = new Dictionary<string, string>();
 
+        public Dictionary<string, bool> boolDatas = new Dictionary<string, bool>();
         public void Int(string key, int value)
         {
             if (!intDatas.ContainsKey(key))
@@ -34,6 +35,20 @@ namespace ZFramework
             if (strDatas.ContainsKey(key))
                 return strDatas[key];
             return "";
+        }
+
+        public void Bool(string key, bool value)
+        {
+            if (!boolDatas.ContainsKey(key))
+                boolDatas.Add(key, value);
+            boolDatas[key] = value;
+        }
+
+        public bool Bool(string key)
+        {
+            if (boolDatas.ContainsKey(key))
+                return boolDatas[key];
+            return false;
         }
     }
 }

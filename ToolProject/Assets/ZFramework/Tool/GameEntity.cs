@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ZFramework.FSM;
+using ZFramework.Skill;
 using ZFramework.Skill.Choose;
 
 namespace ZFramework
@@ -52,11 +53,14 @@ namespace ZFramework
         public int atkInterval = 1;//攻击间隔
 
         public int damage = 10;
+        public int def = 5;
 
         public int camp = -1;
 
         public TrueSync.FP searchDis = 150;
-        public Dictionary<AbnormalState, List<SimpleAbnormalBuff>> abnormalBuffs = new Dictionary<AbnormalState, List<SimpleAbnormalBuff>>();
+        public Dictionary<AbnormalState, List<int>> abnormalBuffs = new Dictionary<AbnormalState, List<int>>();
+
+        public Dictionary<int, Buff> buffs = new Dictionary<int, Buff>();
         public int hp = 100;
         public int moveSpeed = 10;
 
@@ -136,14 +140,14 @@ namespace ZFramework
         }
 
 
-        public void AddAbnormalState(SimpleAbnormalBuff buff)
+        public void AddAbnormalState(AbnormalState state,Buff buff)
         {
-            if (!abnormalBuffs.ContainsKey(buff.state))
+            if (!abnormalBuffs.ContainsKey(state))
             {
-                abnormalBuffs.Add(buff.state, new List<SimpleAbnormalBuff>());
+                abnormalBuffs.Add(state, new List<int>());
             }
 
-            abnormalBuffs[buff.state].Add(buff);
+            abnormalBuffs[state].Add(buff.buffId);
         }
 
         public bool IsRejectMove
@@ -168,11 +172,11 @@ namespace ZFramework
             }
         }
 
-        public void RemoveAbnormalState(SimpleAbnormalBuff buff)
+        public void RemoveAbnormalState(AbnormalState state,Buff buff)
         {
-            if (!abnormalBuffs.ContainsKey(buff.state)) return;
-            if (abnormalBuffs[buff.state].Contains(buff))
-                abnormalBuffs[buff.state].Remove(buff);
+            if (!abnormalBuffs.ContainsKey(state)) return;
+            if (abnormalBuffs[state].Contains(buff.buffId))
+                abnormalBuffs[state].Remove(buff.buffId);
         }
 
         public void RandomMove()
@@ -202,12 +206,46 @@ namespace ZFramework
                 }
                 atkerList.Clear();
             }
+            if(buffs.Count > 0)
+            {
+                foreach (var buff in buffs)
+                {
+                    buff.Value.Dispose();
+                }
+                buffs.Clear();
+            }
         }
 
         public void HpChange(int damage)
         {
             this.hp -= damage;
-            this.hpTxt.text = hp.ToString();
+            LogTool.Log(damage.ToString());
+            if (hpTxt != null)
+                this.hpTxt.text = hp.ToString();
+        }
+
+        public void AddBuff(GameEntity creater,BuffData buffData)
+        {
+            if(buffs.ContainsKey(buffData.id))
+            {
+                if (buffs[buffData.id].maxStack > 1)
+                {
+                    //可以叠加
+                }
+                else
+                {
+                    //不可以 进行替换
+                }
+            }
+            else
+            {
+                //init buff
+                var buff = Buff.Create(this, creater, buffData);
+                if(buff != null)
+                {
+                    buffs.Add(buffData.id, buff);
+                }
+            }
         }
     }
 

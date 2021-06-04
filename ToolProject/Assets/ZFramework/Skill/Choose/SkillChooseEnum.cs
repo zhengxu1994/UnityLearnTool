@@ -1,19 +1,6 @@
 ﻿namespace ZFramework.Skill.Choose
 {
     /// <summary>
-    /// 技能选择控制器
-    /// </summary>
-    public class SkillChooseController
-    {
-        //选择顺序 UnitTeam --> UnitRace
-        //ChooseArea --> UnitAttr 
-        public SkillChooseController(ChooseData chooseData)
-        {
-         
-        }
-    }
-
-    /// <summary>
     /// 目标队伍
     /// </summary>
     public enum UnitTeam

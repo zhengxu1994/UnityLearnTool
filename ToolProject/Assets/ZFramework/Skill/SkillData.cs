@@ -84,6 +84,7 @@ namespace ZFramework.Skill
         public TriggerData trigger;
         public List<int> effects = new List<int>();
         public int time;
+        public int stack;
     }
 
     public class AdditionData
