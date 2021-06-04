@@ -9,7 +9,8 @@ namespace ZFramework.Skill
     public class SkillManager : Singleton<SkillManager>
     {
         private HashSet<GameEntity> entities;
-
+        private HashSet<Skill> skills = new HashSet<Skill>();
+        private HashSet<Skill> removeList = new HashSet<Skill>();
         public void Init()
         {
             entities = GameController.Inst.entities;
@@ -19,17 +20,41 @@ namespace ZFramework.Skill
 
         public void Update(float deltaTime)
         {
+            SkillUpdate(deltaTime);
             BuffSystem.Inst.Update(deltaTime);
         }
 
-        public void Remove(int instId)
+        public void SkillUpdate(float deltaTime)
         {
-
+            foreach (var skill in skills)
+            {
+                skill.Update(deltaTime);
+                if(skill.IsOver)
+                {
+                    removeList.Add(skill);
+                }
+            }
+            if(removeList.Count > 0)
+            {
+                foreach (var removeItem in removeList)
+                {
+                    removeItem.Dispose();
+                    skills.Remove(removeItem);
+                }
+                removeList.Clear();
+            }
         }
 
-        public void Add()
+        public void Remove(Skill skill)
         {
+            if (!skills.Contains(skill)) return;
+            removeList.Add(skill);
+        }
 
+        public void Add(Skill skill)
+        {
+            if (skills.Contains(skill)) return;
+            skills.Add(skill);
         }
     }
 }

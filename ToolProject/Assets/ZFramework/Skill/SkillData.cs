@@ -15,11 +15,15 @@ namespace ZFramework.Skill
 
         public bool isIgnoreAbnormal;
 
+        public bool needTarget = true;
+
         public RaiseData raiseData;
 
         public ChantData chantData;
 
         public EndData endData;
+
+        public ChooseData chooseData;
     }
     [Serializable]
     public class RaiseData
@@ -75,6 +79,8 @@ namespace ZFramework.Skill
         public ChooseData chooseData;
         public int ratio;//比例
         public int fixValue;//数值
+
+        public bool disposeBySkill;
     }
 
     [Serializable]
@@ -85,6 +91,17 @@ namespace ZFramework.Skill
         public List<int> effects = new List<int>();
         public int time;
         public int stack;
+        public bool disposeBySkill;
+    }
+    [Serializable]
+    public class SummonData
+    {
+        public int summonId;
+        public TriggerData triggerData;
+        public ChooseData chooseData;
+        public int liveTime;
+        public List<EffectData> effects = new List<EffectData>();
+        public List<BuffData> buffs = new List<BuffData>();
     }
 
     public class AdditionData

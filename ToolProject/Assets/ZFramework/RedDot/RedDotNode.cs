@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using FairyGUI;
-namespace ZFrameWork
+namespace ZFramework
 {
     internal class RedDotNode
     {

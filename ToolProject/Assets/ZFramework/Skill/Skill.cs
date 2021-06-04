@@ -13,190 +13,14 @@ namespace ZFramework.Skill
     {
         void Update(float deltaTime);
     }
- 
-    public abstract class EffectNode : IDisposable
-    {
-        protected EffectData effectData;
-        protected GameEntity owner;
-        protected GameEntity creater;
-        public EffectNode(GameEntity owner,GameEntity creater, EffectData effectData)
-        {
-            this.owner = owner;
-            this.creater = creater;
-            this.effectData = effectData;
-        }
-
-        public static EffectNode Create(GameEntity owner,GameEntity creater,EffectData effectData)
-        {
-            if (effectData == null) return null;
-            EffectNode effectNode = null;
-            switch (effectData.id)
-            {
-                case 1:
-                    effectNode = new BleedEffect(owner,creater,effectData);
-                    break;
-            }
-            return effectNode;
-        }
-
-        public abstract void DoEffect(GameEntity owner,GameEntity creater);
-
-        public void Dispose()
-        {
-
-        }
-    }
-
-    public class DamageEffect : EffectNode
-    {
-        public DamageEffect(GameEntity owner, GameEntity creater, EffectData effectData) : base(owner,creater, effectData)
-        {
-
-        }
-
-        public override void DoEffect(GameEntity owner, GameEntity creater)
-        {
-            DamageSystem.Inst.CountDamage(new DamageParam() {
-                attackUid = creater.id,
-                defUid = owner.id,
-                formulaPercent = 10000,
-                formulaAbsolute = 100,
-            });
-        }
-    }
-
-    public class BleedEffect : EffectNode
-    {
-        public BleedEffect(GameEntity owner, GameEntity creater, EffectData effectData) : base(owner,creater, effectData)
-        {
-
-        }
-
-        public override void DoEffect(GameEntity owner, GameEntity creater)
-        {
-            DamageSystem.Inst.CountDamage(new DamageParam() {
-                attackUid = creater.id,
-                defUid = owner.id,
-                holyDamage = effectData.fixValue,
-            });
-        }
-    }
-
-    public class AbnormalEffect : EffectNode
-    {
-        protected AbnormalState abnormalState;
-        public AbnormalEffect(GameEntity owner, GameEntity creater, EffectData effectData) : base(owner,creater,effectData)
-        {
-
-        }
-
-        public override void DoEffect(GameEntity owner, GameEntity creater)
-        {
-            
-        }
-    }
-
-    public class Buff : LiveUpdate ,IDisposable
-    {
-        public static int initBuffId = 0;
-        //配置数据
-        private GameEntity owner;
-
-        private GameEntity creater;
-
-        private int defId;
-
-        public int buffId { get; private set; }
-
-        private int stack;
-
-        public int maxStack { get; private set; }
-        //buff 默认每秒生效一次
-        private int effectInterval = 1;
-        //effect list
-        private List<EffectNode> effectNodes = new List<EffectNode>();
-
-        private BuffData buffData;
-
-        private float tempLive = 0;
-
-        private float liveTime = 0;
-
-        private float triggerInterval = 1f;//触发间隔
-
-        private float tempTriggerTime = 1f;
-        public bool IsOver
-        {
-            get {
-                return tempLive >= liveTime;
-            }
-        }
-
-        public Buff(GameEntity owner,GameEntity creater, BuffData data, int buffId)
-        {
-            this.owner = owner;
-            this.creater = creater;
-            this.defId = data.id;
-            this.buffId = buffId;
-            stack = 1;
-            this.maxStack = data.stack;
-            this.buffData = data;
-            this.liveTime = data.time;
-            for (int i = 0; i < buffData.effects.Count; i++)
-            {
-                var effectData = buffData.effects[i];
-                //SkillEditor 获取数据 先测试
-                EffectNode node = EffectNode.Create(owner, creater, SkillEditor.effectDatas[effectData]);
-                if (node != null)
-                    effectNodes.Add(node);
-            }
-        }
-
-        private void InitEffect()
-        {
-
-        }
-
-        public static Buff Create(GameEntity owner,GameEntity creater,BuffData data)
-        {
-            if (data == null) return null;
-            Buff buff = new Buff(owner, creater, data, ++initBuffId);
-            return buff;
-        }
-
-        public void Update(float deltaTime)
-        {
-            if (tempTriggerTime >= triggerInterval)
-            {
-                if (effectNodes.Count > 0)
-                {
-                    for (int i = 0; i < effectNodes.Count; i++)
-                    {
-                        effectNodes[i].DoEffect(owner, creater);
-                    }
-                }
-                tempTriggerTime = 0;
-            }
-            tempLive += deltaTime;
-            tempTriggerTime += deltaTime;
-        }
-
-        public void Dispose()
-        {
-            effectNodes.Clear();
-            effectNodes = null;
-        }
-    }
 
     public class Skill
     {
         protected FP raiseTick = 0;
 
-        protected FP[] chantTick;
+        protected FP chantTick;
 
         protected FP endTick = 0;
-
-        protected bool hasRaise = true, hasChant = true, hasEnd = true;
 
         protected FP raiseTime = 0;//抬手总时间
 
@@ -204,25 +28,153 @@ namespace ZFramework.Skill
 
         protected FP endTime = 0;
 
+        protected FP chantInterval = 1f;//吟唱生效间隔
+
         protected FP tempTime = 0;
+
+        protected bool hasRaise = true, hasChant = true, hasEnd = true;
+
+        protected bool canRaiseBreak, canChantBreak, canEndBreak;
+
+        protected bool needTarget = false;
+
+        protected GameEntity owner;
+
+        protected SkillData skillData;
+
+        protected HashSet<GameEntity> targets = new HashSet<GameEntity>();
+
+        protected Dictionary<int, Buff> buffs = new Dictionary<int, Buff>();
+
+        protected HashSet<EffectNode> effects = new HashSet<EffectNode>();
+
+        protected bool raiseOver, chantOver, endOver;
+        public bool IsOver
+        {
+            get {
+                return raiseOver && chantOver && endOver;
+            }
+        }
+
+        public Skill(GameEntity user,SkillData skillData)
+        {
+            this.owner = user;
+            this.skillData = skillData;
+            //是否有抬手 抬手关键帧 抬手是否创建buff或者effect 抬手过程中是否可以被打断
+            hasRaise = skillData.raiseData == null;
+            hasChant = skillData.chantData == null;
+            hasEnd = skillData.endData == null;
+
+            if(hasRaise)
+            {
+                raiseTime = skillData.raiseData.raiseTime;
+                raiseTick = skillData.raiseData.raiseTick;
+                canRaiseBreak = skillData.raiseData.canBreak;
+            }
+            //是否有吟唱 吟唱时间 吟唱间隔 吟唱作用间隔 创建的buff和effect 是否可以被打断
+            if(hasChant)
+            {
+                chantTime = skillData.chantData.chantTime;
+                chantTick = skillData.chantData.chantTick;
+                chantInterval = skillData.chantData.chantInterval;
+                canChantBreak = skillData.chantData.canBreak;
+            }
+            //是否有收招动作 收招tick 是否创建buff和effect 是否可以被打断
+            if(hasEnd)
+            {
+                endTime = skillData.endData.endTime;
+                endTick = skillData.endData.endTick;
+                canEndBreak = skillData.endData.canBreak;
+            }
+            needTarget = skillData.needTarget;
+        }
+
         //技能有 抬手 吟唱 结束 三个阶段
         //技能逻辑 与 特效逻辑分离
-
-        public virtual void Update(FP deltaTime)
+        public virtual void Use(SkillChooseInfo info)
         {
-
+            targets = SkillChoose.GetTargets(skillData.chooseData, info, GameController.Inst.entities);
+            //如果没有搜索到目标 并且 技能是需要目标才能释放的 则释放失败
+            if (targets == null && needTarget)
+            {
+                LogTool.Log("技能需要目标，释放失败");
+                return;
+            }
+            //成功搜到目标  则将skill 的update加入到SkillManager的update中
+            SkillManager.Inst.Add(this);
+            Refresh();
         }
 
+        public void Refresh()
+        {
+            tempTime = 0;
+            raiseOver = hasRaise;
+            triggerRaiseTick = false;
+            triggerEndTick = false;
+            chantOver = hasChant;
+            endOver = hasEnd;
+        }
+
+        public void Update(float deltaTime)
+        {
+            Raise();
+            Chant();
+            End();
+            tempTime += deltaTime;
+        }
+
+        private bool triggerRaiseTick = false;
         public virtual void Raise()
         {
-                
+            if (hasRaise && !raiseOver)
+            {
+                if (tempTime >= raiseTime)
+                {
+                    //raise 结束
+                    raiseOver = true;
+                    //结束抬手特效等
+                }
+                if(tempTime  >= raiseTick && !triggerRaiseTick)
+                {
+                    //触发抬手tick
+                    //Buff
+                    if(skillData.raiseData.buffs.Count > 0)
+                    {
+                        foreach (var entity in targets)
+                        {
+                            foreach (var buffData in skillData.raiseData.buffs)
+                            {
+                                var buff = Buff.Create(entity, owner, buffData);
+                                buffs.Add(buff.buffId,buff);
+                            }
+                        }
+                    }
+                    //Effect
+                    if (skillData.raiseData.effects.Count > 0)
+                    {
+                        foreach (var entity in targets)
+                        {
+                            foreach (var effectData in skillData.raiseData.effects)
+                            {
+                                var effect = EffectNode.Create(entity, owner, effectData);
+                                effect.DoEffect(entity, owner);
+                                effects.Add(effect);
+                            }
+                        }
+                    }
+                    //Summon
+
+                }
+            }
         }
 
+     
         public virtual void Chant()
         {
 
         }
 
+        private bool triggerEndTick = false;
         public virtual void End()
         {
 
@@ -240,17 +192,40 @@ namespace ZFramework.Skill
          
         public virtual void Dispose()
         {
+            targets.Clear();
+            if(buffs.Count > 0)
+            {
+                foreach (var buff in buffs)
+                {
+                    buff.Value.Dispose();
+                }
+                buffs.Clear();
+            }
+
+            if(effects.Count > 0)
+            {
+                foreach (var effect in effects)
+                {
+                    effect.Dispose();
+                }
+                effects.Clear();
+            }
+        }
+    }
+
+    public class ActiveSkill : Skill
+    {
+        public ActiveSkill(GameEntity user, SkillData skillData) : base(user, skillData)
+        {
 
         }
     }
 
-    public class ActiveSkill: Skill
-    {
-
-    }
-
     public class PassiveSkill : Skill
     {
+        public PassiveSkill(GameEntity user, SkillData skillData) : base(user, skillData)
+        {
 
+        }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace ZFrameWork
+namespace ZFramework
 {
     /// <summary>
     /// 红点manager

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
-namespace ZFrameWork
+namespace ZFramework
 {
     /// <summary>
     /// 对hashset进行再一次的封装使用

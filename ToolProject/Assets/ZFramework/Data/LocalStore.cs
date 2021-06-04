@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace ZFrameWork
+namespace ZFramework
 {
     //本地数据存储
     public class LocalStore

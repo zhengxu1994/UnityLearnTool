@@ -135,6 +135,9 @@
     <Compile Include="Assets\ZFramework\Skill\BuffSystem.cs" />
     <Compile Include="Assets\ZFramework\Skill\Choose\SkillChoose.cs" />
     <Compile Include="Assets\ZFramework\Skill\Choose\SkillChooseEnum.cs" />
+    <Compile Include="Assets\ZFramework\Skill\Effect\Buff.cs" />
+    <Compile Include="Assets\ZFramework\Skill\Effect\EffectNode.cs" />
+    <Compile Include="Assets\ZFramework\Skill\Effect\SummonObject.cs" />
     <Compile Include="Assets\ZFramework\Skill\EventTrigger.cs" />
     <Compile Include="Assets\ZFramework\Skill\Skill.cs" />
     <Compile Include="Assets\ZFramework\Skill\SkillData.cs" />
