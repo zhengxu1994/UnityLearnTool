@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using ZFramework.Skill.Choose;
 using TrueSync;
+using ZFramework.Skill.Trigger;
+
 namespace ZFramework.Skill
 {
     //定义一些接口
@@ -52,6 +54,7 @@ namespace ZFramework.Skill
 
         protected bool raiseOver, chantOver, endOver;
 
+        private int chantTriggerCount = 0;//吟唱触发效果的次数
         private SkillChooseInfo chooseInfo;
         public bool IsOver
         {
@@ -82,6 +85,7 @@ namespace ZFramework.Skill
                 chantTick = skillData.chantData.chantTick;
                 chantInterval = skillData.chantData.chantInterval;
                 canChantBreak = skillData.chantData.canBreak;
+                chantTriggerCount = (int)(chantTime / chantInterval);
             }
             //是否有收招动作 收招tick 是否创建buff和effect 是否可以被打断
             if(hasEnd)
@@ -137,6 +141,7 @@ namespace ZFramework.Skill
                 {
                     //raise 结束
                     raiseOver = true;
+                    tempTime = 0;
                     LogTool.Log("技能抬手结束");
                     return;
                     //结束抬手特效等
@@ -146,69 +151,110 @@ namespace ZFramework.Skill
                     //触发抬手tick
                     //Buff
                     LogTool.Log("技能抬手Tick");
-                    if (skillData.raiseData.buffs.Count > 0)
-                    {
-                        foreach (var entity in targets)
-                        {
-                            foreach (var buffData in skillData.raiseData.buffs)
-                            {
-                                var buff = entity.AddBuff(owner, buffData);
-                                buffs.Add(buff.buffId, buff);
-                            }
-                        }
-                    }
-                    //Effect
-                    if (skillData.raiseData.effects.Count > 0)
-                    {
-                        foreach (var entity in targets)
-                        {
-                            foreach (var effectData in skillData.raiseData.effects)
-                            {
-                                var effect = EffectNode.Create(entity, owner, effectData);
-                                effect.DoEffect(entity, owner);
-                                effects.Add(effect);
-                            }
-                        }
-                    }
-                    //Summon
-                    if(skillData.raiseData.summons.Count > 0)
-                    {
-                        foreach (var entity in targets)
-                        {
-                            foreach (var summonData in skillData.raiseData.summons)
-                            {
-                                var summon = new SummonObject(entity, owner, summonData, chooseInfo);
-                                summons.Add(summon);
-                            }
-                        }
-                    }
+                    CreateBuffAndEffectAndSummons(skillData.raiseData);
                     triggerRaiseTick = true;
                 }
             }
         }
 
-     
+        private int nowChantTriggerCount = 0;
         public virtual void Chant()
         {
-
+            //计算结束时间 触发间隔
+            if(hasChant && !chantOver)
+            {
+                if(nowChantTriggerCount >= chantTriggerCount)
+                {
+                    chantOver = true;
+                    tempTime = 0;
+                    LogTool.Log("技能吟唱结束");
+                    return;
+                }
+                else if (tempTime >= chantInterval && tempTime >= chantTick)
+                {
+                    tempTime = 0;
+                    nowChantTriggerCount++;
+                    //触发效果
+                    CreateBuffAndEffectAndSummons(skillData.chantData);
+                }
+            }
         }
 
         private bool triggerEndTick = false;
         public virtual void End()
         {
-
+            if (hasEnd && !endOver)
+            {
+                if (tempTime >= endTime)
+                {
+                    //raise 结束
+                    endOver = true;
+                    tempTime = 0;
+                    LogTool.Log("技能收招结束");
+                    return;
+                    //结束抬手特效等
+                }
+                if (tempTime >= endTick && !triggerEndTick)
+                {
+                    //触发抬手tick
+                    //Buff
+                    LogTool.Log("技能收招Tick");
+                    CreateBuffAndEffectAndSummons(skillData.endData);
+                    triggerEndTick = true;
+                }
+            }
         }
 
-        public virtual void RealUseSkillLogic()
+        public virtual void ForceBreak(GameEntity breaker)
         {
-
+            //清空当前数据，推送打断消息
         }
 
-        public virtual void ForceBreak()
+        protected void CreateBuffAndEffectAndSummons(EffectsData data)
         {
-
+            if (data.buffs.Count > 0)
+            {
+                foreach (var entity in targets)
+                {
+                    foreach (var buffData in data.buffs)
+                    {
+                        var buff = entity.AddBuff(owner, buffData);
+                        buffs.Add(buff.buffId, buff);
+                    }
+                }
+            }
+            //Effect
+            if (data.effects.Count > 0)
+            {
+                foreach (var entity in targets)
+                {
+                    foreach (var effectData in data.effects)
+                    {
+                        var effect = EffectNode.Create(entity, owner, effectData);
+                        effect.DoEffect(entity, owner);
+                        effects.Add(effect);
+                    }
+                }
+            }
+            //Summon
+            if (data.summons.Count > 0)
+            {
+                foreach (var entity in targets)
+                {
+                    foreach (var summonData in data.summons)
+                    {
+                        var summon = new SummonObject(entity, owner, summonData, chooseInfo);
+                        summons.Add(summon);
+                    }
+                }
+            }
         }
-         
+
+        protected virtual bool CheckCD()
+        {
+            return true;
+        }
+
         public virtual void Dispose()
         {
             targets.Clear();
@@ -247,15 +293,28 @@ namespace ZFramework.Skill
     {
         public ActiveSkill(GameEntity user, SkillData skillData) : base(user, skillData)
         {
-
+            //主动技能 流程 判断检测 -- 黑屏特效---正式触发 --- 抬手 -- 吟唱 -- 收招 --数据释放
         }
     }
 
     public class PassiveSkill : Skill
     {
+        TriggerData triggerData;
+       
+
         public PassiveSkill(GameEntity user, SkillData skillData) : base(user, skillData)
         {
+            //被动 通过Trigger去触发 同样需要检测
+            this.triggerData = skillData.triggerData;
+            if(triggerData == null)
+            {
+                LogTool.LogError("Trigger Info is null");
+                return;
+            }
 
+            targets.Add(owner);    
+            CreateBuffAndEffectAndSummons(skillData.passiveData);
         }
+
     }
 }

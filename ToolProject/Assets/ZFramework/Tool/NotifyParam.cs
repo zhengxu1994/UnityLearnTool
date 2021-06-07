@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using ZFramework.Pool;
+
 namespace ZFramework
 {
     public class NotifyParam
@@ -51,5 +53,53 @@ namespace ZFramework
                 return boolDatas[key];
             return false;
         }
+
+        private static TObjectPool<NotifyParam> pool = new TObjectPool<NotifyParam>(PoolAlloc,PoolFree,PoolDestroy);
+
+        public string type;
+        public static NotifyParam Create(string type ="")
+        {
+            NotifyParam evt = pool.Alloc();
+            evt.type = type;
+            return evt;
+        }
+
+        private static NotifyParam PoolAlloc()
+        {
+            NotifyParam evt = new NotifyParam();
+            return evt;
+        }
+
+        private static void PoolFree(NotifyParam evt)
+        {
+            evt.intDatas?.Clear();
+            evt.strDatas?.Clear();
+            evt.boolDatas?.Clear();
+        }
+
+        private static void PoolDestroy(NotifyParam evt)
+        {
+            evt.intDatas = null;
+            evt.strDatas = null;
+            evt.boolDatas = null;
+        }
+
+        public NotifyParam Clear()
+        {
+            PoolFree(this);
+            return this;
+        }
+
+        public void Destory()
+        {
+            pool.Free(this);
+        }
+
+        public void Dispose()
+        {
+            Destory();
+        }
+
+
     }
 }

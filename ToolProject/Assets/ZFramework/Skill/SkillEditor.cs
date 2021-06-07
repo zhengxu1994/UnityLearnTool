@@ -115,7 +115,7 @@ namespace ZFramework.Skill
 
         private void TriggerInitTest()
         {
-            var trigger = Trigger.Trigger.Create(owner,owner,BattleEvent.BeforeAttack,TriggerType.BeforeAttack,1,
+            var trigger = Trigger.Trigger.Create(owner,owner,BattleEvent.BeforeAttack,1,
                 (e,t) => {
                     Debug.Log("BeforeAttack");
                 }, (e,t) => {

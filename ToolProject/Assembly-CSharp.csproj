@@ -145,6 +145,8 @@
     <Compile Include="Assets\ZFramework\Skill\SkillManager.cs" />
     <Compile Include="Assets\ZFramework\Skill\Trigger\Trigger.cs" />
     <Compile Include="Assets\ZFramework\Skill\Trigger\TriggerManager.cs" />
+    <Compile Include="Assets\ZFramework\Tool\CoroutineHandler.cs" />
+    <Compile Include="Assets\ZFramework\Tool\CoroutineManager.cs" />
     <Compile Include="Assets\ZFramework\Tool\DamageSystem.cs" />
     <Compile Include="Assets\ZFramework\Tool\GameController.cs" />
     <Compile Include="Assets\ZFramework\Tool\GameEntity.cs" />
@@ -153,6 +155,7 @@
     <Compile Include="Assets\ZFramework\Tool\MonSingleton.cs" />
     <Compile Include="Assets\ZFramework\Tool\NotifyParam.cs" />
     <Compile Include="Assets\ZFramework\Tool\Singleton.cs" />
+    <Compile Include="Assets\ZFramework\Tool\StringUtils.cs" />
     <Compile Include="Assets\ZFramework\Tool\Timer.cs" />
     <Compile Include="Assets\ZFramework\Tool\UITimer.cs" />
     <Compile Include="Assets\ZFramework\Tool\ZConsole.cs" />
@@ -442,6 +445,10 @@
     <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TrueSyncConfig.cs" />
     <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TrueSyncManager.cs" />
     <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\UnityUtils.cs" />
+    <Compile Include="Assets\ZFramework\UI\CommonTop.cs" />
+    <Compile Include="Assets\ZFramework\UI\UIConfig.cs" />
+    <Compile Include="Assets\ZFramework\UI\UIManager.cs" />
+    <Compile Include="Assets\ZFramework\UI\ViewBase.cs" />
     <None Include="Assets\ZFramework\FengleleShaderBook\Le1\VertexFrament Shader.shader" />
     <None Include="Assets\ZFramework\Shaders\Diffuse\DiffuseFrag.shader" />
     <None Include="Assets\ZFramework\Movement\RVO2\CMakeLists.txt" />

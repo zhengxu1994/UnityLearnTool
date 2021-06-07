@@ -25,34 +25,22 @@
         KillUnit
     }
 
-    public enum TriggerType
-    {
-        BeControl,
-        Attr,
-        CureOneHp,
-        AttackSoldier,
-        AttackBySex,
-        BeforeAttack,
-    }
-
     public class Trigger
     {
         protected TriggerSkillTrigger skillTrigger;
         protected CancelSkillTrigger cancelTrigger;
         protected GameEntity creater;
         protected GameEntity owner;
-        protected TriggerType triggerType;
         protected BattleEvent eventType;
         protected int triggerId;
 
 
-        public Trigger(GameEntity creater, GameEntity owner, BattleEvent eventType, TriggerType triggerType,
+        public Trigger(GameEntity creater, GameEntity owner, BattleEvent eventType,
             int triggerId, TriggerSkillTrigger skillTrigger, CancelSkillTrigger cancelTrigger)
         {
             this.creater = creater;
             this.owner = owner;
             this.eventType = eventType;
-            this.triggerType = triggerType;
             this.triggerId = triggerId;
             this.skillTrigger = skillTrigger;
             this.cancelTrigger = cancelTrigger;
@@ -66,27 +54,17 @@
             EventTrigger.Inst.RemoveAll(this);
         }
 
-        public static Trigger Create(GameEntity creater, GameEntity owner, BattleEvent eventType, TriggerType triggerType, 
+        public static Trigger Create(GameEntity creater, GameEntity owner, BattleEvent eventType, 
             int triggerId, TriggerSkillTrigger skillTrigger, CancelSkillTrigger cancelTrigger)
         {
             Trigger trigger = null;
-            switch (triggerType)
+            switch (eventType)
             {
-                case TriggerType.BeforeAttack:
-                    trigger = new Trigger_BeforeAttack(creater, owner, eventType, triggerType, triggerId, skillTrigger, cancelTrigger);
-                    break;
-                case TriggerType.BeControl:
-                    break;
-                case TriggerType.Attr:
-                    break;
-                case TriggerType.CureOneHp:
-                    break;
-                case TriggerType.AttackSoldier:
-                    break;
-                case TriggerType.AttackBySex:
+                case BattleEvent.BeforeAttack:
+                    trigger = new Trigger_BeforeAttack(creater, owner, eventType, triggerId, skillTrigger, cancelTrigger);
                     break;
                 default:
-                    trigger = new Trigger(creater,owner,eventType,triggerType,triggerId,skillTrigger,cancelTrigger);
+                    trigger = new Trigger(creater,owner,eventType,triggerId,skillTrigger,cancelTrigger);
                     break;
             }
             return trigger;
@@ -95,8 +73,8 @@
 
     public class Trigger_BeforeAttack : Trigger
     {
-        public Trigger_BeforeAttack(GameEntity creater, GameEntity owner, BattleEvent eventType, TriggerType triggerType, int triggerId, TriggerSkillTrigger skillTrigger, CancelSkillTrigger cancelTrigger) :
-            base(creater, owner, eventType, triggerType, triggerId, skillTrigger, cancelTrigger)
+        public Trigger_BeforeAttack(GameEntity creater, GameEntity owner, BattleEvent eventType, int triggerId, TriggerSkillTrigger skillTrigger, CancelSkillTrigger cancelTrigger) :
+            base(creater, owner, eventType, triggerId, skillTrigger, cancelTrigger)
         {
 
         }
@@ -106,6 +84,25 @@
             int attackUid = evt.Int("AttackUid");
             if (attackUid == owner.id)
                 skillTrigger(evt, owner);
+        }
+    }
+
+    public class Trigger_OnNearDeath : Trigger
+    {
+        public int count;
+        private int tempCount = 0;
+        public Trigger_OnNearDeath(GameEntity creater, GameEntity owner, BattleEvent eventType, int triggerId, TriggerSkillTrigger skillTrigger, CancelSkillTrigger cancelTrigger) : base(creater, owner, eventType, triggerId, skillTrigger, cancelTrigger)
+        {
+            //Test
+            count = 2;
+        }
+
+        public override void OnEvent(NotifyParam evt)
+        {
+            if(evt.Int(UnStr.definerId) == owner.id && tempCount <= count)
+            {
+                skillTrigger(evt, owner);
+            }
         }
     }
 }

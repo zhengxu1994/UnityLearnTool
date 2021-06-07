@@ -23,23 +23,31 @@ namespace ZFramework.Skill
 
         public EndData endData;
 
+        public PassiveData passiveData;
+
         public ChooseData chooseData;
+
+        public TriggerData triggerData;//专为被动准备，触发条件
     }
     [Serializable]
-    public class RaiseData
+    public class EffectsData
     {
-        public string raiseAction;
-        public int raiseTime;
-        public int raiseTick;
-        public bool canBreak;
-
         public List<EffectData> effects = new List<EffectData>();
         public List<BuffData> buffs = new List<BuffData>();
         public List<SummonData> summons = new List<SummonData>();
     }
 
     [Serializable]
-    public class ChantData
+    public class RaiseData : EffectsData
+    {
+        public string raiseAction;
+        public int raiseTime;
+        public int raiseTick;
+        public bool canBreak;
+    }
+
+    [Serializable]
+    public class ChantData : EffectsData
     {
         public string chantAction;
         public bool actionRepeat;
@@ -50,14 +58,10 @@ namespace ZFramework.Skill
         public bool hasBuff;
         public bool hasEffect;
         public bool canBreak;
-
-        public List<EffectData> effects = new List<EffectData>();
-        public List<BuffData> buffs = new List<BuffData>();
-        public List<SummonData> summons = new List<SummonData>();
     }
 
     [Serializable]
-    public class EndData
+    public class EndData : EffectsData
     {
         public string endAction;
         public int endTime;
@@ -66,10 +70,16 @@ namespace ZFramework.Skill
         public bool hasBuff;
         public bool hasEffect;
         public bool canBreak;
+    }
 
-        public List<EffectData> effects = new List<EffectData>();
-        public List<BuffData> buffs = new List<BuffData>();
-        public List<SummonData> summons = new List<SummonData>();
+
+    [Serializable]
+    public class PassiveData : EffectsData
+    {
+        public string raiseAction;
+        public int raiseTime;
+        public int raiseTick;
+        public bool canBreak;
     }
 
     [Serializable]
@@ -117,6 +127,10 @@ namespace ZFramework.Skill
     public class TriggerData
     {
         public int triggerId;
+
+        public int triggerCond1;
+
+        public int triggerCond2;
     }
 
     [Serializable]

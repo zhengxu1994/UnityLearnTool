@@ -6,7 +6,7 @@ namespace ZFramework.Skill.Trigger
     /// <summary>
     /// Trigger管理
     /// </summary>
-    public class TriggerManager
+    public class TriggerManager : Singleton<TriggerManager>
     {
         public Dictionary<int, Trigger> triggers = new Dictionary<int, Trigger>();
 
@@ -17,11 +17,11 @@ namespace ZFramework.Skill.Trigger
             //Test
         }
 
-        public Trigger CreateTrigger(GameEntity creater, GameEntity owner, BattleEvent eventType, TriggerType triggerType,
+        public Trigger CreateTrigger(GameEntity creater, GameEntity owner, BattleEvent eventType,
              TriggerSkillTrigger skillTrigger, CancelSkillTrigger cancelTrigger)
         {
             triggerId++;
-            triggers.Add(triggerId, Trigger.Create(creater, owner, eventType, triggerType, triggerId, skillTrigger, cancelTrigger));
+            triggers.Add(triggerId, Trigger.Create(creater, owner, eventType, triggerId, skillTrigger, cancelTrigger));
             return triggers[triggerId];
         }
 

@@ -87,5 +87,7 @@ namespace ZFramework
         public const string formulaAbsolute = "formulaAbsolute";
 
         public const string value = "value";
+
+        public const string targetUid = "targetUid";
     }
 }

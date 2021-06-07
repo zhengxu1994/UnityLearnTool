@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace Pool
+namespace ZFramework.Pool
 {
     public class TObjectPool<T>
     {
