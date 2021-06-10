@@ -17,6 +17,8 @@ namespace ZFramework.Skill
         private int stack;
 
         public int maxStack { get; private set; }
+
+        public bool canCoexist { get; private set; }
         //buff 默认每秒生效一次
         private int effectInterval = 1;
         //effect list
@@ -40,6 +42,8 @@ namespace ZFramework.Skill
             }
         }
 
+        private bool dispose = false;
+
         public Buff(GameEntity owner,GameEntity creater, BuffData data, int buffId)
         {
             this.owner = owner;
@@ -48,6 +52,7 @@ namespace ZFramework.Skill
             this.buffId = buffId;
             stack = 1;
             this.maxStack = data.stack;
+            canCoexist = data.canCoexit;
             this.buffData = data;
             this.liveTime = data.time;
             this.disposeBySkill = data.disposeBySkill;
@@ -87,8 +92,12 @@ namespace ZFramework.Skill
 
         public void Dispose()
         {
-            effectNodes.Clear();
-            effectNodes = null;
+            if (!dispose)
+            {
+                effectNodes.Clear();
+                effectNodes = null;
+                dispose = true;
+            }
         }
     }
 }

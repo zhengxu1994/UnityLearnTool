@@ -132,7 +132,10 @@ public class DictBox<K,V> : IDisposable
         return false;
     }
 
-
+    public IEnumerator<KeyValuePair<K,V>> GetEnumerator()
+    {
+        return data.GetEnumerator();
+    }
    
     public void Dispose()
     {

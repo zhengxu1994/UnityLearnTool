@@ -72,7 +72,19 @@ namespace ZFramework.Skill
                 skillData.raiseData.effects.Add(effectDatas[1]);
                 skillData.raiseData.raiseTime = 5;
                 skillData.raiseData.raiseTick = 3;
-                var skill = new Skill(owner, skillData);
+
+                skillData.chantData = new ChantData();
+                skillData.chantData.effects.Add(effectDatas[1]);
+                skillData.chantData.chantTime = 5;
+                skillData.chantData.chantTick = 0.5f;
+                skillData.chantData.chantInterval = 1;
+
+                skillData.endData = new EndData();
+                skillData.endData.buffs.Add(buffDatas[1]);
+                skillData.endData.endTime = 2;
+                skillData.endData.endTick = 1;
+
+                var skill = new ActiveSkill(owner, skillData);
                 skill.Use(skillChooseInfo);
             }
         }

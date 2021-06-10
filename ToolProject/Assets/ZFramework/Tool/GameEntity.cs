@@ -234,7 +234,9 @@ namespace ZFramework
                 }
                 else
                 {
-                    //不可以 进行替换
+                    //不可以叠加 进行替换
+                    buffs[buffData.id].Dispose();
+                    buffs[buffData.id] = Buff.Create(this, creater, buffData);
                 }
             }
             else

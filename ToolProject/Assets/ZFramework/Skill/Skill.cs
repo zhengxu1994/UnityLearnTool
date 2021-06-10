@@ -18,25 +18,7 @@ namespace ZFramework.Skill
 
     public class Skill
     {
-        protected FP raiseTick = 0;
-
-        protected FP chantTick;
-
-        protected FP endTick = 0;
-
-        protected FP raiseTime = 0;//抬手总时间
-
-        protected FP chantTime = 0;//吟唱总时间
-
-        protected FP endTime = 0;
-
-        protected FP chantInterval = 1f;//吟唱生效间隔
-
         protected FP tempTime = 0;
-
-        protected bool hasRaise = true, hasChant = true, hasEnd = true;
-
-        protected bool canRaiseBreak, canChantBreak, canEndBreak;
 
         protected bool needTarget = false;
 
@@ -52,14 +34,11 @@ namespace ZFramework.Skill
 
         protected HashSet<SummonObject> summons = new HashSet<SummonObject>();
 
-        protected bool raiseOver, chantOver, endOver;
-
-        private int chantTriggerCount = 0;//吟唱触发效果的次数
         private SkillChooseInfo chooseInfo;
-        public bool IsOver
+        public virtual bool IsOver
         {
             get {
-                return raiseOver && chantOver && endOver;
+                return false;
             }
         }
 
@@ -68,32 +47,6 @@ namespace ZFramework.Skill
             this.owner = user;
             this.skillData = skillData;
             //是否有抬手 抬手关键帧 抬手是否创建buff或者effect 抬手过程中是否可以被打断
-            hasRaise = skillData.raiseData != null;
-            hasChant = skillData.chantData != null;
-            hasEnd = skillData.endData != null;
-
-            if(hasRaise)
-            {
-                raiseTime = skillData.raiseData.raiseTime;
-                raiseTick = skillData.raiseData.raiseTick;
-                canRaiseBreak = skillData.raiseData.canBreak;
-            }
-            //是否有吟唱 吟唱时间 吟唱间隔 吟唱作用间隔 创建的buff和effect 是否可以被打断
-            if(hasChant)
-            {
-                chantTime = skillData.chantData.chantTime;
-                chantTick = skillData.chantData.chantTick;
-                chantInterval = skillData.chantData.chantInterval;
-                canChantBreak = skillData.chantData.canBreak;
-                chantTriggerCount = (int)(chantTime / chantInterval);
-            }
-            //是否有收招动作 收招tick 是否创建buff和effect 是否可以被打断
-            if(hasEnd)
-            {
-                endTime = skillData.endData.endTime;
-                endTick = skillData.endData.endTick;
-                canEndBreak = skillData.endData.canBreak;
-            }
             needTarget = skillData.needTarget;
         }
 
@@ -114,95 +67,14 @@ namespace ZFramework.Skill
             Refresh();
         }
 
-        public void Refresh()
+        public virtual void Refresh()
         {
             tempTime = 0;
-            raiseOver = !hasRaise;
-            triggerRaiseTick = false;
-            triggerEndTick = false;
-            chantOver = !hasChant;
-            endOver = !hasEnd;
         }
 
-        public void Update(float deltaTime)
+        public virtual  void Update(float deltaTime)
         {
-            Raise();
-            Chant();
-            End();
             tempTime += deltaTime;
-        }
-
-        private bool triggerRaiseTick = false;
-        public virtual void Raise()
-        {
-            if (hasRaise && !raiseOver)
-            {
-                if (tempTime >= raiseTime)
-                {
-                    //raise 结束
-                    raiseOver = true;
-                    tempTime = 0;
-                    LogTool.Log("技能抬手结束");
-                    return;
-                    //结束抬手特效等
-                }
-                if(tempTime  >= raiseTick && !triggerRaiseTick)
-                {
-                    //触发抬手tick
-                    //Buff
-                    LogTool.Log("技能抬手Tick");
-                    CreateBuffAndEffectAndSummons(skillData.raiseData);
-                    triggerRaiseTick = true;
-                }
-            }
-        }
-
-        private int nowChantTriggerCount = 0;
-        public virtual void Chant()
-        {
-            //计算结束时间 触发间隔
-            if(hasChant && !chantOver)
-            {
-                if(nowChantTriggerCount >= chantTriggerCount)
-                {
-                    chantOver = true;
-                    tempTime = 0;
-                    LogTool.Log("技能吟唱结束");
-                    return;
-                }
-                else if (tempTime >= chantInterval && tempTime >= chantTick)
-                {
-                    tempTime = 0;
-                    nowChantTriggerCount++;
-                    //触发效果
-                    CreateBuffAndEffectAndSummons(skillData.chantData);
-                }
-            }
-        }
-
-        private bool triggerEndTick = false;
-        public virtual void End()
-        {
-            if (hasEnd && !endOver)
-            {
-                if (tempTime >= endTime)
-                {
-                    //raise 结束
-                    endOver = true;
-                    tempTime = 0;
-                    LogTool.Log("技能收招结束");
-                    return;
-                    //结束抬手特效等
-                }
-                if (tempTime >= endTick && !triggerEndTick)
-                {
-                    //触发抬手tick
-                    //Buff
-                    LogTool.Log("技能收招Tick");
-                    CreateBuffAndEffectAndSummons(skillData.endData);
-                    triggerEndTick = true;
-                }
-            }
         }
 
         public virtual void ForceBreak(GameEntity breaker)
@@ -291,9 +163,168 @@ namespace ZFramework.Skill
 
     public class ActiveSkill : Skill
     {
+        protected FP raiseTick = 0;
+
+        protected FP chantTick;
+
+        protected FP endTick = 0;
+
+        protected FP raiseTime = 0;//抬手总时间
+
+        protected FP chantTime = 0;//吟唱总时间
+
+        protected FP endTime = 0;
+
+        protected FP chantInterval = 1f;//吟唱生效间隔
+
+        protected bool hasRaise = true, hasChant = true, hasEnd = true;
+
+        protected bool canRaiseBreak, canChantBreak, canEndBreak;
+
+        protected bool raiseOver, chantOver, endOver;
+
+        private int chantTriggerCount = 0;//吟唱触发效果的次数
+
+        public override bool IsOver => raiseOver && chantOver && endOver;
+
+        public int step = 0;//抬手 吟唱 收招阶段
+
         public ActiveSkill(GameEntity user, SkillData skillData) : base(user, skillData)
         {
             //主动技能 流程 判断检测 -- 黑屏特效---正式触发 --- 抬手 -- 吟唱 -- 收招 --数据释放
+
+            hasRaise = skillData.raiseData != null;
+            hasChant = skillData.chantData != null;
+            hasEnd = skillData.endData != null;
+            CheckStep();
+            if (hasRaise)
+            {
+                raiseTime = skillData.raiseData.raiseTime;
+                raiseTick = skillData.raiseData.raiseTick;
+                canRaiseBreak = skillData.raiseData.canBreak;
+            }
+            //是否有吟唱 吟唱时间 吟唱间隔 吟唱作用间隔 创建的buff和effect 是否可以被打断
+            if (hasChant)
+            {
+                chantTime = skillData.chantData.chantTime;
+                chantTick = skillData.chantData.chantTick;
+                chantInterval = skillData.chantData.chantInterval;
+                canChantBreak = skillData.chantData.canBreak;
+                chantTriggerCount = (int)(chantTime / chantInterval);
+            }
+            //是否有收招动作 收招tick 是否创建buff和effect 是否可以被打断
+            if (hasEnd)
+            {
+                endTime = skillData.endData.endTime;
+                endTick = skillData.endData.endTick;
+                canEndBreak = skillData.endData.canBreak;
+            }
+        }
+
+        private void CheckStep()
+        {
+            if (hasRaise)
+                step = 0;
+            else if (hasChant)
+                step = 1;
+            else if (hasEnd)
+                step = 2;
+        }
+
+        public override void Update(float deltaTime)
+        {
+            Raise();
+            Chant();
+            End();
+            base.Update(deltaTime);
+        }
+
+        public override void Refresh()
+        {
+            base.Refresh();
+            raiseOver = !hasRaise;
+            chantOver = !hasChant;
+            endOver = !hasEnd;
+            triggerRaiseTick = false;
+            triggerEndTick = false;
+            CheckStep();
+        }
+
+        private bool triggerRaiseTick = false;
+        public virtual void Raise()
+        {
+            if (hasRaise && !raiseOver && step == 0)
+            {
+                if (tempTime >= raiseTime)
+                {
+                    //raise 结束
+                    raiseOver = true;
+                    tempTime = 0;
+                    LogTool.Log("技能抬手结束");
+                    step++;
+                    return;
+                    //结束抬手特效等
+                }
+                if (tempTime >= raiseTick && !triggerRaiseTick)
+                {
+                    //触发抬手tick
+                    //Buff
+                    LogTool.Log("技能抬手Tick");
+                    CreateBuffAndEffectAndSummons(skillData.raiseData);
+                    triggerRaiseTick = true;
+                }
+            }
+        }
+
+        private int nowChantTriggerCount = 0;
+        public virtual void Chant()
+        {
+            //计算结束时间 触发间隔
+            if (hasChant && !chantOver && step == 1)
+            {
+                if (nowChantTriggerCount >= chantTriggerCount)
+                {
+                    chantOver = true;
+                    tempTime = 0;
+                    step++;
+                    LogTool.Log("技能吟唱结束");
+                    return;
+                }
+                else if (tempTime >= chantInterval && tempTime >= chantTick)
+                {
+                    tempTime = 0;
+                    nowChantTriggerCount++;
+                    LogTool.Log("吟唱tick");
+                    //触发效果
+                    CreateBuffAndEffectAndSummons(skillData.chantData);
+                }
+            }
+        }
+
+        private bool triggerEndTick = false;
+        public virtual void End()
+        {
+            if (hasEnd && !endOver && step == 2)
+            {
+                if (tempTime >= endTime)
+                {
+                    //raise 结束
+                    endOver = true;
+                    tempTime = 0;
+                    step++;
+                    LogTool.Log("技能收招结束");
+                    return;
+                    //结束抬手特效等
+                }
+                if (tempTime >= endTick && !triggerEndTick)
+                {
+                    //触发抬手tick
+                    //Buff
+                    LogTool.Log("技能收招Tick");
+                    CreateBuffAndEffectAndSummons(skillData.endData);
+                    triggerEndTick = true;
+                }
+            }
         }
     }
 

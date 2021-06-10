@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
+
 namespace ZFramework
 {
     //本地数据存储
@@ -14,6 +16,7 @@ namespace ZFramework
                 return data;
             }
         }
+     
     }
 
     [Serializable]
@@ -33,6 +36,11 @@ namespace ZFramework
         {
             if (nums == null) nums = new Dictionary<string, int>();
             if (floats == null) floats = new Dictionary<string, float>();
+        }
+
+        public int GetInt(string key, int defaultValue = 0)
+        {
+            return PlayerPrefs.GetInt(key, defaultValue);
         }
     }
 }

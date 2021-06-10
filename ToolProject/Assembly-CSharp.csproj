@@ -125,6 +125,7 @@
     <Compile Include="Assets\ZFramework\Movement\RVO2\src\Vector2.cs" />
     <Compile Include="Assets\ZFramework\Pool\TObjectPool.cs" />
     <Compile Include="Assets\ZFramework\Pool\UtilTool.cs" />
+    <Compile Include="Assets\ZFramework\ProgramNotes.cs" />
     <Compile Include="Assets\ZFramework\RedDot\RedDotConst.cs" />
     <Compile Include="Assets\ZFramework\RedDot\RedDotMgr.cs" />
     <Compile Include="Assets\ZFramework\RedDot\RedDotNode.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Assets\ZFramework\Render\Polygon.cs" />
     <Compile Include="Assets\ZFramework\Render\Scripts\DrawMesh.cs" />
     <Compile Include="Assets\ZFramework\RenderQueue\RenderQueueTest.cs" />
+    <Compile Include="Assets\ZFramework\ResLoad\ResourceManager.cs" />
     <Compile Include="Assets\ZFramework\Skill\BuffSystem.cs" />
     <Compile Include="Assets\ZFramework\Skill\Choose\SkillChoose.cs" />
     <Compile Include="Assets\ZFramework\Skill\Choose\SkillChooseEnum.cs" />
@@ -148,6 +150,7 @@
     <Compile Include="Assets\ZFramework\Tool\CoroutineHandler.cs" />
     <Compile Include="Assets\ZFramework\Tool\CoroutineManager.cs" />
     <Compile Include="Assets\ZFramework\Tool\DamageSystem.cs" />
+    <Compile Include="Assets\ZFramework\Tool\ExtensionMgr.cs" />
     <Compile Include="Assets\ZFramework\Tool\GameController.cs" />
     <Compile Include="Assets\ZFramework\Tool\GameEntity.cs" />
     <Compile Include="Assets\ZFramework\Tool\GameMain.cs" />

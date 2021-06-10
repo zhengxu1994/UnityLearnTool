@@ -52,11 +52,9 @@ namespace ZFramework.Skill
         public string chantAction;
         public bool actionRepeat;
         public int chantTime;
-        public int chantTick;
+        public float chantTick;
         public int chantInterval;
 
-        public bool hasBuff;
-        public bool hasEffect;
         public bool canBreak;
     }
 
@@ -67,8 +65,6 @@ namespace ZFramework.Skill
         public int endTime;
         public int endTick;
 
-        public bool hasBuff;
-        public bool hasEffect;
         public bool canBreak;
     }
 
@@ -101,6 +97,7 @@ namespace ZFramework.Skill
         public List<int> effects = new List<int>();
         public int time;
         public int stack;
+        public bool canCoexit;
         public bool disposeBySkill;
     }
     [Serializable]
