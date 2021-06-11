@@ -97,67 +97,66 @@ namespace ZFramework.ResLoad
             return null;
         }
 
-        ///// <summary>
-        ///// 异步加载资源
-        ///// </summary>
-        ///// <param name="ab"></param>
-        ///// <param name="type"></param>
-        ///// <param name="assetName"></param>
-        ///// <returns></returns>
-        //async Task<Object> LoadAssetsFromBundleAsync(AssetBundle ab,Type type = null,string assetName = null)
-        //{
-        //    Object obj = null;
-        //    if(ab != null)
-        //    {
-        //        if(!string.IsNullOrEmpty(assetName))
-        //        {
-        //            //判断资源内是否存在找的对象
-        //            var names = ab.GetAllAssetNames();
-        //            for (int i = 0; i < names.Length; i++)
-        //            {
-        //                //存在
-        //                if(names[i].IndexOf(assetName.ToLower()) != -1)
-        //                {
-        //                    if(type != null)
-        //                    {
-        //                        AssetBundleRequest request = ab.LoadAssetAsync(names[i], type);
-        //                        await request;
-        //                        obj = request.asset;
-        //                    }
-        //                    else
-        //                    {
-        //                        AssetBundleRequest request = ab.LoadAssetAsync(names[i]);
-        //                        await request;
-        //                        obj = request.asset;
-        //                    }
-        //                    break;
-        //                }
-        //            }
-        //        }
-        //        else
-        //        {
-        //            //默认加载第一个同类型资源
-        //            Object[] objs;
-        //            if(type != null)
-        //            {
-        //                AssetBundleRequest request = ab.LoadAllAssetsAsync(type);
-        //                yield return request;
-        //                objs = request.allAssets;
-        //            }
-        //            else
-        //            {
-        //                AssetBundleRequest request = ab.LoadAllAssetsAsync();
-        //                yield return request;
-        //                objs = request.allAssets;
-        //            }
+        /// <summary>
+        /// 异步加载资源
+        /// </summary>
+        /// <param name="ab"></param>
+        /// <param name="type"></param>
+        /// <param name="assetName"></param>
+        /// <returns></returns>
+        async Task<Object> LoadAssetsFromBundleAsync(AssetBundle ab,Type type = null,string assetName = null)
+        {
+            Object obj = null;
+            if (ab != null)
+            {
+                if (!string.IsNullOrEmpty(assetName))
+                {
+                    //判断资源内是否存在找的对象
+                    var names = ab.GetAllAssetNames();
+                    for (int i = 0; i < names.Length; i++)
+                    {
+                        //存在
+                        if (names[i].IndexOf(assetName.ToLower()) != -1)
+                        {
+                            if (type != null)
+                            {
+                                AssetBundleRequest request = ab.LoadAssetAsync(names[i], type);
+                                await request;
+                                obj = request.asset;
+                            }
+                            else
+                            {
+                                AssetBundleRequest request = ab.LoadAssetAsync(names[i]);
+                                await request;
+                                obj = request.asset;
+                            }
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    //默认加载第一个同类型资源
+                    Object[] objs;
+                    if (type != null)
+                    {
+                        AssetBundleRequest request = ab.LoadAllAssetsAsync(type);
+                        await request;
+                        objs = request.allAssets;
+                    }
+                    else
+                    {
+                        AssetBundleRequest request = ab.LoadAllAssetsAsync();
+                        await request;
+                        objs = request.allAssets;
+                    }
 
-        //            if (objs.Length > 0)
-        //                obj = objs[0];
-        //        }
-        //    }
-
-        //     return obj;
-        //}
+                    if (objs.Length > 0)
+                        obj = objs[0];
+                }
+            }
+            return obj;
+        }
 
         /// <summary>
         /// 从bundle中加载资源对象

@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -24,7 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,7 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -158,14 +160,6 @@
     <Compile Include="Assets\ZFramework\Tool\MonSingleton.cs" />
     <Compile Include="Assets\ZFramework\Tool\NotifyParam.cs" />
     <Compile Include="Assets\ZFramework\Tool\Singleton.cs" />
-    <Compile Include="Assets\ZFramework\Tool\Source\AwaitExtensions.cs" />
-    <Compile Include="Assets\ZFramework\Tool\Source\Awaiters.cs" />
-    <Compile Include="Assets\ZFramework\Tool\Source\IEnumeratorAwaitExtensions.cs" />
-    <Compile Include="Assets\ZFramework\Tool\Source\Internal\AsyncCoroutineRunner.cs" />
-    <Compile Include="Assets\ZFramework\Tool\Source\Internal\SyncContextUtil.cs" />
-    <Compile Include="Assets\ZFramework\Tool\Source\TaskExtensions.cs" />
-    <Compile Include="Assets\ZFramework\Tool\Source\WaitForBackgroundThread.cs" />
-    <Compile Include="Assets\ZFramework\Tool\Source\WaitForUpdate.cs" />
     <Compile Include="Assets\ZFramework\Tool\StringUtils.cs" />
     <Compile Include="Assets\ZFramework\Tool\Timer.cs" />
     <Compile Include="Assets\ZFramework\Tool\UITimer.cs" />
