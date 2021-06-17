@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -21,8 +21,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_3_3;UNITY_2019_3;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <OutputPath>Temp\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_3;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -46,510 +46,477 @@
   </PropertyGroup>
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.9.4.0</UnityProjectGeneratorVersion>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.7</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneOSX:2</UnityBuildTarget>
-    <UnityVersion>2019.3.3f1</UnityVersion>
+    <UnityVersion>2020.3.3f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="UnityEngine">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
-    </Reference>
+    <Compile Include="Assets/ZFramework/Movement/PathFinding/Pathmodifier.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/LinearMath/TSBBox.cs" />
+    <Compile Include="Assets/ZFramework/Render/Polygon.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ITrueSyncBehaviourCallbacks.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/SerializableDictionaryByteByteArray.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Delaunay/Sweep/PointOnEdgeException.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/Math/ITypeMath.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Body.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSTransform.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/RollbackLockstep.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/PhysicsLogic/SimpleExplosion.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Delaunay/Sweep/AdvancingFront.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/TrueSyncPlayerDisconnectionCallback.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/TrueSyncInputCallback.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/ICommunicator.cs" />
+    <Compile Include="Assets/ZFramework/Games101/Game101Note.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/FixedArray.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/DebugViewBase.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/TSMatrix.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSCollision.cs" />
+    <Compile Include="Assets/ZFramework/Pool/UtilTool.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Factories/FixtureFactory.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSMaterial.cs" />
+    <Compile Include="Assets/TestCls.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/LineTools.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSCollider.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Extra/Clones/SweetPointClone.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Constraint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDTDecomposer.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/ITriangulatable.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/BayazitDecomposer.cs" />
+    <Compile Include="Assets/ZFramework/UI/ViewBase.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/PhysicsManagerFactory.cs" />
+    <Compile Include="Assets/ZFramework/Movement/Move/MoveMgr.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Constraints/Constraint2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/SerializableDictionaryByteByte.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Extra/Clones/ContactClone.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Collision/DynamicTree.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ReplayRecord.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ITrueSyncBehaviourGamePlay.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/Multishape.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/Sink.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/IPhysicsManager.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/FSMTest.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSCircleCollider2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/BreakableBody.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/PhysicsLogic/RealExplosion.cs" />
+    <Compile Include="Assets/ZFramework/Skill/SkillData.cs" />
+    <Compile Include="Assets/ZFramework/RedDot/RedDotMgr.cs" />
+    <Compile Include="Assets/ZFramework/Tool/StringUtils.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Extra/Clones/DynamicTreeBroadPhaseClone2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Contacts/Contact.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/ConeShape.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/CurveKey.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/Stats.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/State/DecisionDie.cs" />
+    <Compile Include="Assets/ZFramework/Tool/LogTool.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Extra/Clones/ContactClone2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ArrayResourcePool.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Extra/Clones/CollisionIslandClone.cs" />
+    <Compile Include="Assets/ZFramework/Skill/Skill.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/CurveKeyCollection.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ChecksumExtractor.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Path.cs" />
+    <Compile Include="Assets/ZFramework/Movement/Move/MoveUnit.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/Trapezoid.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TrueSyncManager.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Settings.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/ConvexHull/Melkman.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/MotorJoint.cs" />
+    <Compile Include="Assets/ZFramework/Movement/Move/Formation.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/TrueSyncEventCallback.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Delaunay/Sweep/DTSweepContext.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Polygon/Polygon.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/Point.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Util/PolygonGenerator.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/State/DecisionChant.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSBoxCollider.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/PulleyJoint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Polygon/PolygonSet.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/State/DecisionAttack.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/DistanceJoint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Sets/ConstrainedPointSet.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/SerializableDictionaryByteInt.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/FixedMouseJoint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/IPhysicsManagerBase.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/InputData.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/Node.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/Fix64SinLut.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/TSPlayerInfo.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/IPriorityQueue.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Extra/Clones/BodyClone2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Island.cs" />
+    <Compile Include="Assets/ZFramework/Skill/SkillEditor.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/SerializableDictionaryByteString.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/FrictionJoint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Collision/Shapes/CircleShape.cs" />
+    <Compile Include="Assets/ZFramework/Movement/PathFinding/AStarFinding.cs" />
+    <Compile Include="Assets/PluginTools/ShaderForge/Example Assets/Scripts/SoftNormalsToVertexColor.cs" />
+    <Compile Include="Assets/ZFramework/Skill/Trigger/Trigger.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/TSQuaternion.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Extra/Clones/CollisionSystemPersistentSAPClone.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/TrueSyncIsReady.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/PolygonManipulation/SimpleCombiner.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/PriorityQueue.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/TriangulationContext.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSBoxCollider2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ReplayMode.cs" />
+    <Compile Include="Assets/ZFramework/CatCooking/Base/Organic-Variety/OrganicVariety.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Factories/JointFactory.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/HashList.cs" />
+    <Compile Include="Assets/ZFramework/Tool/Singleton.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/DecisionTool.cs" />
+    <Compile Include="Assets/ZFramework/RedDot/RedDotNode.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/Math/TypeMath.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/TSMatrix4x4.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSCapsuleCollider.cs" />
+    <Compile Include="Assets/ZFramework/Tool/Timer.cs" />
+    <Compile Include="Assets/ZFramework/Tool/ZConsole.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/MonotoneMountain.cs" />
+    <Compile Include="Assets/ZFramework/Skill/Effect/SummonObject.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Extra/Clones/WorldClone2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/HashSet.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Constraints/TSRigidBodyConstraints.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/TrueSyncManagedBehaviour.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/Math/DoubleMath.cs" />
+    <Compile Include="Assets/ZFramework/Tool/GameController.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/GearJoint.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/Math/GeoUtils.cs" />
+    <Compile Include="Assets/ZFramework/Movement/RVO2/src/Line.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ICollider.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Controllers/GravityController.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Delaunay/DelaunayTriangle.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/Fix64AcosLut.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/WheelJoint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Joints/HingeJoint3D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Controllers/BuoyancyController.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSCollider2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/SerializableDictionary.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Delaunay/Sweep/DTSweepPointComparator.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/BodyMaterial.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/State/DecisionIdle.cs" />
+    <Compile Include="Assets/ZFramework/Movement/RVO2/src/KdTree.cs" />
+    <Compile Include="Assets/ZFramework/Movement/RVO2/src/RVOMath.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/PhysicsLogic/PhysicsLogic.cs" />
+    <Compile Include="Assets/ZFramework/Movement/RVO2/src/Simulator.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/State/DecisionAbnormalState.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/GenericBufferWindow.cs" />
+    <Compile Include="Assets/ZFramework/Pool/TObjectPool.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/DefaultLockstep.cs" />
+    <Compile Include="Assets/ZFramework/Movement/Move/MoveParty.cs" />
+    <Compile Include="Assets/ZFramework/Movement/RVO2/src/Agent.cs" />
+    <Compile Include="Assets/ZFramework/Platform/PlatformInterface.cs" />
+    <Compile Include="Assets/ZFramework/Skill/Effect/EffectNode.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/CountInfo.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ResourcePoolItem.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Extra/Clones/TOIClone2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Extra/Clones/GenericShapeClone.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Collision/DynamicTreeBroadPhase.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/TSRandom.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/MinkowskiSumShape.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/PathManager.cs" />
+    <Compile Include="Assets/ZFramework/Tool/MonSingleton.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Polygon/PolygonPoint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ResourcePool.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/CollisionSystemPersistentSAP.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/RigidBody.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TrueSyncBehaviour.cs" />
+    <Compile Include="Assets/ZFramework/Movement/RVO2/src/Obstacle.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/TriangleMeshShape.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/WorldChecksumExtractor.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/TrueSyncUpdateCallback.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Extra/Clones/GenericShapeClone2D.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/HyperRect.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Extra/Clones/PoolClones3D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Collision/Shapes/ChainShape.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/EarclipDecomposer.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/DataStructures/ReadOnlyHashset.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/DecisionFSM.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Constraints/ConstraintHierarchy.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Vertices.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/FSMSystem.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Fixture.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/YNode.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/CollisionIsland.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Stopwatch.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Controllers/VelocityLimitController.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Util/FixedBitArray3.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Contact.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Extra/Clones/WorldClone.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/AbstractLockstep.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/CompoundStats.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/ConvexHull/GiftWrap.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ITrueSyncBehaviour.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TrueSyncConfig.cs" />
+    <Compile Include="Assets/ZFramework/Data/LocalStore.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSRigidBody2D.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/KdTree.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/TextureTools/MarchingSquares.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/GJKCollide.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/StateTracker.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/PolygonTools.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/State/DecisionMove.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/TextureTools/Terrain.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ResourcePoolStateTrackerState.cs" />
+    <Compile Include="Assets/PluginTools/ShaderForge/Example Assets/Scripts/EnableCameraDepthInForward.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Joints/Joint3D.cs" />
+    <Compile Include="Assets/ZFramework/Render/Scripts/DrawMesh.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Serialization.cs" />
+    <Compile Include="Assets/ZFramework/DataStructure/ListBox.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/TrapezoidalMap.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/Triangulator.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Collision/Shapes/PolygonShape.cs" />
+    <Compile Include="Assets/ZFramework/Skill/Trigger/TriggerManager.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Util/PointGenerator.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Constraints/PointOnLine.cs" />
+    <Compile Include="Assets/ZFramework/UI/UIConfig.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Extra/Clones/ArbiterClone.cs" />
+    <Compile Include="Assets/ZFramework/ProgramNotes.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Controllers/SimpleWindForce.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/CompoundShape.cs" />
+    <Compile Include="Assets/ZFramework/Tool/NotifyParam.cs" />
+    <Compile Include="Assets/ZFramework/Skill/Effect/Buff.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/BoxShape.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSCollision2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/XNode.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/ConvertUnits.cs" />
+    <Compile Include="Assets/ZFramework/CatCooking/Base/Jobs/Jobs.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Factories/BodyFactory.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/Fix64.cs" />
+    <Compile Include="Assets/ZFramework/Movement/ParabolaPath.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/OnEventReceived.cs" />
+    <Compile Include="Assets/ZFramework/Skill/Choose/SkillChoose.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/TSVector.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSRigidBody.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/SoftBody.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/IDebugDraw.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/IWorldClone.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/Drawing.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/Fix64TanLut.cs" />
+    <Compile Include="Assets/ZFramework/Tool/CoroutineManager.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Controllers/Controller.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/TriangulationMode.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/WorldCallbacks.cs" />
+    <Compile Include="Assets/ZFramework/ResLoad/ResourceManager.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/LayerCollisionMatrix.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Orientation.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/TSMath.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/AddTracking.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/IBodyConstraint.cs" />
+    <Compile Include="Assets/ZFramework/Movement/PathFinding/JPSFinding.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Constraints/PointPointDistance.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Extra/Clones/IslandClone2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Coroutine/CoroutineScheduler.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/PhotonTrueSyncCommunicator.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Coroutine/CoroutineNode.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/AngleJoint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSPhysics2D.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/KdTreeNode.cs" />
+    <Compile Include="Assets/ZFramework/Skill/BuffSystem.cs" />
+    <Compile Include="Assets/ZFramework/Tool/GameEntity.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Util/FixedArray3.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Collision/Collision.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/SyncedData.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/LinearMath/TSConvexHull.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Collision/Shapes/Shape.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Controllers/AbstractForceController.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/TSVector2.cs" />
+    <Compile Include="Assets/ZFramework/Tool/GameExtension.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSRaycastHit.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Extra/ConstraintHierarchy2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Contacts/ContactSolver.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/Physics2DWorldManager.cs" />
+    <Compile Include="Assets/ZFramework/Movement/Move/Calculater.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/CapsuleShape.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/PolygonManipulation/YuPengClipper.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Extra/Clones/PoolClones2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/TSPlayer.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Delaunay/Sweep/AdvancingFrontNode.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/TrueSyncInput.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ReplayRecordSave.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/Shape.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSSphereCollider.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/ConvexHullShape.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/RopeJoint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Collision/Shapes/EdgeShape.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/NearestNeighbourList.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/CylinderShape.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/CollisionSystem.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Extra/Clones/ContactEdgeClone2D.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/DecisionFSMState.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/ArbiterMap.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/IBody3D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Delaunay/Sweep/DTSweepConstraint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Octree.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/CollisionSystemBrute.cs" />
+    <Compile Include="Assets/ZFramework/UI/CommonTop.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/RevoluteJoint.cs" />
+    <Compile Include="Assets/ZFramework/Movement/Move/MoveGroup.cs" />
+    <Compile Include="Assets/ZFramework/Skill/EventTrigger.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/TrueSyncInputDataProvider.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Joints/PrismaticJoint3D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/SerializableDictionaryBytePlayer.cs" />
+    <Compile Include="Assets/ZFramework/Movement/Move/MoveUniform.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/TerrainShape.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/State/SecondState/DecisionNearDie.cs" />
+    <Compile Include="Assets/ZFramework/Movement/RVO2/src/Vector2.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSyncExtensionsCore.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/TriangulationPoint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/UnityUtils.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/FSMState.cs" />
+    <Compile Include="Assets/ZFramework/Animator/Scripts/FSMManager.cs" />
+    <Compile Include="Assets/ZFramework/DataStructure/DictBox.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/Math/TSVector4.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/Shapes/SphereShape.cs" />
+    <Compile Include="Assets/ZFramework/RedDot/RedDotConst.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSRaycastHit2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/TimeStep.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Constraints/FixedAngle.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/PolygonManipulation/SimplifyTools.cs" />
+    <Compile Include="Assets/PluginTools/ShaderForge/Example Assets/Scripts/EditorLabel.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/CollisionSystemSAP.cs" />
+    <Compile Include="Assets/ZFramework/Tool/UITimer.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/IslandManager.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Collision/IBroadPhase.cs" />
+    <Compile Include="Assets/ZFramework/DataStructure/HashBox.cs" />
+    <Compile Include="Assets/ZFramework/TouchAndInput/MoveCamera.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSRay.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/ConvexHull/ChainHull.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/PhysicsLogic/FilterData.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/Math/FloatMath.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/PrismaticJoint.cs" />
+    <Compile Include="Assets/ZFramework/Movement/PathFinding/PriorityQueue.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Extra/Clones/DynamicTreeClone2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/IWorld.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/InputDataBase.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/FlipcodeDecomposer.cs" />
+    <Compile Include="Assets/ZFramework/Skill/SkillManager.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/Math/GeoMath.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/IBody2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSTransform2D.cs" />
+    <Compile Include="Assets/ZFramework/Skill/Choose/SkillChooseEnum.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/World.cs" />
+    <Compile Include="Assets/ZFramework/UI/UIManager.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/WeldJoint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Triangulate.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Collision/TimeOfImpact.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/TrueSyncStats.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSPhysics.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/Edge.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/PhysicsWorldManager.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Collision/Distance.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Delaunay/Sweep/DTSweep.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Constraints/PointOnPoint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/TriangulationUtil.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/SerializableDictionaryIntSyncedData.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ResourcePoolListSyncedData.cs" />
+    <Compile Include="Assets/ZFramework/Tool/GameMain.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Curve.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSTerrainCollider.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/MathUtils.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Extra/Clones/RigidBodyClone.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSMeshCollider.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/SeidelDecomposer.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/PolygonManipulation/CuttingTools.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Sets/PointSet.cs" />
+    <Compile Include="Assets/ZFramework/Render/CutPolygon.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/SyncedInfo.cs" />
+    <Compile Include="Assets/ZFramework/Movement/Move/MapMgr.cs" />
+    <Compile Include="Assets/ZFramework/Tool/ExtensionMgr.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/QueryGraph.cs" />
+    <Compile Include="Assets/ZFramework/Movement/KdTreeLib/IKdTree.cs" />
+    <Compile Include="Assets/ZFramework/Tool/CoroutineHandler.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/XenoCollide.cs" />
+    <Compile Include="Assets/ZFramework/Movement/Move/TSVector2KdTree.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/ResourcePoolSyncedData.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Engine/TrueSyncExtensions.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/ContactManager.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/IConstraint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Collision/DynamicTree.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Factories/LinkFactory.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/Dynamics/Arbiter.cs" />
+    <Compile Include="Assets/ZFramework/RenderQueue/RenderQueueTest.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/TriangulationConstraint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/TSPolygonCollider2D.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/Joint.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/Dynamics/World.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/Utils.cs" />
+    <Compile Include="Assets/ZFramework/Tool/DamageSystem.cs" />
+    <Compile Include="Assets/ZFramework/TrueSync/Plugins/TrueSyncDll/TrueSync/IBody.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PluginTools\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
-    <Compile Include="Assets\PluginTools\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
-    <Compile Include="Assets\PluginTools\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
-    <Compile Include="Assets\TestCls.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\DecisionFSM.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\DecisionFSMState.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\DecisionTool.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\FSMManager.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\FSMState.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\FSMSystem.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\FSMTest.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionAbnormalState.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionAttack.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionChant.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionDie.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionIdle.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\State\DecisionMove.cs" />
-    <Compile Include="Assets\ZFramework\Animator\Scripts\State\SecondState\DecisionNearDie.cs" />
-    <Compile Include="Assets\ZFramework\CatCooking\Base\Jobs\Jobs.cs" />
-    <Compile Include="Assets\ZFramework\CatCooking\Base\Organic-Variety\OrganicVariety.cs" />
-    <Compile Include="Assets\ZFramework\Data\LocalStore.cs" />
-    <Compile Include="Assets\ZFramework\DataStructure\DictBox.cs" />
-    <Compile Include="Assets\ZFramework\DataStructure\HashBox.cs" />
-    <Compile Include="Assets\ZFramework\DataStructure\ListBox.cs" />
-    <Compile Include="Assets\ZFramework\Games101\Game101Note.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\HyperRect.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\IKdTree.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\IPriorityQueue.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\KdTree.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\KdTreeNode.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\Math\DoubleMath.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\Math\FloatMath.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\Math\GeoMath.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\Math\GeoUtils.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\Math\ITypeMath.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\Math\TypeMath.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\NearestNeighbourList.cs" />
-    <Compile Include="Assets\ZFramework\Movement\KdTreeLib\PriorityQueue.cs" />
-    <Compile Include="Assets\ZFramework\Movement\Move\Calculater.cs" />
-    <Compile Include="Assets\ZFramework\Movement\Move\Formation.cs" />
-    <Compile Include="Assets\ZFramework\Movement\Move\MapMgr.cs" />
-    <Compile Include="Assets\ZFramework\Movement\Move\MoveGroup.cs" />
-    <Compile Include="Assets\ZFramework\Movement\Move\MoveMgr.cs" />
-    <Compile Include="Assets\ZFramework\Movement\Move\MoveParty.cs" />
-    <Compile Include="Assets\ZFramework\Movement\Move\MoveUniform.cs" />
-    <Compile Include="Assets\ZFramework\Movement\Move\MoveUnit.cs" />
-    <Compile Include="Assets\ZFramework\Movement\Move\TSVector2KdTree.cs" />
-    <Compile Include="Assets\ZFramework\Movement\ParabolaPath.cs" />
-    <Compile Include="Assets\ZFramework\Movement\PathFinding\AStarFinding.cs" />
-    <Compile Include="Assets\ZFramework\Movement\PathFinding\JPSFinding.cs" />
-    <Compile Include="Assets\ZFramework\Movement\PathFinding\Pathmodifier.cs" />
-    <Compile Include="Assets\ZFramework\Movement\PathFinding\PriorityQueue.cs" />
-    <Compile Include="Assets\ZFramework\Movement\RVO2\src\Agent.cs" />
-    <Compile Include="Assets\ZFramework\Movement\RVO2\src\KdTree.cs" />
-    <Compile Include="Assets\ZFramework\Movement\RVO2\src\Line.cs" />
-    <Compile Include="Assets\ZFramework\Movement\RVO2\src\Obstacle.cs" />
-    <Compile Include="Assets\ZFramework\Movement\RVO2\src\RVOMath.cs" />
-    <Compile Include="Assets\ZFramework\Movement\RVO2\src\Simulator.cs" />
-    <Compile Include="Assets\ZFramework\Movement\RVO2\src\Vector2.cs" />
-    <Compile Include="Assets\ZFramework\Platform\PlatformInterface.cs" />
-    <Compile Include="Assets\ZFramework\Pool\TObjectPool.cs" />
-    <Compile Include="Assets\ZFramework\Pool\UtilTool.cs" />
-    <Compile Include="Assets\ZFramework\ProgramNotes.cs" />
-    <Compile Include="Assets\ZFramework\RedDot\RedDotConst.cs" />
-    <Compile Include="Assets\ZFramework\RedDot\RedDotMgr.cs" />
-    <Compile Include="Assets\ZFramework\RedDot\RedDotNode.cs" />
-    <Compile Include="Assets\ZFramework\Render\CutPolygon.cs" />
-    <Compile Include="Assets\ZFramework\Render\Polygon.cs" />
-    <Compile Include="Assets\ZFramework\Render\Scripts\DrawMesh.cs" />
-    <Compile Include="Assets\ZFramework\RenderQueue\RenderQueueTest.cs" />
-    <Compile Include="Assets\ZFramework\ResLoad\ResourceManager.cs" />
-    <Compile Include="Assets\ZFramework\Skill\BuffSystem.cs" />
-    <Compile Include="Assets\ZFramework\Skill\Choose\SkillChoose.cs" />
-    <Compile Include="Assets\ZFramework\Skill\Choose\SkillChooseEnum.cs" />
-    <Compile Include="Assets\ZFramework\Skill\Effect\Buff.cs" />
-    <Compile Include="Assets\ZFramework\Skill\Effect\EffectNode.cs" />
-    <Compile Include="Assets\ZFramework\Skill\Effect\SummonObject.cs" />
-    <Compile Include="Assets\ZFramework\Skill\EventTrigger.cs" />
-    <Compile Include="Assets\ZFramework\Skill\Skill.cs" />
-    <Compile Include="Assets\ZFramework\Skill\SkillData.cs" />
-    <Compile Include="Assets\ZFramework\Skill\SkillEditor.cs" />
-    <Compile Include="Assets\ZFramework\Skill\SkillManager.cs" />
-    <Compile Include="Assets\ZFramework\Skill\Trigger\Trigger.cs" />
-    <Compile Include="Assets\ZFramework\Skill\Trigger\TriggerManager.cs" />
-    <Compile Include="Assets\ZFramework\Tool\CoroutineHandler.cs" />
-    <Compile Include="Assets\ZFramework\Tool\CoroutineManager.cs" />
-    <Compile Include="Assets\ZFramework\Tool\DamageSystem.cs" />
-    <Compile Include="Assets\ZFramework\Tool\ExtensionMgr.cs" />
-    <Compile Include="Assets\ZFramework\Tool\GameController.cs" />
-    <Compile Include="Assets\ZFramework\Tool\GameEntity.cs" />
-    <Compile Include="Assets\ZFramework\Tool\GameExtension.cs" />
-    <Compile Include="Assets\ZFramework\Tool\GameMain.cs" />
-    <Compile Include="Assets\ZFramework\Tool\LogTool.cs" />
-    <Compile Include="Assets\ZFramework\Tool\MonSingleton.cs" />
-    <Compile Include="Assets\ZFramework\Tool\NotifyParam.cs" />
-    <Compile Include="Assets\ZFramework\Tool\Singleton.cs" />
-    <Compile Include="Assets\ZFramework\Tool\StringUtils.cs" />
-    <Compile Include="Assets\ZFramework\Tool\Timer.cs" />
-    <Compile Include="Assets\ZFramework\Tool\UITimer.cs" />
-    <Compile Include="Assets\ZFramework\Tool\ZConsole.cs" />
-    <Compile Include="Assets\ZFramework\TouchAndInput\MoveCamera.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\Drawing.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\ICommunicator.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\IPhysicsManagerBase.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\OnEventReceived.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\AbstractLockstep.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\AddTracking.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ArrayResourcePool.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ChecksumExtractor.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\CompoundStats.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\CountInfo.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\DefaultLockstep.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\GenericBufferWindow.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\HashList.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\IBody.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ICollider.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ITrueSyncBehaviour.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ITrueSyncBehaviourCallbacks.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ITrueSyncBehaviourGamePlay.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\IWorld.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\IWorldClone.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\InputDataBase.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ReplayMode.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ReplayRecord.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ReplayRecordSave.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ResourcePool.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ResourcePoolItem.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ResourcePoolListSyncedData.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ResourcePoolStateTrackerState.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\ResourcePoolSyncedData.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\RollbackLockstep.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\SerializableDictionary.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\SerializableDictionaryByteByte.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\SerializableDictionaryByteByteArray.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\SerializableDictionaryByteInt.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\SerializableDictionaryBytePlayer.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\SerializableDictionaryByteString.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\SerializableDictionaryIntSyncedData.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\StateTracker.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\Stats.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\SyncedData.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\SyncedInfo.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\TSPlayer.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\TSPlayerInfo.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\TrueSyncEventCallback.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\TrueSyncInputCallback.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\TrueSyncInputDataProvider.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\TrueSyncIsReady.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\TrueSyncManagedBehaviour.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\TrueSyncPlayerDisconnectionCallback.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\TrueSyncStats.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\TrueSyncUpdateCallback.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\Utils.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSync\WorldChecksumExtractor.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\Plugins\TrueSyncDll\TrueSyncExtensionsCore.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Coroutine\CoroutineNode.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Coroutine\CoroutineScheduler.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\InputData.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\Fix64.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\Fix64AcosLut.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\Fix64SinLut.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\Fix64TanLut.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\TSMath.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\TSMatrix.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\TSMatrix4x4.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\TSQuaternion.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\TSRandom.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\TSVector.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\TSVector2.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\Math\TSVector4.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\TrueSyncExtensions.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Engine\TrueSyncInput.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Collision\Collision.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Collision\Distance.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Collision\DynamicTree.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Collision\DynamicTreeBroadPhase.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Collision\IBroadPhase.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Collision\Shapes\ChainShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Collision\Shapes\CircleShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Collision\Shapes\EdgeShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Collision\Shapes\PolygonShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Collision\Shapes\Shape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Collision\TimeOfImpact.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\ConvexHull\ChainHull.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\ConvexHull\GiftWrap.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\ConvexHull\Melkman.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Curve.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\CurveKey.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\CurveKeyCollection.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\BayazitDecomposer.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Delaunay\DelaunayTriangle.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\AdvancingFront.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\AdvancingFrontNode.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\DTSweep.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepConstraint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepContext.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepPointComparator.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\PointOnEdgeException.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\ITriangulatable.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Orientation.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Polygon\Polygon.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Polygon\PolygonPoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Polygon\PolygonSet.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Sets\ConstrainedPointSet.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Sets\PointSet.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\TriangulationConstraint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\TriangulationContext.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\TriangulationMode.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\TriangulationPoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\TriangulationUtil.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Util\FixedArray3.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Util\FixedBitArray3.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Util\PointGenerator.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDT\Util\PolygonGenerator.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\CDTDecomposer.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\EarclipDecomposer.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\FlipcodeDecomposer.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Seidel\Edge.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Seidel\MonotoneMountain.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Seidel\Node.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Seidel\Point.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Seidel\QueryGraph.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Seidel\Sink.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Seidel\Trapezoid.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Seidel\TrapezoidalMap.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Seidel\Triangulator.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Seidel\XNode.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Seidel\YNode.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\SeidelDecomposer.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Decomposition\Triangulate.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\FixedArray.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\HashSet.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\LineTools.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\MathUtils.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Path.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\PathManager.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\PhysicsLogic\FilterData.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\PhysicsLogic\PhysicsLogic.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\PhysicsLogic\RealExplosion.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\PhysicsLogic\SimpleExplosion.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\PolygonManipulation\CuttingTools.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\PolygonManipulation\SimpleCombiner.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\PolygonManipulation\SimplifyTools.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\PolygonManipulation\YuPengClipper.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\PolygonTools.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Serialization.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Stopwatch.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\TextureTools\MarchingSquares.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\TextureTools\Terrain.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Common\Vertices.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Controllers\AbstractForceController.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Controllers\BuoyancyController.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Controllers\Controller.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Controllers\GravityController.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Controllers\SimpleWindForce.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Controllers\VelocityLimitController.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\ConvertUnits.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\DebugViewBase.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Body.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\BreakableBody.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\ContactManager.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Contacts\Contact.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Contacts\ContactSolver.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Fixture.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Island.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\AngleJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\DistanceJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\FixedMouseJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\FrictionJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\GearJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\Joint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\MotorJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\PrismaticJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\PulleyJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\RevoluteJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\RopeJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\WeldJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\Joints\WheelJoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\TimeStep.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\World.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Dynamics\WorldCallbacks.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Extra\Clones\BodyClone2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Extra\Clones\ContactClone2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Extra\Clones\ContactEdgeClone2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Extra\Clones\DynamicTreeBroadPhaseClone2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Extra\Clones\DynamicTreeClone2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Extra\Clones\GenericShapeClone2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Extra\Clones\IslandClone2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Extra\Clones\PoolClones2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Extra\Clones\TOIClone2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Extra\Clones\WorldClone2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Extra\ConstraintHierarchy2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Factories\BodyFactory.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Factories\FixtureFactory.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Factories\JointFactory.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Factories\LinkFactory.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\Settings.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\IBody2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\IBody3D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\IBodyConstraint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\IPhysicsManager.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\CollisionIsland.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\CollisionSystem.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\CollisionSystemBrute.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\CollisionSystemPersistentSAP.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\CollisionSystemSAP.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\DynamicTree.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\GJKCollide.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\IslandManager.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Octree.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\BoxShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\CapsuleShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\CompoundShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\ConeShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\ConvexHullShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\CylinderShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\MinkowskiSumShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\Multishape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\Shape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\SphereShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\TerrainShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\Shapes\TriangleMeshShape.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Collision\XenoCollide.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\DataStructures\ReadOnlyHashset.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Arbiter.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\ArbiterMap.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\BodyMaterial.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Constraint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Constraints\Constraint2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Constraints\ConstraintHierarchy.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Constraints\FixedAngle.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Constraints\PointOnLine.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Constraints\PointOnPoint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Constraints\PointPointDistance.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Constraints\TSRigidBodyConstraints.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Contact.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\IConstraint.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Joints\HingeJoint3D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Joints\Joint3D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\Joints\PrismaticJoint3D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\RigidBody.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Dynamics\SoftBody.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Extra\Clones\ArbiterClone.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Extra\Clones\CollisionIslandClone.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Extra\Clones\CollisionSystemPersistentSAPClone.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Extra\Clones\ContactClone.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Extra\Clones\GenericShapeClone.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Extra\Clones\PoolClones3D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Extra\Clones\RigidBodyClone.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Extra\Clones\SweetPointClone.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\Extra\Clones\WorldClone.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\IDebugDraw.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\LinearMath\TSBBox.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\LinearMath\TSConvexHull.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\World.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\LayerCollisionMatrix.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\PhotonTrueSyncCommunicator.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\Physics2DWorldManager.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\PhysicsManagerFactory.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\PhysicsWorldManager.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSBoxCollider.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSBoxCollider2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSCapsuleCollider.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSCircleCollider2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSCollider.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSCollider2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSCollision.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSCollision2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSMaterial.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSMeshCollider.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSPhysics.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSPhysics2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSPolygonCollider2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSRay.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSRaycastHit.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSRaycastHit2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSRigidBody.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSRigidBody2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSSphereCollider.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSTerrainCollider.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSTransform.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TSTransform2D.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TrueSyncBehaviour.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TrueSyncConfig.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\TrueSyncManager.cs" />
-    <Compile Include="Assets\ZFramework\TrueSync\TrueSync\Unity\UnityUtils.cs" />
-    <Compile Include="Assets\ZFramework\UI\CommonTop.cs" />
-    <Compile Include="Assets\ZFramework\UI\UIConfig.cs" />
-    <Compile Include="Assets\ZFramework\UI\UIManager.cs" />
-    <Compile Include="Assets\ZFramework\UI\ViewBase.cs" />
-    <None Include="Assets\ZFramework\FengleleShaderBook\Le1\VertexFrament Shader.shader" />
-    <None Include="Assets\ZFramework\Shaders\Diffuse\DiffuseFrag.shader" />
-    <None Include="Assets\ZFramework\Movement\RVO2\CMakeLists.txt" />
-    <None Include="Assets\Resources\CellShader.shader" />
-    <None Include="Assets\Effect\Shader\Blend20200721.shader" />
-    <None Include="Assets\PluginTools\taecgLibrary\SkillIndicator\Examples\Meshes\ProjectorLight.shader" />
-    <None Include="Assets\Effect\Shader\yl-Particle Add.shader" />
-    <None Include="Assets\ZFramework\Shaders\ShaderForge\Learn1\Lambot\LambotDes.txt" />
-    <None Include="Assets\PluginTools\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
-    <None Include="Assets\Effect\Shader\yl Unlit.shader" />
-    <None Include="Assets\PluginTools\ShaderForge\Example Assets\Shaders\LightWrapping.shader" />
-    <None Include="Assets\Effect\Shader\cgwell Alpha Blend.shader" />
-    <None Include="Assets\Effect\Shader\WarningSector.shader" />
-    <None Include="Assets\Effect\Shader\yl_Fresnel_HDRparticle_add_backculldepthwrite.shader" />
-    <None Include="Assets\Effect\Shader\Post.shader" />
-    <None Include="Assets\Effect\Shader\yl_liuguang1_001.shader" />
-    <None Include="Assets\ZFramework\Shaders\ShaderForge\Learn2\LambotT2.shader" />
-    <None Include="Assets\ZFramework\Shaders\Specular\SpecularVertex.shader" />
-    <None Include="Assets\Effect\Shader\yl Alpha_Blend_Mask.shader" />
-    <None Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Jitter\license.txt" />
-    <None Include="Assets\PluginTools\ShaderForge\Example Assets\Shaders\Parallax.shader" />
-    <None Include="Assets\Effect\Shader\cgwell-Particle Add.shader" />
-    <None Include="Assets\PluginTools\ShaderForge\Example Assets\Shaders\Tiles.shader" />
-    <None Include="Assets\codeandweb.com\Readme.txt" />
-    <None Include="Assets\PluginTools\ShaderForge\Example Assets\Shaders\Refraction.shader" />
-    <None Include="Assets\ZFramework\Shaders\Phong\BlinnPhong.shader" />
-    <None Include="Assets\Resources\Shaders\FairyGUI-Text.shader" />
-    <None Include="Assets\ZFramework\Shaders\ShaderForge\Learn2\HalfToon.shader" />
-    <None Include="Assets\Effect\Shader\yl_Burn.shader" />
-    <None Include="Assets\PluginTools\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
-    <None Include="Assets\Effect\Shader\yl_guangyun_001.shader" />
-    <None Include="Assets\ZFramework\Shaders\ShaderForge\Learn2\LambotHighLight.shader" />
-    <None Include="Assets\Resources\Shaders\FairyGUI-Image.shader" />
-    <None Include="Assets\Effect\Shader\10211_liuguang_002.shader" />
-    <None Include="Assets\Effect\Shader\CustomEffect_00.shader" />
-    <None Include="Assets\ZFramework\Shaders\ShaderForge\Learn4\l04.shader" />
-    <None Include="Assets\ZFramework\TrueSync\TrueSync\link.xml" />
-    <None Include="Assets\ZFramework\Shaders\Phong\Phong.shader" />
-    <None Include="Assets\Effect\Shader\yl Alpha Blend.shader" />
-    <None Include="Assets\Effect\Shader\yl_Dissolution_blend.shader" />
-    <None Include="Assets\ZFramework\Shaders\shader笔记.txt" />
-    <None Include="Assets\ZFramework\Shaders\LambortAndPhong\LambortAndPhong.shader" />
-    <None Include="Assets\Effect\Shader\UV_Move_Add.shader" />
-    <None Include="Assets\Effect\Shader\CustomEffect_Blend.shader" />
-    <None Include="Assets\ZFramework\Shaders\ShaderForge\Learn1\Lambot\Lambot.shader" />
-    <None Include="Assets\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
-    <None Include="Assets\PluginTools\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
-    <None Include="Assets\ZFramework\Shaders\Simple\SimpleShader.shader" />
-    <None Include="Assets\Effect\Shader\yl_guangyun_002.shader" />
-    <None Include="Assets\Effect\Shader\yl Alpha Blend Z.shader" />
-    <None Include="Assets\ZFramework\TrueSync\TrueSync\Physics\Farseer\license.txt" />
-    <None Include="Assets\ZFramework\Movement\RVO2\src\CMakeLists.txt" />
-    <None Include="Assets\Resources\OutlineShader.shader" />
-    <None Include="Assets\PluginTools\ShaderForge\Readme.txt" />
-    <None Include="Assets\Effect\Shader\yl_liuguang_002.shader" />
-    <None Include="Assets\ZFramework\TrueSync\TrueSync\Physics\readme.txt" />
-    <None Include="Assets\PluginTools\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
-    <None Include="Assets\Effect\Shader\yl Add Zoff.shader" />
-    <None Include="Assets\Resources\CellShaderNew.shader" />
-    <None Include="Assets\PluginTools\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
-    <None Include="Assets\Resources\Shaders\FairyGUI-BMFont.shader" />
-    <None Include="Assets\PluginTools\ShaderForge\Example Assets\Shaders\TessellationDisplacement.shader" />
-    <None Include="Assets\Effect\Shader\yl_ASE_RefractionDistortion.shader" />
-    <None Include="Assets\Effect\Shader\ASE_RefractionDistortion.shader" />
-    <None Include="Assets\ZFramework\Shaders\Diffuse\DiffuseVertex.shader" />
-    <None Include="Assets\builtin\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-Diffuse.shader" />
-    <None Include="Assets\Effect\Shader\WarningArrow.shader" />
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="ILRuntime">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/ILRuntime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+     <None Include="Assets/ZFramework/FengleleShaderBook/Le1/VertexFrament Shader.shader" />
+     <None Include="Assets/ZFramework/Shaders/Diffuse/DiffuseFrag.shader" />
+     <None Include="Assets/ZFramework/Movement/RVO2/CMakeLists.txt" />
+     <None Include="Assets/Resources/CellShader.shader" />
+     <None Include="Assets/Effect/Shader/Blend20200721.shader" />
+     <None Include="Assets/PluginTools/taecgLibrary/SkillIndicator/Examples/Meshes/ProjectorLight.shader" />
+     <None Include="Assets/Effect/Shader/yl-Particle Add.shader" />
+     <None Include="Assets/ZFramework/Shaders/ShaderForge/Learn1/Lambot/LambotDes.txt" />
+     <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/Vegetation.shader" />
+     <None Include="Assets/Effect/Shader/yl Unlit.shader" />
+     <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/LightWrapping.shader" />
+     <None Include="Assets/Effect/Shader/cgwell Alpha Blend.shader" />
+     <None Include="Assets/Effect/Shader/WarningSector.shader" />
+     <None Include="Assets/Effect/Shader/yl_Fresnel_HDRparticle_add_backculldepthwrite.shader" />
+     <None Include="Assets/Effect/Shader/Post.shader" />
+     <None Include="Assets/Effect/Shader/yl_liuguang1_001.shader" />
+     <None Include="Assets/ZFramework/Shaders/ShaderForge/Learn2/LambotT2.shader" />
+     <None Include="Assets/ZFramework/Shaders/Specular/SpecularVertex.shader" />
+     <None Include="Assets/Effect/Shader/yl Alpha_Blend_Mask.shader" />
+     <None Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Jitter/license.txt" />
+     <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/Parallax.shader" />
+     <None Include="Assets/Effect/Shader/cgwell-Particle Add.shader" />
+     <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/Tiles.shader" />
+     <None Include="Assets/codeandweb.com/Readme.txt" />
+     <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/Refraction.shader" />
+     <None Include="Assets/ZFramework/Shaders/Phong/BlinnPhong.shader" />
+     <None Include="Assets/Resources/Shaders/FairyGUI-Text.shader" />
+     <None Include="Assets/ZFramework/Shaders/ShaderForge/Learn2/HalfToon.shader" />
+     <None Include="Assets/Effect/Shader/yl_Burn.shader" />
+     <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/CustomLighting.shader" />
+     <None Include="Assets/Effect/Shader/yl_guangyun_001.shader" />
+     <None Include="Assets/ZFramework/Shaders/ShaderForge/Learn2/LambotHighLight.shader" />
+     <None Include="Assets/Resources/Shaders/FairyGUI-Image.shader" />
+     <None Include="Assets/Effect/Shader/10211_liuguang_002.shader" />
+     <None Include="Assets/Effect/Shader/CustomEffect_00.shader" />
+     <None Include="Assets/ZFramework/Shaders/ShaderForge/Learn4/l04.shader" />
+     <None Include="Assets/ZFramework/TrueSync/TrueSync/link.xml" />
+     <None Include="Assets/ZFramework/Shaders/Phong/Phong.shader" />
+     <None Include="Assets/Effect/Shader/yl Alpha Blend.shader" />
+     <None Include="Assets/Effect/Shader/yl_Dissolution_blend.shader" />
+     <None Include="Assets/ZFramework/Shaders/shader笔记.txt" />
+     <None Include="Assets/ZFramework/Shaders/LambortAndPhong/LambortAndPhong.shader" />
+     <None Include="Assets/Effect/Shader/UV_Move_Add.shader" />
+     <None Include="Assets/Effect/Shader/CustomEffect_Blend.shader" />
+     <None Include="Assets/ZFramework/Shaders/ShaderForge/Learn1/Lambot/Lambot.shader" />
+     <None Include="Assets/Resources/Shaders/AddOn/FairyGUI-BlurFilter.shader" />
+     <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/VertexColorRounding.shader" />
+     <None Include="Assets/ZFramework/Shaders/Simple/SimpleShader.shader" />
+     <None Include="Assets/Effect/Shader/yl_guangyun_002.shader" />
+     <None Include="Assets/Effect/Shader/yl Alpha Blend Z.shader" />
+     <None Include="Assets/ZFramework/TrueSync/TrueSync/Physics/Farseer/license.txt" />
+     <None Include="Assets/ZFramework/Movement/RVO2/src/CMakeLists.txt" />
+     <None Include="Assets/Resources/OutlineShader.shader" />
+     <None Include="Assets/PluginTools/ShaderForge/Readme.txt" />
+     <None Include="Assets/Effect/Shader/yl_liuguang_002.shader" />
+     <None Include="Assets/ZFramework/TrueSync/TrueSync/Physics/readme.txt" />
+     <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/PixelRotator.shader" />
+     <None Include="Assets/Effect/Shader/yl Add Zoff.shader" />
+     <None Include="Assets/Resources/CellShaderNew.shader" />
+     <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/VertexAnimation.shader" />
+     <None Include="Assets/Resources/Shaders/FairyGUI-BMFont.shader" />
+     <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/TessellationDisplacement.shader" />
+     <None Include="Assets/Effect/Shader/yl_ASE_RefractionDistortion.shader" />
+     <None Include="Assets/Effect/Shader/ASE_RefractionDistortion.shader" />
+     <None Include="Assets/ZFramework/Shaders/Diffuse/DiffuseVertex.shader" />
+     <None Include="Assets/builtin/builtin_shaders/DefaultResourcesExtra/Mobile/Mobile-Diffuse.shader" />
+     <None Include="Assets/Effect/Shader/WarningArrow.shader" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -593,6 +560,9 @@
     <Reference Include="UnityEngine.DirectorModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GIModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
     </Reference>
@@ -634,6 +604,9 @@
     </Reference>
     <Reference Include="UnityEngine.ProfilerModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
@@ -680,6 +653,9 @@
     <Reference Include="UnityEngine.UIElementsModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIElementsNativeModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UNETModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
     </Reference>
@@ -691,6 +667,9 @@
     </Reference>
     <Reference Include="UnityEngine.UnityConnectModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityCurlModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityTestProtocolModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
@@ -722,20 +701,56 @@
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.WindModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XRModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
-    <Reference Include="ILRuntime.Mono.Cecil">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.dll</HintPath>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="ILRuntime.Mono.Cecil.Pdb">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
+    <Reference Include="UnityEditor.CoreModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GraphViewModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.GraphViewModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.PackageManagerUIModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.PackageManagerUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SceneTemplateModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.SceneTemplateModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsSamplesModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIElementsSamplesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIServiceModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIServiceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UnityConnectModule">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Mdb">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
+      <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="ILRuntime.Mono.Cecil">
+      <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="ILRuntime.Mono.Cecil.Pdb">
+      <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -1082,14 +1097,35 @@
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
     </Reference>
-    <Reference Include="UnityScript">
-      <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/UnityScript.dll</HintPath>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityScript.Lang">
-      <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/UnityScript.Lang.dll</HintPath>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Boo.Lang">
-      <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="ILRuntime">
+      <HintPath>Library/ScriptAssemblies/ILRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -1100,7 +1136,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

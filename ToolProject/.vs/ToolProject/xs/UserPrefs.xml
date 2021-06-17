@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{867945B8-755C-27AE-7CE2-68A275B91FB5}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ZFramework/ResLoad/ResourceManager.cs">
     <Files>
-      <File FileName="Assets/ZFramework/ResLoad/ResourceManager.cs" Line="150" Column="30" />
+      <File FileName="Assets/ZFramework/ResLoad/ResourceManager.cs" Line="554" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,12 +9,7 @@
           <Node name="ToolProject" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Plugins" expanded="True">
-                <Node name="AsyncAwaitUtil" expanded="True">
-                  <Node name="Tests" expanded="True" />
-                  <Node name="UniRx" expanded="True">
-                    <Node name="Tests" expanded="True" />
-                  </Node>
-                </Node>
+                <Node name="AsyncAwaitUtil" expanded="True" />
               </Node>
               <Node name="ZFramework" expanded="True">
                 <Node name="ResLoad" expanded="True">

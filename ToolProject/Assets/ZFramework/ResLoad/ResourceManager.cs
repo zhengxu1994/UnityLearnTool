@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Networking;
 using ZFramework.Platform;
 
 namespace ZFramework.ResLoad
@@ -159,6 +160,209 @@ namespace ZFramework.ResLoad
         }
 
         /// <summary>
+        /// 加载某个bundle的一种类型资源
+        /// </summary>
+        /// <param name="ab"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        async Task<Object[]> LoadAllAssetsFromBundleAsync(AssetBundle ab,Type type =null)
+        {
+            Object[] objs = null;
+            if(ab != null)
+            {
+                AssetBundleRequest request;
+                if (type == null)
+                    request = ab.LoadAllAssetsAsync();
+                else
+                    request = ab.LoadAllAssetsAsync(type);
+                await request;
+                objs = request.allAssets;
+            }
+            return objs;
+        }
+
+        /// <summary>
+        /// 网络请求下载bundle
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="file"></param>
+        /// <param name="callback"></param>
+        /// <param name="cache"></param>
+        async void LoadBundleFromWebRequest(string url,string file,Action<AssetBundle> callback,bool cache)
+        {
+            file = file.ToLower();
+            if (mCacheAssets.TryGetValue(file,out var node))
+            {
+                callback?.Invoke(node.ab);
+            }
+            else
+            {
+                AssetBundle ab = null;
+                url = string.Format("{0}{1}{2}", url, file, ABExtension);
+                using(UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(url))
+                {
+                    await request.SendWebRequest();
+                    if(request.isDone)
+                    {
+                        ab = DownloadHandlerAssetBundle.GetContent(request);
+                        if (ab != null && cache)
+                            CacheAssetBundle(file, ab);
+                    }
+                }
+                callback?.Invoke(ab);
+            }
+        }
+
+        /// <summary>
+        /// 异步缓存依赖信息
+        /// </summary>
+        /// <param name="bundle"></param>
+        /// <returns></returns>
+        public async Task<bool> CacheDepensAsync(string bundle)
+        {
+            string file;
+            string path;
+            bool childdep = false;
+            if(mDependencies.TryGetValue(bundle,out var deps))
+            {
+                foreach (var f in deps)
+                {
+                    file = f.ToLower();
+                    if (mCacheAssets.ContainsKey(file))
+                        continue;
+                    childdep = await CacheDepensAsync(file);
+                    if (!childdep)
+                        return false;
+                }
+            }
+
+            if(!mCacheAssets.ContainsKey(bundle))
+            {
+                AssetBundleCreateRequest request;
+                path = PlatformInterface.instance.GetBundlePath(string.Format("{0}{1}", bundle, ABExtension), out ulong offset);
+                if (offset > 0)
+                    request = AssetBundle.LoadFromFileAsync(path, 0, offset);
+                else
+                    request = AssetBundle.LoadFromFileAsync(path);
+                AssetBundle ab = await request;
+
+                if (ab == null) return false;
+                CacheAssetBundle(bundle, ab);
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// 外部调用异步加载bundle，这里加载的bundle需要手动去释放
+        /// </summary>
+        /// <param name="file"></param>
+        /// <param name="callback"></param>
+        public async void LoadBundleAsync(string file,Action<AssetBundle> callback)
+        {
+            file = file.ToLower();
+            if (mCacheAssets.TryGetValue(file,out var node))
+            {
+                callback(node.ab);
+                return;
+            }
+            //有正在加载这个资源的人物，就添加进去 等加载完 一起回调
+            //?  问题，如果我的回调里面释放了bundle 那后面的事件又使用这个bundle该咋办
+            if (mLoadingAssets.ContainsKey(file))
+            {
+                mLoadingAssets[file] += callback;
+                return;
+            }
+
+            mLoadingAssets[file] = callback;
+            bool depcached = await CacheDepensAsync(file);
+            if(!depcached)
+            {
+                mLoadingAssets[file].Invoke(null);
+                mLoadingAssets.Remove(file);
+                UnLoadAssetsFromCache(file);
+            }
+            else
+            {
+                mLoadingAssets[file].Invoke(mCacheAssets[file].ab);
+                mLoadingAssets.Remove(file);
+            }
+        }
+
+        /// <summary>
+        /// 异步加载资源
+        /// </summary>
+        /// <param name="ab"></param>
+        /// <param name="callback"></param>
+        /// <param name="type"></param>
+        /// <param name="assetName"></param>
+        public async void LoadAssetsAsync(AssetBundle ab,Action<Object> callback,Type type = null,string assetName = null)
+        {
+            Object obj = await LoadAssetsFromBundleAsync(ab, type, assetName);
+            callback?.Invoke(obj);
+        }
+
+        public async void LoadAllAssetsAsync(AssetBundle ab,Action<Object[]> callback,Type type =null)
+        {
+            Object[] objs = await LoadAllAssetsFromBundleAsync(ab, type);
+            callback?.Invoke(objs);
+        }
+
+        public void LoadAssetFromBundleFileAsync(string file,Action<Object> callback,Type type =null,bool unload =true,
+            string assetName = null)
+        {
+            file = file.ToLower();
+            LoadBundleAsync(file, (ab) => {
+                if (ab == null)
+                {
+                    callback(null);
+                    return;
+                }
+
+                //不是场景ab包
+                if(!ab.isStreamedSceneAssetBundle)
+                {
+                    LoadAssetsAsync(ab, (obj) => {
+                        callback(obj);
+                        if (unload)
+                            UnLoadAssetsFromCache(file);
+                    }, type, assetName);
+                }
+                else
+                {
+                    callback(null);
+                }
+            });
+        }
+
+
+        public void LoadAllAssetFromBundleFileAsync(string file, Action<Object[]> callback, Type type = null, bool unload = true,
+            string assetName = null)
+        {
+            file = file.ToLower();
+            LoadBundleAsync(file, (ab) => {
+                if (ab == null)
+                {
+                    callback(null);
+                    return;
+                }
+
+                //不是场景ab包
+                if (!ab.isStreamedSceneAssetBundle)
+                {
+                    LoadAllAssetsAsync(ab, (objs) => {
+                        callback(objs);
+                        if (unload)
+                            UnLoadAssetsFromCache(file);
+                    }, type);
+                }
+                else
+                {
+                    callback(new Object[] { ab} );
+                }
+            });
+        }
+
+        /// <summary>
         /// 从bundle中加载资源对象
         /// </summary>
         /// <param name="file"></param>
@@ -308,6 +512,45 @@ namespace ZFramework.ResLoad
             }
         }
 
-       
+        public Object[] LoadAllAssetFromBundleFile(string file,Type type = null,bool unload =true)
+        {
+            file = file.ToLower();
+            AssetBundle ab = LoadBundleFromFile(file);
+            if(ab == null)
+            {
+                LogTool.LogError("load bundle failed :{0}!", file);
+                return null;
+            }
+
+            Object[] objs = LoadAllAssetFromBundle(ab, type);
+            if (unload)
+                UnLoadAssetsFromCache(file);
+            return objs;
+        }
+
+        public Object[] LoadAllAssetFromBundle(AssetBundle ab, Type type = null)
+        {
+            Object[] objs = null;
+            if (ab != null)
+            {
+                if (type == null)
+                    objs = ab.LoadAllAssets(type);
+                else
+                    objs = ab.LoadAllAssets();
+            }
+            return objs;
+        }
+
+        private void AddPackageAssets(string package,string asset)
+        {
+            if (!mPackageAssets.ContainsKey(package))
+                mPackageAssets[package] = new HashSet<string>();
+            mPackageAssets[package].Add(asset);
+        }
+
+        public void UnLoadAssetsByPackage(string pkgName,bool clean = false)
+        {
+            
+        }
     }
 }
