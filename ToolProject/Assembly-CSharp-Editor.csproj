@@ -26,7 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,7 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -82,7 +82,6 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_ShaderProperties/SF_ShaderProperty.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SF_NodeConnectionLine.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_LightPosition.cs" />
-    <Compile Include="Assets/codeandweb.com/Editor/UIImageSetSizeAndPivot.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SF_NodeStatus.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Utility/SF_DraggableSeparator.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Vector4Property.cs" />
@@ -90,12 +89,12 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Divide.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_NormalVector.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_LightVector.cs" />
-    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/Editor/TrueSyncConfigEditor.cs" />
+    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/TrueSyncConfigEditor.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Utility/SF_MinMax.cs" />
-    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/Editor/TSRigidBodyEditor.cs" />
+    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/TSRigidBodyEditor.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_ObjectScale.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SF_Node_Arithmetic.cs" />
-    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/Editor/MenuContext.cs" />
+    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/MenuContext.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_ConnectionGroups/SFNCG_MatrixMultiply.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Negate.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SF_NodeConnector.cs" />
@@ -155,7 +154,7 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_RgbToHsv.cs" />
     <Compile Include="Assets/Editor/ExportResourceOld/ExportResourceEffect.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_HalfVector.cs" />
-    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/Editor/TSVectorDrawer.cs" />
+    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/TSVectorDrawer.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_StaticBranch.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Utility/SF_Link.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Vector2.cs" />
@@ -199,7 +198,7 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Color.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Multiply.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Tangent.cs" />
-    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/Editor/TSVector2Drawer.cs" />
+    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/TSVector2Drawer.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Reflect.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_SceneColor.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Distance.cs" />
@@ -218,7 +217,7 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_DDX.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_ChannelBlend.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_ShaderProperties/SFP_Tex2d.cs" />
-    <Compile Include="Assets/ZFramework/TrueSync/TrueSync/Unity/Editor/TSFPDrawer.cs" />
+    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/TSFPDrawer.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Exp.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Round.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_SwitchProperty.cs" />
@@ -362,7 +361,6 @@
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_Rotator/SFN_Rotator_REQONLY.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_MultiplyMatrix/SFN_MultiplyMatrix.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_Reciprocal/SFN_Reciprocal.shader" />
-     <None Include="Assets/codeandweb.com/Editor/SettingsTexturePackerImporter.txt" />
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_Add/SFN_Add_2.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_Min/SFN_Min_3.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_DDXY/SFN_DDXY.shader" />
@@ -385,7 +383,6 @@
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_ColorDodge.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_VertexColor/SFN_VertexColor.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_Sin/SFN_Sin.shader" />
-     <None Include="Assets/codeandweb.com/Editor/TexturePackerImporter.dll" />
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_ArcTan2/SFN_ArcTan2_NOTO.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_Relay/SFN_Relay.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_Transpose/SFN_Transpose.shader" />
@@ -703,9 +700,6 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="TexturePackerImporter">
-      <HintPath>Assets/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Mdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
@@ -1105,6 +1099,15 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Toolchain.Macos-x86_64-Linux-x86_64">
+      <HintPath>Library/ScriptAssemblies/Unity.Toolchain.Macos-x86_64-Linux-x86_64.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Sysroot.Linux_x86_64">
+      <HintPath>Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.SysrootPackage.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
