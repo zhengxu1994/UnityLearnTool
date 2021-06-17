@@ -103,6 +103,7 @@
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/CancellationToken.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/System/IObservable.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableCanvasGroupChangedTrigger.cs" />
+    <Compile Include="Assets/Plugins/LitJson/JsonMapper.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/DynamicFont.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/CoroutineAsyncBridge.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/HitTest/HitTestContext.cs" />
@@ -211,6 +212,7 @@
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/Amb.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/FillMesh.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/PlaneMesh.cs" />
+    <Compile Include="Assets/Plugins/LitJson/JsonException.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Action/ChangePageAction.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/SelectMany.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/UIPainter.cs" />
@@ -251,6 +253,7 @@
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/ZipLatest.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/System/Tuple.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Relations.cs" />
+    <Compile Include="Assets/Plugins/LitJson/JsonData.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Event/EventDispatcher.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GGroup.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/HitTest/RectHitTest.cs" />
@@ -270,6 +273,7 @@
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Window.cs" />
     <Compile Include="Assets/Plugins/UniRx/Examples/Sample05_ConvertFromCoroutine.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableDestroyTrigger.cs" />
+    <Compile Include="Assets/Plugins/LitJson/Lexer.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Notifiers/ScheduledNotifier.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/ToolSet.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/ScenePlaybackDetector.cs" />
@@ -332,6 +336,7 @@
     <Compile Include="Assets/Plugins/UniRx/Examples/Sample06_ConvertToCoroutine.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Operators/SubscribeOnMainThread.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/Where.cs" />
+    <Compile Include="Assets/Plugins/LitJson/JsonMockWrapper.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/ReactiveDictionary.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/WhereSelect.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableTriggerExtensions.Component.cs" />
@@ -375,8 +380,10 @@
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/AsSingleUnitObservable.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/InternalUtil/ThreadSafeQueueWorker.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Triggers/ObservablePointerUpTrigger.cs" />
+    <Compile Include="Assets/Plugins/LitJson/ParserToken.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/IColorGear.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Operators/ThrottleFirstFrame.cs" />
+    <Compile Include="Assets/Plugins/LitJson/JsonWriter.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Observable.Creation.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/WithLatestFrom.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableDragTrigger.cs" />
@@ -412,6 +419,7 @@
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/SynchronizedObserver.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Observer.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableCollisionTrigger.cs" />
+    <Compile Include="Assets/Plugins/LitJson/IJsonWrapper.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/GTween.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/RefCount.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/EllipseMesh.cs" />
@@ -449,6 +457,7 @@
     <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/TweenValue.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Operators/TimeoutFrame.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Diagnostics/Logger.cs" />
+    <Compile Include="Assets/Plugins/LitJson/JsonReader.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableMoveTrigger.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/ObservableWWW.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/Delay.cs" />
@@ -465,15 +474,6 @@
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/StartWith.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/DefaultIfEmpty.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/Last.cs" />
-    <Compile Include="Assets/Plugins/LitJson/JsonWriter.cs" />
-    <Compile Include="Assets/Plugins/LitJson/JsonException.cs" />
-    <Compile Include="Assets/Plugins/LitJson/IJsonWrapper.cs" />
-    <Compile Include="Assets/Plugins/LitJson/JsonData.cs" />
-    <Compile Include="Assets/Plugins/LitJson/JsonMockWrapper.cs" />
-    <Compile Include="Assets/Plugins/LitJson/JsonMapper.cs" />
-    <Compile Include="Assets/Plugins/LitJson/Lexer.cs" />
-    <Compile Include="Assets/Plugins/LitJson/ParserToken.cs" />
-    <Compile Include="Assets/Plugins/LitJson/JsonReader.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Plugins/UniRx/ReadMe.txt" />
@@ -1063,11 +1063,17 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Toolchain.Macos-x86_64-Linux-x86_64">
+      <HintPath>Library/ScriptAssemblies/Unity.Toolchain.Macos-x86_64-Linux-x86_64.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Sysroot.Linux_x86_64">
+      <HintPath>Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
@@ -1089,12 +1095,6 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Toolchain.Macos-x86_64-Linux-x86_64">
-      <HintPath>Library/ScriptAssemblies/Unity.Toolchain.Macos-x86_64-Linux-x86_64.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Sysroot.Linux_x86_64">
-      <HintPath>Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
     </Reference>
     <Reference Include="Unity.SysrootPackage.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
