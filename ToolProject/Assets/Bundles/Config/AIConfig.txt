@@ -1,0 +1,5 @@
+{
+{"101":{{"_id":101,"AIConfigId":1,"Order":1,"Name":"AI_Attack","Name":"攻击"}},
+{"102":{{"_id":102,"AIConfigId":1,"Order":2,"Name":"AI_XunLuo","Name":"巡逻"}},
+{"201":{{"_id":201,"AIConfigId":2,"Order":1,"Name":"AI_XunLuo","Name":"巡逻"}},
+}
