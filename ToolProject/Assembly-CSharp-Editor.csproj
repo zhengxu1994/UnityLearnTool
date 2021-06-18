@@ -89,12 +89,12 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Divide.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_NormalVector.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_LightVector.cs" />
-    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/TrueSyncConfigEditor.cs" />
+    <Compile Include="Assets/ZFramework/Model/Tool/TrueSync/TrueSync/Unity/Editor/TrueSyncConfigEditor.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Utility/SF_MinMax.cs" />
-    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/TSRigidBodyEditor.cs" />
+    <Compile Include="Assets/ZFramework/Model/Tool/TrueSync/TrueSync/Unity/Editor/TSRigidBodyEditor.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_ObjectScale.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SF_Node_Arithmetic.cs" />
-    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/MenuContext.cs" />
+    <Compile Include="Assets/ZFramework/Model/Tool/TrueSync/TrueSync/Unity/Editor/MenuContext.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_ConnectionGroups/SFNCG_MatrixMultiply.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Negate.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SF_NodeConnector.cs" />
@@ -154,7 +154,7 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_RgbToHsv.cs" />
     <Compile Include="Assets/Editor/ExportResourceOld/ExportResourceEffect.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_HalfVector.cs" />
-    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/TSVectorDrawer.cs" />
+    <Compile Include="Assets/ZFramework/Model/Tool/TrueSync/TrueSync/Unity/Editor/TSVectorDrawer.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_StaticBranch.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Utility/SF_Link.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Vector2.cs" />
@@ -198,7 +198,7 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Color.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Multiply.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Tangent.cs" />
-    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/TSVector2Drawer.cs" />
+    <Compile Include="Assets/ZFramework/Model/Tool/TrueSync/TrueSync/Unity/Editor/TSVector2Drawer.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Reflect.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_SceneColor.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Distance.cs" />
@@ -212,12 +212,12 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Pi.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SFPSC_Console.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_MultiplyMatrix.cs" />
-    <Compile Include="Assets/ZFramework/Editor/ResourcesChecker.cs" />
+    <Compile Include="Assets/Editor/ResourcesChecker.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Phi.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_DDX.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_ChannelBlend.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_ShaderProperties/SFP_Tex2d.cs" />
-    <Compile Include="Assets/ZFramework/Tool/TrueSync/TrueSync/Unity/Editor/TSFPDrawer.cs" />
+    <Compile Include="Assets/ZFramework/Model/Tool/TrueSync/TrueSync/Unity/Editor/TSFPDrawer.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Exp.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Round.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_SwitchProperty.cs" />
@@ -272,6 +272,7 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_UVTile.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Utility/SF_Blit.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SF_NodeTreeStatus.cs" />
+    <Compile Include="Assets/Editor/ExcelExporter/ExcelExporter.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_ArcTan2/SFN_ArcTan2_NPTP.shader" />
