@@ -704,14 +704,8 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="NPOI.OOXML">
-      <HintPath>Assets/Plugins/NPOI.OOXML.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.OpenXml4Net">
-      <HintPath>Assets/Plugins/NPOI.OpenXml4Net.dll</HintPath>
-    </Reference>
     <Reference Include="CommandLine">
-      <HintPath>Assets/Plugins/CommandLine.dll</HintPath>
+      <HintPath>Assets/Plugins/Dlls/CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Mdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
@@ -722,17 +716,17 @@
     <Reference Include="ILRuntime.Mono.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="NPOI.OpenXmlFormats">
-      <HintPath>Assets/Plugins/NPOI.OpenXmlFormats.dll</HintPath>
+    <Reference Include="EPPlus">
+      <HintPath>Assets/Plugins/Dlls/EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI">
-      <HintPath>Assets/Plugins/NPOI.dll</HintPath>
+      <HintPath>Assets/Plugins/Dlls/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Bson">
-      <HintPath>Assets/Plugins/MongoDB.Bson.dll</HintPath>
+      <HintPath>Assets/Plugins/Dlls/MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream">
+      <HintPath>Assets/Plugins/Dlls/Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>

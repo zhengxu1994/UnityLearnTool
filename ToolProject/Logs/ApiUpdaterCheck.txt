@@ -642,3 +642,610 @@ C# parse time         : 877ms
 candidates check time : 277ms
 console write time    : 2ms
 
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:10:13 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 480.022ms
+moved types parse time: 173ms
+candidates parse time : 27ms
+C# parse time         : 792ms
+candidates check time : 115ms
+console write time    : 3ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:10:25 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 128.048ms
+moved types parse time: 177ms
+candidates parse time : 7ms
+C# parse time         : 579ms
+candidates check time : 99ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:10:42 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 282.955ms
+moved types parse time: 219ms
+candidates parse time : 13ms
+C# parse time         : 548ms
+candidates check time : 83ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:10:58 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 261.629ms
+moved types parse time: 121ms
+candidates parse time : 2ms
+C# parse time         : 535ms
+candidates check time : 94ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:11:00 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 166.772ms
+moved types parse time: 335ms
+candidates parse time : 5ms
+C# parse time         : 676ms
+candidates check time : 109ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:11:16 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 376.653ms
+moved types parse time: 141ms
+candidates parse time : 14ms
+C# parse time         : 718ms
+candidates check time : 104ms
+console write time    : 5ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:13:47 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 318.162ms
+moved types parse time: 576ms
+candidates parse time : 21ms
+C# parse time         : 820ms
+candidates check time : 111ms
+console write time    : 3ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:14:02 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 220.554ms
+moved types parse time: 169ms
+candidates parse time : 4ms
+C# parse time         : 563ms
+candidates check time : 108ms
+console write time    : 6ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:14:34 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 266.99ms
+moved types parse time: 130ms
+candidates parse time : 3ms
+C# parse time         : 937ms
+candidates check time : 134ms
+console write time    : 4ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:15:22 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 302.577ms
+moved types parse time: 231ms
+candidates parse time : 8ms
+C# parse time         : 962ms
+candidates check time : 151ms
+console write time    : 5ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:15:32 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 111.911ms
+moved types parse time: 191ms
+candidates parse time : 21ms
+C# parse time         : 711ms
+candidates check time : 138ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:15:50 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 274.068ms
+moved types parse time: 490ms
+candidates parse time : 3ms
+C# parse time         : 576ms
+candidates check time : 115ms
+console write time    : 3ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:16:14 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 237.593ms
+moved types parse time: 103ms
+candidates parse time : 15ms
+C# parse time         : 757ms
+candidates check time : 121ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:19:11 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 296.78ms
+moved types parse time: 151ms
+candidates parse time : 7ms
+C# parse time         : 803ms
+candidates check time : 161ms
+console write time    : 7ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:19:29 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 285.111ms
+moved types parse time: 144ms
+candidates parse time : 2ms
+C# parse time         : 803ms
+candidates check time : 144ms
+console write time    : 11ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:19:47 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 269.146ms
+moved types parse time: 163ms
+candidates parse time : 92ms
+C# parse time         : 692ms
+candidates check time : 155ms
+console write time    : 3ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:20:11 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 259.872ms
+moved types parse time: 112ms
+candidates parse time : 2ms
+C# parse time         : 585ms
+candidates check time : 138ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:20:38 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 234.77ms
+moved types parse time: 145ms
+candidates parse time : 6ms
+C# parse time         : 1193ms
+candidates check time : 178ms
+console write time    : 10ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:20:44 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 124.601ms
+moved types parse time: 124ms
+candidates parse time : 2ms
+C# parse time         : 611ms
+candidates check time : 153ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:20:48 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 208.959ms
+moved types parse time: 256ms
+candidates parse time : 11ms
+C# parse time         : 760ms
+candidates check time : 168ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:21:33 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 648.908ms
+moved types parse time: 177ms
+candidates parse time : 22ms
+C# parse time         : 756ms
+candidates check time : 159ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:21:53 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 338.18ms
+moved types parse time: 265ms
+candidates parse time : 18ms
+C# parse time         : 637ms
+candidates check time : 145ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:22:03 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 430.034ms
+moved types parse time: 151ms
+candidates parse time : 26ms
+C# parse time         : 1068ms
+candidates check time : 292ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:22:46 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 204.256ms
+moved types parse time: 231ms
+candidates parse time : 2ms
+C# parse time         : 582ms
+candidates check time : 127ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:23:10 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 224.71ms
+moved types parse time: 313ms
+candidates parse time : 4ms
+C# parse time         : 726ms
+candidates check time : 201ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:23:13 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 118.145ms
+moved types parse time: 107ms
+candidates parse time : 3ms
+C# parse time         : 527ms
+candidates check time : 130ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:24:10 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 285.24ms
+moved types parse time: 120ms
+candidates parse time : 17ms
+C# parse time         : 585ms
+candidates check time : 168ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:24:56 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 242.952ms
+moved types parse time: 292ms
+candidates parse time : 19ms
+C# parse time         : 759ms
+candidates check time : 175ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:25:05 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 233.968ms
+moved types parse time: 147ms
+candidates parse time : 4ms
+C# parse time         : 552ms
+candidates check time : 144ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:25:34 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 232.59ms
+moved types parse time: 229ms
+candidates parse time : 38ms
+C# parse time         : 680ms
+candidates check time : 149ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:25:37 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 116.93ms
+moved types parse time: 105ms
+candidates parse time : 2ms
+C# parse time         : 531ms
+candidates check time : 139ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:27:39 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 337.044ms
+moved types parse time: 260ms
+candidates parse time : 4ms
+C# parse time         : 719ms
+candidates check time : 156ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:28:13 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 313.913ms
+moved types parse time: 248ms
+candidates parse time : 66ms
+C# parse time         : 753ms
+candidates check time : 171ms
+console write time    : 4ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:32:43 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 273.853ms
+moved types parse time: 372ms
+candidates parse time : 18ms
+C# parse time         : 767ms
+candidates check time : 203ms
+console write time    : 6ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:33:12 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 253.824ms
+moved types parse time: 192ms
+candidates parse time : 15ms
+C# parse time         : 596ms
+candidates check time : 207ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:33:34 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 248.584ms
+moved types parse time: 129ms
+candidates parse time : 2ms
+C# parse time         : 619ms
+candidates check time : 211ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:33:54 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 297.419ms
+moved types parse time: 626ms
+candidates parse time : 3ms
+C# parse time         : 596ms
+candidates check time : 203ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:34:11 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 339.021ms
+moved types parse time: 217ms
+candidates parse time : 30ms
+C# parse time         : 780ms
+candidates check time : 511ms
+console write time    : 3ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:34:40 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 272.403ms
+moved types parse time: 226ms
+candidates parse time : 25ms
+C# parse time         : 717ms
+candidates check time : 190ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:35:13 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 225.2ms
+moved types parse time: 314ms
+candidates parse time : 6ms
+C# parse time         : 629ms
+candidates check time : 232ms
+console write time    : 3ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:35:17 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 181.751ms
+moved types parse time: 135ms
+candidates parse time : 26ms
+C# parse time         : 696ms
+candidates check time : 177ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:35:39 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 322.297ms
+moved types parse time: 484ms
+candidates parse time : 13ms
+C# parse time         : 835ms
+candidates check time : 200ms
+console write time    : 3ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:36:08 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 223.305ms
+moved types parse time: 108ms
+candidates parse time : 5ms
+C# parse time         : 635ms
+candidates check time : 261ms
+console write time    : 4ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:37:26 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 242.012ms
+moved types parse time: 171ms
+candidates parse time : 8ms
+C# parse time         : 965ms
+candidates check time : 242ms
+console write time    : 3ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:37:34 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 99.719ms
+moved types parse time: 107ms
+candidates parse time : 3ms
+C# parse time         : 688ms
+candidates check time : 183ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 16:37:37 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 123.613ms
+moved types parse time: 117ms
+candidates parse time : 4ms
+C# parse time         : 619ms
+candidates check time : 169ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:06:26 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 779.265ms
+moved types parse time: 458ms
+candidates parse time : 23ms
+C# parse time         : 1335ms
+candidates check time : 248ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:06:50 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 241.021ms
+moved types parse time: 228ms
+candidates parse time : 23ms
+C# parse time         : 1082ms
+candidates check time : 298ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:10:05 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 243.595ms
+moved types parse time: 152ms
+candidates parse time : 11ms
+C# parse time         : 998ms
+candidates check time : 254ms
+console write time    : 6ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:13:21 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 265.581ms
+moved types parse time: 100ms
+candidates parse time : 3ms
+C# parse time         : 893ms
+candidates check time : 362ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:16:38 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 260.793ms
+moved types parse time: 181ms
+candidates parse time : 4ms
+C# parse time         : 783ms
+candidates check time : 308ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:19:25 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 222.56ms
+moved types parse time: 136ms
+candidates parse time : 23ms
+C# parse time         : 803ms
+candidates check time : 225ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:22:48 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 267.091ms
+moved types parse time: 300ms
+candidates parse time : 37ms
+C# parse time         : 780ms
+candidates check time : 509ms
+console write time    : 10ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:24:51 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 205.226ms
+moved types parse time: 99ms
+candidates parse time : 2ms
+C# parse time         : 627ms
+candidates check time : 318ms
+console write time    : 7ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:45:03 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 257.591ms
+moved types parse time: 115ms
+candidates parse time : 3ms
+C# parse time         : 555ms
+candidates check time : 261ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:45:38 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 186.572ms
+moved types parse time: 88ms
+candidates parse time : 2ms
+C# parse time         : 475ms
+candidates check time : 341ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:48:24 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] Exception caught while loading types from /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll (some types may not be loaded)
+	Exception of type 'System.Reflection.ReflectionTypeLoadException' was thrown.
+	  at (wrapper managed-to-native) System.Reflection.Assembly.GetTypes(System.Reflection.Assembly,bool)
+  at System.Reflection.Assembly.GetTypes () [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at APIUpdater.NonObsoleteApiUpdaterDetector.ExtraInfoParser+<LoadTypesWithMovedFromAttributeAsync>d__3.MoveNext () [0x000c8] in <6358200448ef46218e7be4a1b6be469f>:0 
+	Could not load file or assembly 'UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 90.382ms
+moved types parse time: 91ms
+candidates parse time : 3ms
+C# parse time         : 631ms
+candidates check time : 182ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:50:17 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 190.676ms
+moved types parse time: 94ms
+candidates parse time : 2ms
+C# parse time         : 585ms
+candidates check time : 192ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:53:07 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 223.602ms
+moved types parse time: 119ms
+candidates parse time : 2ms
+C# parse time         : 573ms
+candidates check time : 210ms
+console write time    : 2ms
+
+[api-updater (non-obsolete-error-filter)] 2021/6/18 17:56:44 : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 180.941ms
+moved types parse time: 107ms
+candidates parse time : 2ms
+C# parse time         : 544ms
+candidates check time : 234ms
+console write time    : 2ms
+

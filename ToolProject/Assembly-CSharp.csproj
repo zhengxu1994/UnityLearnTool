@@ -81,7 +81,7 @@
     <Compile Include="Assets/Model/Tool/Pool/UtilTool.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Factories/FixtureFactory.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Unity/TSMaterial.cs" />
-    <Compile Include="Assets/TestCls.cs" />
+    <Compile Include="Assets/ZFramework/TestCls.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Common/LineTools.cs" />
     <Compile Include="Assets/Model/Core/Entity/EntitySceneFactory.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Unity/TSCollider.cs" />
@@ -889,14 +889,8 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="NPOI.OOXML">
-      <HintPath>Assets/Plugins/NPOI.OOXML.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.OpenXml4Net">
-      <HintPath>Assets/Plugins/NPOI.OpenXml4Net.dll</HintPath>
-    </Reference>
     <Reference Include="CommandLine">
-      <HintPath>Assets/Plugins/CommandLine.dll</HintPath>
+      <HintPath>Assets/Plugins/Dlls/CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Mdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
@@ -907,17 +901,17 @@
     <Reference Include="ILRuntime.Mono.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="NPOI.OpenXmlFormats">
-      <HintPath>Assets/Plugins/NPOI.OpenXmlFormats.dll</HintPath>
+    <Reference Include="EPPlus">
+      <HintPath>Assets/Plugins/Dlls/EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI">
-      <HintPath>Assets/Plugins/NPOI.dll</HintPath>
+      <HintPath>Assets/Plugins/Dlls/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Bson">
-      <HintPath>Assets/Plugins/MongoDB.Bson.dll</HintPath>
+      <HintPath>Assets/Plugins/Dlls/MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream">
+      <HintPath>Assets/Plugins/Dlls/Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

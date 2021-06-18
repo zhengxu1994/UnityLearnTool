@@ -3,317 +3,188 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using MongoDB.Bson;
-using NPOI.SS.UserModel;
-using NPOI.XSSF.UserModel;
 using UnityEditor;
-using UnityEngine;
+using ProtoBuf;
+using OfficeOpenXml;
+//using Microsoft.CodeAnalysis;
+//using Microsoft.CodeAnalysis.CSharp;
+//using Microsoft.CodeAnalysis.Emit;
+using System.Reflection;
+using MongoDB.Bson.Serialization;
+using System.ComponentModel;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace ZFramework
 {
-    public struct CellInfo
+    public enum ConfigType
     {
-        public string Type;
-        public string Name;
-        public string Desc;
+        Client,
+        Server
     }
 
-    public class ExcelMD5Info
+    struct HeadInfo
     {
-        public Dictionary<string, string> fileMD5 = new Dictionary<string, string>();
+        public string FieldAttrbute;
+        public string FieldDesc;
+        public string FieldName;
+        public string FieldType;
 
-        public string Get(string fileName)
+        public HeadInfo(string cs, string desc, string name, string type)
         {
-            string md5 = "";
-            this.fileMD5.TryGetValue(fileName, out md5);
-            return md5;
-        }
-
-        public void Add(string fileName, string md5)
-        {
-            this.fileMD5[fileName] = md5;
+            this.FieldAttrbute = cs;
+            this.FieldDesc = desc;
+            this.FieldName = name;
+            this.FieldType = type;
         }
     }
 
-    public class ExcelExporterEditor : EditorWindow
+    public static class ExcelExport
     {
-        [MenuItem("Tools/导出配置")]
-        private static void ShowWindow()
+        private static string template;
+
+        private const string clientClassDir = "../../../Unity/Assets/Model/Generate/Config";
+        private const string serverClassDir = "../../../Server/Model/Generate/Config";
+
+        private const string excelDir = "../../../Excel";
+
+        private const string jsonDir = "./{0}/Json";
+
+        private const string clientProtoDir = "../../../Unity/Assets/Bundles/Config";
+        private const string serverProtoDir = "../../../Config";
+
+        private static string GetProtoDir(ConfigType configType)
         {
-            GetWindow(typeof(ExcelExporterEditor));
+            if (configType == ConfigType.Client)
+                return clientProtoDir;
+            return serverProtoDir;
         }
 
-        private const string ExcelPath = "../Excel";
-        private const string ServerConfigPath = "../Config/";
-
-        private bool isClient;
-
-        private ExcelMD5Info md5Info;
-
-        // Update is called once per frame
-        private void OnGUI()
+        private static string GetClassDir(ConfigType configType)
         {
-            try
-            {
-                const string clientPath = "./Assets/Bundles/Config";
-
-                if (GUILayout.Button("导出客户端配置"))
-                {
-                    this.isClient = true;
-
-                    ExportAll(clientPath);
-
-                    ExportAllClass(@"./Assets/Model/Generate/Config", "using MongoDB.Bson.Serialization.Attributes;\n\nnamespace ZFramework\n{\n");
-
-                    Log.Info($"导出客户端配置完成!");
-                }
-
-                if (GUILayout.Button("导出服务端配置"))
-                {
-                    this.isClient = false;
-
-                    ExportAll(ServerConfigPath);
-
-                    ExportAllClass(@"../Server/Model/Config", "using MongoDB.Bson.Serialization.Attributes;\n\nnamespace ZFramework\n{\n");
-
-                    Log.Info($"导出服务端配置完成!");
-                }
-            }
-            catch (Exception e)
-            {
-                Log.Error(e);
-            }
+            if (configType == ConfigType.Client)
+                return clientClassDir;
+            return serverClassDir;
         }
 
-        private void ExportAllClass(string exportDir, string csHead)
+        [MenuItem("Tool/ExportExcel")]
+        public static void ExportExcel()
         {
-            foreach (string filePath in Directory.GetFiles(ExcelPath))
+
+        }
+
+        #region 导出class
+        static void ExportExcelClass(ExcelPackage p, string name, ConfigType configType)
+        {
+            List<HeadInfo> classField = new List<HeadInfo>();
+            HashSet<string> uniqeField = new HashSet<string>();
+            foreach (var workSheet in p.Workbook.Worksheets)
             {
-                if (Path.GetExtension(filePath) != ".xlsx")
-                {
+                ExportSheetClass(workSheet, classField, uniqeField, configType);
+            }
+            ExportClass(name, classField, configType);
+        }
+
+        static void ExportSheetClass(ExcelWorksheet worksheet, List<HeadInfo> classField, HashSet<string> uniqeField, ConfigType configType)
+        {
+            //根据自己定义的excel表格式 和表头信息做对应的逻辑 不是写死的
+            const int row = 2;
+            for (int col = 3; col <= worksheet.Dimension.End.Column; ++col)
+            {
+                string fieldName = worksheet.Cells[row + 2, col].Text.Trim();
+                if (fieldName == "")
                     continue;
-                }
-
-                if (Path.GetFileName(filePath).StartsWith("~"))
-                {
+                if (!uniqeField.Add(fieldName))
                     continue;
-                }
-
-                ExportClass(filePath, exportDir, csHead);
-                Log.Info($"生成{Path.GetFileName(filePath)}类");
-            }
-
-            AssetDatabase.Refresh();
-        }
-
-        private void ExportClass(string fileName, string exportDir, string csHead)
-        {
-            XSSFWorkbook xssfWorkbook;
-            using (FileStream file = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-            {
-                xssfWorkbook = new XSSFWorkbook(file);
-            }
-
-            string protoName = Path.GetFileNameWithoutExtension(fileName);
-
-            string exportPath = Path.Combine(exportDir, $"{protoName}.cs");
-            using (FileStream txt = new FileStream(exportPath, FileMode.Create))
-            using (StreamWriter sw = new StreamWriter(txt))
-            {
-                StringBuilder sb = new StringBuilder();
-                ISheet sheet = xssfWorkbook.GetSheetAt(0);
-                sb.Append(csHead);
-
-                sb.Append($"\t[Config]\n");
-                sb.Append($"\tpublic partial class {protoName}Category : ACategory<{protoName}>\n");
-                sb.Append("\t{\n");
-                sb.Append($"\t\tpublic static {protoName}Category Instance;\n");
-                sb.Append($"\t\tpublic {protoName}Category()\n");
-                sb.Append("\t\t{\n");
-                sb.Append($"\t\t\tInstance = this;\n");
-                sb.Append("\t\t}\n");
-                sb.Append("\t}\n\n");
-
-                sb.Append($"\tpublic partial class {protoName}: IConfig\n");
-                sb.Append("\t{\n");
-                sb.Append("\t\t[BsonId]\n");
-                sb.Append("\t\tpublic long Id { get; set; }\n");
-
-                int cellCount = sheet.GetRow(3).LastCellNum;
-
-                for (int i = 2; i < cellCount; i++)
-                {
-                    string fieldDesc = GetCellString(sheet, 2, i);
-
-                    if (fieldDesc.StartsWith("#"))
-                    {
-                        continue;
-                    }
-
-                    // s开头表示这个字段是服务端专用
-                    if (fieldDesc.StartsWith("s") && this.isClient)
-                    {
-                        continue;
-                    }
-
-                    string fieldName = GetCellString(sheet, 3, i);
-
-                    if (fieldName == "Id" || fieldName == "_id")
-                    {
-                        continue;
-                    }
-
-                    string fieldType = GetCellString(sheet, 4, i);
-                    if (fieldType == "" || fieldName == "")
-                    {
-                        continue;
-                    }
-
-                    sb.Append($"\t\tpublic {fieldType} {fieldName};\n");
-                }
-
-                sb.Append("\t}\n");
-                sb.Append("}\n");
-
-                sw.Write(sb.ToString());
+                string fieldCS = worksheet.Cells[row, col].Text.Trim();//变量名
+                string fieldDesc = worksheet.Cells[row + 1, col].Text.Trim();//注释
+                string fieldType = worksheet.Cells[row + 3, col].Text.Trim();//类型
+                classField.Add(new HeadInfo(fieldCS, fieldDesc, fieldName, fieldType));
             }
         }
 
-        private void ExportAll(string exportDir)
+        static void ExportClass(string protoName, List<HeadInfo> classField, ConfigType configType)
         {
-            string md5File = Path.Combine(ExcelPath, "md5.txt");
-            if (!File.Exists(md5File))
-            {
-                this.md5Info = new ExcelMD5Info();
-            }
-            else
-            {
-                this.md5Info = MongoHelper.FromJson<ExcelMD5Info>(File.ReadAllText(md5File));
-            }
+            string dir = GetClassDir(configType);
+            if (!Directory.Exists(dir))
+                Directory.CreateDirectory(dir);
+            string exportPath = Path.Combine(dir, $"{protoName}.cs");
+            FileStream txt = new FileStream(exportPath, FileMode.Create);
+            StreamWriter sw = new StreamWriter(txt);
 
-            foreach (string filePath in Directory.GetFiles(ExcelPath))
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < classField.Count; i++)
             {
-                if (Path.GetExtension(filePath) != ".xlsx")
-                {
+                HeadInfo headInfo = classField[i];
+                //"#"代表不用导出
+                if (headInfo.FieldAttrbute.StartsWith("#"))
                     continue;
-                }
-
-                if (Path.GetFileName(filePath).StartsWith("~"))
-                {
-                    continue;
-                }
-
-                string fileName = Path.GetFileName(filePath);
-                string oldMD5 = this.md5Info.Get(fileName);
-                string md5 = MD5Helper.FileMD5(filePath);
-                this.md5Info.Add(fileName, md5);
-                // if (md5 == oldMD5)
-                // {
-                // 	continue;
-                // }
-
-                Export(filePath, exportDir);
+                sb.Append($"\t\t[ProtoMember({i + 1}, IsRequired  = true)]\n");
+                sb.Append($"\t\tpublic {headInfo.FieldType} {headInfo.FieldName} {{ get; set; }}\n");
             }
+            string content = template.Replace("(ConfigName)", protoName).Replace(("(Fields)"), sb.ToString());
+            sw.Write(content);
+        }
+        #endregion
 
-            File.WriteAllText(md5File, this.md5Info.ToJson());
+        #region 导出json
+        static void ExportExcelJson(ExcelPackage p, string name, ConfigType configType)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("{\"list\":[}");
+            foreach (var worksheet in p.Workbook.Worksheets)
+            {
+                ExportSheetJson(worksheet, configType, sb);
+            }
+            sb.AppendLine("]}");
+            string dir = string.Format(jsonDir, configType.ToString());
+            if (!Directory.Exists(dir))
+                Directory.CreateDirectory(dir);
 
-            Log.Info("所有表导表完成");
-            AssetDatabase.Refresh();
+            string jsonPath = Path.Combine(dir, $"{name}.txt");
+            FileStream txt = new FileStream(jsonPath, FileMode.Create);
+            StreamWriter sw = new StreamWriter(txt);
+            sw.Write(sb.ToString());
         }
 
-        private void Export(string fileName, string exportDir)
+        static void ExportSheetJson(ExcelWorksheet worksheet, ConfigType configType, StringBuilder sb)
         {
-            XSSFWorkbook xssfWorkbook;
-            using (FileStream file = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            int infoRow = 2;
+            HeadInfo[] headInfos = new HeadInfo[100];
+            for (int col = 3; col <= worksheet.Dimension.End.Column; ++col)
             {
-                xssfWorkbook = new XSSFWorkbook(file);
-            }
-
-            string protoName = Path.GetFileNameWithoutExtension(fileName);
-            Log.Info($"{protoName}导表开始");
-            string exportPath = Path.Combine(exportDir, $"{protoName}.txt");
-            using (FileStream txt = new FileStream(exportPath, FileMode.Create))
-            using (StreamWriter sw = new StreamWriter(txt))
-            {
-                sw.WriteLine("{");
-                for (int i = 0; i < xssfWorkbook.NumberOfSheets; ++i)
-                {
-                    ISheet sheet = xssfWorkbook.GetSheetAt(i);
-                    ExportSheet(sheet, sw);
-                }
-                sw.WriteLine("}");
-            }
-
-            Log.Info($"{protoName}导表完成");
-        }
-
-        private void ExportSheet(ISheet sheet, StreamWriter sw)
-        {
-            int cellCount = sheet.GetRow(3).LastCellNum;
-
-            CellInfo[] cellInfos = new CellInfo[cellCount];
-
-            for (int i = 2; i < cellCount; i++)
-            {
-                string fieldDesc = GetCellString(sheet, 2, i);
-                string fieldName = GetCellString(sheet, 3, i);
-                string fieldType = GetCellString(sheet, 4, i);
-                cellInfos[i] = new CellInfo() { Name = fieldName, Type = fieldType, Desc = fieldDesc };
-            }
-
-            for (int i = 5; i <= sheet.LastRowNum; ++i)
-            {
-                if (GetCellString(sheet, i, 2) == "")
-                {
+                string fieldCS = worksheet.Cells[infoRow, col].Text.Trim();
+                if (fieldCS.Contains("#"))
                     continue;
-                }
 
-                StringBuilder sb = new StringBuilder();
-                IRow row = sheet.GetRow(i);
-                for (int j = 2; j < cellCount; ++j)
+                string fieldName = worksheet.Cells[infoRow + 2, col].Text.Trim();
+                if (fieldName == "")
+                    continue;
+
+                string fieldDesc = worksheet.Cells[infoRow + 1, col].Text.Trim();
+                string fieldType = worksheet.Cells[infoRow + 3, col].Text.Trim();
+                headInfos[col] = new HeadInfo(fieldCS, fieldDesc, fieldName, fieldType);
+            }
+
+            for (int row = 6; row <= worksheet.Dimension.End.Row; ++row)
+            {
+                sb.Append("{");
+                for (int col = 0; col <= worksheet.Dimension.End.Column; ++col)
                 {
-                    string desc = cellInfos[j].Desc.ToLower();
-                    if (desc.StartsWith("#"))
-                    {
+                    HeadInfo headInfo = headInfos[col];
+                    if (headInfo.FieldAttrbute == null)
                         continue;
-                    }
-
-                    // s开头表示这个字段是服务端专用
-                    if (desc.StartsWith("s") && this.isClient)
-                    {
+                    if (headInfo.FieldAttrbute.Contains("#"))
                         continue;
-                    }
 
-                    // c开头表示这个字段是客户端专用
-                    if (desc.StartsWith("c") && !this.isClient)
+                    if (headInfo.FieldName == "Id")
                     {
-                        continue;
+                        headInfo.FieldName = "_id";
                     }
-
-                    string fieldValue = GetCellString(row, j);
-                    if (fieldValue == "")
-                    {
-                        continue;
-                    }
-
-                    if (j > 2)
-                    {
+                    else
                         sb.Append(",");
-                    }
-
-                    string fieldName = cellInfos[j].Name;
-
-                    if (fieldName == "Id" || fieldName == "_id")
-                    {
-                        fieldName = "_id";
-                        sb.Append("{\"" + fieldValue + "\":{{");
-                    }
-
-                    string fieldType = cellInfos[j].Type;
-                    sb.Append($"\"{fieldName}\":{Convert(fieldType, fieldValue)}");
+                    sb.Append($"\"{headInfo.FieldName}\":{Convert(headInfo.FieldType, worksheet.Cells[row, col].Text.Trim())}");
                 }
-
-                sb.Append("}},");
-                sw.WriteLine(sb.ToString());
+                sb.Append("},\n");
             }
         }
 
@@ -340,49 +211,80 @@ namespace ZFramework
                     throw new Exception($"不支持此类型: {type}");
             }
         }
+        #endregion
 
-        private static string GetCellString(ISheet sheet, int i, int j)
-        {
-            IRow _irow = sheet.GetRow(i);
-            if (_irow != null)
-            {
-                return GetCellString(_irow, j);
-            }
-            return "";
-        }
+        //private static void ExportExcelProtobuf(ConfigType configType)
+        //{
+        //    string classPath = GetClassDir(configType);
+        //    List<SyntaxTree> syntaxTrees = new List<SyntaxTree>();
+        //    List<string> protoNames = new List<string>();
+        //    foreach (string classFile in Directory.GetFiles(classPath, "*.cs"))
+        //    {
+        //        protoNames.Add(Path.GetFileNameWithoutExtension(classFile));
+        //        syntaxTrees.Add(CSharpSyntaxTree.ParseText(File.ReadAllText(classFile)));
+        //    }
 
-        private static string GetCellString(IRow row, int i)
-        {
-            ICell _icell = row.GetCell(i);
-            if (_icell != null)
-            {
-                return GetCellString(_icell); ;
-            }
-            return "";
-        }
+        //    List<PortableExecutableReference> references = new List<PortableExecutableReference>();
 
-        private static string GetCellString(ICell cell)
-        {
-            if (cell != null)
-            {
-                if (cell.CellType == CellType.Numeric || (cell.CellType == CellType.Formula && cell.CachedFormulaResultType == CellType.Numeric))
-                {
-                    return cell.NumericCellValue.ToString();
-                }
-                else if (cell.CellType == CellType.String || (cell.CellType == CellType.Formula && cell.CachedFormulaResultType == CellType.String))
-                {
-                    return cell.StringCellValue.ToString();
-                }
-                else if (cell.CellType == CellType.Boolean || (cell.CellType == CellType.Formula && cell.CachedFormulaResultType == CellType.Boolean))
-                {
-                    return cell.BooleanCellValue.ToString();
-                }
-                else
-                {
-                    return cell.ToString();
-                }
-            }
-            return "";
-        }
+        //    string assemblyPath = Path.GetDirectoryName(typeof(object).Assembly.Location);
+        //    references.Add(AssemblyMetadata.CreateFromFile(typeof(object).Assembly.Location).GetReference());
+        //    references.Add(AssemblyMetadata.CreateFromFile(typeof(ProtoMemberAttribute).Assembly.Location).GetReference());
+        //    references.Add(AssemblyMetadata.CreateFromFile(typeof(BsonDefaultValueAttribute).Assembly.Location).GetReference());
+        //    references.Add(AssemblyMetadata.CreateFromFile(typeof(IConfig).Assembly.Location).GetReference());
+        //    references.Add(AssemblyMetadata.CreateFromFile(typeof(Attribute).Assembly.Location).GetReference());
+        //    references.Add(AssemblyMetadata.CreateFromFile(Path.Combine(assemblyPath, "mscorlib.dll")).GetReference());
+        //    references.Add(AssemblyMetadata.CreateFromFile(Path.Combine(assemblyPath, "System.dll")).GetReference());
+        //    references.Add(AssemblyMetadata.CreateFromFile(Path.Combine(assemblyPath, "System.Core.dll")).GetReference());
+        //    references.Add(AssemblyMetadata.CreateFromFile(Path.Combine(assemblyPath, "System.Runtime.dll")).GetReference());
+        //    references.Add(AssemblyMetadata.CreateFromFile(Path.Combine(assemblyPath, "netstandard.dll")).GetReference());
+        //    references.Add(AssemblyMetadata.CreateFromFile(typeof(ISupportInitialize).Assembly.Location).GetReference());
+
+
+        //    CSharpCompilation compilation = CSharpCompilation.Create(
+        //        null,
+        //        syntaxTrees.ToArray(),
+        //        references.ToArray(),
+        //        new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
+
+        //    using MemoryStream memSteam = new MemoryStream();
+
+        //    EmitResult emitResult = compilation.Emit(memSteam);
+        //    if (!emitResult.Success)
+        //    {
+        //        StringBuilder stringBuilder = new StringBuilder();
+        //        foreach (Diagnostic t in emitResult.Diagnostics)
+        //        {
+        //            stringBuilder.AppendLine(t.GetMessage());
+        //        }
+        //        throw new Exception($"动态编译失败:\n{stringBuilder}");
+        //    }
+
+        //    memSteam.Seek(0, SeekOrigin.Begin);
+
+        //    Assembly ass = Assembly.Load(memSteam.ToArray());
+
+        //    string dir = GetProtoDir(configType);
+        //    if (!Directory.Exists(dir))
+        //    {
+        //        Directory.CreateDirectory(dir);
+        //    }
+
+        //    foreach (string protoName in protoNames)
+        //    {
+        //        Type type = ass.GetType($"ET.{protoName}Category");
+        //        Type subType = ass.GetType($"ET.{protoName}");
+        //        Serializer.NonGeneric.PrepareSerializer(type);
+        //        Serializer.NonGeneric.PrepareSerializer(subType);
+
+
+        //        string json = File.ReadAllText(Path.Combine(string.Format(jsonDir, configType), $"{protoName}.txt"));
+        //        object deserialize = BsonSerializer.Deserialize(json, type);
+
+        //        string path = Path.Combine(dir, $"{protoName}Category.bytes");
+
+        //        using FileStream file = File.Create(path);
+        //        Serializer.Serialize(file, deserialize);
+        //    }
+        //}
     }
 }
