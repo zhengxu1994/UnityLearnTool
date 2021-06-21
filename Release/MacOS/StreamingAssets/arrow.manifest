@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 788098713
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d4276b3d136afa6c2251580ec55dd203
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 08a1f09909337ebfaa4cc93807d162c3
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 96
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Prefab/Arrow.prefab
+Dependencies:
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/arrow_trail_001

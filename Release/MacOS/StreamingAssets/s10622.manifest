@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 2016881624
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0953f2ca15da1edc77dd25284a2ee929
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c4b1783ed85756841ebaba25394cd478
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Prefab/s10622.prefab
+Dependencies:
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/10032_plane001
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/plane_002
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/s10021_glow_001
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/s10021_trail_001
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/s10511_trail_001

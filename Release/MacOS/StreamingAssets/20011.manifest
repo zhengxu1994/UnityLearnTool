@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 1316489889
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f4be671cdc8316c4c429494ed6259bbf
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 85179858bf50e8de59913750d58c0e5e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Prefab/20011.prefab
+- Assets/Bundles/Effect/Animation/20011.anim
+- Assets/Bundles/Effect/Animation/20011.controller
+Dependencies:
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/20011_pattern_001
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/20011_pattern_002
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/20011_pattern_003
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/plane_001

@@ -1,23 +1,29 @@
 ﻿<Properties StartupConfiguration="{867945B8-755C-27AE-7CE2-68A275B91FB5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/ExcelExporter/ExcelExporter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/BuildEditor/BuildHelper.cs">
     <Files>
-      <File FileName="Assets/Model/Module/Numeric/NumericComponent.cs" Line="3" Column="21" />
-      <File FileName="Assets/Model/Module/Config/ConfigAttribute.cs" />
-      <File FileName="Assets/Editor/ExcelExporter/ExcelExporter.cs" Line="290" Column="2" />
+      <File FileName="Assets/Editor/BuildEditor/BuildEditor.cs" Line="137" Column="34" />
+      <File FileName="Assets/Editor/BuildEditor/BuildHelper.cs" Line="82" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ToolProject" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Bundles" expanded="True">
+                <Node name="Config" expanded="True" />
+              </Node>
               <Node name="Editor" expanded="True">
-                <Node name="ExcelExporter" expanded="True" />
+                <Node name="BuildEditor" expanded="True">
+                  <Node name="BuildHelper.cs" selected="True" />
+                </Node>
+                <Node name="ExportHelper" expanded="True" />
               </Node>
               <Node name="Model" expanded="True">
-                <Node name="Module" expanded="True">
-                  <Node name="Numeric" expanded="True">
-                    <Node name="NumericComponent.cs" selected="True" />
-                  </Node>
+                <Node name="Core" expanded="True" />
+              </Node>
+              <Node name="ZFramework" expanded="True">
+                <Node name="Render" expanded="True">
+                  <Node name="Scripts" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -26,9 +32,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="06ff478f-e8ad-45a1-9db7-d7e34188a5d9" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="70d284ba-9e06-4726-a214-8e451a27f159" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="06ff478f-e8ad-45a1-9db7-d7e34188a5d9" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/Assets/ZFramework/Animator/Scripts/State/SecondState/DecisionNearDie.cs" relfile="Assets/ZFramework/Animator/Scripts/State/SecondState/DecisionNearDie.cs" line="24" column="1" />

@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 1743192721
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 01584f03ae3bac5ecac56cd2f675985c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: d533060b0dd015677709cb9fe1195f68
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/WarningArrow.png
+- Assets/Bundles/Effect/Shader/WarningArrow.shader
+Dependencies: []

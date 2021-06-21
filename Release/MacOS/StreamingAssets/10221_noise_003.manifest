@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 3854266100
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e3fdfed3942d3dcdb8ab2e8a7db71c17
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 939e20ecac0e95a3f7c5cfb3e57acb1d
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Material/10221_noise_003.mat
+Dependencies:
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/additive_00
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/mask_011
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/noise_031
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/ring_008

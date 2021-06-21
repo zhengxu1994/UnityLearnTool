@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 4027275038
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4660fb33c24193c02d693e735d3f2c8a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 87d8350b46029255406d612579664277
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Prefab/UE_G10053.prefab
+Dependencies:
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/20191_lizi_001
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/ue_g10053_glow_004
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/ue_g10053_glow_005

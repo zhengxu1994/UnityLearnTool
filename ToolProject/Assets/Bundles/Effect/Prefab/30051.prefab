@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6566809637218449684}
-  m_LocalRotation: {x: -0.856741, y: -0, z: -0, w: 0.515747}
+  m_LocalRotation: {x: -0.7431448, y: 0, z: 0, w: 0.6691307}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 6566809638044059370}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -117.905, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -96, y: 0, z: 0}
 --- !u!33 &6566809637218449681
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4c03f7eb2321e6c438360796749029f9, type: 2}
+  - {fileID: 2100000, guid: b257d0d925dbb474bb08b59178b675e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,7 +134,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.83
+    scalar: 0.5
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -363,8 +363,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 60
-      minScalar: 12
+      scalar: 85
+      minScalar: 23
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -679,7 +679,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 6
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4797,8 +4797,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b05629174c0cf294ba425d964169fac8, type: 2}
-  - {fileID: 2100000, guid: b05629174c0cf294ba425d964169fac8, type: 2}
+  - {fileID: 2100000, guid: 49fb52bcf058fd54fa8108b7ea579e31, type: 2}
+  - {fileID: 2100000, guid: 49fb52bcf058fd54fa8108b7ea579e31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4859,7 +4859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6566809637953766823
 Transform:
   m_ObjectHideFlags: 0
@@ -4867,13 +4867,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6566809637953766820}
-  m_LocalRotation: {x: -0.7748837, y: 0.365459, z: 0.2200017, w: 0.46647012}
-  m_LocalPosition: {x: 1.8, y: 1.6, z: -0.4}
-  m_LocalScale: {x: -0.8, y: 0.8, z: 0.7}
+  m_LocalRotation: {x: -0.7431448, y: 0, z: 0, w: 0.6691307}
+  m_LocalPosition: {x: 0, y: -0.7, z: -0.1}
+  m_LocalScale: {x: -0.8, y: 0.8, z: 1.2}
   m_Children: []
   m_Father: {fileID: 6566809638044059370}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -117.905, y: -0.000015258789, z: -1389.5}
+  m_LocalEulerAnglesHint: {x: -96, y: 0, z: 0}
 --- !u!33 &6566809637953766817
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4900,7 +4900,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 522f0676344821446845119cb218e0f2, type: 2}
+  - {fileID: 2100000, guid: b257d0d925dbb474bb08b59178b675e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4976,7 +4976,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.83
+    scalar: 0.5
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -5205,7 +5205,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 65
+      scalar: 85
       minScalar: 12
       maxCurve:
         serializedVersion: 2
@@ -5521,7 +5521,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 1
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -9688,8 +9688,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4fc3d60f3de7350469d34aa8b282a0b5, type: 2}
-  - {fileID: 2100000, guid: 4fc3d60f3de7350469d34aa8b282a0b5, type: 2}
+  - {fileID: 2100000, guid: 49fb52bcf058fd54fa8108b7ea579e31, type: 2}
+  - {fileID: 2100000, guid: 49fb52bcf058fd54fa8108b7ea579e31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9798,7 +9798,7 @@ GameObject:
   - component: {fileID: 6566809638214051918}
   - component: {fileID: 6566809638214051919}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: eff_par
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9812,7 +9812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6566809638214051917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 32.1, z: 21.5}
+  m_LocalPosition: {x: 0, y: 46.4, z: 31.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6566809637647430764}
@@ -14498,7 +14498,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -14598,7 +14598,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.83
+    scalar: 0.5
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -15143,7 +15143,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 8
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -19441,8 +19441,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 92e0ca74001f3a64d81d2d7639eebe8b, type: 2}
-  - {fileID: 2100000, guid: 92e0ca74001f3a64d81d2d7639eebe8b, type: 2}
+  - {fileID: 2100000, guid: 49fb52bcf058fd54fa8108b7ea579e31, type: 2}
+  - {fileID: 2100000, guid: 49fb52bcf058fd54fa8108b7ea579e31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

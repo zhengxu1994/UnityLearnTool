@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1137400958
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ae2e8f29f02c595105f66f84f588ff0d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/fire_001.png
+Dependencies: []

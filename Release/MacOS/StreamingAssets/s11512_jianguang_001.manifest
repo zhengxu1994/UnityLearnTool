@@ -1,0 +1,31 @@
+ManifestFileVersion: 0
+CRC: 285240042
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 84ff516bb030f8ad4df25d79804b1ab9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0c85761bb181e92d6befd038b3ecfd13
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Model/s11512_jianguang_001.FBX
+Dependencies: []

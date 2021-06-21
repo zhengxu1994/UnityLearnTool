@@ -318,12 +318,6 @@
     <Reference Include="ILRuntime.Mono.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="EPPlus">
-      <HintPath>Assets/Plugins/Dlls/EPPlus.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>Assets/Plugins/Dlls/ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
     <Reference Include="MongoDB.Bson">
       <HintPath>Assets/Plugins/Dlls/MongoDB.Bson.dll</HintPath>
     </Reference>

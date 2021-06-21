@@ -227,11 +227,9 @@
      <None Include="Assets/Plugins/Dlls/MongoDB.Bson.dll" />
      <None Include="Assets/Plugins/x86_64/kcp.dll" />
      <None Include="Assets/Plugins/x86/kcp.dll" />
-     <None Include="Assets/Plugins/Dlls/EPPlus.dll" />
      <None Include="Assets/Plugins/Dlls/Microsoft.IO.RecyclableMemoryStream.dll" />
      <None Include="Assets/Plugins/Dlls/CommandLine.dll" />
      <None Include="Assets/Plugins/FGUI/Extensions/TextMeshPro/Shaders/FairyGUI-TMP.shader" />
-     <None Include="Assets/Plugins/Dlls/ICSharpCode.SharpZipLib.dll" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -465,12 +463,6 @@
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="EPPlus">
-      <HintPath>Assets/Plugins/Dlls/EPPlus.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>Assets/Plugins/Dlls/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Bson">
       <HintPath>Assets/Plugins/Dlls/MongoDB.Bson.dll</HintPath>

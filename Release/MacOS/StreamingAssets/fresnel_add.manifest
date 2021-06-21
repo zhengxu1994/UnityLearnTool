@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2802869414
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 51be032a120f84751f6c798f55380f9e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 68c985bf88fecc38b460cdb825182138
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Shader/Fresnel_Add.shader
+Dependencies: []

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: sector_mat
-  m_Shader: {fileID: 4800000, guid: 72beee40b6b178d44b2e3f86888273ac, type: 3}
+  m_Shader: {fileID: 4800000, guid: f365bf778f5fa9345ae699f9af87b417, type: 3}
   m_ShaderKeywords: _SECTOR_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

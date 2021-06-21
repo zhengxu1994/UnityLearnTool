@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1294609048
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1b738fcb18c1087209da1d69959a6e73
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/obj_007.png
+Dependencies: []

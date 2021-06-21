@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3529824515
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ec0c83649d6888380880c1341345d067
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5651999fa58938ac55fc849c3d2539bc
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Material/10272_glow_002.mat
+Dependencies:
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/additive_00

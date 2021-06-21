@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2134033353
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 654e7c37e3890ac08eb037a7a7997fdd
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/par_001.png
+Dependencies: []

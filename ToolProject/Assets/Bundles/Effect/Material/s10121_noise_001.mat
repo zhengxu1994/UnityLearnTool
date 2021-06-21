@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: s10121_noise_001
-  m_Shader: {fileID: 4800000, guid: ceaf9e71ebd2cc049afcfd1f51134f0e, type: 3}
+  m_Shader: {fileID: 4800000, guid: 362e41812be140640bb5bf6b07d5760d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,46 +20,96 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AlphaTex:
-        m_Texture: {fileID: 2800000, guid: bf453dfcf2bdbee47a435ca14accec60, type: 3}
-        m_Scale: {x: 3, y: 2}
+        m_Texture: {fileID: 2800000, guid: 4bb88fbfe3b814440ab5be42fc3c9e97, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlphaTex1:
-        m_Texture: {fileID: 2800000, guid: 1faef9fbd710a7540b2969be2794c85e, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _AlphaTex2:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Distortion_Tex:
-        m_Texture: {fileID: 2800000, guid: d176d07c783df9947b1172410bb556ba, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
+    - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _texcoord2:
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortionTex:
+        m_Texture: {fileID: 2800000, guid: 433e0b1bfca9dd84484c4af18cf45c45, type: 3}
+        m_Scale: {x: 3, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 31efed9425ef62444a541cd9f5af27ca, type: 3}
+        m_Scale: {x: 2, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SoftDissolveTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AlphaTex12UV: 0
-    - _AlphaTex1U: 0
-    - _AlphaTex1V: 0
-    - _AlphaTex22UV: 0
-    - _AlphaTex2U: 0
-    - _AlphaTex2UV: 0
-    - _AlphaTex2V: 0
     - _AlphaU: 0
-    - _AlphaV: -1
-    - _ChromaticAberration: 0.1
-    - _DistortionU: 0.2
-    - _DistortionV: -0.6
-    - _Distortion_Tex2UV: 0
-    - _IOR1: 1
-    - _IOR2: 1.4
-    - _Indensity: 0.5
-    - __dirty: 0
+    - _AlphaU1: 0
+    - _AlphaV: 0
+    - _AlphaV1: 0
+    - _BumpScale: 1
+    - _ColorPow: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DistortionIndensity: 0.1
+    - _DistortionToSoftDissolve: 0
+    - _DistortionU: 0
+    - _DistortionV: 0.4
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Indensity: 12
+    - _LineIndensity: 1
+    - _LineRange: 0.5
+    - _LineWidth: 0.1
+    - _MainU: 0
+    - _MainV: -0.5
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Opacity: 0.6
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SoftDissolveIndensity: 0
+    - _SoftDissolveSoft: 0.5
+    - _SoftDissolveSwitch: 0
+    - _SoftDissolveTexU: 0
+    - _SoftDissolveTexV: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
     m_Colors:
-    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.4753454, b: 0.36320752, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LineColor: {r: 1, g: 1, b: 1, a: 1}

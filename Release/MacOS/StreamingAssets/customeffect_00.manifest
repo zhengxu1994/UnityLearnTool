@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1471135993
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d95cb61b39d0f5c1b4e1a42ede0b5018
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 68c985bf88fecc38b460cdb825182138
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Shader/CustomEffect_00.shader
+Dependencies: []

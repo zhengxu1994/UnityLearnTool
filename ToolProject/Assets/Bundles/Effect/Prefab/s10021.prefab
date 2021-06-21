@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63db17f184474c247ba8439c41b556ae, type: 2}
+  - {fileID: 2100000, guid: c6be1fe4315bba54aaf3aa503aec3a07, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,7 +172,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1c404e7ef07d2b5429905e2250f583e9, type: 2}
+  - {fileID: 2100000, guid: 60cdaabe4a67ba34b9acd5d45aa223b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -793,7 +793,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 6
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4902,8 +4902,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eea880a2e715c564dbacb9b6ca3167c8, type: 2}
-  - {fileID: 2100000, guid: eea880a2e715c564dbacb9b6ca3167c8, type: 2}
+  - {fileID: 2100000, guid: af90f3770296e9f4798a90c041a28a89, type: 2}
+  - {fileID: 2100000, guid: af90f3770296e9f4798a90c041a28a89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4973,7 +4973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8501709943929340586}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 21.85, y: 0, z: 0.1}
+  m_LocalPosition: {x: 21.8, y: 0, z: 0.1}
   m_LocalScale: {x: 0.01, y: 0.06743735, z: 0.6711674}
   m_Children: []
   m_Father: {fileID: 8501709943152769680}
@@ -5005,7 +5005,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 191c6561052e1a14aa2381089c957bda, type: 2}
+  - {fileID: 2100000, guid: a0e1bd3b72dcac74abd91133682774ec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5076,7 +5076,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 044eb9078549ac24aa9f2fbd946f0024, type: 2}
+  - {fileID: 2100000, guid: fd242122b6972774c8440d6d01f24715, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5100,7 +5100,7 @@ TrailRenderer:
   m_Time: 0.08
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1.2
+    widthMultiplier: 2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -5156,7 +5156,7 @@ TrailRenderer:
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
-    alignment: 0
+    alignment: 1
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0

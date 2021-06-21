@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 801981444
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 297701df0651044cdd409de00a2b7d4f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/glow_015.png
+Dependencies: []

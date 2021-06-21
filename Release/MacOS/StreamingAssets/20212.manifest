@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 56968048
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bf9815939aac3c29ddda6ebb58da0c48
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2e1f26389d1506a5758acc12f4c3e67d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 120
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Prefab/20212.prefab
+Dependencies:
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/20212_noise_001
+- /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ToolProject/../Release/MacOS/StreamingAssets/20212_noise_002

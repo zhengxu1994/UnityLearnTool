@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 362683498
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f24b1c873d60db9b24896ca049860879
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/trail_002.png
+Dependencies: []

@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 546444580
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 47ac4bd3aeceb922c56e628aa1839f00
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/tex_006.png
+Dependencies: []

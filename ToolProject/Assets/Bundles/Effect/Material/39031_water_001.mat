@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 39031_water_001
-  m_Shader: {fileID: 4800000, guid: 56076892dcd4b4bdaa78c5c3f39a4dce, type: 3}
+  m_Shader: {fileID: 4800000, guid: 1834d693b0e718d4e947022bb1be4c17, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a14d17f8ef3f45f43b4701c20f71dc08, type: 3}
+        m_Texture: {fileID: 2800000, guid: 29cb39e1c955299418901e0811dbbfdb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -63,9 +63,11 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Indensity: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Opacity: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -73,9 +75,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Center: {r: 0, g: 0, b: 0, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.4313698, g: 1, b: 0.33490568, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Normal: {r: 0, g: 0, b: 1, a: 0}
-    - _Scale: {r: 1, g: 1, b: 1, a: 1}
-    - _TintColor: {r: 0.10034712, g: 0.38679248, b: 0.2056171, a: 0.5019608}

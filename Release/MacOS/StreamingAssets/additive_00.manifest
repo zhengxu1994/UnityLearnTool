@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 147258201
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b544d165f84265d502ce573eb263507a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 68c985bf88fecc38b460cdb825182138
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Shader/Additive_00.shader
+Dependencies: []

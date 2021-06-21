@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-guid: 8fa1c2dc99f1ab742aa0133d96d59a4b
+guid: f365bf778f5fa9345ae699f9af87b417
 ShaderImporter:
   externalObjects: {}
   defaultTextures: []
   nonModifiableTextures: []
+  preprocessorOverride: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: warningarrow
   assetBundleVariant: 

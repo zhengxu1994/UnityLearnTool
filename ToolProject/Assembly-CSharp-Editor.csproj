@@ -155,7 +155,6 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_RgbToHsv.cs" />
     <Compile Include="Assets/Editor/ExportResourceOld/ExportResourceEffect.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_HalfVector.cs" />
-    <Compile Include="Assets/Editor/ExcelExporter/ExcelExporter.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Unity/Editor/TSVectorDrawer.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_StaticBranch.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Utility/SF_Link.cs" />
@@ -275,6 +274,9 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_UVTile.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Utility/SF_Blit.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SF_NodeTreeStatus.cs" />
+    <Compile Include="Assets/Editor/BuildEditor/BuildHelper.cs" />
+    <Compile Include="Assets/Editor/BuildEditor/BuildEditor.cs" />
+    <Compile Include="Assets/Editor/BuildEditor/ZBuildSettings.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_ArcTan2/SFN_ArcTan2_NPTP.shader" />
@@ -715,12 +717,6 @@
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="EPPlus">
-      <HintPath>Assets/Plugins/Dlls/EPPlus.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>Assets/Plugins/Dlls/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Bson">
       <HintPath>Assets/Plugins/Dlls/MongoDB.Bson.dll</HintPath>

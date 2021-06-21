@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 286777960
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ff467f0a955154f84ea7a3aeb4d2b1a8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4df8c69f2c8a6ad9e3cbf82bb83e4dc3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/ui_015.png
+Dependencies: []

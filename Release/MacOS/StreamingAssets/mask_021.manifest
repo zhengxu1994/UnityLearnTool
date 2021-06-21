@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1801404030
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5da45fd950401927e83029323a2cc2ef
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/mask_021.png
+Dependencies: []

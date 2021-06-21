@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2962200973
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0d8c0a537b178ce9be0b8514d3c23dc0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/Pattern_008.png
+Dependencies: []

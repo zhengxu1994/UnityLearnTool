@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2702632915
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c25edd1098e460313dfe636d77d51c59
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 68c985bf88fecc38b460cdb825182138
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Shader/Post.shader
+Dependencies: []

@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 3054462473
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e124784c7087f9705445643de3f04459
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/noise_030.png
+Dependencies: []

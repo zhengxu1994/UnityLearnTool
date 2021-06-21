@@ -316,7 +316,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 150
+      scalar: 110
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1393,9 +1393,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0.36078432}
-        key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 1}
+        key0: {r: 1, g: 0.8879592, b: 0.53333336, a: 0.36078432}
+        key1: {r: 1, g: 1, b: 1, a: 0.5882353}
+        key2: {r: 0, g: 0, b: 0, a: 0.5686275}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -4799,8 +4799,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9be0646885a697141b2a3e5507073813, type: 2}
-  - {fileID: 2100000, guid: 9be0646885a697141b2a3e5507073813, type: 2}
+  - {fileID: 2100000, guid: b50728474e1b9c24e97557fc66b839e7, type: 2}
+  - {fileID: 2100000, guid: b50728474e1b9c24e97557fc66b839e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5128,7 +5128,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.13
+      scalar: 0.11
       minScalar: 0.06
       maxCurve:
         serializedVersion: 2
@@ -9611,8 +9611,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: da31508836542ac42846bb764060cac4, type: 2}
-  - {fileID: 2100000, guid: da31508836542ac42846bb764060cac4, type: 2}
+  - {fileID: 2100000, guid: 153276efe74872a43ade725411e193a7, type: 2}
+  - {fileID: 2100000, guid: 153276efe74872a43ade725411e193a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9639,7 +9639,7 @@ ParticleSystemRenderer:
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
-  m_LengthScale: 6.45
+  m_LengthScale: 5
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0

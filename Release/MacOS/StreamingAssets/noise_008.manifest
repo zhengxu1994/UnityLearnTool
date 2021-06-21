@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2685118264
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: de23d15c7c69bc1f1852a809e4b05c43
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/noise_008.png
+Dependencies: []

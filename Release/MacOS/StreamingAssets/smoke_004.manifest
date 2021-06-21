@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 3540010110
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cacdf416d76c43116a070b5f421cbb04
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/smoke_004.png
+Dependencies: []

@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 1507541167
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 48b109b390bae7fb8639adc3e9538d93
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f64856a3d606b613608cbf22df470c60
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Model/20451_ball_001.FBX
+Dependencies: []

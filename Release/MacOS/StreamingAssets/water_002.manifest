@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 4094131376
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 30e72ae83da7d0e49e1fad921913e692
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/water_002.png
+Dependencies: []

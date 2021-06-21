@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 957620159203206261}
   - component: {fileID: 957620159203206218}
   m_Layer: 0
-  m_Name: dack (9)
+  m_Name: dack_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +222,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.5660378, g: 0.52033687, b: 0.4565682, a: 1}
+      maxColor: {r: 0.6901961, g: 0.25794467, b: 0.04705882, a: 0.78039217}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -284,7 +284,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 60
+      scalar: 65
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4709,8 +4709,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8a44310742234994fb36a7f046ac7832, type: 2}
-  - {fileID: 2100000, guid: 8a44310742234994fb36a7f046ac7832, type: 2}
+  - {fileID: 2100000, guid: 011d4b85ed05bde4dbc97178a9b1511e, type: 2}
+  - {fileID: 2100000, guid: 011d4b85ed05bde4dbc97178a9b1511e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4797,7 +4797,7 @@ GameObject:
   - component: {fileID: 957620159731952675}
   - component: {fileID: 957620159731952672}
   m_Layer: 0
-  m_Name: guangci001 (1)
+  m_Name: guangci001_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5007,7 +5007,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.94998497, b: 0.6650944, a: 0.49411765}
+      maxColor: {r: 1, g: 0.94998497, b: 0.6650944, a: 0.3254902}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5069,7 +5069,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 6
+      scalar: 5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9552,8 +9552,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b059c87c6233c814c841c7721a71a252, type: 2}
-  - {fileID: 2100000, guid: b059c87c6233c814c841c7721a71a252, type: 2}
+  - {fileID: 2100000, guid: c8700254edc329940a73d75e25632ff2, type: 2}
+  - {fileID: 2100000, guid: c8700254edc329940a73d75e25632ff2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9881,8 +9881,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: 1
+      scalar: 3.5
+      minScalar: 1.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -10197,7 +10197,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -10462,7 +10462,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -14306,8 +14306,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4612c5931896000468696b9a95894a9b, type: 2}
-  - {fileID: 2100000, guid: 4612c5931896000468696b9a95894a9b, type: 2}
+  - {fileID: 2100000, guid: 16946176f4ffb99439dff06130e85149, type: 2}
+  - {fileID: 2100000, guid: 16946176f4ffb99439dff06130e85149, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14363,7 +14363,7 @@ GameObject:
   - component: {fileID: 957620160912234933}
   - component: {fileID: 957620160912234890}
   m_Layer: 0
-  m_Name: guangci001 (2)
+  m_Name: guangci001_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19118,8 +19118,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: df2f781add505d8409f6239ee98c53ea, type: 2}
-  - {fileID: 2100000, guid: df2f781add505d8409f6239ee98c53ea, type: 2}
+  - {fileID: 2100000, guid: 85f0954068bf310458519d1b464b9528, type: 2}
+  - {fileID: 2100000, guid: 85f0954068bf310458519d1b464b9528, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19175,7 +19175,7 @@ GameObject:
   - component: {fileID: 957620161010838608}
   - component: {fileID: 957620161010838609}
   m_Layer: 0
-  m_Name: dack (8)
+  m_Name: dack_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19189,7 +19189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957620161010838615}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.0197, z: -0}
+  m_LocalPosition: {x: -0.005, y: -0.0197, z: -0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 5201818891502436982}
@@ -19385,7 +19385,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.5660378, g: 0.52033687, b: 0.4565682, a: 1}
+      maxColor: {r: 0.8679245, g: 0.80215704, b: 0.5199359, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -19447,7 +19447,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 90
+      scalar: 27
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -23872,8 +23872,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 98b7085fbf8216d409c6d5eaf2757afb, type: 2}
-  - {fileID: 2100000, guid: 98b7085fbf8216d409c6d5eaf2757afb, type: 2}
+  - {fileID: 2100000, guid: c8700254edc329940a73d75e25632ff2, type: 2}
+  - {fileID: 2100000, guid: c8700254edc329940a73d75e25632ff2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24029,7 +24029,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 793fd49f475fde3449f88dc3e66987f4, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 5c559fcbbf3159d45b74a50aaf8ea42c,
         type: 3}
       propertyPath: m_Name
@@ -24055,11 +24055,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0.000010245275
       objectReference: {fileID: 0}
+    - target: {fileID: 1401006494575068746, guid: 5c559fcbbf3159d45b74a50aaf8ea42c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5218053877760515484, guid: 5c559fcbbf3159d45b74a50aaf8ea42c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed090f93becb9264cb169403fdfe80e4, type: 2}
+      objectReference: {fileID: 2100000, guid: a1c46a4e7d042cd499d0ccdaf0cafe5e, type: 2}
     m_RemovedComponents:
     - {fileID: -5716681864270162303, guid: 5c559fcbbf3159d45b74a50aaf8ea42c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5c559fcbbf3159d45b74a50aaf8ea42c, type: 3}

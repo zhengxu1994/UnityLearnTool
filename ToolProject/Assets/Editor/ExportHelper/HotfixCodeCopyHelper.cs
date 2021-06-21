@@ -2,7 +2,7 @@ using System.IO;
 using ZFramework;
 using UnityEditor;
 
-[InitializeOnLoad]
+//[InitializeOnLoad]
 public static class HotfixCodeCopyHelper
 {
     private const string ScriptAssembliesDir = "Library/ScriptAssemblies";

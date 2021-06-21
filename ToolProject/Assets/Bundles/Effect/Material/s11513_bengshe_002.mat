@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: s11513_bengshe_002
-  m_Shader: {fileID: 4800000, guid: a13dfd66e46cd7b4f83efe9f422a9f26, type: 3}
-  m_ShaderKeywords: _DEPTHFADE_ON _VERTEXCOLORINFLUENCESOFTDISSOLVE_ON
-  m_LightmapFlags: 0
+  m_Shader: {fileID: 4800000, guid: 362e41812be140640bb5bf6b07d5760d, type: 3}
+  m_ShaderKeywords: _SOFTDISSOLVESWITCH_ON
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -20,22 +20,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AlphaTex:
-        m_Texture: {fileID: 2800000, guid: d1fe52cd4c96ebc449ad9d8ea8fdd533, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _AlphaTex2:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _AlphaTex3:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _AlphaTex4:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _AlphaTex5:
+    - _AlphaTex1:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -63,12 +51,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _GradientTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 122a2a21f47b18c47ae356366ae431c1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -84,91 +68,48 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SoftDissolveTex:
-        m_Texture: {fileID: 2800000, guid: b9b89470f4ca08e4c90aded3e14fb1d2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _VertexOffsetTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _tex4coord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord2:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 122a2a21f47b18c47ae356366ae431c1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Alpha2U: 0
-    - _Alpha2V: 0
-    - _Alpha3U: 0
-    - _Alpha3V: 0
-    - _Alpha4U: 0
-    - _Alpha4V: 0
-    - _Alpha5U: 0
-    - _Alpha5V: 0
-    - _AlphaTexUV2: 0
     - _AlphaU: 0
+    - _AlphaU1: 0
     - _AlphaV: 0
+    - _AlphaV1: 0
     - _BumpScale: 1
-    - _CustomDataUV2XInfluenceSoftDissolve: 0
-    - _CustomDataUV2X_Indensity: 1
+    - _ColorPow: 1
     - _Cutoff: 0.5
-    - _DepthFade: 1
-    - _DepthFadeIndensity: 0.1
     - _DetailNormalMapScale: 1
-    - _DissolveTexPlusValue: 0
-    - _Distortion2UV: 0
     - _DistortionIndensity: 0
-    - _DistortionInfluenceGradient: 0
-    - _DistortionInfluenceOffset: 0
-    - _DistortionInfluenceSoft: 0
+    - _DistortionToSoftDissolve: 0
     - _DistortionU: 0
     - _DistortionV: 0
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GradientTexU: 0
-    - _GradientTexV: 0
     - _Indensity: 10
     - _LineIndensity: 1
     - _LineRange: 0.5
-    - _LineWidth: 0
-    - _MainPower: 1
+    - _LineWidth: 0.1
     - _MainU: 0
     - _MainV: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Opacity: 1
-    - _OpacityPower: 1
+    - _Opacity: 0.81
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
-    - _SoftDissolveIndensity: 0.654
-    - _SoftDissolveSoft: 0.5
-    - _SoftDissolveSwitch: 0
+    - _SoftDissolveIndensity: 0.836
+    - _SoftDissolveSoft: 0.354
+    - _SoftDissolveSwitch: 1
     - _SoftDissolveTexU: 0
     - _SoftDissolveTexV: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _VertexColorInfluenceSoftDissolve: 1
-    - _VertexOffsetIndensity: 0
-    - _VertexOffsetTexU: 0
-    - _VertexOffsetTexV: 0
     - _ZWrite: 1
-    - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.36320752, g: 0.52019435, b: 1, a: 1}
+    - _Color: {r: 0.2235294, g: 0.47670045, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LineColor: {r: 1, g: 1, b: 1, a: 1}

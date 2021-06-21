@@ -41,7 +41,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Cutoff: 0.5
-    - _Ins: 0
+    - _Ins: 3.7
     - _node_4993: 1.14
     - _node_7479: 1.55
     m_Colors:

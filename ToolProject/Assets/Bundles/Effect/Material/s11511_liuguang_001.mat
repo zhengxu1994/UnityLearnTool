@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: s11511_liuguang_001
-  m_Shader: {fileID: 4800000, guid: a13dfd66e46cd7b4f83efe9f422a9f26, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 0
+  m_Shader: {fileID: 4800000, guid: 362e41812be140640bb5bf6b07d5760d, type: 3}
+  m_ShaderKeywords: _DISTORTIONTOSOFTDISSOLVE_ON
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -20,22 +20,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _AlphaTex2:
-        m_Texture: {fileID: 2800000, guid: 6391c861d692d3c468feca737ea3bb62, type: 3}
+        m_Texture: {fileID: 2800000, guid: 097306a4bbf21e8439049c78d66dc69e, type: 3}
         m_Scale: {x: 1, y: 0.29}
         m_Offset: {x: 0, y: 0}
-    - _AlphaTex3:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _AlphaTex4:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _AlphaTex5:
+    - _AlphaTex1:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -56,20 +44,16 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DistortionTex:
-        m_Texture: {fileID: 2800000, guid: 20d77a6773295684eb7590248691ff22, type: 3}
-        m_Scale: {x: 1, y: -12.18}
+        m_Texture: {fileID: 2800000, guid: d81b480f4b662784f9d755a9d18d665e, type: 3}
+        m_Scale: {x: 1, y: -5}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _GradientTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9cbfc8bc9f71d5f43a5c23b918eaae64, type: 3}
-        m_Scale: {x: 1, y: 2.39}
+        m_Texture: {fileID: 2800000, guid: a0608506cd02f434496bd4819257bd85, type: 3}
+        m_Scale: {x: 1, y: 2}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -87,108 +71,45 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _T_mask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _VertexOffsetTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _mask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _mask1:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _tex4coord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord2:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Alpha2U: 0
-    - _Alpha2V: 0
-    - _Alpha3U: 0
-    - _Alpha3V: 0
-    - _Alpha4U: 0
-    - _Alpha4V: 0
-    - _Alpha5U: 0
-    - _Alpha5V: 0
-    - _AlphaTexUV2: 0
     - _AlphaU: 0
+    - _AlphaU1: 0
     - _AlphaV: 0
+    - _AlphaV1: 0
     - _BumpScale: 1
-    - _CustomDataUV2XInfluenceSoftDissolve: 0
-    - _CustomDataUV2X_Indensity: 1
+    - _ColorPow: 1
     - _Cutoff: 0.5
-    - _DepthFade: 0
-    - _DepthFadeIndensity: 1
     - _DetailNormalMapScale: 1
-    - _DissolveTexPlusValue: 0
-    - _Distortion2UV: 0
     - _DistortionIndensity: 0.1
-    - _DistortionInfluenceGradient: 0
-    - _DistortionInfluenceOffset: 0
-    - _DistortionInfluenceSoft: 0
+    - _DistortionToSoftDissolve: 1
     - _DistortionU: 0
     - _DistortionV: 0.5
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GradientTexU: 0
-    - _GradientTexV: 0
-    - _Indensity: 50
+    - _Indensity: 23
     - _LineIndensity: 1
     - _LineRange: 0.5
     - _LineWidth: 0.1
-    - _MainPower: 1
     - _MainU: 0.2
     - _MainV: -2.08
     - _Metallic: 0
     - _Mode: 0
-    - _N_BY_KD: 0.01
-    - _N_BY_QD: 3
-    - _N_mask: 0.3
     - _OcclusionStrength: 1
-    - _Opacity: 1
-    - _OpacityPower: 1.58
+    - _Opacity: 0.4
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SoftDissolveIndensity: 0
-    - _SoftDissolveSoft: 0
+    - _SoftDissolveSoft: 0.5
     - _SoftDissolveSwitch: 0
     - _SoftDissolveTexU: 0
     - _SoftDissolveTexV: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _VertexColorInfluenceSoftDissolve: 0
-    - _VertexOffsetIndensity: 0
-    - _VertexOffsetTexU: 0
-    - _VertexOffsetTexV: 0
     - _ZWrite: 1
-    - __dirty: 0
-    - _u_move: 0
-    - _v_move: 0
     m_Colors:
-    - _C_BYcolor: {r: 1, g: 0, b: 0, a: 1}
-    - _Color: {r: 0.023584902, g: 0.33855745, b: 1, a: 1}
+    - _Color: {r: 0.0540564, g: 0.7748084, b: 2.297397, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LineColor: {r: 1, g: 1, b: 1, a: 1}
-    - _TintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _color: {r: 0.5, g: 0.5, b: 0.5, a: 1}

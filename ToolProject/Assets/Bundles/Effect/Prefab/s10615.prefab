@@ -4923,7 +4923,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 800
+      scalar: 1200
       minScalar: 300
       maxCurve:
         serializedVersion: 2
@@ -5039,7 +5039,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
+      scalar: 8
       minScalar: 3
       maxCurve:
         serializedVersion: 2
@@ -5416,7 +5416,7 @@ ParticleSystem:
     enabled: 1
     type: 8
     angle: 23
-    length: 56.7
+    length: 72.4
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
@@ -5501,7 +5501,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 12
+      value: 18.52
       mode: 0
       spread: 0
       speed:
@@ -9653,8 +9653,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ef5e6864500b1504c9c87156468eabfb, type: 2}
-  - {fileID: 2100000, guid: ef5e6864500b1504c9c87156468eabfb, type: 2}
+  - {fileID: 2100000, guid: 7fb1fc4c78063b14eb27267300b8bc8e, type: 2}
+  - {fileID: 2100000, guid: 7fb1fc4c78063b14eb27267300b8bc8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

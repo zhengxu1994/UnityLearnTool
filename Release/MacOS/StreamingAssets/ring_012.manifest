@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 30028987
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c56833423ab4cee8f89112429bb2a042
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/Effect/Texture/ring_012.png
+Dependencies: []

@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets/Model/Movement/PathFinding/Pathmodifier.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Jitter/LinearMath/TSBBox.cs" />
-    <Compile Include="Assets/ModelView/Render/Polygon.cs" />
+    <Compile Include="Assets/ZFramework/Render/Polygon.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/Plugins/TrueSyncDll/TrueSync/ITrueSyncBehaviourCallbacks.cs" />
     <Compile Include="Assets/Model/Tool/Helper/PathHelper.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/Plugins/TrueSyncDll/TrueSync/SerializableDictionaryByteByteArray.cs" />
@@ -332,7 +332,7 @@
     <Compile Include="Assets/Model/Core/ProcessHelper.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Jitter/Dynamics/Joints/Joint3D.cs" />
     <Compile Include="Assets/Model/Core/Helper/JsonHelper.cs" />
-    <Compile Include="Assets/ModelView/Render/Scripts/DrawMesh.cs" />
+    <Compile Include="Assets/ZFramework/Render/Scripts/DrawMesh.cs" />
     <Compile Include="Assets/Model/Core/Helper/RandomHelper.cs" />
     <Compile Include="Assets/Model/Module/Message/NetKcpComponent.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Common/Serialization.cs" />
@@ -558,7 +558,7 @@
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/CDT/Sets/PointSet.cs" />
     <Compile Include="Assets/Model/Tool/Helper/PositionHelper.cs" />
     <Compile Include="Assets/Model/Core/ListComponent.cs" />
-    <Compile Include="Assets/ModelView/Render/CutPolygon.cs" />
+    <Compile Include="Assets/ZFramework/Render/CutPolygon.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/Plugins/TrueSyncDll/TrueSync/SyncedInfo.cs" />
     <Compile Include="Assets/Model/Movement/Move/MapMgr.cs" />
     <Compile Include="Assets/Model/Tool/ExtensionMgr.cs" />
@@ -598,75 +598,61 @@
      <None Include="Assets/Learn/Shaders/Diffuse/DiffuseFrag.shader" />
      <None Include="Assets/Model/Movement/RVO2/CMakeLists.txt" />
      <None Include="Assets/Resources/CellShader.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/Blend20200721.shader" />
      <None Include="Assets/PluginTools/taecgLibrary/SkillIndicator/Examples/Meshes/ProjectorLight.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl-Particle Add.shader" />
      <None Include="Assets/Learn/Shaders/ShaderForge/Learn1/Lambot/LambotDes.txt" />
      <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/Vegetation.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl Unlit.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/LightWrapping.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/cgwell Alpha Blend.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/WarningSector.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl_Fresnel_HDRparticle_add_backculldepthwrite.shader" />
+     <None Include="Assets/Bundles/Effect/Shader/Fresnel_Add.shader" />
      <None Include="Assets/Bundles/Effect/Shader/Post.shader" />
      <None Include="Assets/Bundles/Config/StartSceneConfig.txt" />
-     <None Include="Assets/Bundles/Effect/Shader/yl_liuguang1_001.shader" />
      <None Include="Assets/Learn/Shaders/ShaderForge/Learn2/LambotT2.shader" />
+     <None Include="Assets/Bundles/Effect/Shader/CustomEffect_Add.shader" />
      <None Include="Assets/Learn/Shaders/Specular/SpecularVertex.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl Alpha_Blend_Mask.shader" />
+     <None Include="Assets/Bundles/Effect/Shader/WarningArrow.shader" />
      <None Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Jitter/license.txt" />
+     <None Include="Assets/Bundles/Effect/Shader/Additive_00.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/Parallax.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/cgwell-Particle Add.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/Tiles.shader" />
+     <None Include="Assets/Bundles/Effect/Shader/Fresnel_Blend.shader" />
      <None Include="Assets/Bundles/Config/StartProcessConfig.txt" />
      <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/Refraction.shader" />
      <None Include="Assets/Bundles/Config/StartZoneConfig.txt" />
      <None Include="Assets/Learn/Shaders/Phong/BlinnPhong.shader" />
      <None Include="Assets/Resources/Shaders/FairyGUI-Text.shader" />
      <None Include="Assets/Learn/Shaders/ShaderForge/Learn2/HalfToon.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl_Burn.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/CustomLighting.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl_guangyun_001.shader" />
      <None Include="Assets/Learn/Shaders/ShaderForge/Learn2/LambotHighLight.shader" />
      <None Include="Assets/Resources/Shaders/FairyGUI-Image.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/10211_liuguang_002.shader" />
      <None Include="Assets/Bundles/Effect/Shader/CustomEffect_00.shader" />
      <None Include="Assets/Learn/Shaders/ShaderForge/Learn4/l04.shader" />
      <None Include="Assets/Model/Tool/TrueSync/TrueSync/link.xml" />
      <None Include="Assets/Learn/Shaders/Phong/Phong.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl Alpha Blend.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl_Dissolution_blend.shader" />
      <None Include="Assets/Learn/Shaders/shader笔记.txt" />
      <None Include="Assets/Bundles/Config/StartMachineConfig.txt" />
+     <None Include="Assets/Bundles/Effect/Shader/CustomEffect_Add_1.shader" />
      <None Include="Assets/Learn/Shaders/LambortAndPhong/LambortAndPhong.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/UV_Move_Add.shader" />
+     <None Include="Assets/Bundles/Effect/Shader/Blend_00.shader" />
      <None Include="Assets/Bundles/Effect/Shader/CustomEffect_Blend.shader" />
      <None Include="Assets/Learn/Shaders/ShaderForge/Learn1/Lambot/Lambot.shader" />
      <None Include="Assets/Resources/Shaders/AddOn/FairyGUI-BlurFilter.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/VertexColorRounding.shader" />
      <None Include="Assets/Learn/Shaders/Simple/SimpleShader.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl_guangyun_002.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl Alpha Blend Z.shader" />
      <None Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/license.txt" />
      <None Include="Assets/Model/Movement/RVO2/src/CMakeLists.txt" />
      <None Include="Assets/Resources/OutlineShader.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Readme.txt" />
-     <None Include="Assets/Bundles/Effect/Shader/yl_liuguang_002.shader" />
      <None Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/readme.txt" />
      <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/PixelRotator.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl Add Zoff.shader" />
      <None Include="Assets/Resources/CellShaderNew.shader" />
      <None Include="Assets/Bundles/Config/AIConfig.txt" />
      <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/VertexAnimation.shader" />
      <None Include="Assets/Resources/Shaders/FairyGUI-BMFont.shader" />
      <None Include="Assets/PluginTools/ShaderForge/Example Assets/Shaders/TessellationDisplacement.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/yl_ASE_RefractionDistortion.shader" />
      <None Include="Assets/Bundles/Config/UnitConfig.txt" />
-     <None Include="Assets/Bundles/Effect/Shader/ASE_RefractionDistortion.shader" />
      <None Include="Assets/Learn/Shaders/FengleleShaderBook/Le1/FalseColor.shader" />
      <None Include="Assets/Learn/Shaders/Diffuse/DiffuseVertex.shader" />
      <None Include="Assets/Learn/Shaders/FengleleShaderBook/Le1/SimpleShader1.shader" />
-     <None Include="Assets/Bundles/Effect/Shader/WarningArrow.shader" />
+     <None Include="Assets/Bundles/Effect/Shader/CustomDistort_00.shader" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -900,12 +886,6 @@
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="EPPlus">
-      <HintPath>Assets/Plugins/Dlls/EPPlus.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>Assets/Plugins/Dlls/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Bson">
       <HintPath>Assets/Plugins/Dlls/MongoDB.Bson.dll</HintPath>
