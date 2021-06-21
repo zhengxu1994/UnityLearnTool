@@ -1,34 +1,45 @@
 ﻿<Properties StartupConfiguration="{1545A311-1FF9-4185-AFAF-CA6A2BD73A1B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Unity/Assets/Hotfix/Demo/Move/MoveComponentSystem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
       <File FileName="../Model/Base/DllHelper.cs" Line="5" Column="2" />
-      <File FileName="../../Unity/Assets/Model/Demo/Move/MoveComponent.cs" Line="1" Column="1" />
-      <File FileName="../Hotfix/Demo/Move/MoveHelper.cs" Line="1" Column="1" />
-      <File FileName="../Hotfix/Demo/Move/PathFindHelper.cs" Line="1" Column="1" />
-      <File FileName="../../Unity/Assets/Hotfix/Demo/Move/MoveComponentSystem.cs" Line="1" Column="1" />
+      <File FileName="../Hotfix/Demo/Move/MoveHelper.cs" />
+      <File FileName="../Hotfix/Demo/Move/PathFindHelper.cs" />
+      <File FileName="App.config" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="28" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Server.App" expanded="True">
-            <Node name="Server.App" expanded="True" />
+            <Node name="Server.App" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="PackageDependencies" expanded="True" />
+                <Node name="ProjectDependencies" expanded="True" />
+              </Node>
+              <Node name="Program.cs" selected="True" />
+            </Node>
             <Node name="Server.Hotfix" expanded="True">
               <Node name="Demo" expanded="True">
-                <Node name="Move" expanded="True">
-                  <Node name="MoveComponentSystem.cs" selected="True" />
-                </Node>
+                <Node name="Move" expanded="True" />
                 <Node name="Scene" expanded="True" />
                 <Node name="Unit" expanded="True" />
               </Node>
             </Node>
             <Node name="Server.Model" expanded="True">
               <Node name="Base" expanded="True" />
-              <Node name="Demo" expanded="True">
-                <Node name="Move" expanded="True" />
-              </Node>
+              <Node name="Demo" expanded="True" />
               <Node name="Module" expanded="True" />
             </Node>
+            <Node name="Server.ThirdParty" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+            </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>importerPath</Value>
         </State>
       </Pad>
     </Pads>

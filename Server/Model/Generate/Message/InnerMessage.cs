@@ -1,7 +1,7 @@
-using ET;
+using ZFramework;
 using ProtoBuf;
 using System.Collections.Generic;
-namespace ET
+namespace ZFramework
 {
 /// <summary>
 /// 传送unit

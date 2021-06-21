@@ -143,7 +143,6 @@
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Unity/TrueSyncManager.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Settings.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Common/ConvexHull/Melkman.cs" />
-    <Compile Include="Assets/Model/Core/Object/BaseAttribute.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/MotorJoint.cs" />
     <Compile Include="Assets/Model/Movement/Move/Formation.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/Plugins/TrueSyncDll/TrueSync/TrueSyncEventCallback.cs" />
@@ -592,6 +591,7 @@
     <Compile Include="Assets/Model/Tool/DamageSystem.cs" />
     <Compile Include="Assets/Model/Module/Network/AChannel.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/Plugins/TrueSyncDll/TrueSync/IBody.cs" />
+    <Compile Include="Assets/Model/Core/Object/BaseAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/ZFramework/Learn/Shaders/FengleleShaderBook/Le1/VertexFrament Shader.shader" />
@@ -875,8 +875,8 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="CommandLine">
-      <HintPath>Assets/Plugins/Dlls/CommandLine.dll</HintPath>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>Assets/Plugins/MongoDB.Bson.dll</HintPath>
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Mdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
@@ -887,11 +887,11 @@
     <Reference Include="ILRuntime.Mono.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Bson">
-      <HintPath>Assets/Plugins/Dlls/MongoDB.Bson.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IO.RecyclableMemoryStream">
-      <HintPath>Assets/Plugins/Dlls/Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    <Reference Include="CommandLine">
+      <HintPath>Assets/Plugins/CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

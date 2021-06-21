@@ -85,6 +85,7 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SF_NodeStatus.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Utility/SF_DraggableSeparator.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Vector4Property.cs" />
+    <Compile Include="Assets/Editor/BuildEditor/ZBuildSettings.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_ConstantLerp.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Divide.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_NormalVector.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_DDY.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Node_Constant.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Utility/SF_ZoomArea.cs" />
+    <Compile Include="Assets/Editor/BuildEditor/BuildHelper.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SF_Dependencies.cs" />
     <Compile Include="Assets/Editor/ExportResourceOld/ExportResourceConfig.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Clamp.cs" />
@@ -141,6 +143,7 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Parallax.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Vector4.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SFPSC_Blending.cs" />
+    <Compile Include="Assets/Editor/BuildEditor/BuildEditor.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SF_PreviewWindow.cs" />
     <Compile Include="Assets/Editor/ExportResourceOld/ExportResourceBase.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_Vector1.cs" />
@@ -274,9 +277,6 @@
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Nodes/SFN_UVTile.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/_Utility/SF_Blit.cs" />
     <Compile Include="Assets/PluginTools/ShaderForge/Editor/Code/SF_NodeTreeStatus.cs" />
-    <Compile Include="Assets/Editor/BuildEditor/BuildHelper.cs" />
-    <Compile Include="Assets/Editor/BuildEditor/BuildEditor.cs" />
-    <Compile Include="Assets/Editor/BuildEditor/ZBuildSettings.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/PluginTools/ShaderForge/Editor/InternalResources/GPU Rendering/SFN_ArcTan2/SFN_ArcTan2_NPTP.shader" />
@@ -706,8 +706,8 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="CommandLine">
-      <HintPath>Assets/Plugins/Dlls/CommandLine.dll</HintPath>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>Assets/Plugins/MongoDB.Bson.dll</HintPath>
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Mdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
@@ -718,11 +718,11 @@
     <Reference Include="ILRuntime.Mono.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Bson">
-      <HintPath>Assets/Plugins/Dlls/MongoDB.Bson.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IO.RecyclableMemoryStream">
-      <HintPath>Assets/Plugins/Dlls/Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    <Reference Include="CommandLine">
+      <HintPath>Assets/Plugins/CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>

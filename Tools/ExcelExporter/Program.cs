@@ -13,7 +13,7 @@ using OfficeOpenXml;
 using ProtoBuf;
 using LicenseContext = OfficeOpenXml.LicenseContext;
 
-namespace ET
+namespace ZFramework
 {
     public enum ConfigType
     {
@@ -41,14 +41,14 @@ namespace ET
     {
         private static string template;
 
-        private const string clientClassDir = "../../../Unity/Assets/Model/Generate/Config";
+        private const string clientClassDir = "../../../ToolProject/Assets/Model/Generate/Config";
         private const string serverClassDir = "../../../Server/Model/Generate/Config";
         
         private const string excelDir = "../../../Excel";
         
         private const string jsonDir = "./{0}/Json";
         
-        private const string clientProtoDir = "../../../Unity/Assets/Bundles/Config";
+        private const string clientProtoDir = "../../../ToolProject/Assets/Bundles/Config";
         private const string serverProtoDir = "../../../Config";
 
         private static string GetProtoDir(ConfigType configType)
@@ -321,8 +321,8 @@ namespace ET
             
             foreach (string protoName in protoNames)
             {
-                Type type = ass.GetType($"ET.{protoName}Category");
-                Type subType = ass.GetType($"ET.{protoName}");
+                Type type = ass.GetType($"ZFramework.{protoName}Category");
+                Type subType = ass.GetType($"ZFramework.{protoName}");
                 Serializer.NonGeneric.PrepareSerializer(type);
                 Serializer.NonGeneric.PrepareSerializer(subType);
                 

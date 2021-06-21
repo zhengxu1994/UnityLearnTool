@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel;
 using ProtoBuf;
 
-namespace ET
+namespace ZFramework
 {
     public abstract class Object: ISupportInitialize, IDisposable
     {

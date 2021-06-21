@@ -40,14 +40,14 @@
         <Link>libRecastNavDll.so</Link>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Include="..\..\Unity\Assets\Plugins\MacOS\libkcp.dylib">
-        <Link>libkcp.dylib</Link>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="..\..\Unity\Assets\Plugins\x86_64\kcp.dll">
-        <Link>kcp.dll</Link>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Include="..\..\ToolProject\Assets\Plugins\x86_64\kcp.dll">
+        <Link>kcp.dll</Link>
+      </None>
+      <None Include="..\..\ToolProject\Assets\Plugins\MacOS\libkcp.dylib">
+        <Link>libkcp.dylib</Link>
+      </None>
+    </ItemGroup>
 </Project>

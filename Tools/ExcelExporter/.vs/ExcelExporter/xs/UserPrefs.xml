@@ -1,12 +1,24 @@
 ﻿<Properties StartupConfiguration="{E2DFD9ED-4061-47F8-9121-1F081B70CA8C}|Default">
   <MonoDevelop.Ide.ItemProperties.ExcelExporter PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Template.txt">
+    <Files>
+      <File FileName="Program.cs" Line="323" Column="14" />
+      <File FileName="ProtoObject.cs" />
+      <File FileName="Template.txt" Line="12" Column="15" />
+      <File FileName="BaseAttribute.cs" />
+      <File FileName="IConfig.cs" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ExcelExporter" expanded="True" selected="True">
             <Node name="ExcelExporter" expanded="True" />
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>importerPath</Value>
         </State>
       </Pad>
     </Pads>

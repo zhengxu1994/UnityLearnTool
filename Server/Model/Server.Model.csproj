@@ -22,16 +22,8 @@
   </PropertyGroup>
   <ItemGroup>
 
-    <Compile Include="..\..\Unity\Assets\Editor\Helper\MongoHelper.cs">
-      <Link>Base\MongoHelper.cs</Link>
-    </Compile>
-
     <Compile Include="..\..\Unity\Assets\Model\Core\**\*.cs"> 
       <Link>Core\%(RecursiveDir)%(FileName)%(Extension)</Link>
-    </Compile>
-
-    <Compile Include="..\..\Unity\Assets\Model\Demo\Move\MoveComponent.cs">
-      <Link>Demo\Move\MoveComponent.cs</Link>
     </Compile>
 
     <Compile Include="..\..\Unity\Assets\Model\Module\Config\**\*.cs">
@@ -64,6 +56,9 @@
     </Compile>
     <Compile Include="..\..\Unity\Assets\Model\Module\Message\MessageDispatcherComponent.cs">
       <Link>Module\Message\MessageDispatcherComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ToolProject\Assets\Editor\ExportHelper\MongoHelper.cs">
+      <Link>Base\MongoHelper.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -143,5 +138,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ThirdParty\Server.ThirdParty.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Demo\Move\" />
   </ItemGroup>
 </Project>

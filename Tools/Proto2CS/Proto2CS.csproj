@@ -24,9 +24,6 @@
 
     <ItemGroup>
       <Compile Remove=".vs\**" />
-      <Compile Include="..\..\Unity\Assets\Model\Core\ProcessHelper.cs">
-        <Link>ProcessHelper.cs</Link>
-      </Compile>
     </ItemGroup>
 
     <ItemGroup>
@@ -37,4 +34,9 @@
       <None Remove=".vs\**" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Include="..\..\ToolProject\Assets\Model\Core\ProcessHelper.cs">
+        <Link>Bin\ProcessHelper.cs</Link>
+      </Compile>
+    </ItemGroup>
 </Project>

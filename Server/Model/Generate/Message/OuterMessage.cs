@@ -1,7 +1,7 @@
-using ET;
+using ZFramework;
 using ProtoBuf;
 using System.Collections.Generic;
-namespace ET
+namespace ZFramework
 {
 	[ResponseType(typeof(M2C_TestResponse))]
 	[Message(OuterOpcode.C2M_TestRequest)]

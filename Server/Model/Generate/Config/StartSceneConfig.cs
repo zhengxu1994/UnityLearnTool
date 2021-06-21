@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using MongoDB.Bson.Serialization.Attributes;
 using ProtoBuf;
 
-namespace ET
+namespace ZFramework
 {
     [ProtoContract]
     [Config]
