@@ -4,7 +4,7 @@
       <File FileName="../Model/Base/DllHelper.cs" Line="5" Column="2" />
       <File FileName="../Hotfix/Demo/Move/MoveHelper.cs" />
       <File FileName="../Hotfix/Demo/Move/PathFindHelper.cs" />
-      <File FileName="App.config" Line="1" Column="1" />
+      <File FileName="App.config" />
       <File FileName="Program.cs" Line="28" Column="28" />
     </Files>
     <Pads>

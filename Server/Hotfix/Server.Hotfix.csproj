@@ -20,9 +20,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Other\**" />
-    <Compile Include="..\..\Unity\Assets\Hotfix\Module\Config\ConfigComponentSystem.cs">
-      <Link>Module\Config\ConfigComponentSystem.cs</Link>
-    </Compile>
     <Compile Include="..\..\Unity\Assets\Hotfix\Module\Message\MessageDispatcherComponentSystem.cs">
       <Link>Module\Message\MessageDispatcherComponentSystem.cs</Link>
     </Compile>
@@ -38,18 +35,22 @@
     <Compile Include="..\..\Unity\Assets\Hotfix\Module\Message\SessionIdleCheckerComponentSystem.cs">
       <Link>Module\Message\SessionIdleCheckerComponentSystem.cs</Link>
     </Compile>
-    <Compile Include="..\..\Unity\Assets\Hotfix\Module\Numeric\NumericChangeEvent_NotifyWatcher.cs">
-      <Link>Module\Numeric\NumericChangeEvent_NotifyWatcher.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Unity\Assets\Hotfix\Module\Numeric\NumericWatcher_Hp_ShowUI.cs">
-      <Link>Module\Numeric\NumericWatcher_Hp_ShowUI.cs</Link>
-    </Compile>
-
     <Compile Include="..\..\Unity\Assets\Hotfix\Module\AI\**\*.cs">
       <Link>Module\AI\%(RecursiveDir)%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\ToolProject\Assets\HotFix\Module\Config\ConfigComponentSystem.cs">
+      <Link>Module\Actor\Config\ConfigComponentSystem.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Server.Model.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Module\Config\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\ToolProject\Assets\HotFix\Module\Config\ConfigComponentSystem.cs.meta">
+      <Link>Module\Actor\Config\ConfigComponentSystem.cs.meta</Link>
+    </None>
   </ItemGroup>
 </Project>
