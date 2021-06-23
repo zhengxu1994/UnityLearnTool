@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace ET
+namespace ZFramework
 {
     public partial class StartProcessConfig
     {

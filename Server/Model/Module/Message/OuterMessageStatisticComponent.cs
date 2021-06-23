@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ET
+namespace ZFramework
 {
     public class OuterMessageStatisticComponent: Entity
     {

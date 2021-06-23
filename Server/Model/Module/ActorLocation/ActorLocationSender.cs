@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace ET
+namespace ZFramework
 {
     // 知道对方的Id，使用这个类发actor消息
     public class ActorLocationSender: Entity

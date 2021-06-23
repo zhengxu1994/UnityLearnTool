@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Net;
 
-namespace ET
+namespace ZFramework
 {
     public partial class StartSceneConfigCategory
     {

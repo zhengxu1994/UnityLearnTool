@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ET
+namespace ZFramework
 {
     [ActorMessageHandler]
     public abstract class AMActorLocationRpcHandler<E, Request, Response>: IMActorHandler where E : Entity where Request : class, IActorLocationRequest where Response : class, IActorLocationResponse

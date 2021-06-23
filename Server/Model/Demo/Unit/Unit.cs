@@ -2,7 +2,7 @@
 using MongoDB.Bson.Serialization.Attributes;
 using UnityEngine;
 
-namespace ET
+namespace ZFramework
 {
     [BsonIgnoreExtraElements]
     public sealed class Unit: Entity

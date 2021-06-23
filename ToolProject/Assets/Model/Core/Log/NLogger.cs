@@ -1,7 +1,7 @@
 ﻿#if NOT_CLIENT
 using NLog;
 
-namespace ET
+namespace ZFramework
 {
     public class NLogger: ILog
     {

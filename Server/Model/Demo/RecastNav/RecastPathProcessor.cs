@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ET
+namespace ZFramework
 {
     public class RecastPathDestorySystem : DestroySystem<RecastPath>
     {

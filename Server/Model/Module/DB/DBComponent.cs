@@ -2,7 +2,7 @@
 using System.Text;
 using MongoDB.Driver;
 
-namespace ET
+namespace ZFramework
 {
 	/// <summary>
 	/// 用来缓存数据

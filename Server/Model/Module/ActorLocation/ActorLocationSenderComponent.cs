@@ -1,6 +1,6 @@
 ﻿﻿using System.Collections.Generic;
 
-namespace ET
+namespace ZFramework
 {
     public class ActorLocationSenderComponent: Entity
     {

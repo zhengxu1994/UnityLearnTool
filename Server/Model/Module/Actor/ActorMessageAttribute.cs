@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ET
+namespace ZFramework
 {
     public class ActorMessageAttribute: Attribute
     {

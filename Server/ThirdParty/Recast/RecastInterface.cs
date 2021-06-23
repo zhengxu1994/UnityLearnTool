@@ -2,7 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace ET
+namespace ZFramework
 {
     /// <summary>
     /// 用Apoca\recastnavigation-master\RecastDemo\Projects\vs2019\recastnavigation.sln工程编译

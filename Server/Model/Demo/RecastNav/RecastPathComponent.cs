@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using ET;
+using ZFramework;
 using UnityEngine;
 
-namespace ET
+namespace ZFramework
 {
     public class RecastPathAwakeSystem: AwakeSystem<RecastPathComponent>
     {

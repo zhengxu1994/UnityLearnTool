@@ -5,7 +5,7 @@ using System.Threading;
 using CommandLine;
 using NLog;
 
-namespace ET
+namespace ZFramework
 {
 	internal static class Program
 	{

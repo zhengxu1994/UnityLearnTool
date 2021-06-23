@@ -1,4 +1,4 @@
-﻿namespace ET
+﻿namespace ZFramework
 {
     public class LocationProxyComponent: Entity
     {

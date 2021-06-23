@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 
-namespace ET
+namespace ZFramework
 {
     public static class DllHelper
     {

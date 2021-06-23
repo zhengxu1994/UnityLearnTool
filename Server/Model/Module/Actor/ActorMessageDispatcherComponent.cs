@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ET
+namespace ZFramework
 {
     /// <summary>
     /// Actor消息分发组件

@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace ET
+namespace ZFramework
 {
     public struct ProcessActorId
     {

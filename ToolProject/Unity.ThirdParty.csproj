@@ -347,8 +347,8 @@
     <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/ISerializerProxy.cs" />
     <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservablePointerExitTrigger.cs" />
     <Compile Include="Assets/ThirdParty/protobuf-net/ServiceModel/ProtoEndpointBehavior.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Schedulers/Scheduler.cs" />
     <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableSelectTrigger.cs" />
+    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Schedulers/Scheduler.cs" />
     <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/SynchronizedObserver.cs" />
     <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observer.cs" />
     <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableCollisionTrigger.cs" />

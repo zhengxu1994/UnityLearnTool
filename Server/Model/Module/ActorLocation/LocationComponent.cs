@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ET
+namespace ZFramework
 {
     [ObjectSystem]
     public class LockInfoAwakeSystem: AwakeSystem<LockInfo, long, CoroutineLock>

@@ -1,4 +1,4 @@
-﻿namespace ET
+﻿namespace ZFramework
 {
 	public class PlayerSystem : AwakeSystem<Player, string>
 	{

@@ -1,45 +1,20 @@
 ﻿<Properties StartupConfiguration="{1545A311-1FF9-4185-AFAF-CA6A2BD73A1B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../ToolProject/Assets/HotFix/Module/Message/OuterMessageDispatcher.cs">
     <Files>
-      <File FileName="../Model/Base/DllHelper.cs" Line="5" Column="2" />
-      <File FileName="../Hotfix/Demo/Move/MoveHelper.cs" />
-      <File FileName="../Hotfix/Demo/Move/PathFindHelper.cs" />
-      <File FileName="App.config" />
-      <File FileName="Program.cs" Line="28" Column="28" />
+      <File FileName="../Model/Module/NetworkTCP/NetInnerComponent.cs" Line="25" Column="41" />
+      <File FileName="../../ToolProject/Assets/HotFix/Module/Message/OuterMessageDispatcher.cs" Line="34" Column="49" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Server.App" expanded="True">
-            <Node name="Server.App" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
-                <Node name="PackageDependencies" expanded="True" />
-                <Node name="ProjectDependencies" expanded="True" />
-              </Node>
-              <Node name="Program.cs" selected="True" />
-            </Node>
-            <Node name="Server.Hotfix" expanded="True">
-              <Node name="Demo" expanded="True">
-                <Node name="Move" expanded="True" />
-                <Node name="Scene" expanded="True" />
-                <Node name="Unit" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="Server.Hotfix" expanded="True" selected="True" />
             <Node name="Server.Model" expanded="True">
-              <Node name="Base" expanded="True" />
-              <Node name="Demo" expanded="True" />
-              <Node name="Module" expanded="True" />
-            </Node>
-            <Node name="Server.ThirdParty" expanded="True">
-              <Node name="Dependencies" expanded="True" />
+              <Node name="Module" expanded="True">
+                <Node name="NetworkTCP" expanded="True" />
+              </Node>
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>importerPath</Value>
         </State>
       </Pad>
     </Pads>

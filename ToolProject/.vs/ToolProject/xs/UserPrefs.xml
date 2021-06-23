@@ -1,9 +1,12 @@
 ﻿<Properties StartupConfiguration="{867945B8-755C-27AE-7CE2-68A275B91FB5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/HotFix/Module/AI/AIComponentSystem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Model/Core/Object/BaseAttribute.cs">
     <Files>
       <File FileName="Assets/Model/Module/Message/ErrorCode.cs" Line="8" Column="46" />
-      <File FileName="Assets/HotFix/Module/Message/PingComponentSystem.cs" Line="13" Column="1" />
-      <File FileName="Assets/HotFix/Module/AI/AIComponentSystem.cs" Line="17" Column="1" />
+      <File FileName="Assets/HotFix/Module/Message/PingComponentSystem.cs" Line="3" Column="21" />
+      <File FileName="Assets/HotFix/Module/AI/AIComponentSystem.cs" Line="4" Column="21" />
+      <File FileName="Assets/Model/Generate/Message/OuterMessage.cs" Line="6" Column="15" />
+      <File FileName="Assets/Model/Module/Message/ResponseTypeAttribute.cs" Line="5" Column="54" />
+      <File FileName="Assets/Model/Core/Object/BaseAttribute.cs" Line="6" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,16 +21,16 @@
               </Node>
               <Node name="HotFix" expanded="True">
                 <Node name="Module" expanded="True">
-                  <Node name="AI" expanded="True">
-                    <Node name="AIComponentSystem.cs" selected="True" />
-                  </Node>
+                  <Node name="AI" expanded="True" />
                   <Node name="Message" expanded="True" />
                 </Node>
               </Node>
               <Node name="Model" expanded="True">
                 <Node name="Core" expanded="True">
                   <Node name="Event" expanded="True" />
-                  <Node name="Object" expanded="True" />
+                  <Node name="Object" expanded="True">
+                    <Node name="BaseAttribute.cs" selected="True" />
+                  </Node>
                 </Node>
                 <Node name="Generate" expanded="True">
                   <Node name="Config" expanded="True" />
