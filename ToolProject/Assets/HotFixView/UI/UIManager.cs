@@ -287,7 +287,7 @@ namespace ZFramework.UI
             Type type = Type.GetType("ZFramework.UI".Append(uiName));
             if(!type.IsSubclassOf(typeof(PanelBase)))
             {
-                LogTool.LogError($"can not find panel base{uiName}");
+                Log.Error($"can not find panel base{uiName}");
                 return null;
             }
             UIData config = GetUIData(uiName);

@@ -46,7 +46,7 @@ namespace ZFramework.FSM
 
         public override void Action()
         {
-            LogTool.Log("Idle======");
+            Log.Debug("Idle======");
             //搜索目标
             if (entity.atkTarget == null)
                 DecisionTool.Inst.SearchAtkTarget(entity);
@@ -55,13 +55,13 @@ namespace ZFramework.FSM
         public override void DoBeforeEntering()
         {
             //切换到待机动画
-            LogTool.Log("切换待机状态");
+            Log.Debug("切换待机状态");
         }
 
         public override void DoBeforeLeaving()
         {
             //
-            LogTool.Log("离开待机状态");
+            Log.Debug("离开待机状态");
         }
     }
 }

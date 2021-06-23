@@ -36,7 +36,7 @@ namespace ZFramework.UI
             //必须继承自ExtensionBase的类
             if(!type.IsSubclassOf(typeof(ExtensionBase)) || type.IsSubclassOf(typeof(ViewBase)))
             {
-                LogTool.LogError("Super Type Error : {0} must be extend ExtensionBase", type.ToString());
+                Log.Error("Super Type Error : {0} must be extend ExtensionBase", type.ToString());
                 return null;
             }
 
@@ -48,7 +48,7 @@ namespace ZFramework.UI
             if (ctor != null)
                 view = ctor.Invoke(null) as ExtensionBase;
             else
-                LogTool.LogError("Create {0} Not Find Constructor", type.ToString());
+                Log.Error("Create {0} Not Find Constructor", type.ToString());
             if (view != null)
             {
                 //初始化
@@ -72,7 +72,7 @@ namespace ZFramework.UI
         ~ExtensionBase()
         {
             if (!disposed)
-                LogTool.LogWarning($"please call {this.GetType().Name} Dispose function initiative!!!");
+                Log.Warning($"please call {this.GetType().Name} Dispose function initiative!!!");
             RealDispose(false);
         }
 
@@ -219,7 +219,7 @@ namespace ZFramework.UI
             Type type = Type.GetType("ZFramework.UI".Append(className));
             if(!type.IsSubclassOf(typeof(ViewBase)) || (!isPanel && type.IsSubclassOf(typeof(PanelBase))))
             {
-                LogTool.LogError("Super Type Error :{0} must be extend ViewBase", type);
+                Log.Error("Super Type Error :{0} must be extend ViewBase", type);
                 return null;
             }
             BindingFlags flags = BindingFlags.Instance | BindingFlags.Public;
@@ -227,7 +227,7 @@ namespace ZFramework.UI
             if (ctor != null)
                 view = (ViewBase)ctor.Invoke(null);
             else
-                LogTool.LogError("Create {0} Not Find Constructor", type);
+                Log.Error("Create {0} Not Find Constructor", type);
             if (view != null)
             {
                 view.objParams = objParams;

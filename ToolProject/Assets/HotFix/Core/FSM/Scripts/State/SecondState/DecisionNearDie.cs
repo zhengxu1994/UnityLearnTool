@@ -29,7 +29,7 @@ namespace ZFramework.FSM
 
         public override void Action()
         {
-            LogTool.LogWarning("呼喊救命~");
+            Log.Warning("呼喊救命~");
             //倒计时 倒计时结束 死亡
             tempTime += Time.deltaTime;
             if (tempTime >= Num)
@@ -39,16 +39,16 @@ namespace ZFramework.FSM
         public override void DoBeforeLeaving()
         {
             if (entity.dieImmediately)
-                LogTool.LogWarning("没人救我");
+                Log.Warning("没人救我");
             else if (entity.dieImmediately == false && entity.alive)
             {
-                LogTool.LogWarning("终于有人救我了");
+                Log.Warning("终于有人救我了");
             }
         }
 
         public override void DoBeforeEntering()
         {
-            LogTool.LogWarning("濒临死亡ing");
+            Log.Warning("濒临死亡ing");
             Num = 10;
             tempTime = 0;
         }

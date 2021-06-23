@@ -58,7 +58,6 @@
   <ItemGroup>
     <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlSelect.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/PopupMenu.cs" />
-    <Compile Include="Assets/Plugins/AsyncAwaitUtil/Source/AwaitExtensions.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/TypingEffect.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GSlider.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GProgressBar.cs" />
@@ -92,7 +91,6 @@
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearFontSize.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/XMLIterator.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/IKeyboard.cs" />
-    <Compile Include="Assets/Plugins/AsyncAwaitUtil/Source/TaskExtensions.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GTextField.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GTreeNode.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GImage.cs" />
@@ -107,11 +105,9 @@
     <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/EaseManager.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearLook.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/GTweener.cs" />
-    <Compile Include="Assets/Plugins/AsyncAwaitUtil/Source/WaitForBackgroundThread.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GComponent.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/BlendMode.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Container.cs" />
-    <Compile Include="Assets/Plugins/AsyncAwaitUtil/Source/Internal/SyncContextUtil.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/XML.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GObjectPool.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Timers.cs" />
@@ -127,12 +123,9 @@
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/UIPainter.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlButton.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlParseOptions.cs" />
-    <Compile Include="Assets/Plugins/AsyncAwaitUtil/Source/UnirxAwaitExtensions.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/ByteBuffer.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/XMLUtils.cs" />
-    <Compile Include="Assets/Plugins/AsyncAwaitUtil/Source/IEnumeratorAwaitExtensions.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Filter/IFilter.cs" />
-    <Compile Include="Assets/Plugins/AsyncAwaitUtil/Source/Internal/AsyncCoroutineRunner.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/StageEngine.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/HitTest/IHitTest.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GTextInput.cs" />
@@ -151,7 +144,6 @@
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/TextFormat.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/BitmapFont.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/IAnimationGear.cs" />
-    <Compile Include="Assets/Plugins/AsyncAwaitUtil/Source/Awaiters.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GComboBox.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/UI/DragDropManager.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Stage.cs" />
@@ -221,7 +213,6 @@
     <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/TweenValue.cs" />
     <Compile Include="Assets/Plugins/FGUI/Extensions/TextMeshPro/TMPFont.cs" />
     <Compile Include="Assets/Plugins/FGUI/Scripts/Gesture/LongPressGesture.cs" />
-    <Compile Include="Assets/Plugins/AsyncAwaitUtil/Source/WaitForUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Plugins/x86_64/kcp.dll" />

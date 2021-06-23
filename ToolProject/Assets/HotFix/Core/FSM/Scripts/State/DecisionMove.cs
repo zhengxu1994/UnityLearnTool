@@ -37,12 +37,12 @@ namespace ZFramework.FSM
 
         public override void DoBeforeLeaving()
         {
-            LogTool.Log("离开移动状态");
+            Log.Debug("离开移动状态");
         }
 
         public override void DoBeforeEntering()
         {
-            LogTool.Log("进入移动状态");
+            Log.Debug("进入移动状态");
         }
     }
 }

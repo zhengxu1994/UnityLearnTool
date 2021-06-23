@@ -2,11 +2,11 @@
 using UnityEngine;
 namespace ZFramework.FSM
 {
-    public class DecisionChant : DecisionFSMState
+    public class DecisionAbnormalState : DecisionFSMState
     {
-        public DecisionChant(FSMSystem fsm, GameEntity entity) : base(fsm, entity)
+        public DecisionAbnormalState(FSMSystem fsm, GameEntity entity) : base(fsm, entity)
         {
-            stateID = StateID.DecisionChant;
+            stateID = StateID.DecisionUnControl;
         }
 
         public override bool Reason()
@@ -17,7 +17,7 @@ namespace ZFramework.FSM
                 fsm.PerformTransId(TransId.DecisionDie);
                 return false;
             }
-            if (!entity.chanting)
+            if(!entity.isControl)
             {
                 fsm.PerformTransId(TransId.DecisionIdle);
                 return false;
@@ -27,17 +27,19 @@ namespace ZFramework.FSM
 
         public override void Action()
         {
-            
+            //各种异常状态处理，存在优先级和混合
+            DecisionTool.Inst.InAbnormalStating(entity);
         }
 
         public override void DoBeforeLeaving()
         {
-            LogTool.Log("离开吟唱");
+            Log.Error("异常解除");
+            entity.canMove = entity.canChanting = entity.canAttack = true;
         }
 
         public override void DoBeforeEntering()
         {
-            LogTool.Log("进入吟唱");
+            Log.Error("受到了异常状态");
         }
     }
 }

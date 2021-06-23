@@ -1,0 +1,16 @@
+{
+    "name": "HotFixView",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4b88d48da2f0747728d547d12e2bcd43"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

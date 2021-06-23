@@ -191,7 +191,7 @@ namespace ZFramework
 
         public void Dispose()
         {
-            LogTool.LogWarning("entity 死亡，id :{0}", id);
+            Log.Warning("entity 死亡，id :{0}", id);
             GameObject.Destroy(obj);
             if (atkTarget != null)
             {
@@ -219,7 +219,7 @@ namespace ZFramework
         public void HpChange(int damage)
         {
             this.hp -= damage;
-            LogTool.Log(damage.ToString());
+            Log.Debug(damage.ToString());
             if (hpTxt != null)
                 this.hpTxt.text = hp.ToString();
         }

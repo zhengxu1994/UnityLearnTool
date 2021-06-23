@@ -159,11 +159,11 @@ namespace ZFramework.FSM
         {
             if (entity.atkTarget == null || !entity.atkTarget.alive)
             {
-                LogTool.LogError("攻击目标为空/必须活着");
+                Log.Error("攻击目标为空/必须活着");
                 return;
             }
             entity.atkTarget.HpChange(entity.damage);
-            LogTool.LogWarning("AttackerID:{0}", entity.id);
+            Log.Warning("AttackerID:{0}", entity.id);
         }
 
         public void MoveToTarget(GameEntity entity)
@@ -252,7 +252,7 @@ namespace ZFramework.FSM
             {
                 entity.canAttack = entity.canChanting = false;
                 //往自身朝向反方向跑
-                LogTool.Log("恐惧中～～～");
+                Log.Debug("恐惧中～～～");
                 return true;
             }
             return false;
@@ -268,7 +268,7 @@ namespace ZFramework.FSM
             {
                 entity.canAttack = entity.canChanting = false;
                 //到处跑
-                LogTool.Log("混乱中～");
+                Log.Debug("混乱中～");
                 entity.RandomMove();
                 return true;
             }
@@ -301,7 +301,7 @@ namespace ZFramework.FSM
             {
                 entity.canChanting = false;
                 //被嘲讽
-                LogTool.Log("被嘲讽中～");
+                Log.Debug("被嘲讽中～");
                 entity.BeSneered();
                 return true;
             }

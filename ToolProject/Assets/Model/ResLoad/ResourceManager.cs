@@ -66,7 +66,7 @@ namespace ZFramework.ResLoad
             TextAsset textAsset = LoadAssetFromBundleFile(file, typeof(TextAsset)) as TextAsset;
             if(textAsset  == null)
             {
-                LogTool.LogError("dependency is null");
+                Log.Error("dependency is null");
                 return;
             }
 
@@ -376,7 +376,7 @@ namespace ZFramework.ResLoad
             AssetBundle ab = LoadBundleFromFile(file);
             if(ab == null)
             {
-                LogTool.LogError("load bundle failed:{0}!", file);
+                Log.Error("load bundle failed:{0}!", file);
                 return null;
             }
 
@@ -518,7 +518,7 @@ namespace ZFramework.ResLoad
             AssetBundle ab = LoadBundleFromFile(file);
             if(ab == null)
             {
-                LogTool.LogError("load bundle failed :{0}!", file);
+                Log.Error("load bundle failed :{0}!", file);
                 return null;
             }
 

@@ -35,12 +35,12 @@ namespace ZFramework.FSM
 
         public override void DoBeforeLeaving()
         {
-            LogTool.Log("离开攻击");
+            Log.Debug("离开攻击");
         }
 
         public override void DoBeforeEntering()
         {
-            LogTool.Log("进入攻击");
+            Log.Debug("进入攻击");
         }
     }
 }

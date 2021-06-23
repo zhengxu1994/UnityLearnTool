@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F4B6A996-31B0-18FC-C828-592994ED9DA4}</ProjectGuid>
+    <ProjectGuid>{C56E065C-58A3-9077-2290-E49F9F113CFD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.ThirdParty</AssemblyName>
+    <AssemblyName>HotFixView</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -26,7 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,7 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -56,356 +56,14 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/UInt32Serializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/System/IObserver.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/TimeInterval.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ProtoEnumAttribute.cs" />
-    <Compile Include="Assets/ThirdParty/AsyncAwaitUtil/Source/AwaitExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/ContinueWith.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/MainThreadScheduler.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Concurrency.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/ToArray.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ProtoException.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableUpdateTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/BufferPool.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Single.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Timestamp.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Diagnostics/ObservableLogger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Diagnostics/LogEntry.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Notification.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ServiceModel/XmlProtoSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ExtensibleUtil.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/InternalUtil/MicroCoroutine.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Schedulers/IScheduler.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/ThrottleFirst.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/SkipUntil.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/JsonReader.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Synchronize.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ProtoConverterAttribute.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/DiscriminatedUnion.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/StableCompositeDisposable.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/DecimalSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/CancellationDisposable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Timeout.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/ReflectedUriDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/Int16Serializer.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Meta/MetaType.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/IgnoreElements.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/TypedMonoBehaviour.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Aggregate.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableSubmitTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/SingleAssignmentDisposable.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/UInt64Serializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/ToObservable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/CancellationToken.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Meta/RuntimeTypeModel.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/System/IObservable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableCanvasGroupChangedTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/SByteSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/CoroutineAsyncBridge.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Subjects/SubjectExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/ParseableSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Do.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Sample.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/ParserToken.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/TupleSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Return.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/MemberSpecifiedDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/LifetimeDisposableExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/TagDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/TakeWhile.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/PairWise.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableVisibleTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Repeat.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/ListDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableBeginDragTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/DateTimeSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/InspectableReactiveProperty.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/InspectorDisplayDrawer.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/TimeSpanSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/InternalUtil/ImmutableList.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Tasks/TaskObservableExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/AsObservable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableTransformChangedTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Notifiers/MessageBroker.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/UnityEventExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Meta/TypeFormatEventArgs.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/AsyncOperationExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Zip.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableDropTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/CompiledSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ProtoIgnoreAttribute.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/JsonMapper.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ProtoContractAttribute.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Awaiter.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/BatchFrame.cs" />
-    <Compile Include="Assets/ThirdParty/AsyncAwaitUtil/Source/TaskExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Notifiers/BooleanNotifier.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Aggregate.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableRectTransformTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ImplicitFields.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Notifiers/CountNotifier.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/DefaultValueDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/AotSafeExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/System/IProgress.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableCancelTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/ArrayDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/IProtoSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Timestamped.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Paging.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Subjects/ConnectableObservable.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Extensible.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/IExtension.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/TakeUntil.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/NetObjectSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/ObservableMonoBehaviour.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/CharSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Schedulers/ImmediateScheduler.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/EnumSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Cast.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/SubItemSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Properties/AssemblyInfo.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/StringSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Concatenate.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/JsonWriter.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/SystemTypeSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Skip.cs" />
-    <Compile Include="Assets/ThirdParty/AsyncAwaitUtil/Source/WaitForBackgroundThread.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/OperatorObservableBase.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/ObserveOn.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/WhenAll.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/BufferExtension.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Range.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/SubscribeOn.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Joins.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/BlobSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/GroupBy.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Observable.Unity.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Merge.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Schedulers/ThreadPoolScheduler.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/RepeatSafe.cs" />
-    <Compile Include="Assets/ThirdParty/AsyncAwaitUtil/Source/Internal/SyncContextUtil.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/SurrogateSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableDeselectTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Meta/SubType.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/NetObjectCache.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableMouseTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/TimeInterval.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/System/IOptimizedObservable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/SampleFrame.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ProtoReader.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/UnityGraphicExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/Int32Serializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Amb.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/Lexer.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/Int64Serializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/SelectMany.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Dematerialize.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservablePointerClickTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableUpdateSelectedTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Meta/CallbackSet.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Binding.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/Extensions.cs" />
-    <Compile Include="Assets/ThirdParty/AsyncAwaitUtil/Source/UnirxAwaitExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableCollision2DTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/IProtoTypeSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Compiler/CompilerDelegates.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ProtoMemberAttribute.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Meta/ValueMember.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Start.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/ProtoDecoratorBase.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/TakeLast.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/FrameInterval.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/DoubleSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Select.cs" />
-    <Compile Include="Assets/ThirdParty/AsyncAwaitUtil/Source/IEnumeratorAwaitExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Defer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.FromAsync.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Subjects/Subject.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/UniRxSynchronizationContext.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/IExtensible.cs" />
-    <Compile Include="Assets/ThirdParty/AsyncAwaitUtil/Source/Internal/AsyncCoroutineRunner.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableEventTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/PrefixStyle.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/ObserveExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/UnityEqualityComparer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Materialize.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Scan.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableStateMachineTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/ImmutableCollectionDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/OperatorObserverBase.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityWinRTBridge/Thread.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/ZipLatest.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/System/Tuple.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/BooleanSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/ReactiveProperty.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Empty.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Subjects/BehaviorSubject.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/JsonException.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/InternalUtil/PriorityQueue.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/DictionaryDisposable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableTrigger2DTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/DelayFrameSubscription.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/JsonData.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableDestroyTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Notifiers/ScheduledNotifier.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/ScenePlaybackDetector.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/ForEachAsync.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Compiler/Local.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableTriggerBase.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/ToList.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Time.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableEnableTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/InternalUtil/ListObserver.cs" />
-    <Compile Include="Assets/ThirdParty/AsyncAwaitUtil/Source/Awaiters.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/UriDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/UnityTypeBindings.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Throw.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/SerialDisposable.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Compiler/CompilerContext.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/PropertyDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/SingleSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/OfType.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/RepeatUntil.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Pair.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableAnimatorTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/BooleanDisposable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Conversions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/First.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/ReactiveCommand.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/ICancelable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/ThrottleFrame.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableLateUpdateTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Diagnostics/LogEntryExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/SubItemToken.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/TypeSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableTriggerTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/MultipleAssignmentDisposable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableEndDragTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Throttle.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/System/Unit.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Never.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Catch.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityWinRTBridge/ThreadPoolScheduler_UnityWinRT.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/FromEvent.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/SubscribeOnMainThread.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Where.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/MapDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/ReactiveDictionary.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/GuidSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/WhereSelect.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableTriggerExtensions.Component.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Timer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/SelectWhere.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/WireType.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Schedulers/CurrentThreadScheduler.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableInitializePotentialDragTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Concat.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/IProtoOutputT.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Meta/TypeModel.InputOutput.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Blocking.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ServiceModel/ProtoBehaviorAttribute.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/UnityUIComponentExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Subjects/ReplaySubject.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/BclHelpers.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Switch.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/MainThreadDispatcher.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/CombineLatest.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/InternalUtil/AscynLock.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/JsonMockWrapper.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/KeyValuePairProxy.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/CompositeDisposable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/ReactiveCollection.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ProtoWriter.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/IProtoInputT.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/FrameTimeInterval.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/SkipWhile.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Finally.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/Netstandard15Polyfill.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/GlobalSuppressions.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/DataFormat.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableParticleTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableScrollTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/FrameInterval.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/DistinctUntilChanged.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/AsSingleUnitObservable.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ProtoMapAttribute.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/InternalUtil/ThreadSafeQueueWorker.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservablePointerUpTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/ThrottleFirstFrame.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Creation.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/WithLatestFrom.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableDragTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Subjects/AsyncSubject.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/InternalUtil/ReflectionAccessor.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableFixedUpdateTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservablePointerEnterTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/ByteSerializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/RefCountDisposable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/YieldInstructionCache.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ProtoIncludeAttribute.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Wait.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservablePointerDownTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Diagnostics/UnityDebugSink.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Create.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ServiceModel/ProtoOperationBehavior.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/LazyTask.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/ISerializerProxy.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservablePointerExitTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ServiceModel/ProtoEndpointBehavior.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableSelectTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Schedulers/Scheduler.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/SynchronizedObserver.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableCollisionTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/RefCount.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Meta/BasicList.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableTriggerExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Meta/ProtoSyntax.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Asynchronous/WebRequestExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/DelayFrame.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Subjects/ISubject.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Buffer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/FromCoroutine.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Helpers.cs" />
-    <Compile Include="Assets/ThirdParty/LitJson/IJsonWrapper.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Toolkit/ObjectPool.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/ServiceModel/ProtoBehaviorExtensionElement.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.Events.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/NullDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Observable.ErrorHandling.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/EventPattern.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Meta/AttributeMap.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/SerializationContext.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/UInt16Serializer.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/AsUnitObservable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Distinct.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/CallbackAttributes.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Meta/TypeModel.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/InternalUtil/ScheduledItem.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/PresenterBase.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Operators/TimeoutFrame.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Diagnostics/Logger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableMoveTrigger.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/ObservableWWW.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Delay.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/DisposableExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/ScheduledDisposable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/UnityEngineBridge/Diagnostics/ObservableDebugExtensions.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/DiscriminatedUnion.Serializable.cs" />
-    <Compile Include="Assets/ThirdParty/protobuf-net/Serializers/FieldDecorator.cs" />
-    <Compile Include="Assets/ThirdParty/AsyncAwaitUtil/Source/WaitForUpdate.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Take.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Disposables/Disposable.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/DelaySubscription.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/StartWith.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/DefaultIfEmpty.cs" />
-    <Compile Include="Assets/ThirdParty/UniRx/Scripts/Operators/Last.cs" />
+    <Compile Include="Assets/HotFixView/UI/ViewBase.cs" />
+    <Compile Include="Assets/HotFixView/UI/UIConfig.cs" />
+    <Compile Include="Assets/HotFixView/UI/CommonTop.cs" />
+    <Compile Include="Assets/HotFixView/UI/UIManager.cs" />
+    <Compile Include="Assets/HotFixView/UIExtensionMgr.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets/ThirdParty/Unity.ThirdParty.asmdef" />
+     <None Include="Assets/HotFixView/Unity.HotFixView.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -1023,6 +681,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.Model.csproj">
+      <Project>{C1FA0FA1-BF36-0434-7A8E-938995761FE0}</Project>
+      <Name>Unity.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

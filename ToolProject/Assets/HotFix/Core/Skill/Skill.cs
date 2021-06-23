@@ -58,7 +58,7 @@ namespace ZFramework.Skill
             //如果没有搜索到目标 并且 技能是需要目标才能释放的 则释放失败
             if (targets == null && needTarget)
             {
-                LogTool.Log("技能需要目标，释放失败");
+                Log.Debug("技能需要目标，释放失败");
                 return;
             }
             this.chooseInfo = info;
@@ -260,7 +260,7 @@ namespace ZFramework.Skill
                     //raise 结束
                     raiseOver = true;
                     tempTime = 0;
-                    LogTool.Log("技能抬手结束");
+                    Log.Debug("技能抬手结束");
                     step++;
                     return;
                     //结束抬手特效等
@@ -269,7 +269,7 @@ namespace ZFramework.Skill
                 {
                     //触发抬手tick
                     //Buff
-                    LogTool.Log("技能抬手Tick");
+                    Log.Debug("技能抬手Tick");
                     CreateBuffAndEffectAndSummons(skillData.raiseData);
                     triggerRaiseTick = true;
                 }
@@ -287,14 +287,14 @@ namespace ZFramework.Skill
                     chantOver = true;
                     tempTime = 0;
                     step++;
-                    LogTool.Log("技能吟唱结束");
+                    Log.Debug("技能吟唱结束");
                     return;
                 }
                 else if (tempTime >= chantInterval && tempTime >= chantTick)
                 {
                     tempTime = 0;
                     nowChantTriggerCount++;
-                    LogTool.Log("吟唱tick");
+                    Log.Debug("吟唱tick");
                     //触发效果
                     CreateBuffAndEffectAndSummons(skillData.chantData);
                 }
@@ -312,7 +312,7 @@ namespace ZFramework.Skill
                     endOver = true;
                     tempTime = 0;
                     step++;
-                    LogTool.Log("技能收招结束");
+                    Log.Debug("技能收招结束");
                     return;
                     //结束抬手特效等
                 }
@@ -320,7 +320,7 @@ namespace ZFramework.Skill
                 {
                     //触发抬手tick
                     //Buff
-                    LogTool.Log("技能收招Tick");
+                    Log.Debug("技能收招Tick");
                     CreateBuffAndEffectAndSummons(skillData.endData);
                     triggerEndTick = true;
                 }
@@ -339,7 +339,7 @@ namespace ZFramework.Skill
             this.triggerData = skillData.triggerData;
             if(triggerData == null)
             {
-                LogTool.LogError("Trigger Info is null");
+                Log.Error("Trigger Info is null");
                 return;
             }
 
