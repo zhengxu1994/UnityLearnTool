@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="../../ToolProject/Assets/HotFix/Module/Message/OuterMessageDispatcher.cs">
     <Files>
       <File FileName="../Model/Module/NetworkTCP/NetInnerComponent.cs" Line="25" Column="41" />
-      <File FileName="../../ToolProject/Assets/HotFix/Module/Message/OuterMessageDispatcher.cs" Line="34" Column="49" />
+      <File FileName="../../ToolProject/Assets/HotFix/Module/Message/OuterMessageDispatcher.cs" Line="35" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotFixView", "HotFixView.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Editor", "Unity.Editor.csproj", "{824DE5F2-BA15-AF79-FD06-CC20BFAC372F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{9D195AE0-F9D5-9796-2FA8-B771476AD697}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{8429900D-02F2-94EA-CD80-4202AC62FA64}"
 EndProject
 Global
@@ -45,6 +47,10 @@ Global
 		{824DE5F2-BA15-AF79-FD06-CC20BFAC372F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{824DE5F2-BA15-AF79-FD06-CC20BFAC372F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{824DE5F2-BA15-AF79-FD06-CC20BFAC372F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D195AE0-F9D5-9796-2FA8-B771476AD697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D195AE0-F9D5-9796-2FA8-B771476AD697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D195AE0-F9D5-9796-2FA8-B771476AD697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D195AE0-F9D5-9796-2FA8-B771476AD697}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8429900D-02F2-94EA-CD80-4202AC62FA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8429900D-02F2-94EA-CD80-4202AC62FA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8429900D-02F2-94EA-CD80-4202AC62FA64}.Release|Any CPU.ActiveCfg = Release|Any CPU

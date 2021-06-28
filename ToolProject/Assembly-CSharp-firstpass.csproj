@@ -56,170 +56,22 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlSelect.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/PopupMenu.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/TypingEffect.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GSlider.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GProgressBar.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/UIContentScaler.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/HitTest/ShapeHitTest.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/IHtmlObject.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/PackageItem.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/TweenManager.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/IHtmlPageContext.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/CaptureCamera.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/CompositeMesh.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/PolygonMesh.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Event/EventContext.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Stats.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/DynamicFont.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/HitTest/HitTestContext.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/NAudioClip.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/EaseType.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/GoWrapper.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/InputTextField.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/HitTest/MeshColliderHitTest.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GTree.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GLoader.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/VertexBuffer.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/SelectionShape.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/RectMesh.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/MovieClip.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlElement.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlLink.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearDisplay2.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearFontSize.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/XMLIterator.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/IKeyboard.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GTextField.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GTreeNode.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GImage.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Image.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Event/EventListener.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/NTexture.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/Emoji.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/UpdateContext.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/DisplayObject.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GGraph.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GList.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/EaseManager.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearLook.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/GTweener.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GComponent.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/BlendMode.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Container.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/XML.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GObjectPool.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Timers.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Tree/TreeNode.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GObject.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Tree/TreeView.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/UIObjectFactory.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Event/IEventDispatcher.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/UIPackage.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/FillMesh.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/PlaneMesh.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Action/ChangePageAction.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/UIPainter.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlButton.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlParseOptions.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/ByteBuffer.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/XMLUtils.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Filter/IFilter.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/StageEngine.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/HitTest/IHitTest.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GTextInput.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Relations.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Event/EventDispatcher.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GGroup.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/HitTest/RectHitTest.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Filter/BlurFilter.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/TouchScreenKeyboard.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GRichTextField.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlImage.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Gesture/RotationGesture.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Window.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/ToolSet.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GButton.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/TextFormat.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/BitmapFont.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/IAnimationGear.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GComboBox.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/DragDropManager.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Stage.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearDisplay.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/ScrollPane.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/XMLList.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/UIPanel.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/MaterialManager.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/BaseFont.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/RichTextField.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/NGraphics.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/ZipReader.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Margin.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearColor.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Gesture/SwipeGesture.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/UBBParser.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearIcon.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearXY.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/StageCamera.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/IUISource.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Transition.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearBase.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Shape.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GRoot.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GMovieClip.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/LineMesh.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Event/InputEvent.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Extensions/Spine/SpineLoader.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/RTLSupport.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Filter/ColorFilter.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearText.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/FontManager.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/StraightLineMesh.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/HitTest/ColliderHitTest.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/RoundedRectMesh.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/IColorGear.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Event/EventBridge.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlPageContext.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GScrollBar.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/MeshFactory.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Gesture/PinchGesture.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Controller.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GLabel.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/TweenPropType.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/HitTest/PixelHitTest.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/GPath.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearSize.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlInput.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Extensions/TextMeshPro/TMPTextFormat.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/GTween.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/EllipseMesh.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Action/PlayTransitionAction.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/ShaderConfig.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/AsyncCreationHelper.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/RelationItem.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/FieldTypes.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Utils/Html/HtmlParser.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Extensions/DragonBones/DragonBonesLoader.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/TranslationHelper.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/UIConfig.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/GLoader3D.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Action/ControllerAction.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Text/TextField.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Core/Mesh/RegularPolygonMesh.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/Gears/GearAnimation.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/UI/EMRenderSupport.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Tween/TweenValue.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Extensions/TextMeshPro/TMPFont.cs" />
-    <Compile Include="Assets/Plugins/FGUI/Scripts/Gesture/LongPressGesture.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" />
+    <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Plugins/x86_64/kcp.dll" />
      <None Include="Assets/Plugins/x86/kcp.dll" />
      <None Include="Assets/Plugins/MongoDB.Bson.dll" />
+     <None Include="Assets/Plugins/Demigiant/DOTween/DOTween.XML" />
+     <None Include="Assets/Plugins/Demigiant/DOTween/DOTween.dll" />
      <None Include="Assets/Plugins/CommandLine.dll" />
-     <None Include="Assets/Plugins/FGUI/Extensions/TextMeshPro/Shaders/FairyGUI-TMP.shader" />
+     <None Include="Assets/Plugins/Demigiant/DOTween/readme.txt" />
      <None Include="Assets/Plugins/ICSharpCode.SharpZipLib.dll" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -460,6 +312,9 @@
     </Reference>
     <Reference Include="CommandLine">
       <HintPath>Assets/Plugins/CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -856,6 +711,22 @@
     <ProjectReference Include="Unity.ThirdParty.csproj">
       <Project>{F4B6A996-31B0-18FC-C828-592994ED9DA4}</Project>
       <Name>Unity.ThirdParty</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Editor.csproj">
+      <Project>{824DE5F2-BA15-AF79-FD06-CC20BFAC372F}</Project>
+      <Name>Unity.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Model.csproj">
+      <Project>{C1FA0FA1-BF36-0434-7A8E-938995761FE0}</Project>
+      <Name>Unity.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.HotFix.csproj">
+      <Project>{7B464DC9-93D7-2A29-D528-D63031A805CD}</Project>
+      <Name>Unity.HotFix</Name>
+    </ProjectReference>
+    <ProjectReference Include="HotFixView.csproj">
+      <Project>{C56E065C-58A3-9077-2290-E49F9F113CFD}</Project>
+      <Name>HotFixView</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

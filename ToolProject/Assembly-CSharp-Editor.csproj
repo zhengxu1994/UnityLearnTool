@@ -701,6 +701,9 @@
     <Reference Include="CommandLine">
       <HintPath>Assets/Plugins/CommandLine.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
@@ -1102,6 +1105,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{9D195AE0-F9D5-9796-2FA8-B771476AD697}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{867945B8-755C-27AE-7CE2-68A275B91FB5}</Project>
       <Name>Assembly-CSharp</Name>

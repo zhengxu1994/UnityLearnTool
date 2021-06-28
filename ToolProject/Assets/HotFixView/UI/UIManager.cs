@@ -365,5 +365,15 @@ namespace ZFramework.UI
                 v.OnSafeAreaChange(space);
             });
         }
+
+        public bool PopPanel()
+        {
+            if(panelStack.Count >0)
+            {
+                RemovePanel(panelStack.Last.Value, false);
+                return panelStack.Count > 0;
+            }
+            return false;
+        }
     }
 }
