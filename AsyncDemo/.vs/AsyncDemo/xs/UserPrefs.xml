@@ -4,14 +4,14 @@
       <File FileName="Assets/Scripts/AsyncETTaskCompletedMethodBuilder.cs" Line="6" Column="2" />
       <File FileName="Assets/Scripts/NewClass.cs" Line="15" Column="37" />
       <File FileName="Assets/Scripts/NewClass.cs" Line="8" Column="17" />
-      <File FileName="Assets/Scripts/NewClass.cs" Line="8" Column="19" />
+      <File FileName="Assets/Scripts/NewClass.cs" Line="13" Column="25" />
       <File FileName="Assets/Scripts/NewClass.cs" Line="3" Column="30" />
       <File FileName="Assets/Scripts/ZTask.cs" Line="231" Column="39" />
       <File FileName="Assets/Scripts/NewClass.cs" Line="10" Column="21" />
       <File FileName="Assets/Scripts/NewClass.cs" Line="20" Column="21" />
       <File FileName="Assets/Scripts/NewClass.cs" Line="5" Column="25" />
       <File FileName="Assets/Scripts/NewClass.cs" Line="47" Column="6" />
-      <File FileName="Assets/TestDemo.cs" Line="22" Column="52" />
+      <File FileName="Assets/TestDemo.cs" Line="11" Column="34" />
       <File FileName="Assets/AsyncAwaitUtil/Source/UnirxAwaitExtensions.cs" Line="28" Column="4" />
     </Files>
     <Pads>
