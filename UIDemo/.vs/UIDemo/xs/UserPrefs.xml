@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{31830DBC-6487-5677-D24F-896A8ED9EA8F}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NetTest.cs">
+    <Files>
+      <File FileName="Assets/Scripts/UI/UIManager.cs" Line="290" Column="65" />
+      <File FileName="Assets/Scripts/UI/ViewBase.cs" />
+      <File FileName="Assets/Scripts/Pool/UtilTool.cs" />
+      <File FileName="Assets/Scripts/CoroutineHandler.cs" />
+      <File FileName="Assets/Scripts/CoroutineManager.cs" />
+      <File FileName="Assets/Scripts/NotifyParam.cs" Line="12" Column="1" />
+      <File FileName="Assets/NetTest.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UIDemo" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="FGUI" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="208f85fe-d25a-4310-8a8d-1592c2a6f90b" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

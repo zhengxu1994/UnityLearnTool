@@ -75,10 +75,11 @@ namespace ZFramework
             AssetImporter assetImporter = AssetImporter.GetAtPath(importerPath);  //得到Asset
             string tempName = assetPath.Substring(assetPath.LastIndexOf(@"/") + 1);
             string assetName = tempName.Remove(tempName.LastIndexOf(".")); //获取asset的文件名称
-            assetImporter.assetBundleName = string.Format("{0}{1}", assetName, ".unity3d") ;    //最终设置assetBundleName
+            assetImporter.assetBundleName = assetName;    //最终设置assetBundleName
+            assetImporter.assetBundleVariant = ".bundle";
         }
 
-        public static void Build(PlatformType type,BuildAssetBundleOptions buildAssetBundleOptions,
+        public static void Build(PlatformType type,BuildAssetBundleOptions   buildAssetBundleOptions,
             BuildOptions buildOptions,bool isBuildExe,bool isContainAB,bool clearFolder)
         {
             BuildTarget buildTarget = BuildTarget.StandaloneWindows;
@@ -127,6 +128,10 @@ namespace ZFramework
                 BuildPipeline.BuildPlayer(levels, $"{relativeDirPrefix}/{exeName}", buildTarget, buildOptions);
                 Debug.Log("完成exe打包");
             }
+            //更新md5
+            Debug.Log("更新md5");
+            MD5Helper.BuildVersion();
+            Debug.Log("更新md5完成");
         }
     }
 }

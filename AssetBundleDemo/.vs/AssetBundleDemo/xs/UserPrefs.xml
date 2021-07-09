@@ -1,26 +1,36 @@
-﻿<Properties StartupConfiguration="{BFEB8496-C471-CA14-2AE5-58E9B161D805}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/FileHelper.cs">
+﻿<Properties StartupConfiguration="{41348DB9-71AA-9B06-96F1-298EB35930C6}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AssetBundleDemo.cs">
     <Files>
-      <File FileName="Assets/Editor/BuildHelper.cs" Line="122" Column="24" />
-      <File FileName="Assets/Editor/FileHelper.cs" Line="1" Column="18" />
+      <File FileName="Assets/Editor/BuildHelper.cs" Line="87" Column="26" />
+      <File FileName="Assets/Editor/FileHelper.cs" />
+      <File FileName="Assets/Scripts/ResourceManager.cs" />
+      <File FileName="Assets/Scripts/Platform/PlatformInterface.cs" />
+      <File FileName="Assets/Scripts/Platform/PlatformAndroid.cs" />
+      <File FileName="Assets/Scripts/Platform/PlatformUtil.cs" />
+      <File FileName="Assets/Editor/BuildEditor.cs" />
+      <File FileName="Assets/Editor/EditorResHelper.cs" />
+      <File FileName="Assets/Editor/MD5Helper.cs" />
+      <File FileName="Assets/Editor/ZBuildSettings.cs" />
+      <File FileName="Assets/AssetBundleDemo.cs" Line="29" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AssetBundleDemo" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Editor" expanded="True">
-                <Node name="FileHelper.cs" selected="True" />
-              </Node>
+              <Node name="Editor" expanded="True" />
+              <Node name="Scripts" expanded="True" />
+              <Node name="StreamingAssets" expanded="True" />
+              <Node name="AssetBundleDemo.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="603e3a44-5e82-411c-bc8c-780922922c6e" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4a6add99-d828-428b-98dd-9d66c1ae5530" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

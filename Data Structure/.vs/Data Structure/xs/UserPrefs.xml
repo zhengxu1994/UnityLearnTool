@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{4B2103C1-E90C-00B2-6C0F-5959817C2FA4}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ZList.cs">
+    <Files>
+      <File FileName="Assets/Scripts/ZList.cs" Line="78" Column="17" />
+      <File FileName="Assets/DataDemo.cs" Line="18" Column="20" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Data Structure" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="ZList.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9e37442b-0c45-4cea-a107-97262e8f94d9" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

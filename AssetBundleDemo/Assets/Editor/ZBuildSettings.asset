@@ -16,4 +16,4 @@ MonoBehaviour:
   isBuildExe: 0
   isContainAB: 0
   buildType: 1
-  buildAssetBundleOptions: 0
+  buildAssetBundleOptions: 1

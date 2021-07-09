@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using ZFramework;
 //Task 介绍
@@ -23,6 +24,8 @@ public class TestDemo : MonoBehaviour
         task.OnCompleted(() => {
             Debug.Log("OnCompleted");
         });
+
+        
     }
 
     //打包的ab好想有点问题 先用其他地方的ab 验证一下
@@ -47,6 +50,8 @@ public class TestDemo : MonoBehaviour
             return request1.allAssets[0];
         }
     }
+
+     
     // Update is called once per frame
     void Update()
     {

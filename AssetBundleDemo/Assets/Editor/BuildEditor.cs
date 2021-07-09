@@ -27,7 +27,7 @@ namespace ZFramework
 
     public class BuildEditor : EditorWindow
     {
-        private const string settingAsset = "Assets/Editor/BuildEditor/ZBuildSettings.asset";
+        private const string settingAsset = "Assets/Editor/ZBuildSettings.asset";
 
         private readonly Dictionary<string, BundleInfo> dictionary = new Dictionary<string, BundleInfo>();
 

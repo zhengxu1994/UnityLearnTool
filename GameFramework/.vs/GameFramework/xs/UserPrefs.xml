@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{3BA0E4D3-6182-230A-D46D-44EBBAF70F90}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameFramework/Scripts/Editor/Inspector/DownloadComponentInspector.cs">
+    <Files>
+      <File FileName="Assets/Example/ProcedureLaunch.cs" Line="25" Column="49" />
+      <File FileName="Assets/GameFramework/Scripts/Runtime/Base/BaseComponent.cs" Line="67" Column="14" />
+      <File FileName="Assets/GameFramework/Scripts/Runtime/Download/DownloadComponent.cs" Line="122" Column="29" />
+      <File FileName="Assets/GameFramework/Scripts/Editor/Inspector/DownloadComponentInspector.cs" Line="62" Column="23" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GameFramework" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0c224e77-2704-470d-a350-ee82d8fd0e44" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
