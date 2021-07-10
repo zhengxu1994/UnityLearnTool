@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{74003F1A-34D7-E84B-6A60-D9DC240C6569}|">
+  <MonoDevelop.Ide.ItemProperties.Editor PreferredExecutionTarget="a73874b8-78f3-41ff-af52-02e7c3144189" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Model/Tools/LitJson/Properties/AssemblyInfo.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Model/GameLanuch.cs" Line="9" Column="2" />
+      <File FileName="Assets/Scripts/Model/Tools/LitJson/Properties/AssemblyInfo.cs" Line="10" Column="37" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ILRuntimeDemo" expanded="True">
+            <Node name="Assets" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Model PreferredExecutionTarget="02ffaf09-d57c-4b43-ba96-5d57ad203835" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>HotFix/HotFix.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="02ffaf09-d57c-4b43-ba96-5d57ad203835" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

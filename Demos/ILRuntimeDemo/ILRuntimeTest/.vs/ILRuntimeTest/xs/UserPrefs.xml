@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{E6DD179D-FA31-4425-BDE1-9DD0BE0A9BE1}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Adapters/TestVector3Binder.cs">
+    <Files>
+      <File FileName="Adapters/ClassInheritanceTestAdaptor.cs" Line="4" Column="25" />
+      <File FileName="AutoGenerate/LitJson_JsonMapper_Binding.cs" Line="40" Column="18" />
+      <File FileName="App.config" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="42" Column="19" />
+      <File FileName="Adapters/TestVector3Binder.cs" Line="209" Column="25" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ILRuntimeTest" expanded="True" selected="True">
+            <Node name="ILRuntimeTest" expanded="True">
+              <Node name="Adapters" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ILRuntimeTest PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
