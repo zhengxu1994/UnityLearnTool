@@ -1,21 +1,26 @@
 ﻿<Properties StartupConfiguration="{74003F1A-34D7-E84B-6A60-D9DC240C6569}|">
   <MonoDevelop.Ide.ItemProperties.Editor PreferredExecutionTarget="a73874b8-78f3-41ff-af52-02e7c3144189" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Model/Tools/LitJson/Properties/AssemblyInfo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Model/GameLanuch.cs">
     <Files>
-      <File FileName="Assets/Scripts/Model/GameLanuch.cs" Line="9" Column="2" />
-      <File FileName="Assets/Scripts/Model/Tools/LitJson/Properties/AssemblyInfo.cs" Line="10" Column="37" />
+      <File FileName="Assets/Scripts/Model/GameLanuch.cs" Line="71" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ILRuntimeDemo" expanded="True">
-            <Node name="Assets" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Model" expanded="True">
+                  <Node name="GameLanuch.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Model PreferredExecutionTarget="02ffaf09-d57c-4b43-ba96-5d57ad203835" />
+  <MonoDevelop.Ide.ItemProperties.Model PreferredExecutionTarget="fb0e0b86-8557-482e-8e0d-850e4a63bf21" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>HotFix/HotFix.csproj</String>

@@ -1,0 +1,31 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hotfix/Hotfix/Src/Manager/UISystem/WindowBase.cs">
+    <Files>
+      <File FileName="Hotfix/Hotfix/Src/UIGen/v_TestBridgeUI_Popup_wnd.cs" Line="43" Column="46" />
+      <File FileName="Hotfix/Hotfix/Src/Manager/UISystem/WindowBase.cs" Line="93" Column="16" />
+      <File FileName="Hotfix/Hotfix/Src/Manager/UISystem/UIShowGameObject.cs" Line="37" Column="27" />
+      <File FileName="Hotfix/Hotfix/Src/CommonUI/drops_game_wnd.cs" Line="6" Column="27" />
+      <File FileName="Hotfix/Hotfix/Src/CommonUI/gm_wnd.cs" Line="10" Column="16" />
+      <File FileName="Hotfix/Hotfix/Src/HotFixLoop.cs" Line="24" Column="27" />
+      <File FileName="Hotfix/Hotfix/Src/Manager/UISystem/UIManager.cs" Line="8" Column="18" />
+      <File FileName="Hotfix/Hotfix/Src/UIGen/v_Login_Popup_wnd.cs" Line="1" Column="1" />
+      <File FileName="Hotfix/Hotfix/Src/CommonUI/busy_wnd.cs" Line="1" Column="1" />
+      <File FileName="Hotfix/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Hotfix" expanded="True">
+            <Node name="Hotfix" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

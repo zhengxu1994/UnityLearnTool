@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{6EAB3A89-BA6A-4C8B-9495-BA10EA8EB94B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataStructure/Program.cs">
+    <Files>
+      <File FileName="DataStructure/Program.cs" Line="32" Column="14" />
+      <File FileName="DataStructure/Tree.cs" Line="46" Column="10" />
+      <File FileName="DataStructure/DataSort.cs" Line="60" Column="21" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DataStructure" expanded="True" selected="True">
+            <Node name="DataStructure" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.DataStructure PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

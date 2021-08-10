@@ -1,6 +1,6 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Packages/manifest.json
+    m_FilePath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -8,7 +8,7 @@ m_ProjectFiles:
       ticks: 637613933400000000
     m_Hash: 335319638
   m_LockFileStatus:
-    m_FilePath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Packages/packages-lock.json
+    m_FilePath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -25,7 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.24
       source: 1
-      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Library/PackageCache/com.unity.test-framework@1.1.24
+      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Library/PackageCache/com.unity.test-framework@1.1.24
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -117,7 +117,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.4
       source: 1
-      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Library/PackageCache/com.unity.textmeshpro@3.0.4
+      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Library/PackageCache/com.unity.textmeshpro@3.0.4
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -276,7 +276,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.4.6
       source: 1
-      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Library/PackageCache/com.unity.timeline@1.4.6
+      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Library/PackageCache/com.unity.timeline@1.4.6
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -428,7 +428,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 0.1.21-preview
       source: 1
-      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Library/PackageCache/com.unity.toolchain.macos-x86_64-linux-x86_64@0.1.21-preview
+      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Library/PackageCache/com.unity.toolchain.macos-x86_64-linux-x86_64@0.1.21-preview
       assetPath: Packages/com.unity.toolchain.macos-x86_64-linux-x86_64
       name: com.unity.toolchain.macos-x86_64-linux-x86_64
       displayName: Toolchain MacOS Linux x64
@@ -2324,7 +2324,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 0.1.19-preview
       source: 1
-      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Library/PackageCache/com.unity.sysroot@0.1.19-preview
+      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Library/PackageCache/com.unity.sysroot@0.1.19-preview
       assetPath: Packages/com.unity.sysroot
       name: com.unity.sysroot
       displayName: Sysroot Base
@@ -2397,7 +2397,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 0.1.14-preview
       source: 1
-      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Library/PackageCache/com.unity.sysroot.linux-x86_64@0.1.14-preview
+      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Library/PackageCache/com.unity.sysroot.linux-x86_64@0.1.14-preview
       assetPath: Packages/com.unity.sysroot.linux-x86_64
       name: com.unity.sysroot.linux-x86_64
       displayName: Sysroot Linux x64
@@ -2469,7 +2469,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Library/PackageCache/com.unity.ext.nunit@1.0.6
+      resolvedPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Library/PackageCache/com.unity.ext.nunit@1.0.6
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -2527,5 +2527,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Packages
+m_ProjectPath: /Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Packages
 m_EditorVersion: 2020.3.3f1 (76626098c1c4)

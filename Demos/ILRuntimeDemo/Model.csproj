@@ -118,6 +118,7 @@
     <Compile Include="Assets\Scripts\Model\Tools\LitJson\JsonWriter.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.InlineMethod.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Runtime\Enviorment\InvocationContext.cs" />
+    <Compile Include="Assets\Scripts\Model\GameLanuch.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Runtime\Enviorment\DelegateManager.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\CLR\TypeSystem\ILType.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Runtime\Debugger\Protocol\SCModuleLoaded.cs" />
@@ -146,14 +147,13 @@
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Runtime\Debugger\Protocol\SCThreadStarted.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Runtime\CLRBinding\MethodBindingGenerator.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\LitJson\JsonReader.cs" />
+    <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Properties\AssemblyInfo.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Reflection\ILRuntimeMethodInfo.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Runtime\Debugger\StackFrameInfo.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Runtime\Intepreter\OpCodes\OpCodeEnum.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Other\UncheckedStack.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Runtime\Extensions.cs" />
     <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Runtime\Intepreter\ILRuntimeException.cs" />
-    <Compile Include="Assets\Scripts\Model\GameLanuch.cs" />
-    <Compile Include="Assets\Scripts\Model\Tools\ILRuntime\Properties\AssemblyInfo.cs" />
     <None Include="Assets\Scripts\Model\Model.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -396,13 +396,13 @@
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Mdb">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Assets/Scripts/Model/Tools/MonoCeil/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Assets/Scripts/Model/MonoCeil/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Pdb">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Assets/Scripts/Model/Tools/MonoCeil/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Assets/Scripts/Model/MonoCeil/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="ILRuntime.Mono.Cecil">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Assets/Scripts/Model/Tools/MonoCeil/ILRuntime.Mono.Cecil.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Assets/Scripts/Model/MonoCeil/ILRuntime.Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -756,10 +756,10 @@
       <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/ILRuntimeDemo/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/ILRuntimeDemo/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

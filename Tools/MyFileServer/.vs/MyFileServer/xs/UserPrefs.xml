@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{86A5D679-8699-4AC7-A8F0-35262F3EFCD2}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyFileServer/Properties/launchSettings.json">
+    <Files>
+      <File FileName="MyFileServer/Startup.cs" Line="33" Column="1" />
+      <File FileName="MyFileServer/Program.cs" Line="1" Column="1" />
+      <File FileName="MyFileServer/Properties/launchSettings.json" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MyFileServer" expanded="True">
+            <Node name="MyFileServer" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="Pages" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="launchSettings.json" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MyFileServer PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

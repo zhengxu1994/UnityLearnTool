@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{41348DB9-71AA-9B06-96F1-298EB35930C6}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AssetBundleDemo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DownLoader.cs">
     <Files>
       <File FileName="Assets/Editor/BuildHelper.cs" Line="87" Column="26" />
       <File FileName="Assets/Editor/FileHelper.cs" />
@@ -12,16 +12,16 @@
       <File FileName="Assets/Editor/MD5Helper.cs" />
       <File FileName="Assets/Editor/ZBuildSettings.cs" />
       <File FileName="Assets/AssetBundleDemo.cs" Line="29" Column="22" />
+      <File FileName="Assets/Scripts/DownLoader.cs" Line="137" Column="70" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AssetBundleDemo" expanded="True">
-            <Node name="Assets" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
               <Node name="Editor" expanded="True" />
               <Node name="Scripts" expanded="True" />
               <Node name="StreamingAssets" expanded="True" />
-              <Node name="AssetBundleDemo.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -30,7 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4a6add99-d828-428b-98dd-9d66c1ae5530" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="00e7292a-04c6-4248-aee2-3f335f2f4247" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

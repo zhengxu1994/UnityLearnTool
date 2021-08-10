@@ -1,0 +1,68 @@
+﻿<Properties StartupConfiguration="{B8E5F436-8B79-DCFF-526A-3D7BA8E73D0B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Model/GameLib/GameDll/Base/Util/Tool.cs">
+    <Files>
+      <File FileName="Assets/Editor/CSHotFixLibaray/GenConfigEditor.cs" Line="20" Column="26" />
+      <File FileName="Assets/Model/GameLib/Local/Classes/Component/ArtScript/MaskEx.cs" />
+      <File FileName="Assets/Model/GameLib/GameDll/Base/LogicRoot.cs" Line="105" Column="65" />
+      <File FileName="Assets/Model/GameLib/GameDll/Base/Manager/HotFixManager.cs" Line="17" Column="21" />
+      <File FileName="Assets/Model/GameLib/CSHotFixLibaray/Core/Runtime/CLRBinding/BindingCodeGenerator.cs" Line="938" Column="43" />
+      <File FileName="Assets/Model/Main.cs" Line="21" Column="1" />
+      <File FileName="Assets/Model/GameLib/Local/Classes/Start/IGameInterface.cs" Line="6" Column="26" />
+      <File FileName="Assets/Model/GameLib/GameDll/Base/LogicMain.cs" Line="66" Column="53" />
+      <File FileName="Assets/Model/GameLib/Local/Classes/CallPlatform.cs" Line="79" Column="1" />
+      <File FileName="Assets/Model/GameLib/Local/Classes/LWindowsClass.cs" Line="10" Column="30" />
+      <File FileName="Assets/Model/GameLib/GameDll/Procedure/CGameProcedure.cs" Line="86" Column="34" />
+      <File FileName="Assets/Model/GameLib/GameDll/Base/Setting.cs" Line="1" Column="1" />
+      <File FileName="Assets/Model/GameLib/CSHotFixLibaray/Core/Runtime/Enviorment/AppDomain.cs" Line="33" Column="27" />
+      <File FileName="Assets/Model/GameLib/GameDll/Base/Util/Tool.cs" Line="707" Column="28" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CSHotfixDemo" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Model" expanded="True">
+                <Node name="GameLib" expanded="True">
+                  <Node name="CSHotFixLibaray" expanded="True">
+                    <Node name="Core" expanded="True">
+                      <Node name="Runtime" expanded="True">
+                        <Node name="Enviorment" expanded="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                  <Node name="GameDll" expanded="True">
+                    <Node name="Base" expanded="True">
+                      <Node name="Manager" expanded="True" />
+                      <Node name="Util" expanded="True">
+                        <Node name="Tool.cs" selected="True" />
+                      </Node>
+                    </Node>
+                    <Node name="Procedure" expanded="True" />
+                  </Node>
+                  <Node name="Local" expanded="True">
+                    <Node name="Classes" expanded="True">
+                      <Node name="Start" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="884e0ca2-4d03-4dc7-a49b-ce5ebc3def00" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f5da4c3d-3b99-42f3-b37e-95ea875942df" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/CSHotfixDemo/Assets/Model/GameLib/GameDll/Base/LogicMain.cs" relfile="Assets/Model/GameLib/GameDll/Base/LogicMain.cs" line="16" column="1" />
+      <Breakpoint file="/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/CSHotfixDemo/Assets/Model/GameLib/GameDll/Procedure/CGameProcedure.cs" relfile="Assets/Model/GameLib/GameDll/Procedure/CGameProcedure.cs" line="89" column="1" />
+      <Breakpoint file="/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/CSHotfixDemo/Assets/Model/GameLib/GameDll/Procedure/CGameProcedure.cs" relfile="Assets/Model/GameLib/GameDll/Procedure/CGameProcedure.cs" line="83" column="1" />
+      <Breakpoint file="/Users/zhengzhengxu/Desktop/zhengxu/Unity3d/Tool/UnityLearnTool/Demos/CSHotfixDemo/Assets/Model/GameLib/GameDll/Base/Util/Tool.cs" relfile="Assets/Model/GameLib/GameDll/Base/Util/Tool.cs" line="709" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

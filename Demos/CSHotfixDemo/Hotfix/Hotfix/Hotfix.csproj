@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7CD916FD-A91B-4192-B21C-FC21DF55FE94}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hotfix</RootNamespace>
+    <AssemblyName>Hotfix</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Assets\StreamingAssets\</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Assets\StreamingAssets\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Model">
+      <HintPath>..\..\Library\ScriptAssemblies\Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\Unity2020.3.3Dll\UnityEngine\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\Unity2020.3.3Dll\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\Unity2020.3.3Dll\UnityEngine\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Hotfix\Src\Mono2DllFunction.cs" />
+    <Compile Include="Hotfix\Src\ProcedureEvent.cs" />
+    <Compile Include="Hotfix\Src\HotFixLoop.cs" />
+    <Compile Include="Hotfix\Src\Util\CommonDefine.cs" />
+    <Compile Include="Hotfix\Src\UIGen\v_TestBridgeUI_Popup_wnd.cs" />
+    <Compile Include="Hotfix\Src\UIGen\v_testlist_Popup_wnd.cs" />
+    <Compile Include="Hotfix\Src\UIGen\v_Login_Popup_wnd.cs" />
+    <Compile Include="Hotfix\Src\Network\NetworkManagerHF.cs" />
+    <Compile Include="Hotfix\Src\Network\ISerializePacketHF.cs" />
+    <Compile Include="Hotfix\Src\Network\PacketHandlerManagerHF.cs" />
+    <Compile Include="Hotfix\Src\Network\Packets\Packet_Login.cs" />
+    <Compile Include="Hotfix\Src\Network\Packets\Packet_Notice.cs" />
+    <Compile Include="Hotfix\Src\CommonUI\gm_wnd.cs" />
+    <Compile Include="Hotfix\Src\CommonUI\loading_wnd.cs" />
+    <Compile Include="Hotfix\Src\CommonUI\click_mask_wnd.cs" />
+    <Compile Include="Hotfix\Src\CommonUI\joystick_wnd.cs" />
+    <Compile Include="Hotfix\Src\CommonUI\busy_wnd.cs" />
+    <Compile Include="Hotfix\Src\CommonUI\drops_game_wnd.cs" />
+    <Compile Include="Hotfix\Src\BugFix\BugFixManager.cs" />
+    <Compile Include="Hotfix\Src\BugFix\Bugs\Bugs_GameDll_ShaderManager.cs" />
+    <Compile Include="Hotfix\Src\BugFix\Bugs\Bugs_GameDll_JBManager.cs" />
+    <Compile Include="Hotfix\Src\Manager\UISystem\WindowBase.cs" />
+    <Compile Include="Hotfix\Src\Manager\UISystem\UICreator.cs" />
+    <Compile Include="Hotfix\Src\Manager\UISystem\UIManager.cs" />
+    <Compile Include="Hotfix\Src\Manager\UISystem\UIShowGameObject.cs" />
+    <Compile Include="Hotfix\Src\Manager\Message\BaseMessageHF.cs" />
+    <Compile Include="Hotfix\Src\Manager\Message\MessageManagerHF.cs" />
+    <Compile Include="Hotfix\Src\Manager\ClassPool\PooledClassObjectHF.cs" />
+    <Compile Include="Hotfix\Src\Manager\Event\EventsHF.cs" />
+    <Compile Include="Hotfix\Src\GameLogic\StartApplication\StartApplication.cs" />
+    <Compile Include="Hotfix\Src\GameLogic\Login\WfPacket.cs" />
+    <Compile Include="Hotfix\Src\GameLogic\Login\LoginData.cs" />
+    <Compile Include="Hotfix\Src\GameLogic\Login\Login_Popup_wnd.cs" />
+    <Compile Include="Hotfix\Src\GameLogic\Login\LoginMessageHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_bulletBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_objectBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_jubianBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_spawerBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_buffBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_skillBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_animationBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_brushBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_jobBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_monsterBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_growupBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_mapBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_partBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_globalBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_effectBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_missionBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_soundBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_stringBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_serverBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_itemBeanHF.cs" />
+    <Compile Include="Hotfix\Src\Data\Bean\t_renderBeanHF.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Hotfix\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hotfix\Src\Manager\ClassPool\PooledClassObject.cs.meta" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
