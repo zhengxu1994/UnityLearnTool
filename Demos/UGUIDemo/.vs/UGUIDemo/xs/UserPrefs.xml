@@ -4,26 +4,18 @@
       <File FileName="Assets/Demo/Shader/ShaderDemo1.shader" Line="60" Column="58" />
       <File FileName="Assets/Demo/Scipts/Demo1.cs" />
       <File FileName="Assets/Resources/Atlas/emoji.txt" />
-      <File FileName="Assets/Demo/Scipts/MySprite.cs" Line="117" Column="1" />
-      <File FileName="Assets/Demo/Scipts/MySpriteData.cs" Line="17" Column="26" />
-      <File FileName="Assets/Demo/Scipts/MyAltas.cs" Line="1" Column="1" />
-      <File FileName="Assets/Demo/Scipts/MyAtlasInspector.cs" Line="162" Column="38" />
-      <File FileName="Assets/Demo/Scipts/TestFont.cs" Line="63" Column="40" />
+      <File FileName="Assets/Demo/Scipts/MySprite.cs" Line="74" Column="1" />
+      <File FileName="Assets/Demo/Scipts/MySpriteData.cs" Line="10" Column="23" />
+      <File FileName="Assets/Demo/Scipts/MyAltas.cs" Line="30" Column="1" />
+      <File FileName="Assets/Demo/Scipts/MyAtlasInspector.cs" Line="188" Column="12" />
+      <File FileName="Assets/Demo/Scipts/TestFont.cs" Line="66" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UGUIDemo" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Demo" expanded="True">
-                <Node name="Scipts" expanded="True">
-                  <Node name="TestFont.cs" selected="True" />
-                </Node>
-                <Node name="Shader" expanded="True" />
-              </Node>
-              <Node name="Resources" expanded="True">
-                <Node name="Atlas" expanded="True" />
-              </Node>
+              <Node name="Demo" selected="True" />
             </Node>
           </Node>
         </State>

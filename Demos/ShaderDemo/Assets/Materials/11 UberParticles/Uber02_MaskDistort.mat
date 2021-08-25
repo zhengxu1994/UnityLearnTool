@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Uber02_MaskDistort
+  m_Shader: {fileID: 4800000, guid: 0e523cf3deaa64314839b1207f1077ac, type: 3}
+  m_ShaderKeywords: USE_DETAIL USE_SOFTPARTICLES USING_SOFTPARTICLES _BLENDMODE_BLEND
+    _ZWRITE_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DetailTex:
+        m_Texture: {fileID: 2800000, guid: 266e85c9e6c884feeafe8ca1bbac70f0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 6701bfb8e762cd54e96d8dc1a763d942, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BlendMode: 1
+    - _BlendOp: 0
+    - _ColorFactor: 1
+    - _CullMode: 2
+    - _DissolveProgress: 0
+    - _DissolveRange: 0.5
+    - _DstBlend: 10
+    - _InvFade: 0.36
+    - _SrcBlend: 5
+    - _UseDetail: 1
+    - _UseDistort: 0
+    - _UseMask: 0
+    - _UseSoftParticle: 1
+    - _ZWrite: 0
+    m_Colors:
+    - _DissolveColor: {r: 0.9, g: 0.9, b: 0.2, a: 1}
+    - _DistorFactorMain2_Detail2: {r: 1, g: 1, b: 1, a: 1}
+    - _DistorFactorMain2_Mask2: {r: 1, g: 1, b: 1, a: 1}
+    - _DistorUVFactor2_RotateSpeed1: {r: 1, g: 1, b: 0, a: 0}
+    - _DistortSpeed2_Factor2: {r: 1, g: 1, b: 1, a: 1}
+    - _DistortUVFactor2_RotateSpeed1: {r: 1, g: 1, b: 0, a: 0}
+    - _MainSpeed2_DetailSpeed2: {r: 0, g: -1, b: 0, a: 0}
+    - _MainSpeed2_MaskSpeed2: {r: 1, g: 0, b: 0, a: 0}
+    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

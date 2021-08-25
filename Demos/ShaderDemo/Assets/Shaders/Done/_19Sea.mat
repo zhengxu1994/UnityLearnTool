@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: _19Sea
+  m_Shader: {fileID: 4800000, guid: 5b2959a167a7c4f04a9c7ff053beb6c8, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Amplitude: 0.6
+    - _AmplitudePower: 1
+    - _AmptFactor: 0.013
+    - _AmptPower: 1.01
+    - _Frequence: 1
+    - _LayerGapPower: 0.44
+    - _OffsetHashFactor: 50
+    - _PeriodFactor: 0.1
+    - _SeaHigh: 0.28
+    - _SeaLayerPower: 0.5
+    - _SeaMaxHigh: 0.3
+    - _SeaMinHigh: 0
+    - _SkyLineFactor: 0.9
+    - _SkyLinePower: 1.25
+    - _SubWaveAmplitude: 0.5
+    - _SubWaveAmptFactor: 0.5
+    - _SubWaveFrequenceFactor: 1.5
+    - _SubeWaveOffsetBaseSpd: 1
+    - _SubeWaveOffsetHashFactor: 1
+    - _TimeSpeed: 1
+    - _WaveAmplitudeAddPower: 2
+    m_Colors:
+    - _BSeaColor: {r: 0.03137254, g: 0.27319637, b: 0.34117648, a: 1}
+    - _BSkyColor: {r: 0, g: 0.90588236, b: 0.972549, a: 1}
+    - _SeaColor: {r: 0, g: 0.4431373, b: 0.6156863, a: 1}
+    - _SkyColor: {r: 0, g: 0.30980393, b: 0.97647065, a: 1}
+    - _SkyLineColor: {r: 0.9019608, g: 0.2, b: 0.101960786, a: 1}
+    - _TSeaColor: {r: 0.8156863, g: 0.9529412, b: 1, a: 1}
+    - _TSkyColor: {r: 0.6509804, g: 0.01960785, b: 0.41493765, a: 1}

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 11UberShader
+  m_Shader: {fileID: 4800000, guid: c323e472e9c9641a8b30dd230130f0c8, type: 3}
+  m_ShaderKeywords: USE_SOFT_PARTICLES _BLENDMODE_BLEND
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _CircleTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a7ba4ab3dacca1f41b92de92749d7342, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BlendMode: 1
+    - _BlendOp: 0
+    - _CullMode: 0
+    - _DissolveProgress: 0.229
+    - _DissolveRange: 0.188
+    - _DistortRotateSpeed: 0
+    - _DistrotStrength: 0.164
+    - _DstBlend: 10
+    - _InvFade: 0.55
+    - _SrcBlend: 5
+    - _UseDissolve: 1
+    - _UseDistort: 0
+    - _UseMask: 1
+    - _UseSoftParticle: 1
+    - _UseUVFlow: 0
+    - _ZWrite: 0
+    m_Colors:
+    - _DissolveColor: {r: 0.8, g: 0.23117483, b: 0, a: 1}
+    - _FlowSpeed: {r: 1, g: 0, b: 0, a: 0}
+    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}

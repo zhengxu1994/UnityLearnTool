@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{0415007A-7E27-48CF-A334-B78CEE5D365B}|Default">
+  <MonoDevelop.Ide.ItemProperties.PoolDemo PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PoolDemo/Scripts/PoolManager.cs">
+    <Files>
+      <File FileName="PoolDemo/Program.cs" Line="6" Column="6" />
+      <File FileName="PoolDemo/Scripts/PoolManager.cs" Line="12" Column="8" />
+      <File FileName="PoolDemo/Scripts/PoolEntity.cs" Line="38" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PoolDemo" expanded="True">
+            <Node name="PoolDemo" expanded="True">
+              <Node name="Scripts" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{BC739DB0-0562-4FDB-A1B9-93DF9CB2C83D}|Default">
+  <MonoDevelop.Ide.ItemProperties.CScriptDemo FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CScriptDemo/Scripts/IDisposeDemo/IDisposeDemo.cs">
+    <Files>
+      <File FileName="CScriptDemo/Scripts/IDisposeDemo/IDisposeDemo.cs" Line="8" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CScriptDemo" expanded="True">
+            <Node name="CScriptDemo" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="IDisposeDemo" expanded="True">
+                  <Node name="IDisposeDemo.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

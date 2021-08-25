@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 09579881a7c644df2bcee918eb9983c7
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Circle01: {fileID: 2800000, guid: a7ba4ab3dacca1f41b92de92749d7342, type: 3}
+  - _Distort: {fileID: 2800000, guid: 6433ad4692b7d114f95eaccf8dfb9627, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

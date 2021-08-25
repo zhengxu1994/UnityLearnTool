@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CScriptDemo", "CScriptDemo\CScriptDemo.csproj", "{BC739DB0-0562-4FDB-A1B9-93DF9CB2C83D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC739DB0-0562-4FDB-A1B9-93DF9CB2C83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC739DB0-0562-4FDB-A1B9-93DF9CB2C83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC739DB0-0562-4FDB-A1B9-93DF9CB2C83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC739DB0-0562-4FDB-A1B9-93DF9CB2C83D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58A30548-8272-4E93-98CA-5D24BB72F9B2}
+	EndGlobalSection
+EndGlobal
