@@ -72,6 +72,9 @@
     <Compile Include="Assets/FishManShaderTutorialTools/Scripts/VFXScripts/Laser/LaserEffect.cs" />
     <Compile Include="Assets/FishManShaderTutorialTools/Scripts/VFXScripts/TranformUtil/TransformShowEffect.cs" />
     <Compile Include="Assets/Materials/07 Dissolve/AnimationPlayEffect.cs" />
+    <Compile Include="Assets/MyScripts/PoolEntity.cs" />
+    <Compile Include="Assets/MyScripts/PoolManager.cs" />
+    <Compile Include="Assets/MyScripts/PoolDemo.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/AmplifyShaderEditor/Plugins/EditorResources/Previews/Preview_CosTime.shader" />

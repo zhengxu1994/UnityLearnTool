@@ -4,41 +4,49 @@ using System.Collections.Generic;
 namespace Pool
 {
     /// <summary>
+    /// 判断对象是否激活
+    /// </summary>
+    public interface IActivateEntity
+    {
+        public bool IsActive();
+
+        public void SetActive(bool active);
+    }
+    /// <summary>
     /// 对象池
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class PoolEntity <T> : IDisposable where T: class,IDisposable, new() 
+    public class PoolEntity <T> : IDisposable where T: class,IDisposable,IActivateEntity, new() 
     {
-        public Stack<T> pool;
+        /// <summary>
+        /// 数组结构可以使用栈 或者 数组
+        /// </summary>
+        private Stack<T> _pool;
 
-        public HashSet<T> set;//主要用于检测是否重复放入池中
+        private Func<T> _alloc;//初始化逻辑
 
-        private Func<T> alloc;//初始化逻辑
+        private Action<T> _recycle;//做一些数据处理
 
-        private Action<T> free;//做一些数据处理
-
-        public int ChildNum
+        public int ElementCount
         {
             get {
-               return pool.Count;
+               return _pool.Count;
             }
         }
 
-        private bool disposed = false;
+        private bool _disposed = false;
 
-        public PoolEntity(Func<T> alloc,Action<T> free,int num = 0)
+        public PoolEntity(Func<T> alloc,Action<T> recycle,int num = 0)
         {
-            pool = new Stack<T>();
-            set = new HashSet<T>();
+            _pool = new Stack<T>();
 
-            this.alloc = alloc;
-            this.free = free;
+            this._alloc = alloc;
+            this._recycle = recycle;
 
             for (int i = 0; i < num; i++)
             {
                 var t = alloc();
-                pool.Push(t);
-                set.Add(t);
+                _pool.Push(t);
             }
         }
 
@@ -49,52 +57,51 @@ namespace Pool
 
         public T Alloc()
         {
-            if(pool.Count == 0)
+            T t = null;
+            if (_pool.Count == 0)
             {
                 //防止空创建方法
-                if (alloc == null)
-                    return default(T);
+                if (_alloc == null)
+                    t = default(T);
                 else
-                   return alloc();
+                    t = _alloc();
             }
             else
-            {
                 //抛出
-                var item = pool.Pop();
-                set.Remove(item);
-                return item;
-            }
+                t = _pool.Pop();
+            t.SetActive(true);
+            return t;
         }
 
-        public void Free(T t)
+        public void Recycle(T t)
         {
-            if (set.Contains(t))
+            //已经放回池内了
+            if (!t.IsActive())
             {
                 Console.WriteLine($"element is in pool,element type:{t.GetType()}");
                 return;
             }
-            if (free != null)
-                free(t);
-            set.Add(t);
-            pool.Push(t);
+            if (_recycle != null)
+                _recycle(t);
+            
+            t.SetActive(false);
+            _pool.Push(t);
         }
 
         public void Destroy()
         {
-            if (disposed) return;
+            if (_disposed) return;
 
-            if (pool != null && pool.Count > 0)
+            if (_pool != null && _pool.Count > 0)
             {
-                foreach (var item in pool)
+                foreach (var item in _pool)
                 {
                     item.Dispose();
                 }
-                pool.Clear();
-                set.Clear();
+                _pool.Clear();
             }
-            pool = null;
-            set = null;
-            disposed = true;
+            _pool = null;
+            _disposed = true;
         }
 
         public void Dispose()

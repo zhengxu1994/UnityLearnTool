@@ -22,11 +22,12 @@ namespace Pool
             Console.WriteLine($"name1 :{student1.name}");
             Console.WriteLine($"name2 :{student2.name}");
 
-            PoolManager.Inst.Free<Student>(student1);
-            PoolManager.Inst.Free<Student>(student2);
+            PoolManager.Inst.Recycle<Student>(student1);
+            PoolManager.Inst.Recycle<Student>(student2);
 
             Console.WriteLine($"age1 :{student1.age}");
             Console.WriteLine($"age2 :{student2.age}");
+            Console.WriteLine($"active1 :{student2.IsActive()}");
 
             Console.WriteLine($"count :{PoolManager.Inst.PoolCount}");
 
@@ -49,10 +50,11 @@ namespace Pool
         }
     }
 
-    public class Student : IDisposable
+    public class Student : IDisposable,IActivateEntity
     {
         public string name;
         public int age;
+        private bool _active = true;//是否被激活，对象池回收对象激活为false
 
         public void Free()
         {
@@ -63,6 +65,16 @@ namespace Pool
         public void Dispose()
         {
             name = null;
+        }
+
+        public bool IsActive()
+        {
+            return _active;
+        }
+
+        public void SetActive(bool active)
+        {
+            this._active = active;
         }
     }
 }

@@ -358,14 +358,14 @@
     <Reference Include="ILRuntime.Mono.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="CommandLine">
       <HintPath>Assets/Plugins/CommandLine.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -767,10 +767,6 @@
       <Project>{F4B6A996-31B0-18FC-C828-592994ED9DA4}</Project>
       <Name>Unity.ThirdParty</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Editor.csproj">
-      <Project>{824DE5F2-BA15-AF79-FD06-CC20BFAC372F}</Project>
-      <Name>Unity.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Model.csproj">
       <Project>{C1FA0FA1-BF36-0434-7A8E-938995761FE0}</Project>
       <Name>Unity.Model</Name>
@@ -778,6 +774,10 @@
     <ProjectReference Include="Unity.HotFix.csproj">
       <Project>{7B464DC9-93D7-2A29-D528-D63031A805CD}</Project>
       <Name>Unity.HotFix</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Editor.csproj">
+      <Project>{824DE5F2-BA15-AF79-FD06-CC20BFAC372F}</Project>
+      <Name>Unity.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="HotFixView.csproj">
       <Project>{C56E065C-58A3-9077-2290-E49F9F113CFD}</Project>

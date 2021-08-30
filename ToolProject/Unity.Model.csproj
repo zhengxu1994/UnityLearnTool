@@ -155,9 +155,9 @@
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Common/Decomposition/Seidel/Trapezoid.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Unity/Editor/TrueSyncConfigEditor.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Unity/TrueSyncManager.cs" />
+    <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Common/ConvexHull/Melkman.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Settings.cs" />
     <Compile Include="Assets/Model/FGUI/Scripts/Core/Text/InputTextField.cs" />
-    <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Common/ConvexHull/Melkman.cs" />
     <Compile Include="Assets/Model/Core/Object/BaseAttribute.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Dynamics/Joints/MotorJoint.cs" />
     <Compile Include="Assets/Model/Tool/TrueSync/TrueSync/Unity/Editor/TSRigidBodyEditor.cs" />
@@ -974,14 +974,14 @@
     <Reference Include="ILRuntime.Mono.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.ourpalm.ilruntime@1.6.7/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="CommandLine">
       <HintPath>Assets/Plugins/CommandLine.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
