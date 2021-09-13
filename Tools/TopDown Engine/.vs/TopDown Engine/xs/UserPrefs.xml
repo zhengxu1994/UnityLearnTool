@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{0BFD74A0-802B-B96B-C428-FFA9A030F143}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TopDownEngine/ThirdParty/MoreMountains/MMFeedbacks/MMFeedbacks/Sequencing/Scripts/MMSequencer.cs">
+    <Files>
+      <File FileName="Assets/TopDownEngine/Common/ScriptsCinemachine/Editor/Environment/RoomEditor.cs" Line="14" Column="23" />
+      <File FileName="Assets/TopDownEngine/Common/Scripts/Characters/Core/TopDownController3D.cs" Line="18" Column="53" />
+      <File FileName="Assets/TopDownEngine/ThirdParty/MoreMountains/MMTools/Tools/MMAudio/MMSoundManager/MMSoundManager.cs" Line="34" Column="56" />
+      <File FileName="Assets/TopDownEngine/ThirdParty/MoreMountains/MMTools/Tools/MMSingletons/MMPersistentSingleton.cs" Line="8" Column="15" />
+      <File FileName="Assets/TopDownEngine/ThirdParty/MoreMountains/MMFeedbacks/MMFeedbacks/Sequencing/Scripts/MMSequencer.cs" Line="206" Column="22" />
+      <File FileName="Assets/TopDownEngine/ThirdParty/MoreMountains/MMFeedbacks/MMFeedbacks/Sequencing/Scripts/MMSequence.cs" Line="89" Column="36" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TopDown Engine" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="71d36a5e-0c0d-4c69-a8cc-adc4e1088890" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
